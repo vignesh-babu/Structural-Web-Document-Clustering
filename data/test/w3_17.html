@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html style="height: 100%;" lang="en-US"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<title>Angular Modules</title>
+<style>a.menu_angular_modules{font-weight:bold;}</style>
+<style>
+#smallnavContainer {display:none;}
+</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="Keywords" content="HTML,CSS,XML,JavaScript,DOM,jQuery,ASP.NET,PHP,SQL,colors,tutorial,programming,development,training,learning,quiz,primer,lessons,reference,examples,source code,demos,tips,color table,w3c,cascading style sheets,active server pages,Web building,Webmaster">
+<meta name="Description" content="Free HTML CSS JavaScript DOM jQuery XML AJAX RSS ASP .NET PHP SQL tutorials, references, examples for web building.">
+<link rel="icon" href="http://www.w3schools.com/favicon.ico" type="image/x-icon">
+
+<script src="w3_17_files/async-ads.js" async=""></script><script src="w3_17_files/cse.js" async="" type="text/javascript"></script><script src="w3_17_files/gpt.js" type="text/javascript" async=""></script><script src="w3_17_files/analytics.js" async=""></script><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-3855518-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+</script>
+
+<script type="text/javascript">
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+(function() {
+var gads = document.createElement('script');
+gads.async = true;
+gads.type = 'text/javascript';
+var useSSL = 'https:' == document.location.protocol;
+gads.src = (useSSL ? 'https:' : 'http:') + 
+'//www.googletagservices.com/tag/js/gpt.js';
+var node = document.getElementsByTagName('script')[0];
+node.parentNode.insertBefore(gads, node);
+})();
+</script>
+
+<script type="text/javascript">
+googletag.cmd.push(function() {
+googletag.defineSlot('/16833175/BottomMediumRectangle', [300, 250], 'div-gpt-ad-1403595829794-0').addService(googletag.pubads());
+googletag.defineSlot('/16833175/LargePS', [[723, 280], [723, 400], [728, 280], [728, 400], [728, 450]], 'div-gpt-ad-1403595829794-1').addService(googletag.pubads());
+googletag.defineSlot('/16833175/MainLeaderboard', [728, 90], 'div-gpt-ad-1403595829794-2').addService(googletag.pubads());
+googletag.defineSlot('/16833175/SmallPS', [[723, 170], [728, 170]], 'div-gpt-ad-1403595829794-4').addService(googletag.pubads());
+var adScreenWidth = screen.width;
+if (adScreenWidth <= 768) {   
+  googletag.defineSlot('/16833175/MobileBottomBanner', [728, 90], 'div-gpt-ad-1403595829794-3').addService(googletag.pubads());
+} else { 
+  googletag.defineSlot('/16833175/WideSkyScraper', [160, 600], 'div-gpt-ad-1403595829794-5').addService(googletag.pubads());
+}
+googletag.pubads().setTargeting("content","angular");
+googletag.pubads().enableSingleRequest();
+googletag.enableServices();
+});
+</script>
+<link rel="stylesheet" type="text/css" href="w3_17_files/stdtheme.css"><script src="w3_17_files/pubads_impl_50.js" type="text/javascript" async=""></script><iframe style="visibility: hidden; display: none;" src="w3_17_files/container.html"></iframe>
+<link href="w3_17_files/translateelement.css" charset="UTF-8" rel="stylesheet" type="text/css"><script src="w3_17_files/main.js" charset="UTF-8" type="text/javascript"></script><script src="w3_17_files/element_main.js" charset="UTF-8" type="text/javascript"></script><script type="text/javascript" src="w3_17_files/jsapi"></script><link rel="stylesheet" href="w3_17_files/defaulten.css" type="text/css"><link rel="stylesheet" href="w3_17_files/default.css" type="text/css"><script src="w3_17_files/defaulten.js" type="text/javascript"></script><script src="w3_17_files/search.js" type="text/javascript"></script><style type="text/css">
+.gsc-control-cse {
+font-family: Arial, sans-serif;
+border-color: #FFFFFF;
+background-color: #FFFFFF;
+}
+.gsc-control-cse .gsc-table-result {
+font-family: Arial, sans-serif;
+}
+input.gsc-input, .gsc-input-box, .gsc-input-box-hover, .gsc-input-box-focus {
+border-color: #D9D9D9;
+}
+input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:focus {
+border-color: #2F5BB7;
+background-color: #357AE8;
+background-image: none;
+filter: none;
+}
+.gsc-tabHeader.gsc-tabhInactive {
+border-color: #CCCCCC;
+background-color: #FFFFFF;
+}
+.gsc-tabHeader.gsc-tabhActive {
+border-color: #CCCCCC;
+border-bottom-color: #FFFFFF;
+background-color: #FFFFFF;
+}
+.gsc-tabsArea {
+border-color: #CCCCCC;
+}
+.gsc-webResult.gsc-result,
+.gsc-results .gsc-imageResult {
+border-color: #FFFFFF;
+background-color: #FFFFFF;
+}
+.gsc-webResult.gsc-result:hover,
+.gsc-imageResult:hover {
+border-color: #FFFFFF;
+background-color: #FFFFFF;
+}
+.gs-webResult.gs-result a.gs-title:link,
+.gs-webResult.gs-result a.gs-title:link b,
+.gs-imageResult a.gs-title:link,
+.gs-imageResult a.gs-title:link b {
+color: #1155CC;
+}
+.gs-webResult.gs-result a.gs-title:visited,
+.gs-webResult.gs-result a.gs-title:visited b,
+.gs-imageResult a.gs-title:visited,
+.gs-imageResult a.gs-title:visited b {
+color: #1155CC;
+}
+.gs-webResult.gs-result a.gs-title:hover,
+.gs-webResult.gs-result a.gs-title:hover b,
+.gs-imageResult a.gs-title:hover,
+.gs-imageResult a.gs-title:hover b {
+color: #1155CC;
+}
+.gs-webResult.gs-result a.gs-title:active,
+.gs-webResult.gs-result a.gs-title:active b,
+.gs-imageResult a.gs-title:active,
+.gs-imageResult a.gs-title:active b {
+color: #1155CC;
+}
+.gsc-cursor-page {
+color: #1155CC;
+}
+a.gsc-trailing-more-results:link {
+color: #1155CC;
+}
+.gs-webResult .gs-snippet,
+.gs-imageResult .gs-snippet,
+.gs-fileFormatType {
+color: #333333;
+}
+.gs-webResult div.gs-visibleUrl,
+.gs-imageResult div.gs-visibleUrl {
+color: #009933;
+}
+.gs-webResult div.gs-visibleUrl-short {
+color: #009933;
+}
+.gs-webResult div.gs-visibleUrl-short {
+display: none;
+}
+.gs-webResult div.gs-visibleUrl-long {
+display: block;
+}
+.gs-promotion div.gs-visibleUrl-short {
+display: none;
+}
+.gs-promotion div.gs-visibleUrl-long {
+display: block;
+}
+.gsc-cursor-box {
+border-color: #FFFFFF;
+}
+.gsc-results .gsc-cursor-box .gsc-cursor-page {
+border-color: #CCCCCC;
+background-color: #FFFFFF;
+color: #1155CC;
+}
+.gsc-results .gsc-cursor-box .gsc-cursor-current-page {
+border-color: #CCCCCC;
+background-color: #FFFFFF;
+color: #1155CC;
+}
+.gsc-webResult.gsc-result.gsc-promotion {
+border-color: #F6F6F6;
+background-color: #F6F6F6;
+}
+.gsc-completion-title {
+color: #1155CC;
+}
+.gsc-completion-snippet {
+color: #333333;
+}
+.gs-promotion a.gs-title:link,
+.gs-promotion a.gs-title:link *,
+.gs-promotion .gs-snippet a:link {
+color: #1155CC;
+}
+.gs-promotion a.gs-title:visited,
+.gs-promotion a.gs-title:visited *,
+.gs-promotion .gs-snippet a:visited {
+color: #1155CC;
+}
+.gs-promotion a.gs-title:hover,
+.gs-promotion a.gs-title:hover *,
+.gs-promotion .gs-snippet a:hover {
+color: #1155CC;
+}
+.gs-promotion a.gs-title:active,
+.gs-promotion a.gs-title:active *,
+.gs-promotion .gs-snippet a:active {
+color: #1155CC;
+}
+.gs-promotion .gs-snippet,
+.gs-promotion .gs-title .gs-promotion-title-right,
+.gs-promotion .gs-title .gs-promotion-title-right * {
+color: #333333;
+}
+.gs-promotion .gs-visibleUrl,
+.gs-promotion .gs-visibleUrl-short {
+color: #009933;
+}
+</style><style type="text/css">.gscb_a{display:inline-block;font:27px/13px arial,sans-serif}.gsst_a .gscb_a{color:#a1b9ed;cursor:pointer}.gsst_a:hover .gscb_a,.gsst_a:focus .gscb_a{color:#36c}.gsst_a{display:inline-block}.gsst_a{cursor:pointer;padding:0 4px}.gsst_a:hover{text-decoration:none!important}.gsst_b{font-size:16px;padding:0 2px;position:relative;user-select:none;-moz-user-select:none;white-space:nowrap}.gsst_e{opacity:0.55;}.gsst_a:hover .gsst_e,.gsst_a:focus .gsst_e{opacity:0.72;}.gsst_a:active .gsst_e{opacity:1;}.gsst_f{background:white;text-align:left}.gsst_g{background-color:white;border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-moz-box-shadow:0 2px 4px rgba(0,0,0,0.2);margin:-1px -3px;padding:0 6px}.gsst_h{background-color:white;height:1px;margin-bottom:-1px;position:relative;top:-1px}.gsib_a{width:100%;padding:4px 6px 0}.gsib_a,.gsib_b{vertical-align:top}.gssb_c{border:0;position:absolute;z-index:989}.gssb_e{border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-moz-box-shadow:0 2px 4px rgba(0,0,0,0.2);cursor:default}.gssb_f{visibility:hidden;white-space:nowrap}.gssb_k{border:0;display:block;position:absolute;top:0;z-index:988}.gsdd_a{border:none!important}.gsq_a{padding:0}.gscsep_a{display:none}.gssb_a{padding:0 7px}.gssb_a,.gssb_a td{white-space:nowrap;overflow:hidden;line-height:22px}#gssb_b{font-size:11px;color:#36c;text-decoration:none}#gssb_b:hover{font-size:11px;color:#36c;text-decoration:underline}.gssb_g{text-align:center;padding:8px 0 7px;position:relative}.gssb_h{font-size:15px;height:28px;margin:0.2em}.gssb_i{background:#eee}.gss_ifl{visibility:hidden;padding-left:5px}.gssb_i .gss_ifl{visibility:visible}a.gssb_j{font-size:13px;color:#36c;text-decoration:none;line-height:100%}a.gssb_j:hover{text-decoration:underline}.gssb_l{height:1px;background-color:#e5e5e5}.gssb_m{color:#000;background:#fff}.gsfe_a{border:1px solid #b9b9b9;border-top-color:#a0a0a0;box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);-moz-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);-webkit-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);}.gsfe_b{border:1px solid #4d90fe;outline:none;box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);-moz-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);-webkit-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);}.gssb_a{padding:0 9px}.gsib_a{padding-right:8px;padding-left:8px}.gsst_a{padding-top:3px}.gssb_e{border:0}.gssb_l{margin:5px 0}.gssb_c .gsc-completion-container{position:static}.gssb_c{z-index:5000}.gsc-completion-container table{background:transparent;font-size:inherit;font-family:inherit}.gssb_c > tbody > tr,.gssb_c > tbody > tr > td,.gssb_d,.gssb_d > tbody > tr,.gssb_d > tbody > tr > td,.gssb_e,.gssb_e > tbody > tr,.gssb_e > tbody > tr > td{padding:0;margin:0;border:0}.gssb_a table,.gssb_a table tr,.gssb_a table tr td{padding:0;margin:0;border:0}</style></head>
+<body style="position: relative; min-height: 100%; top: 0px;">
+<div id="smallnavContainer"><div id="smallnav"><div id="menuDIV"><hr><hr><hr></div><div id="closeSearchBTN" onclick="hideSearch()">X</div><div id="menuSearchDIV"></div><a href="http://www.w3schools.com/default.asp"><div id="menuHomeDIV"></div></a></div></div><div id="top"><div id="topLogo"><a href="http://www.w3schools.com/"><img src="w3_17_files/w3logotest2.png" alt="W3Schools.com" style="border:0;" height="32" width="280"></a></div></div><div id="topnav"><div id="topnavTut" class="notranslate"><a class="topnav" target="_top" href="http://www.w3schools.com/default.asp">HOME </a><a class="topnav" target="_top" href="http://www.w3schools.com/html/default.asp">HTML </a><a class="topnav" target="_top" href="http://www.w3schools.com/css/default.asp">CSS </a><a class="topnav" target="_top" href="http://www.w3schools.com/js/default.asp">JAVASCRIPT </a><a class="topnav" target="_top" href="http://www.w3schools.com/sql/default.asp">SQL </a><a class="topnav" target="_top" href="http://www.w3schools.com/php/default.asp">PHP </a><a class="topnav" target="_top" href="http://www.w3schools.com/jquery/default.asp">JQUERY </a><a class="topnav" target="_top" href="http://www.w3schools.com/angular/default.asp">ANGULAR </a><a class="topnav" target="_top" href="http://www.w3schools.com/bootstrap/default.asp">BOOTSTRAP </a><a class="topnav" target="_top" href="http://www.w3schools.com/xml/default.asp">XML </a><a class="topnav" target="_top" href="http://www.w3schools.com/aspnet/default.asp">ASP.NET </a><a class="topnav" target="_top" href="http://www.w3schools.com/sitemap/default.asp">MORE...</a><div style="float:right;word-spacing:0;"><a class="topnav" target="_top" href="http://www.w3schools.com/sitemap/sitemap_references.asp">REFERENCES</a><span style="letter-spacing:14px;"> |</span><a class="topnav" target="_top" href="http://www.w3schools.com/sitemap/sitemap_examples.asp"> EXAMPLES</a><span style="letter-spacing:14px;"> |</span><a class="topnav" target="_blank" href="http://www.w3schools.com/forum/default.asp"> FORUM</a><span style="letter-spacing:14px;"> |</span><a class="topnav" target="_top" href="http://www.w3schools.com/about/default.asp"> ABOUT</a></div></div></div><div id="belowTopnav"><div id="page"><div><div id="leftcolumn"><h2 class="left">Tutorial</h2>
+<a target="_top" href="http://www.w3schools.com/angular/default.asp" class="menu_default">AngularJS HOME</a>
+<a target="_top" href="http://www.w3schools.com/angular/angular_intro.asp" class="menu_angular_intro">AJS Introduction</a>
+<a target="_top" href="http://www.w3schools.com/angular/angular_expressions.asp" class="menu_angular_expressions">AJS Expressions</a>
+<a target="_top" href="http://www.w3schools.com/angular/angular_directives.asp" class="menu_angular_directives">AJS Directives</a>
+<a target="_top" href="http://www.w3schools.com/angular/angular_controllers.asp" class="menu_angular_controllers">AJS Controllers</a>
+<a target="_top" href="http://www.w3schools.com/angular/angular_filters.asp" class="menu_angular_filters">AJS Filters</a>
+<a target="_top" href="http://www.w3schools.com/angular/angular_http.asp" class="menu_angular_http">AJS HttpRequest</a>
+<a target="_top" href="http://www.w3schools.com/angular/angular_tables.asp" class="menu_angular_tables">AJS Tables</a>
+<a target="_top" href="http://www.w3schools.com/angular/angular_sql.asp" class="menu_angular_sql">AJS SQL</a>
+<a target="_top" href="http://www.w3schools.com/angular/angular_htmldom.asp" class="menu_angular_htmldom">AJS HTML DOM</a>
+<a target="_top" href="http://www.w3schools.com/angular/angular_events.asp" class="menu_angular_events">AJS HTML Events</a>
+<a target="_top" href="http://www.w3schools.com/angular/angular_modules.asp" class="menu_angular_modules">AJS Modules</a>
+<a target="_top" href="http://www.w3schools.com/angular/angular_forms.asp" class="menu_angular_forms">AJS Forms</a>
+<a target="_top" href="http://www.w3schools.com/angular/angular_validation.asp" class="menu_angular_validation">AJS Validation</a>
+<a target="_top" href="http://www.w3schools.com/angular/angular_bootstrap.asp" class="menu_angular_bootstrap">AJS Bootstrap</a>
+<a target="_top" href="http://www.w3schools.com/angular/angular_includes.asp" class="menu_angular_includes">AJS Includes</a>
+<a target="_top" href="http://www.w3schools.com/angular/angular_application.asp" class="menu_angular_application">AJS Application</a>
+<br>
+<h2 class="left">Examples</h2>
+<a target="_top" href="http://www.w3schools.com/angular/angular_examples.asp" class="menu_angular_examples">AJS Examples</a>
+<br>
+<h2 class="left">References</h2>
+<a target="_top" href="http://www.w3schools.com/angular/angular_ref_directives.asp" class="menu_angular_ref_directives">AJS Reference</a></div><div id="main"><div id="mainLeaderboard"><!-- MainLeaderboard --><div id="div-gpt-ad-1403595829794-2" style="width:728px;height:90px;float:right;"><script type="text/javascript">googletag.cmd.push(function() { googletag.display('div-gpt-ad-1403595829794-2'); });</script><div style="border: 0pt none;" id="google_ads_iframe_/16833175/MainLeaderboard_0__container__"><iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none; vertical-align: bottom;" marginheight="0" marginwidth="0" scrolling="no" name="google_ads_iframe_/16833175/MainLeaderboard_0" id="google_ads_iframe_/16833175/MainLeaderboard_0" frameborder="0" height="90" width="728"></iframe></div><iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none; vertical-align: bottom; visibility: hidden; display: none;" marginheight="0" marginwidth="0" scrolling="no" name="google_ads_iframe_/16833175/MainLeaderboard_0__hidden__" id="google_ads_iframe_/16833175/MainLeaderboard_0__hidden__" frameborder="0" height="0" width="0"></iframe></div></div>
+<h1>AngularJS <span class="color_h1">Modules</span></h1>
+<div class="chapter">
+<div class="prev"><a class="chapter" href="http://www.w3schools.com/angular/angular_events.asp">« Previous</a></div>
+<div class="next"><a class="chapter" href="http://www.w3schools.com/angular/angular_forms.asp">Next Chapter »</a></div>
+</div>
+<hr>
+<p class="intro">Modules define applications. All application controllers should 
+belong to a module. </p>
+
+<p class="intro">Modules make your application more readable, and keep the 
+global namespace clean. </p>
+
+<hr>
+
+<h2>AngularJS Module Example</h2>
+<p>In this example, "myApp.js" contains an application module definition, "myCtrl.js" 
+contains a controller:</p>
+<div class="example">
+<h2 class="example">AngularJS Example</h2>
+<div class="example_code notranslate htmlHigh">
+	<span class="highLT">&lt;</span><span class="highELE">!DOCTYPE</span> <span class="highATT">html</span><span class="highGT">&gt;</span><br><span class="highLT">&lt;</span><span class="highELE">html</span><span class="highGT">&gt;</span><br><span class="highLT">&lt;</span><span class="highELE">body</span><span class="highGT">&gt;</span><br><br><span class="highLT">&lt;</span><span class="highELE">div</span> <span class="highATT">ng-app=</span><span class="highVAL">"myApp"</span> 
+	<span class="highATT">ng-controller=</span><span class="highVAL">"myCtrl"</span><span class="highGT">&gt;</span><br><span class="highATT">{{ firstName + " " + lastName }}</span><br><span class="highLT">&lt;</span><span class="highELE">/div</span><span class="highGT">&gt;</span><br><br><span class="highLT">&lt;</span><span class="highELE">script</span> <span class="highATT">src=</span><span class="highVAL">"http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"</span><span class="highGT">&gt;</span><span class="highLT">&lt;</span><span class="highELE">/script</span><span class="highGT">&gt;</span><br>
+	<br><span class="highLT">&lt;</span><span class="highELE">script</span> <span class="highATT">src=</span><span class="highVAL">"myApp.js"</span><span class="highGT">&gt;</span><span class="highLT">&lt;</span><span class="highELE">/script</span><span class="highGT">&gt;</span><br><span class="highLT">&lt;</span><span class="highELE">script</span> <span class="highATT">src=</span><span class="highVAL">"myCtrl.js"</span><span class="highGT">&gt;</span><span class="highLT">&lt;</span><span class="highELE">/script</span><span class="highGT">&gt;</span><br><br><span class="highLT">&lt;</span><span class="highELE">/body</span><span class="highGT">&gt;</span><br><span class="highLT">&lt;</span><span class="highELE">/html</span><span class="highGT">&gt;</span>
+</div>
+<br><a class="tryitbtn" href="http://www.w3schools.com/angular/tryit.asp?filename=try_ng_module_files" target="_blank">Try it Yourself »</a>
+</div>
+<br>
+
+<hr>
+<h2>Controllers Pollute the Global Namespace</h2>
+<p>All examples in this tutorial, have used global values (global variables or 
+global functions).</p>
+<p>Global values should be avoided in applications. They can easily be overwritten or destroyed by other scripts.</p>
+<p>AngularJS modules can solve (or reduce) this problem.</p>
+
+<hr>
+<h2>A Controller Without a Module </h2>
+
+<p>The application does not have a name, and the controller function is global:</p>
+<div class="example">
+<h2 class="example">AngularJS Example</h2>
+<div class="example_code notranslate htmlHigh">
+<span class="highLT">&lt;</span><span class="highELE">!DOCTYPE</span> <span class="highATT">html</span><span class="highGT">&gt;</span><br><span class="highLT">&lt;</span><span class="highELE">html</span><span class="highGT">&gt;</span><br><span class="highLT">&lt;</span><span class="highELE">body</span><span class="highGT">&gt;</span><br><br><span class="highLT">&lt;</span><span class="highELE">div</span> <span class="highATT">ng-app=</span><span class="highVAL">""</span> 
+	<span class="highATT">ng-controller=</span><span class="highVAL">"myCtrl"</span><span class="highGT">&gt;</span><br><span class="highATT">{{ firstName + " " + lastName }}</span><br><span class="highLT">&lt;</span><span class="highELE">/div</span><span class="highGT">&gt;</span><br><br><span class="highLT">&lt;</span><span class="highELE">script</span><span class="highGT">&gt;</span><br>function 
+	myCtrl($scope) {<br>
+	&nbsp;&nbsp;&nbsp; $scope.firstName 
+	= "John";<br>&nbsp;&nbsp;&nbsp; $scope.lastName 
+	= "Doe";<br>}<br><span class="highLT">&lt;</span><span class="highELE">/script</span><span class="highGT">&gt;</span><br><br><span class="highLT">&lt;</span><span class="highELE">script</span> <span class="highATT">src=</span><span class="highVAL">"http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"</span><span class="highGT">&gt;</span><span class="highLT">&lt;</span><span class="highELE">/script</span><span class="highGT">&gt;</span><br>
+<br><span class="highLT">&lt;</span><span class="highELE">/body</span><span class="highGT">&gt;</span><br><span class="highLT">&lt;</span><span class="highELE">/html</span><span class="highGT">&gt;</span>
+</div>
+<br><a class="tryitbtn" href="http://www.w3schools.com/angular/tryit.asp?filename=try_ng_mod_controller" target="_blank">Try it Yourself »</a>
+</div>
+<br>
+<hr>
+<h2>A Controller With a Module </h2>
+
+<p>The application has a name 
+(ng-app="myApp"), and the controller is a property of the 
+module: </p>
+<div class="example">
+<h2 class="example">AngularJS Example</h2>
+<div class="example_code notranslate htmlHigh">
+	<span class="highLT">&lt;</span><span class="highELE">!DOCTYPE</span> <span class="highATT">html</span><span class="highGT">&gt;</span><br><span class="highLT">&lt;</span><span class="highELE">html</span><span class="highGT">&gt;</span><br><span class="highLT">&lt;</span><span class="highELE">head</span><span class="highGT">&gt;</span><br><span class="highLT">&lt;</span><span class="highELE">script</span> <span class="highATT">src=</span><span class="highVAL">"http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"</span><span class="highGT">&gt;</span><span class="highLT">&lt;</span><span class="highELE">/script</span><span class="highGT">&gt;</span><br>
+	<span class="highLT">&lt;</span><span class="highELE">/head</span><span class="highGT">&gt;</span><br><br><span class="highLT">&lt;</span><span class="highELE">body</span><span class="highGT">&gt;</span><br><br><span class="highLT">&lt;</span><span class="highELE">div</span> <span class="highATT">ng-app=</span><span class="highVAL">"myApp"</span> <span class="highATT">ng-controller=</span><span class="highVAL">"myCtrl"</span><span class="highGT">&gt;</span><br>
+	<span class="highATT">{{ firstName + " " + lastName }}</span><br><span class="highLT">&lt;</span><span class="highELE">/div</span><span class="highGT">&gt;</span><br><br><span class="highLT">&lt;</span><span class="highELE">script</span><span class="highGT">&gt;</span><br>var 
+	app 
+	= angular.module("myApp", 
+	[]);<br><br>app.controller("myCtrl", function($scope) {<br>&nbsp;&nbsp;&nbsp; $scope.firstName 
+	= "John";<br>&nbsp;&nbsp;&nbsp; $scope.lastName 
+	= "Doe";<br>});<br><span class="highLT">&lt;</span><span class="highELE">/script</span><span class="highGT">&gt;</span><br><br><span class="highLT">&lt;</span><span class="highELE">/body</span><span class="highGT">&gt;</span><br><span class="highLT">&lt;</span><span class="highELE">/html</span><span class="highGT">&gt;</span>
+</div>
+<br><a class="tryitbtn" href="http://www.w3schools.com/angular/tryit.asp?filename=try_ng_module" target="_blank">Try it Yourself »</a>
+</div>
+<br>
+<hr>
+<h2>When to Load the Library?</h2>
+<p>
+</p><table class="lamp"><tbody><tr>
+<th style="width:34px"><img src="w3_17_files/lamp.jpg" alt="Note" style="height:32px;width:32px"></th>
+<td>In the example above, the AngularJS library is loaded in the &lt;head&gt; section.</td>
+</tr></tbody></table>
+<p></p>
+
+<p>A common advise for HTML applications, is to place all scripts at the very bottom of the &lt;body&gt; element.</p>
+<p>But, in many AngularJS examples, you will see the library being loaded in the 
+&lt;head&gt; element.</p>
+<p>This is often done because  
+calls to angular.module can only be compiled after the library has been loaded.</p>
+<p>Another solution is to load the AngularJS library in the &lt;body&gt; element, 
+but before your own AngularJS scripts: </p>
+<div class="example">
+<h2 class="example">AngularJS Example</h2>
+<div class="example_code notranslate htmlHigh">
+<span class="highLT">&lt;</span><span class="highELE">!DOCTYPE</span> <span class="highATT">html</span><span class="highGT">&gt;</span><br><span class="highLT">&lt;</span><span class="highELE">html</span><span class="highGT">&gt;</span><br><span class="highLT">&lt;</span><span class="highELE">body</span><span class="highGT">&gt;</span><br><br><span class="highLT">&lt;</span><span class="highELE">div</span> <span class="highATT">ng-app=</span><span class="highVAL">"myApp"</span> 
+<span class="highATT">ng-controller=</span><span class="highVAL">"myCtrl"</span><span class="highGT">&gt;</span><br><span class="highATT">{{ firstName + " " + lastName }}</span><br><span class="highLT">&lt;</span><span class="highELE">/div</span><span class="highGT">&gt;</span><br><br>
+<span class="highLT">&lt;</span><span class="highELE">script</span> <span class="highATT">src=</span><span class="highVAL">"http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"</span><span class="highGT">&gt;</span><span class="highLT">&lt;</span><span class="highELE">/script</span><span class="highGT">&gt;</span><br>
+<br><span class="highLT">&lt;</span><span class="highELE">script</span><span class="highGT">&gt;</span><br>var app = angular.module("myApp", 
+[]);<br><br>app.controller("myCtrl", function($scope) {<br>&nbsp;&nbsp;&nbsp; $scope.firstName 
+= "John";<br>&nbsp;&nbsp;&nbsp; $scope.lastName 
+= "Doe";<br>});<br><span class="highLT">&lt;</span><span class="highELE">/script</span><span class="highGT">&gt;</span><br><br><span class="highLT">&lt;</span><span class="highELE">/body</span><span class="highGT">&gt;</span><br><span class="highLT">&lt;</span><span class="highELE">/html</span><span class="highGT">&gt;</span>
+</div>
+<br><a class="tryitbtn" href="http://www.w3schools.com/angular/tryit.asp?filename=try_ng_module_body" target="_blank">Try it Yourself »</a>
+</div>
+<br>
+
+<hr>
+<h2>AngularJS Application Files</h2>
+<p>Now that you know what modules are, and how they work, it is time to build 
+your application file.</p>
+<p>Your application should have at least one module file, and one controller 
+file for each controller.</p>
+<p>First create a module file "myApp.js":</p>
+<div class="example">
+<div class="example_code notranslate htmlHigh">
+var app = angular.module("myApp", []);
+</div>
+</div>
+<p>
+</p><table class="lamp"><tbody><tr>
+<th style="width:34px"><img src="w3_17_files/lamp.jpg" alt="Note" style="height:32px;width:32px"></th>
+<td>The [] parameter in the module definition can be used to define dependent 
+modules.</td>
+</tr></tbody></table>
+<p></p>
+<p>Then create the controller file(s). In this case "myCtrl.js":</p>
+<div class="example">
+<div class="example_code notranslate htmlHigh">
+	app.controller("myCtrl", function($scope) {<br>&nbsp;&nbsp;&nbsp; $scope.firstName 
+	= "John";<br>&nbsp;&nbsp;&nbsp; $scope.lastName 
+	= "Doe";<br>});</div>
+</div>
+<p>Finally, edit your HTML page: </p>
+<div class="example">
+<h2 class="example">AngularJS Example</h2>
+<div class="example_code notranslate htmlHigh">
+<span class="highLT">&lt;</span><span class="highELE">!DOCTYPE</span> <span class="highATT">html</span><span class="highGT">&gt;</span><br><span class="highLT">&lt;</span><span class="highELE">html</span><span class="highGT">&gt;</span><br><span class="highLT">&lt;</span><span class="highELE">body</span><span class="highGT">&gt;</span><br><br><span class="highLT">&lt;</span><span class="highELE">div</span> <span class="highATT">ng-app=</span><span class="highVAL">"myApp"</span> 
+<span class="highATT">ng-controller=</span><span class="highVAL">"myCtrl"</span><span class="highGT">&gt;</span><br><span class="highATT">{{ firstName + " " + lastName }}</span><br><span class="highLT">&lt;</span><span class="highELE">/div</span><span class="highGT">&gt;</span><br><br>
+<span class="highLT">&lt;</span><span class="highELE">script</span> <span class="highATT">src=</span><span class="highVAL">"http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"</span><span class="highGT">&gt;</span><span class="highLT">&lt;</span><span class="highELE">/script</span><span class="highGT">&gt;</span><br>
+<br><span class="highLT">&lt;</span><span class="highELE">script</span> <span class="highATT">src=</span><span class="highVAL">"myApp.js"</span><span class="highGT">&gt;</span><span class="highLT">&lt;</span><span class="highELE">/script</span><span class="highGT">&gt;</span><br><span class="highLT">&lt;</span><span class="highELE">script</span> <span class="highATT">src=</span><span class="highVAL">"myCtrl.js"</span><span class="highGT">&gt;</span><span class="highLT">&lt;</span><span class="highELE">/script</span><span class="highGT">&gt;</span><br><br>
+<span class="highLT">&lt;</span><span class="highELE">/body</span><span class="highGT">&gt;</span><br><span class="highLT">&lt;</span><span class="highELE">/html</span><span class="highGT">&gt;</span>
+</div>
+<br><a class="tryitbtn" href="http://www.w3schools.com/angular/tryit.asp?filename=try_ng_module_files" target="_blank">Try it Yourself »</a>
+</div>
+<br>
+<br>
+
+<div class="chapter">
+<div class="prev"><a class="chapter" href="http://www.w3schools.com/angular/angular_events.asp">« Previous</a></div>
+<div class="next"><a class="chapter" href="http://www.w3schools.com/angular/angular_forms.asp">Next Chapter »</a></div>
+</div>
+				<hr>
+				<!-- SmallPS -->
+				<div id="div-gpt-ad-1403595829794-4" style="width:728px;display:none;">
+				<script type="text/javascript">
+				googletag.cmd.push(function() { googletag.display('div-gpt-ad-1403595829794-4'); });
+				</script>
+				<div style="border: 0pt none;" id="google_ads_iframe_/16833175/SmallPS_0__container__"><iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none; vertical-align: bottom;" marginheight="0" marginwidth="0" scrolling="no" name="google_ads_iframe_/16833175/SmallPS_0" id="google_ads_iframe_/16833175/SmallPS_0" frameborder="0" height="170" width="723"></iframe></div></div>
+				<!-- LargePS -->
+				<div id="div-gpt-ad-1403595829794-1" style="width:728px;display:none;">
+				<script type="text/javascript">
+				googletag.cmd.push(function() { googletag.display('div-gpt-ad-1403595829794-1'); });
+				</script>
+				<div style="border: 0pt none;" id="google_ads_iframe_/16833175/LargePS_0__container__"><iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none; vertical-align: bottom;" marginheight="0" marginwidth="0" scrolling="no" name="google_ads_iframe_/16833175/LargePS_0" id="google_ads_iframe_/16833175/LargePS_0" frameborder="0" height="280" width="723"></iframe></div></div>
+				<!-- BottomMediumRectangle -->
+				<div id="div-gpt-ad-1403595829794-0" style="width:300px;height:250px;margin-left:172px;">
+				<script type="text/javascript">
+				googletag.cmd.push(function() { googletag.display('div-gpt-ad-1403595829794-0'); });
+				</script>
+				<div style="border: 0pt none;" id="google_ads_iframe_/16833175/BottomMediumRectangle_0__container__"><iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none; vertical-align: bottom;" marginheight="0" marginwidth="0" scrolling="no" name="google_ads_iframe_/16833175/BottomMediumRectangle_0" id="google_ads_iframe_/16833175/BottomMediumRectangle_0" frameborder="0" height="250" width="300"></iframe></div></div>
+				<div id="err_form">
+					<h2>Your suggestion:</h2>
+					<p><label for="err_email">Your E-mail (optional):</label> <input id="err_email" name="err_email" type="email"></p>
+					<p><label for="err_url">Page address:</label> <input disabled="disabled" id="err_url" name="err_url" type="text"></p>
+					<p><label for="err_desc">Description:</label> <textarea name="err_desc" id="err_desc" cols="92" rows="20"></textarea></p>
+					<p class="submit"><input value="Submit" onclick="sendErr()" type="button"></p>
+					<div class="err_close" onclick="hideError()">Close [X]</div>
+				</div>
+				<div id="err_sent">
+					<h2>Thank You For Helping Us!</h2>
+					<p>Your message has been sent to W3Schools.</p>
+					<div class="err_close" onclick="hideSent()">Close [X]</div>
+				</div>
+			</div>
+			<div style="clear:both;"></div>
+		</div>
+	</div>
+	<div id="rightcolumn">
+		<div id="searchSection">
+			<div id="searchText">Search w3schools.com:</div>
+			<div id="googleSearch">
+				<div id="___gcse_0"><div class="gsc-control-cse gsc-control-cse-en"><div dir="ltr" class="gsc-control-wrapper-cse"><form accept-charset="utf-8" class="gsc-search-box gsc-search-box-tools"><table class="gsc-search-box" cellpadding="0" cellspacing="0"><tbody><tr><td class="gsc-input"><div id="gsc-iw-id1" class="gsc-input-box"><table class="gstl_50 " id="gs_id50" style="width: 100%; padding: 0px;" cellpadding="0" cellspacing="0"><tbody><tr><td class="gsib_a" id="gs_tti50"><input spellcheck="false" dir="ltr" id="gsc-i-id1" style="width: 100%; padding: 0px; border: medium none; margin: 0px; height: auto; outline: medium none; background: url(&quot;http://www.google.com/cse/intl/en/images/google_custom_search_watermark.gif&quot;) no-repeat scroll left center rgb(255, 255, 255);" title="search" name="search" class="gsc-input" size="10" autocomplete="off" type="text"></td><td class="gsib_b"><div dir="ltr" id="gs_st50" class="gsst_b"><a style="display: none;" href="javascript:void(0)" class="gsst_a"><span id="gs_cb50" class="gscb_a">×</span></a></div></td></tr></tbody></table></div><input id="bgresponse" name="bgresponse" type="hidden"></td><td class="gsc-search-button"><input title="search" class="gsc-search-button gsc-search-button-v2" src="w3_17_files/search_box_icon.png" type="image"></td><td class="gsc-clear-button"><div title="clear results" class="gsc-clear-button">&nbsp;</div></td></tr></tbody></table><table class="gsc-branding" cellpadding="0" cellspacing="0"><tbody><tr><td class="gsc-branding-user-defined"></td><td class="gsc-branding-text"><div class="gsc-branding-text">powered by</div></td><td class="gsc-branding-img"><img class="gsc-branding-img" src="w3_17_files/small-logo.png"></td></tr></tbody></table></form><div class="gsc-results-wrapper-overlay"><div tabindex="0" class="gsc-results-close-btn"></div><div class="gsc-tabsAreaInvisible"><div class="gsc-tabHeader gsc-inline-block gsc-tabhActive">Custom Search</div><span class="gs-spacer"> </span></div><div class="gsc-tabsAreaInvisible"></div><div class="gsc-above-wrapper-area-invisible"><table class="gsc-above-wrapper-area-container" cellpadding="0" cellspacing="0"><tbody><tr><td class="gsc-result-info-container"><div class="gsc-result-info-invisible"></div></td></tr></tbody></table></div><div class="gsc-adBlockInvisible"></div><div class="gsc-wrapper"><div class="gsc-adBlockInvisible"></div><div class="gsc-resultsbox-invisible"><div class="gsc-resultsRoot gsc-tabData gsc-tabdActive"><table class="gsc-resultsHeader" cellpadding="0" cellspacing="0"><tbody><tr><td class="gsc-twiddleRegionCell"><div class="gsc-twiddle"><div class="gsc-title">Web</div></div><div class="gsc-stats"></div><div class="gsc-results-selector gsc-all-results-active"><div title="show one result" class="gsc-result-selector gsc-one-result">&nbsp;</div><div title="show more results" class="gsc-result-selector gsc-more-results">&nbsp;</div><div title="show all results" class="gsc-result-selector gsc-all-results">&nbsp;</div></div></td><td class="gsc-configLabelCell"></td></tr></tbody></table><div><div class="gsc-expansionArea"></div></div></div></div></div></div><div tabindex="0" class="gsc-modal-background-image"></div></div></div></div>
+			</div>
+		</div>
+		<div id="translateSection">
+			<div id="google_translate_element" style="word-spacing:3px;background-color:transparent;position:relative;top:-7px;"><div style="" dir="ltr" class="skiptranslate goog-te-gadget"><div class="goog-te-gadget-simple" style="white-space: nowrap;" id=":0.targetLanguage"><img style="background-image: url(&quot;https://translate.googleapis.com/translate_static/img/te_ctrl3.gif&quot;); background-position: -65px 0px;" class="goog-te-gadget-icon" src="w3_17_files/cleardot.gif"><span style="vertical-align: middle;"><a href="javascript:void(0)" class="goog-te-menu-value"><span>Select Language</span><img src="w3_17_files/cleardot.gif" height="1" width="1"><span style="border-left: 1px solid rgb(187, 187, 187);">​</span><img src="w3_17_files/cleardot.gif" height="1" width="1"><span style="color: rgb(155, 155, 155);">▼</span></a></span></div></div></div>			
+		</div>
+		<div class="rightad">
+			<h2>WEB HOSTING</h2>
+			<a target="_blank" rel="nofollow" href="https://www.heartinternet.uk/?utm_source=w3schools&amp;utm_medium=cpc&amp;utm_campaign=w3schools%20text%20link">UK Reseller Hosting</a>
+		</div>
+		<div class="rightad">
+			<h2>WEB BUILDING</h2>
+			<a target="_blank" rel="nofollow" id="altovatext" href="http://www.altova.com/ref/?s=w3s_text2&amp;q=xmlspy">XML Editor - Free Trial!</a>
+			<script>
+			if (Math.random()<0.5)
+				{
+				x=document.getElementById("altovatext");
+				x.innerHTML="XML Editor - Free Trial!";
+				x.href="http://www.altova.com/ref/?s=w3s_text2&q=xmlspy";
+				}
+			</script>
+			<a target="_blank" rel="nofollow" href="http://www.wix.com/eteamhtml/900fwb-w3s?utm_campaign=ma_w3schools.com&amp;experiment_id=ma_w3schools.comlink1_900fwb-w3s&amp;embed_tags=camp&amp;utm_camp=hOUdCO-AmAMQm__j8AM">FREE Website BUILDER</a>
+			<a target="_blank" rel="nofollow" href="http://www.wix.com/eteamhtml/300n-w3s?utm_campaign=ma_w3schools.com&amp;experiment_id=ma_w3schools.comlink2_freehtml5templates_300n-w3s">Free HTML5 Templates</a>
+		</div>
+		<div class="rightad">
+			<h2>W3SCHOOLS EXAMS</h2>
+			<a target="_blank" href="http://www.w3schools.com/cert/default.asp">HTML, CSS, JavaScript, PHP, jQuery, XML, and ASP Certifications</a>
+		</div>
+		<div id="rightshare">
+			<h2>SHARE THIS PAGE</h2>
+			<div style="margin-top:7px;">
+				<script>
+				<!--
+				try{
+				loc=location.pathname;
+				if (loc.toUpperCase().indexOf(".ASP")<0) loc=loc+"default.asp";
+				txt='<ul id="sharelist">'
+				txt=txt+'<li id="facebook"><a href="http://www.facebook.com/sharer.php?u=http://www.w3schools.com'+loc+'" target="_blank" title="Facebook"></a></li>';
+				txt=txt+'<li id="twitter"><a href="http://twitter.com/home?status=Currently reading http://www.w3schools.com'+loc+'" target="_blank" title="Twitter"></a></li>';
+				txt=txt+'<li id="email"><a href="mailto:?&amp;subject='+document.title+'&amp;body=Take%20a%20look%20at%20this%20page%20at%20W3Schools.com:%20http://www.w3schools.com'+loc+'" target="_blank"  title="E-mail"></a></li>';
+				txt=txt+'<li id="googleplus"><a href="https://plus.google.com/share?url=http://www.w3schools.com'+loc+'" target="_blank" title="Google+"></a></li>';
+				txt=txt+'<li id="linkedin"><a href="http://www.linkedin.com/shareArticle?mini=true&url=http://www.w3schools.com'+loc+'&source=w3schools.com"  target="_blank"  title="LinkedIn"></a></li>';
+				txt=txt+'<li id="reddit"><a href="http://www.reddit.com/submit?url=http://www.w3schools.com'+loc+'" target="_blank" title="Reddit"></a></li>';
+				txt=txt+'</ul>';
+				document.write(txt);
+				}
+				catch(e) {}
+				//--></script><ul id="sharelist"><li id="facebook"><a href="http://www.facebook.com/sharer.php?u=http://www.w3schools.com/angular/angular_modules.asp" target="_blank" title="Facebook"></a></li><li id="twitter"><a href="http://twitter.com/home?status=Currently%20reading%20http://www.w3schools.com/angular/angular_modules.asp" target="_blank" title="Twitter"></a></li><li id="email"><a href="mailto:?&amp;subject=Angular%20Modules&amp;body=Take%20a%20look%20at%20this%20page%20at%20W3Schools.com:%20http://www.w3schools.com/angular/angular_modules.asp" target="_blank" title="E-mail"></a></li><li id="googleplus"><a href="https://plus.google.com/share?url=http://www.w3schools.com/angular/angular_modules.asp" target="_blank" title="Google+"></a></li><li id="linkedin"><a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.w3schools.com/angular/angular_modules.asp&amp;source=w3schools.com" target="_blank" title="LinkedIn"></a></li><li id="reddit"><a href="http://www.reddit.com/submit?url=http://www.w3schools.com/angular/angular_modules.asp" target="_blank" title="Reddit"></a></li></ul>
+			</div>
+			<div id="rightfblike" style="xdisplay:none;margin-top:10px;">
+				<img style="cursor:pointer;" src="w3_17_files/fblike.gif" onclick="clickFBLike()" alt="facebook">
+				<div id="fblikeframe" style="display:none;">
+					<div id="popupframe" style="position:fixed;height:100%;width:100%;top:0;left:0;background-color:#000000;opacity:0.5;" onclick="hideFBLike()"></div>
+					<div id="popupDIV" style="position:fixed;height:40%;width:40%;min-width:310px;min-height:250px;top:30%;left:30%;background-color:#ffffff;">
+					</div>
+				</div>
+				<script>
+				function clickFBLike() {
+					document.getElementById("fblikeframe").style.display='block'
+					document.getElementById("popupDIV").innerHTML = "<iframe src='/fblike.asp?r=" + Math.random() + "' frameborder='no' style='height:200px;width:300px;'></iframe><br><button onclick='hideFBLike()'>Close</button>";
+				}
+				
+				function hideFBLike() {
+					document.getElementById("fblikeframe").style.display='none'
+				}
+				</script>
+			</div>
+
+		</div>
+		<div id="skyscraper" style="padding-left:1px;">
+			<script>
+			var adScreenWidth = screen.width;
+			if (adScreenWidth <= 768) {
+			  document.write("<!-- MobileBottomBanner --><div id='div-gpt-ad-1403595829794-3' style='width:728px;height:90px;'>")
+			  googletag.cmd.push(function() { googletag.display('div-gpt-ad-1403595829794-3'); });
+			  document.write("</div>");   
+			} else { 
+			  document.write("<!-- WideSkyScraper --><div id='div-gpt-ad-1403595829794-5' style='width:160px;height:600px;'>")
+			  googletag.cmd.push(function() { googletag.display('div-gpt-ad-1403595829794-5'); });
+			  document.write("</div>");
+			}
+			</script><!-- WideSkyScraper --><div id="div-gpt-ad-1403595829794-5" style="width:160px;height:600px;"><div style="border: 0pt none;" id="google_ads_iframe_/16833175/WideSkyScraper_0__container__"><iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none; vertical-align: bottom;" marginheight="0" marginwidth="0" scrolling="no" name="google_ads_iframe_/16833175/WideSkyScraper_0" id="google_ads_iframe_/16833175/WideSkyScraper_0" frameborder="0" height="600" width="160"></iframe></div></div>
+		</div>
+		<div class="rightad" style="margin-top:8px">
+			<h2>WEB RESOURCES</h2>
+			<a target="_top" href="http://www.w3schools.com/browsers/default.asp">Web Statistics</a>
+			<a target="_top" href="http://www.w3schools.com/website/web_validate.asp">Web Validation</a>
+		</div>
+	</div>
+	<div style="clear:both;"></div>
+</div>
+<div class="footer">
+	<br>
+	<table id="bottomlinks"><tbody><tr>
+	<td style="vertical-align:top;">
+	<h3>Top 10 Tutorials</h3>
+	<a href="http://www.w3schools.com/html/default.asp"><span class="bottomlinksraquo">»</span> HTML Tutorial</a><br>
+	<a href="http://www.w3schools.com/html/html5_intro.asp"><span class="bottomlinksraquo">»</span> HTML5 Tutorial</a><br>
+	<a href="http://www.w3schools.com/css/default.asp"><span class="bottomlinksraquo">»</span> CSS Tutorial</a><br>
+	<a href="http://www.w3schools.com/css/css3_intro.asp"><span class="bottomlinksraquo">»</span> CSS3 Tutorial</a><br>
+	<a href="http://www.w3schools.com/js/default.asp"><span class="bottomlinksraquo">»</span> JavaScript Tutorial</a><br>
+	<a href="http://www.w3schools.com/jquery/default.asp"><span class="bottomlinksraquo">»</span> jQuery Tutorial</a><br>
+	<a href="http://www.w3schools.com/sql/default.asp"><span class="bottomlinksraquo">»</span> SQL Tutorial</a><br>
+	<a href="http://www.w3schools.com/php/default.asp"><span class="bottomlinksraquo">»</span> PHP Tutorial</a><br>
+	<a href="http://www.w3schools.com/aspnet/default.asp"><span class="bottomlinksraquo">»</span> ASP.NET Tutorial</a><br>
+	<a href="http://www.w3schools.com/xml/default.asp"><span class="bottomlinksraquo">»</span> XML Tutorial</a><br>
+	</td>
+	<td style="vertical-align:top;">
+	<h3>Top 10 References</h3>
+	<a href="http://www.w3schools.com/tags/default.asp"><span class="bottomlinksraquo">»</span> HTML/HTML5 Reference</a><br>
+	<a href="http://www.w3schools.com/cssref/default.asp"><span class="bottomlinksraquo">»</span> CSS 1,2,3 Reference</a><br>
+	<a href="http://www.w3schools.com/cssref/css3_browsersupport.asp"><span class="bottomlinksraquo">»</span> CSS 3 Browser Support</a><br>
+	<a href="http://www.w3schools.com/jsref/default.asp"><span class="bottomlinksraquo">»</span> JavaScript</a><br>
+	<a href="http://www.w3schools.com/jsref/default.asp"><span class="bottomlinksraquo">»</span> HTML DOM</a><br>
+	<a href="http://www.w3schools.com/dom/dom_nodetype.asp"><span class="bottomlinksraquo">»</span> XML DOM</a><br>
+	<a href="http://www.w3schools.com/php/php_ref_array.asp"><span class="bottomlinksraquo">»</span> PHP Reference</a><br>
+	<a href="http://www.w3schools.com/jquery/jquery_ref_selectors.asp"><span class="bottomlinksraquo">»</span> jQuery Reference</a><br>
+	<a href="http://www.w3schools.com/aspnet/webpages_ref_classes.asp"><span class="bottomlinksraquo">»</span> ASP.NET Reference</a><br>
+	<a href="http://www.w3schools.com/tags/ref_colornames.asp"><span class="bottomlinksraquo">»</span> HTML Colors</a><br>
+	</td>
+	<td style="vertical-align:top;">
+	<h3>Top 10 Examples</h3>
+	<a href="http://www.w3schools.com/html/html_examples.asp"><span class="bottomlinksraquo">»</span> HTML Examples</a><br>
+	<a href="http://www.w3schools.com/css/css_examples.asp"><span class="bottomlinksraquo">»</span> CSS Examples</a><br>
+	<a href="http://www.w3schools.com/js/js_examples.asp"><span class="bottomlinksraquo">»</span> JavaScript Examples</a><br>
+	<a href="http://www.w3schools.com/js/js_dom_examples.asp"><span class="bottomlinksraquo">»</span> HTML DOM Examples</a><br>
+	<a href="http://www.w3schools.com/php/php_examples.asp"><span class="bottomlinksraquo">»</span> PHP Examples</a><br>
+	<a href="http://www.w3schools.com/jquery/jquery_examples.asp"><span class="bottomlinksraquo">»</span> jQuery Examples</a><br>
+	<a href="http://www.w3schools.com/xml/xml_examples.asp"><span class="bottomlinksraquo">»</span> XML Examples</a><br>
+	<a href="http://www.w3schools.com/dom/dom_examples.asp"><span class="bottomlinksraquo">»</span> XML DOM Examples</a><br>
+	<a href="http://www.w3schools.com/asp/asp_examples.asp"><span class="bottomlinksraquo">»</span> ASP Examples</a><br>
+	<a href="http://www.w3schools.com/svg/svg_examples.asp"><span class="bottomlinksraquo">»</span> SVG Examples</a>
+	</td>
+	<td style="vertical-align:top;">
+	<h3>Web Certificates</h3>
+	<a href="http://www.w3schools.com/cert/default.asp"><span class="bottomlinksraquo">»</span> HTML Certificate</a><br>
+	<a href="http://www.w3schools.com/cert/default.asp"><span class="bottomlinksraquo">»</span> HTML5 Certificate</a><br>
+	<a href="http://www.w3schools.com/cert/default.asp"><span class="bottomlinksraquo">»</span> CSS Certificate</a><br>
+	<a href="http://www.w3schools.com/cert/default.asp"><span class="bottomlinksraquo">»</span> JavaScript Certificate</a><br>
+	<a href="http://www.w3schools.com/cert/default.asp"><span class="bottomlinksraquo">»</span> jQuery Certificate</a><br>
+	<a href="http://www.w3schools.com/cert/default.asp"><span class="bottomlinksraquo">»</span> PHP Certificate</a><br>
+	<a href="http://www.w3schools.com/cert/default.asp"><span class="bottomlinksraquo">»</span> XML Certificate</a><br>
+	<a href="http://www.w3schools.com/cert/default.asp"><span class="bottomlinksraquo">»</span> ASP Certificate</a><br>
+	</td>
+	<td style="vertical-align:top;">
+	<h3>Color Picker</h3>
+	<a href="http://www.w3schools.com/tags/ref_colorpicker.asp">
+	<img src="w3_17_files/colorpicker.gif" alt="colorpicker" style="width:80px;height:68px;"></a>
+	</td>
+	</tr></tbody></table>
+</div>
+<hr style="height:5px;">
+<div class="footer">
+	<div id="footerImg"><a href="http://www.w3schools.com/">
+		<img style="width:150px;height:28px;border:0" src="w3_17_files/w3schoolscom_gray.gif" alt="W3Schools.com"></a>
+	</div>
+	<div id="footerAbout">
+		<a href="" onclick="displayError();return false" style="word-spacing:normal;">REPORT ERROR</a> |
+		<a href="http://www.w3schools.com/default.asp" target="_top">HOME</a> |
+		<a href="#top" target="_top">TOP</a> |
+		<a href="" target="_blank" onclick="printPage();return false">PRINT</a> |
+		<a href="http://www.w3schools.com/forum/default.asp" target="_blank">FORUM</a> |
+		<a href="http://www.w3schools.com/about/default.asp" target="_top">ABOUT</a> |
+		<a href="http://www.w3schools.com/about/about_advert.asp" target="_top" style="word-spacing:normal;">ADVERTISE WITH US</a>
+	</div>
+	<div id="footerText">
+		W3Schools is optimized for learning, testing, and training. Examples 
+might be simplified to improve reading and basic understanding.
+		Tutorials, references, and examples are constantly reviewed to avoid 
+errors, but we cannot warrant full correctness of all content.
+		While using this site, you agree to have read and accepted our <a href="http://www.w3schools.com/about/about_copyright.asp">terms of use</a>, <a href="http://www.w3schools.com/about/about_privacy.asp">cookie and privacy policy</a>.
+		<a href="http://www.w3schools.com/about/about_copyright.asp">Copyright 1999-2014</a> by Refsnes Data. All Rights Reserved.<br><br>
+	</div>
+</div>
+<script src="w3_17_files/w3schools.js"></script>
+
+<script src="w3_17_files/element.js"></script>
+
+
+<div id="goog-gt-tt" class="skiptranslate" dir="ltr"><div style="padding: 8px;"><div><div class="logo"><img src="w3_17_files/translate-32.png" height="20" width="20"></div></div></div><div class="top" style="padding: 8px; float: left; width: 100%;"><h1 class="title gray">Original text</h1></div><div class="middle" style="padding: 8px;"><div class="original-text"></div></div><div class="bottom" style="padding: 8px;"><div class="activity-links"><span class="activity-link">Contribute a better translation</span><span class="activity-link"></span></div><div class="started-activity-container"><hr style="color: #CCC; background-color: #CCC; height: 1px; border: none;"><div class="activity-root"></div></div></div><div style="display: none;" class="status-message"></div></div><table class="gstl_50 gssb_c" style="width: 221px; display: none; top: 141px; left: 1079px; position: absolute;" cellpadding="0" cellspacing="0"><tbody><tr><td class="gssb_f"></td><td style="width: 100%;" class="gssb_e"></td></tr></tbody></table><div style="position: absolute; top: -1000px; height: 1px; width: 1px;"><object id="fI0i09ch2tr" name="fI0i09ch2tr" type="application/x-shockwave-flash" data="w3_17_files/hrs.swf" height="500" width="400"><param name="allowScriptAccess" value="always"></object></div><iframe style="visibility: visible; box-sizing: content-box; width: 731px; height: 274px; display: none;" class="goog-te-menu-frame skiptranslate" frameborder="0"></iframe></body></html>
