@@ -3,7 +3,7 @@ package rsl.webCluster.compression;
 /**
  * Created by vignesh on 19/9/14.
  */
-public class Tuple<T,S> {
+public class Tuple<T, S> {
 
     private T first;
     private S second;

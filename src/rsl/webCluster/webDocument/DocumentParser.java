@@ -1,4 +1,5 @@
 package rsl.webCluster.webDocument;
+
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
@@ -11,11 +12,11 @@ import java.io.IOException;
  */
 public class DocumentParser {
 
-    public static String[] getTags(String docLocation){
+    public static String[] getTags(String docLocation) {
 
         Document doc = null;
         try {
-            doc = Jsoup.parse(new File(docLocation),"UTF-8","");
+            doc = Jsoup.parse(new File(docLocation), "UTF-8", "");
         } catch (IOException e) {
             System.err.println("File not found : check the path");
             e.printStackTrace();

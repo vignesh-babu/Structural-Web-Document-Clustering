@@ -1,10 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4338e054-df6c-4565-a449-7dfad4eb7bda" name="Default" comment="Web Document Clustering">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/research paper/2013-CIKM-Hachenberg-G.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    <list default="true" id="4338e054-df6c-4565-a449-7dfad4eb7bda" name="Default" comment="ranking added">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dictionaries/vignesh.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebClusters.iml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rsl/webCluster/webDocument/DocumentParser.java" afterPath="$PROJECT_DIR$/src/rsl/webCluster/webDocument/DocumentParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rsl/webCluster/Main.java" afterPath="$PROJECT_DIR$/src/rsl/webCluster/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rsl/webCluster/compression/Tuple.java" afterPath="$PROJECT_DIR$/src/rsl/webCluster/compression/Tuple.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rsl/webCluster/webDocument/WebDocument.java" afterPath="$PROJECT_DIR$/src/rsl/webCluster/webDocument/WebDocument.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rsl/webCluster/compression/lzw.java" afterPath="$PROJECT_DIR$/src/rsl/webCluster/compression/lzw.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/train/w3_1.html" afterPath="$PROJECT_DIR$/data/train/w3_1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/train/w3_10.html" afterPath="$PROJECT_DIR$/data/train/w3_10.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/train/w3_11.html" afterPath="$PROJECT_DIR$/data/train/w3_11.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/train/w3_12.html" afterPath="$PROJECT_DIR$/data/train/w3_12.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/train/w3_13.html" afterPath="$PROJECT_DIR$/data/train/w3_13.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/train/w3_14.html" afterPath="$PROJECT_DIR$/data/train/w3_14.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/train/w3_15.html" afterPath="$PROJECT_DIR$/data/train/w3_15.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test/w3_16.html" afterPath="$PROJECT_DIR$/data/test/w3_16.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test/w3_17.html" afterPath="$PROJECT_DIR$/data/test/w3_17.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test/w3_18.html" afterPath="$PROJECT_DIR$/data/test/w3_18.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test/w3_19.html" afterPath="$PROJECT_DIR$/data/test/w3_19.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/train/w3_2.html" afterPath="$PROJECT_DIR$/data/train/w3_2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test/w3_20.html" afterPath="$PROJECT_DIR$/data/test/w3_20.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/train/w3_3.html" afterPath="$PROJECT_DIR$/data/train/w3_3.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/train/w3_4.html" afterPath="$PROJECT_DIR$/data/train/w3_4.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/train/w3_5.html" afterPath="$PROJECT_DIR$/data/train/w3_5.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/train/w3_6.html" afterPath="$PROJECT_DIR$/data/train/w3_6.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/train/w3_7.html" afterPath="$PROJECT_DIR$/data/train/w3_7.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/train/w3_8.html" afterPath="$PROJECT_DIR$/data/train/w3_8.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/train/w3_9.html" afterPath="$PROJECT_DIR$/data/train/w3_9.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rsl/webCluster/docOps/webIndexer.java" afterPath="$PROJECT_DIR$/src/rsl/webCluster/docOps/webIndexer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/train/wiki_1.html" afterPath="$PROJECT_DIR$/data/train/wiki_1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/train/wiki_10.html" afterPath="$PROJECT_DIR$/data/train/wiki_10.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/train/wiki_11.html" afterPath="$PROJECT_DIR$/data/train/wiki_11.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/train/wiki_12.html" afterPath="$PROJECT_DIR$/data/train/wiki_12.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/train/wiki_13.html" afterPath="$PROJECT_DIR$/data/train/wiki_13.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/train/wiki_14.html" afterPath="$PROJECT_DIR$/data/train/wiki_14.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/train/wiki_15.html" afterPath="$PROJECT_DIR$/data/train/wiki_15.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test/wiki_16.html" afterPath="$PROJECT_DIR$/data/test/wiki_16.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test/wiki_17.html" afterPath="$PROJECT_DIR$/data/test/wiki_17.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test/wiki_18.html" afterPath="$PROJECT_DIR$/data/test/wiki_18.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test/wiki_19.html" afterPath="$PROJECT_DIR$/data/test/wiki_19.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/train/wiki_2.html" afterPath="$PROJECT_DIR$/data/train/wiki_2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test/wiki_20.html" afterPath="$PROJECT_DIR$/data/test/wiki_20.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/train/wiki_3.html" afterPath="$PROJECT_DIR$/data/train/wiki_3.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/train/wiki_4.html" afterPath="$PROJECT_DIR$/data/train/wiki_4.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/train/wiki_5.html" afterPath="$PROJECT_DIR$/data/train/wiki_5.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/train/wiki_6.html" afterPath="$PROJECT_DIR$/data/train/wiki_6.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/train/wiki_7.html" afterPath="$PROJECT_DIR$/data/train/wiki_7.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/train/wiki_8.html" afterPath="$PROJECT_DIR$/data/train/wiki_8.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/train/wiki_9.html" afterPath="$PROJECT_DIR$/data/train/wiki_9.html" />
     </list>
     <ignored path="WebClusters.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -22,7 +78,8 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
+    <ui_properties converted="true" />
+    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true" converted="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
         <option name="NOTIFY_UNCAUGHT" value="true" />
@@ -58,9 +115,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <breakpoint_rules />
-    <ui_properties />
+    <breakpoint_rules converted="true" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -68,28 +123,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="DocumentParser.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/rsl/webCluster/webDocument/DocumentParser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="13" selection-start="217" selection-end="217" vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="666">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="WebDocument.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/rsl/webCluster/webDocument/WebDocument.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="18" selection-start="447" selection-end="447" vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="1350">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="lzw.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/rsl/webCluster/compression/lzw.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="14" selection-start="82" selection-end="82" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="954">
+            <state vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="1725">
+              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -98,37 +136,30 @@
       <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/rsl/webCluster/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="28" selection-start="612" selection-end="612" vertical-scroll-proportion="0.0" vertical-offset="312" max-vertical-offset="1008">
+            <state vertical-scroll-proportion="0.0" vertical-offset="458" max-vertical-offset="885">
+              <caret line="47" column="65" selection-start-line="47" selection-start-column="65" selection-end-line="47" selection-end-column="65" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="webIndexer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/rsl/webCluster/docOps/webIndexer.java">
+      <file leaf-file-name="Ranker.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/rsl/webCluster/ranking/Ranker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="92" column="9" selection-start="2786" selection-end="2786" vertical-scroll-proportion="0.0" vertical-offset="1344" max-vertical-offset="1818">
-              <folding />
+            <state vertical-scroll-proportion="1.1594203" vertical-offset="0" max-vertical-offset="990">
+              <caret line="32" column="70" selection-start-line="32" selection-start-column="70" selection-end-line="32" selection-end-column="70" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Tuple.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/rsl/webCluster/compression/Tuple.java">
+      <file leaf-file-name="ValueComparator.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/rsl/webCluster/ranking/ValueComparator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="11" selection-start="161" selection-end="161" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="630">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider editor-type-id="MarkdownPreviewEditor">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="40" selection-start="422" selection-end="422" vertical-scroll-proportion="0.6743516" vertical-offset="0" max-vertical-offset="347">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -156,12 +187,14 @@
         <option value="$PROJECT_DIR$/src/rsl/webCluster/webDocument/DocumentParser.java" />
         <option value="$PROJECT_DIR$/src/rsl/webCluster/docOps/webClusterGenerator.java" />
         <option value="$PROJECT_DIR$/src/rsl/webCluster/docOps/Main.java" />
-        <option value="$PROJECT_DIR$/src/rsl/webCluster/Main.java" />
         <option value="$PROJECT_DIR$/src/rsl/webCluster/docOps/webIndexer.java" />
         <option value="$PROJECT_DIR$/src/rsl/webCluster/compression/lzw.java" />
-        <option value="$PROJECT_DIR$/src/rsl/webCluster/webDocument/WebDocument.java" />
         <option value="$PROJECT_DIR$/src/rsl/webCluster/compression/Tuple.java" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/rsl/webCluster/ranking/ValueComparator.java" />
+        <option value="$PROJECT_DIR$/src/rsl/webCluster/webDocument/WebDocument.java" />
+        <option value="$PROJECT_DIR$/src/rsl/webCluster/Main.java" />
+        <option value="$PROJECT_DIR$/src/rsl/webCluster/ranking/Ranker.java" />
       </list>
     </option>
   </component>
@@ -185,7 +218,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -197,32 +230,97 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="WebClusters" />
+              <option name="myItemId" value="Structural-Web-Document-Clustering" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="WebClusters" />
+              <option name="myItemId" value="Structural-Web-Document-Clustering" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="WebClusters" />
+              <option name="myItemId" value="Structural-Web-Document-Clustering" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="WebClusters" />
+              <option name="myItemId" value="Structural-Web-Document-Clustering" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="WebClusters" />
+              <option name="myItemId" value="Structural-Web-Document-Clustering" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webCluster" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Structural-Web-Document-Clustering" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Structural-Web-Document-Clustering" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webCluster" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webDocument" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Structural-Web-Document-Clustering" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Structural-Web-Document-Clustering" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webCluster" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ranking" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Structural-Web-Document-Clustering" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Structural-Web-Document-Clustering" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -232,7 +330,21 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Structural-Web-Document-Clustering" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Structural-Web-Document-Clustering" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -242,16 +354,18 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="FullScreen" value="false" />
-    <property name="options.lastSelected" value="http.proxy" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="options.lastSelected" value="reference.projectsettings.compiler.javacompiler" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="LayoutCode.rearrangeEntriesJava" value="false" />
     <property name="recentsLimit" value="5" />
+    <property name="LayoutCode.rearrangeEntriesJava" value="false" />
     <property name="dynamic.classpath" value="false" />
-    <property name="LayoutCode.rearrangeEntries" value="false" />
+    <property name="LayoutCode.rearrangeEntries" value="true" />
+    <property name="FullScreen" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -263,15 +377,15 @@
   <component name="RunManager" selected="Application.Main">
     <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="rsl.webCluster.Main" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="WebClusters" />
+      <module name="Structural-Web-Document-Clustering" />
       <envs />
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="" />
@@ -283,10 +397,52 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin" singleton="true">
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
       <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
-      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
@@ -307,14 +463,13 @@
       <option name="NETWORK_LATENCY" value="none" />
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
       <method />
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -371,45 +526,6 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
-      <module name="" />
-      <option name="ACTIVITY_CLASS" value="" />
-      <option name="MODE" value="default_activity" />
-      <option name="DEPLOY" value="true" />
-      <option name="ARTIFACT_NAME" value="" />
-      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="USE_COMMAND_LINE" value="true" />
-      <option name="COMMAND_LINE" value="" />
-      <option name="WIPE_USER_DATA" value="false" />
-      <option name="DISABLE_BOOT_ANIMATION" value="false" />
-      <option name="NETWORK_SPEED" value="full" />
-      <option name="NETWORK_LATENCY" value="none" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <method />
-    </configuration>
     <list size="1">
       <item index="0" class="java.lang.String" itemvalue="Application.Main" />
     </list>
@@ -424,22 +540,8 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
-  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
-    <option name="USER" value="" />
-    <option name="PASSWORD" value="" />
-    <option name="mySSHConnectionTimeout" value="30000" />
-    <option name="mySSHReadTimeout" value="30000" />
-    <option name="LAST_MERGED_REVISION" />
-    <option name="MERGE_DRY_RUN" value="false" />
-    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
-    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
-    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
-    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
-    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
-    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
-    <option name="FORCE_UPDATE" value="false" />
-    <option name="IGNORE_EXTERNALS" value="false" />
-    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  <component name="SvnConfiguration" myUseAcceleration="nothing">
+    <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -450,36 +552,39 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="1301" height="744" extended-state="0" />
+    <frame x="65" y="24" width="1301" height="744" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935917" sideWeight="0.49961567" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42175856" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32866043" sideWeight="0.5003849" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32866043" sideWeight="0.4996151" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32840237" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42159763" sideWeight="0.5080707" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24942264" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935917" sideWeight="0.49961567" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32840237" sideWeight="0.49961567" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32866043" sideWeight="0.4996151" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2490392" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42159763" sideWeight="0.4919293" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935917" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39940387" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39792898" sideWeight="0.49961567" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
-    <option name="RECENTLY_FILTERED_USERS">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
       <collection />
     </option>
   </component>
@@ -491,13 +596,15 @@
       <TodoPanelSettings />
     </option>
     <MESSAGE value="Web Document Clustering" />
-    <option name="LAST_COMMIT_MESSAGE" value="Web Document Clustering" />
+    <MESSAGE value="ranking added" />
+    <option name="LAST_COMMIT_MESSAGE" value="ranking added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
+      <option name="time" value="27" />
     </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
@@ -517,261 +624,476 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/rsl/webCluster/webDocument/DocumentParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="217" selection-end="217" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="666">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/rsl/webCluster/webDocument/WebDocument.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="18" selection-start="447" selection-end="447" vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="1350">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/rsl/webCluster/compression/lzw.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="14" selection-start="82" selection-end="82" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="954">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/rsl/webCluster/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="28" selection-start="612" selection-end="612" vertical-scroll-proportion="0.0" vertical-offset="312" max-vertical-offset="1008">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/rsl/webCluster/docOps/webIndexer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="9" selection-start="2786" selection-end="2786" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1818">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/rsl/webCluster/compression/Tuple.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="11" selection-start="161" selection-end="161" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="630">
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="525">
+          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="285">
+          <caret line="13" column="38" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
+        </state>
+      </provider>
       <provider editor-type-id="MarkdownPreviewEditor">
         <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="6" selection-start="335" selection-end="335" vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="270">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/rsl/webCluster/webDocument/DocumentParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="15" selection-start="629" selection-end="629" vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="648">
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/rsl/webCluster/webDocument/WebDocument.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="34" selection-start="615" selection-end="615" vertical-scroll-proportion="0.0" vertical-offset="145" max-vertical-offset="900">
+        <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="1125">
+          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/rsl/webCluster/compression/lzw.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="0" selection-start="1086" selection-end="1086" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="810">
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="795">
+          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/rsl/webCluster/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="29" selection-start="452" selection-end="452" vertical-scroll-proportion="0.0" vertical-offset="288" max-vertical-offset="450">
+        <state vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="840">
+          <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/rsl/webCluster/docOps/webIndexer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="861" selection-end="861" vertical-scroll-proportion="0.0" vertical-offset="486" max-vertical-offset="720">
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1380" max-vertical-offset="1515">
+          <caret line="92" column="9" selection-start-line="92" selection-start-column="9" selection-end-line="92" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/rsl/webCluster/compression/Tuple.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="17" selection-start="230" selection-end="230" vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="720">
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="525">
+          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="285">
+          <caret line="13" column="40" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/rsl/webCluster/webDocument/DocumentParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="27" selection-start="103" selection-end="103" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="234">
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="555">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebClusters.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="324" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/rsl/webCluster/webDocument/WebDocument.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="103" selection-end="103" vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="252">
+        <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="1125">
+          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/rsl/webCluster/compression/lzw.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="16" selection-start="95" selection-end="95" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="234">
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="795">
+          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/rsl/webCluster/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="4" selection-start="91" selection-end="91" vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="252">
+        <state vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="840">
+          <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rsl/webCluster/docOps/webIndexer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1380" max-vertical-offset="1515">
+          <caret line="92" column="9" selection-start-line="92" selection-start-column="9" selection-end-line="92" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rsl/webCluster/compression/Tuple.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="525">
+          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="285">
+          <caret line="13" column="40" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/rsl/webCluster/webDocument/DocumentParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="27" selection-start="103" selection-end="103" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="234">
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="666">
+          <caret line="11" column="13" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebClusters.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="324" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/rsl/webCluster/webDocument/WebDocument.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="103" selection-end="103" vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="252">
+        <state vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="1350">
+          <caret line="18" column="18" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/rsl/webCluster/compression/lzw.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="16" selection-start="95" selection-end="95" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="234">
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="954">
+          <caret line="5" column="14" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/rsl/webCluster/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="4" selection-start="91" selection-end="91" vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="252">
+        <state vertical-scroll-proportion="0.0" vertical-offset="312" max-vertical-offset="1008">
+          <caret line="24" column="28" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rsl/webCluster/docOps/webIndexer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1818">
+          <caret line="92" column="9" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rsl/webCluster/compression/Tuple.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="630">
+          <caret line="10" column="11" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="270">
+          <caret line="9" column="6" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/rsl/webCluster/webDocument/DocumentParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="27" selection-start="103" selection-end="103" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="234">
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="648">
+          <caret line="25" column="15" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebClusters.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="324" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/rsl/webCluster/webDocument/WebDocument.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="103" selection-end="103" vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="252">
+        <state vertical-scroll-proportion="0.0" vertical-offset="145" max-vertical-offset="900">
+          <caret line="28" column="34" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/rsl/webCluster/compression/lzw.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="16" selection-start="95" selection-end="95" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="234">
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="810">
+          <caret line="34" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/rsl/webCluster/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="87" selection-end="87" vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="252">
+        <state vertical-scroll-proportion="0.0" vertical-offset="288" max-vertical-offset="450">
+          <caret line="16" column="29" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rsl/webCluster/docOps/webIndexer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="486" max-vertical-offset="720">
+          <caret line="27" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rsl/webCluster/compression/Tuple.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="720">
+          <caret line="14" column="17" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rsl/webCluster/webDocument/DocumentParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="234">
+          <caret line="5" column="27" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rsl/webCluster/webDocument/WebDocument.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="252">
+          <caret line="8" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rsl/webCluster/compression/lzw.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="234">
+          <caret line="5" column="16" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rsl/webCluster/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="252">
+          <caret line="6" column="4" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rsl/webCluster/webDocument/DocumentParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="234">
+          <caret line="5" column="27" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rsl/webCluster/webDocument/WebDocument.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="252">
+          <caret line="8" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rsl/webCluster/compression/lzw.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="234">
+          <caret line="5" column="16" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rsl/webCluster/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="252">
+          <caret line="6" column="4" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rsl/webCluster/webDocument/DocumentParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="234">
+          <caret line="5" column="27" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rsl/webCluster/webDocument/WebDocument.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="252">
+          <caret line="8" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rsl/webCluster/compression/lzw.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="234">
+          <caret line="5" column="16" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rsl/webCluster/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="252">
+          <caret line="6" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/rsl/webCluster/webDocument/NodeVisitorModifier.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="262" selection-end="262" vertical-scroll-proportion="0.5468354" vertical-offset="0" max-vertical-offset="612" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebClusters.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="79" selection-end="79" vertical-scroll-proportion="0.08571429" vertical-offset="0" max-vertical-offset="420" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/rsl/webCluster/docOps/webIndexer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="9" selection-start="2786" selection-end="2786" vertical-scroll-proportion="0.0" vertical-offset="1344" max-vertical-offset="1818">
-          <folding />
+        <state vertical-scroll-proportion="0.5468354" vertical-offset="0" max-vertical-offset="612">
+          <caret line="12" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/rsl/webCluster/compression/lzw.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="14" selection-start="82" selection-end="82" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="954">
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="795">
+          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/rsl/webCluster/webDocument/WebDocument.java">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="18" selection-start="447" selection-end="447" vertical-scroll-proportion="0.0" vertical-offset="200" max-vertical-offset="1278">
+        <state vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="285">
+          <caret line="13" column="38" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rsl/webCluster/compression/Tuple.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14814815" vertical-offset="90" max-vertical-offset="495">
+          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rsl/webCluster/docOps/webIndexer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8594848" vertical-offset="938" max-vertical-offset="1440">
+          <caret line="92" column="9" selection-start-line="92" selection-start-column="9" selection-end-line="92" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rsl/webCluster/webDocument/DocumentParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="555">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rsl/webCluster/ranking/ValueComparator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="427">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/rsl/webCluster/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="28" selection-start="612" selection-end="612" vertical-scroll-proportion="0.0" vertical-offset="312" max-vertical-offset="1008">
+        <state vertical-scroll-proportion="0.0" vertical-offset="236" max-vertical-offset="885">
+          <caret line="47" column="65" selection-start-line="47" selection-start-column="65" selection-end-line="47" selection-end-column="65" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/rsl/webCluster/webDocument/DocumentParser.java">
+    <entry file="file://$PROJECT_DIR$/src/rsl/webCluster/webDocument/WebDocument.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="217" selection-end="217" vertical-scroll-proportion="0.0" vertical-offset="2" max-vertical-offset="594">
+        <state vertical-scroll-proportion="0.0" vertical-offset="945" max-vertical-offset="1935">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/rsl/webCluster/compression/Tuple.java">
+    <entry file="file://$PROJECT_DIR$/src/rsl/webCluster/ranking/Ranker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="11" selection-start="161" selection-end="161" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
-          <folding />
+        <state vertical-scroll-proportion="1.1594203" vertical-offset="0" max-vertical-offset="990">
+          <caret line="32" column="70" selection-start-line="32" selection-start-column="70" selection-end-line="32" selection-end-column="70" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="40" selection-start="422" selection-end="422" vertical-scroll-proportion="0.6743516" vertical-offset="0" max-vertical-offset="347">
-          <folding />
-        </state>
-      </provider>
-    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>Android API 20, L preview Platform</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Structural-Web-Document-Clustering</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>jdk 1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>jsoup-1.7.3</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
 

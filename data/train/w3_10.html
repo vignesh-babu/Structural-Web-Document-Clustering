@@ -1,19 +1,26 @@
 <!DOCTYPE html>
-<html style="height: 100%;" lang="en-US"><head>
+<html style="height: 100%;" lang="en-US">
+<head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <title>XML Syntax</title>
 <style>a.menu_xml_syntax{font-weight:bold;}</style>
 <style>
-#smallnavContainer {display:none;}
+    #smallnavContainer {display:none;}
 </style>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
-<meta name="Keywords" content="HTML,CSS,XML,JavaScript,DOM,jQuery,ASP.NET,PHP,SQL,colors,tutorial,programming,development,training,learning,quiz,primer,lessons,reference,examples,source code,demos,tips,color table,w3c,cascading style sheets,active server pages,Web building,Webmaster">
-<meta name="Description" content="Free HTML CSS JavaScript DOM jQuery XML AJAX RSS ASP .NET PHP SQL tutorials, references, examples for web building.">
+<meta name="Keywords"
+      content="HTML,CSS,XML,JavaScript,DOM,jQuery,ASP.NET,PHP,SQL,colors,tutorial,programming,development,training,learning,quiz,primer,lessons,reference,examples,source code,demos,tips,color table,w3c,cascading style sheets,active server pages,Web building,Webmaster">
+<meta name="Description"
+      content="Free HTML CSS JavaScript DOM jQuery XML AJAX RSS ASP .NET PHP SQL tutorials, references, examples for web building.">
 <link rel="icon" href="http://www.w3schools.com/favicon.ico" type="image/x-icon">
 
-<script src="w3_10_files/async-ads.js" async=""></script><script src="w3_10_files/cse.js" async="" type="text/javascript"></script><script src="w3_10_files/gpt.js" type="text/javascript" async=""></script><script src="w3_10_files/analytics.js" async=""></script><script>
+<script src="w3_10_files/async-ads.js" async=""></script>
+<script src="w3_10_files/cse.js" async="" type="text/javascript"></script>
+<script src="w3_10_files/gpt.js" type="text/javascript" async=""></script>
+<script src="w3_10_files/analytics.js" async=""></script>
+<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -22,6 +29,7 @@
   ga('create', 'UA-3855518-1', 'auto');
   ga('require', 'displayfeatures');
   ga('send', 'pageview');
+
 </script>
 
 <script type="text/javascript">
@@ -37,6 +45,7 @@ gads.src = (useSSL ? 'https:' : 'http:') +
 var node = document.getElementsByTagName('script')[0];
 node.parentNode.insertBefore(gads, node);
 })();
+
 </script>
 
 <script type="text/javascript">
@@ -55,467 +64,802 @@ googletag.pubads().setTargeting("content","xml");
 googletag.pubads().enableSingleRequest();
 googletag.enableServices();
 });
-</script><script src="w3_10_files/pubads_impl_50.js" type="text/javascript" async=""></script><iframe style="visibility: hidden; display: none;" src="w3_10_files/container.html"></iframe>
+
+</script>
+<script src="w3_10_files/pubads_impl_50.js" type="text/javascript" async=""></script>
+<iframe style="visibility: hidden; display: none;" src="w3_10_files/container.html"></iframe>
 <link rel="stylesheet" type="text/css" href="w3_10_files/stdtheme.css">
-<link href="w3_10_files/translateelement.css" charset="UTF-8" rel="stylesheet" type="text/css"><script src="w3_10_files/main.js" charset="UTF-8" type="text/javascript"></script><script src="w3_10_files/element_main.js" charset="UTF-8" type="text/javascript"></script><script type="text/javascript" src="w3_10_files/jsapi"></script><link rel="stylesheet" href="w3_10_files/defaulten.css" type="text/css"><link rel="stylesheet" href="w3_10_files/default.css" type="text/css"><script src="w3_10_files/defaulten.js" type="text/javascript"></script><script src="w3_10_files/search.js" type="text/javascript"></script><style type="text/css">
-.gsc-control-cse {
-font-family: Arial, sans-serif;
-border-color: #FFFFFF;
-background-color: #FFFFFF;
-}
-.gsc-control-cse .gsc-table-result {
-font-family: Arial, sans-serif;
-}
-input.gsc-input, .gsc-input-box, .gsc-input-box-hover, .gsc-input-box-focus {
-border-color: #D9D9D9;
-}
-input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:focus {
-border-color: #2F5BB7;
-background-color: #357AE8;
-background-image: none;
-filter: none;
-}
-.gsc-tabHeader.gsc-tabhInactive {
-border-color: #CCCCCC;
-background-color: #FFFFFF;
-}
-.gsc-tabHeader.gsc-tabhActive {
-border-color: #CCCCCC;
-border-bottom-color: #FFFFFF;
-background-color: #FFFFFF;
-}
-.gsc-tabsArea {
-border-color: #CCCCCC;
-}
-.gsc-webResult.gsc-result,
-.gsc-results .gsc-imageResult {
-border-color: #FFFFFF;
-background-color: #FFFFFF;
-}
-.gsc-webResult.gsc-result:hover,
-.gsc-imageResult:hover {
-border-color: #FFFFFF;
-background-color: #FFFFFF;
-}
-.gs-webResult.gs-result a.gs-title:link,
-.gs-webResult.gs-result a.gs-title:link b,
-.gs-imageResult a.gs-title:link,
-.gs-imageResult a.gs-title:link b {
-color: #1155CC;
-}
-.gs-webResult.gs-result a.gs-title:visited,
-.gs-webResult.gs-result a.gs-title:visited b,
-.gs-imageResult a.gs-title:visited,
-.gs-imageResult a.gs-title:visited b {
-color: #1155CC;
-}
-.gs-webResult.gs-result a.gs-title:hover,
-.gs-webResult.gs-result a.gs-title:hover b,
-.gs-imageResult a.gs-title:hover,
-.gs-imageResult a.gs-title:hover b {
-color: #1155CC;
-}
-.gs-webResult.gs-result a.gs-title:active,
-.gs-webResult.gs-result a.gs-title:active b,
-.gs-imageResult a.gs-title:active,
-.gs-imageResult a.gs-title:active b {
-color: #1155CC;
-}
-.gsc-cursor-page {
-color: #1155CC;
-}
-a.gsc-trailing-more-results:link {
-color: #1155CC;
-}
-.gs-webResult .gs-snippet,
-.gs-imageResult .gs-snippet,
-.gs-fileFormatType {
-color: #333333;
-}
-.gs-webResult div.gs-visibleUrl,
-.gs-imageResult div.gs-visibleUrl {
-color: #009933;
-}
-.gs-webResult div.gs-visibleUrl-short {
-color: #009933;
-}
-.gs-webResult div.gs-visibleUrl-short {
-display: none;
-}
-.gs-webResult div.gs-visibleUrl-long {
-display: block;
-}
-.gs-promotion div.gs-visibleUrl-short {
-display: none;
-}
-.gs-promotion div.gs-visibleUrl-long {
-display: block;
-}
-.gsc-cursor-box {
-border-color: #FFFFFF;
-}
-.gsc-results .gsc-cursor-box .gsc-cursor-page {
-border-color: #CCCCCC;
-background-color: #FFFFFF;
-color: #1155CC;
-}
-.gsc-results .gsc-cursor-box .gsc-cursor-current-page {
-border-color: #CCCCCC;
-background-color: #FFFFFF;
-color: #1155CC;
-}
-.gsc-webResult.gsc-result.gsc-promotion {
-border-color: #F6F6F6;
-background-color: #F6F6F6;
-}
-.gsc-completion-title {
-color: #1155CC;
-}
-.gsc-completion-snippet {
-color: #333333;
-}
-.gs-promotion a.gs-title:link,
-.gs-promotion a.gs-title:link *,
-.gs-promotion .gs-snippet a:link {
-color: #1155CC;
-}
-.gs-promotion a.gs-title:visited,
-.gs-promotion a.gs-title:visited *,
-.gs-promotion .gs-snippet a:visited {
-color: #1155CC;
-}
-.gs-promotion a.gs-title:hover,
-.gs-promotion a.gs-title:hover *,
-.gs-promotion .gs-snippet a:hover {
-color: #1155CC;
-}
-.gs-promotion a.gs-title:active,
-.gs-promotion a.gs-title:active *,
-.gs-promotion .gs-snippet a:active {
-color: #1155CC;
-}
-.gs-promotion .gs-snippet,
-.gs-promotion .gs-title .gs-promotion-title-right,
-.gs-promotion .gs-title .gs-promotion-title-right * {
-color: #333333;
-}
-.gs-promotion .gs-visibleUrl,
-.gs-promotion .gs-visibleUrl-short {
-color: #009933;
-}
-</style><style type="text/css">.gscb_a{display:inline-block;font:27px/13px arial,sans-serif}.gsst_a .gscb_a{color:#a1b9ed;cursor:pointer}.gsst_a:hover .gscb_a,.gsst_a:focus .gscb_a{color:#36c}.gsst_a{display:inline-block}.gsst_a{cursor:pointer;padding:0 4px}.gsst_a:hover{text-decoration:none!important}.gsst_b{font-size:16px;padding:0 2px;position:relative;user-select:none;-moz-user-select:none;white-space:nowrap}.gsst_e{opacity:0.55;}.gsst_a:hover .gsst_e,.gsst_a:focus .gsst_e{opacity:0.72;}.gsst_a:active .gsst_e{opacity:1;}.gsst_f{background:white;text-align:left}.gsst_g{background-color:white;border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-moz-box-shadow:0 2px 4px rgba(0,0,0,0.2);margin:-1px -3px;padding:0 6px}.gsst_h{background-color:white;height:1px;margin-bottom:-1px;position:relative;top:-1px}.gsib_a{width:100%;padding:4px 6px 0}.gsib_a,.gsib_b{vertical-align:top}.gssb_c{border:0;position:absolute;z-index:989}.gssb_e{border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-moz-box-shadow:0 2px 4px rgba(0,0,0,0.2);cursor:default}.gssb_f{visibility:hidden;white-space:nowrap}.gssb_k{border:0;display:block;position:absolute;top:0;z-index:988}.gsdd_a{border:none!important}.gsq_a{padding:0}.gscsep_a{display:none}.gssb_a{padding:0 7px}.gssb_a,.gssb_a td{white-space:nowrap;overflow:hidden;line-height:22px}#gssb_b{font-size:11px;color:#36c;text-decoration:none}#gssb_b:hover{font-size:11px;color:#36c;text-decoration:underline}.gssb_g{text-align:center;padding:8px 0 7px;position:relative}.gssb_h{font-size:15px;height:28px;margin:0.2em}.gssb_i{background:#eee}.gss_ifl{visibility:hidden;padding-left:5px}.gssb_i .gss_ifl{visibility:visible}a.gssb_j{font-size:13px;color:#36c;text-decoration:none;line-height:100%}a.gssb_j:hover{text-decoration:underline}.gssb_l{height:1px;background-color:#e5e5e5}.gssb_m{color:#000;background:#fff}.gsfe_a{border:1px solid #b9b9b9;border-top-color:#a0a0a0;box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);-moz-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);-webkit-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);}.gsfe_b{border:1px solid #4d90fe;outline:none;box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);-moz-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);-webkit-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);}.gssb_a{padding:0 9px}.gsib_a{padding-right:8px;padding-left:8px}.gsst_a{padding-top:3px}.gssb_e{border:0}.gssb_l{margin:5px 0}.gssb_c .gsc-completion-container{position:static}.gssb_c{z-index:5000}.gsc-completion-container table{background:transparent;font-size:inherit;font-family:inherit}.gssb_c > tbody > tr,.gssb_c > tbody > tr > td,.gssb_d,.gssb_d > tbody > tr,.gssb_d > tbody > tr > td,.gssb_e,.gssb_e > tbody > tr,.gssb_e > tbody > tr > td{padding:0;margin:0;border:0}.gssb_a table,.gssb_a table tr,.gssb_a table tr td{padding:0;margin:0;border:0}</style></head>
+<link href="w3_10_files/translateelement.css" charset="UTF-8" rel="stylesheet" type="text/css">
+<script src="w3_10_files/main.js" charset="UTF-8" type="text/javascript"></script>
+<script src="w3_10_files/element_main.js" charset="UTF-8" type="text/javascript"></script>
+<script type="text/javascript" src="w3_10_files/jsapi"></script>
+<link rel="stylesheet" href="w3_10_files/defaulten.css" type="text/css">
+<link rel="stylesheet" href="w3_10_files/default.css" type="text/css">
+<script src="w3_10_files/defaulten.js" type="text/javascript"></script>
+<script src="w3_10_files/search.js" type="text/javascript"></script>
+<style type="text/css">
+    .gsc-control-cse {
+    font-family: Arial, sans-serif;
+    border-color: #FFFFFF;
+    background-color: #FFFFFF;
+    }
+    .gsc-control-cse .gsc-table-result {
+    font-family: Arial, sans-serif;
+    }
+    input.gsc-input, .gsc-input-box, .gsc-input-box-hover, .gsc-input-box-focus {
+    border-color: #D9D9D9;
+    }
+    input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:focus {
+    border-color: #2F5BB7;
+    background-color: #357AE8;
+    background-image: none;
+    filter: none;
+    }
+    .gsc-tabHeader.gsc-tabhInactive {
+    border-color: #CCCCCC;
+    background-color: #FFFFFF;
+    }
+    .gsc-tabHeader.gsc-tabhActive {
+    border-color: #CCCCCC;
+    border-bottom-color: #FFFFFF;
+    background-color: #FFFFFF;
+    }
+    .gsc-tabsArea {
+    border-color: #CCCCCC;
+    }
+    .gsc-webResult.gsc-result,
+    .gsc-results .gsc-imageResult {
+    border-color: #FFFFFF;
+    background-color: #FFFFFF;
+    }
+    .gsc-webResult.gsc-result:hover,
+    .gsc-imageResult:hover {
+    border-color: #FFFFFF;
+    background-color: #FFFFFF;
+    }
+    .gs-webResult.gs-result a.gs-title:link,
+    .gs-webResult.gs-result a.gs-title:link b,
+    .gs-imageResult a.gs-title:link,
+    .gs-imageResult a.gs-title:link b {
+    color: #1155CC;
+    }
+    .gs-webResult.gs-result a.gs-title:visited,
+    .gs-webResult.gs-result a.gs-title:visited b,
+    .gs-imageResult a.gs-title:visited,
+    .gs-imageResult a.gs-title:visited b {
+    color: #1155CC;
+    }
+    .gs-webResult.gs-result a.gs-title:hover,
+    .gs-webResult.gs-result a.gs-title:hover b,
+    .gs-imageResult a.gs-title:hover,
+    .gs-imageResult a.gs-title:hover b {
+    color: #1155CC;
+    }
+    .gs-webResult.gs-result a.gs-title:active,
+    .gs-webResult.gs-result a.gs-title:active b,
+    .gs-imageResult a.gs-title:active,
+    .gs-imageResult a.gs-title:active b {
+    color: #1155CC;
+    }
+    .gsc-cursor-page {
+    color: #1155CC;
+    }
+    a.gsc-trailing-more-results:link {
+    color: #1155CC;
+    }
+    .gs-webResult .gs-snippet,
+    .gs-imageResult .gs-snippet,
+    .gs-fileFormatType {
+    color: #333333;
+    }
+    .gs-webResult div.gs-visibleUrl,
+    .gs-imageResult div.gs-visibleUrl {
+    color: #009933;
+    }
+    .gs-webResult div.gs-visibleUrl-short {
+    color: #009933;
+    }
+    .gs-webResult div.gs-visibleUrl-short {
+    display: none;
+    }
+    .gs-webResult div.gs-visibleUrl-long {
+    display: block;
+    }
+    .gs-promotion div.gs-visibleUrl-short {
+    display: none;
+    }
+    .gs-promotion div.gs-visibleUrl-long {
+    display: block;
+    }
+    .gsc-cursor-box {
+    border-color: #FFFFFF;
+    }
+    .gsc-results .gsc-cursor-box .gsc-cursor-page {
+    border-color: #CCCCCC;
+    background-color: #FFFFFF;
+    color: #1155CC;
+    }
+    .gsc-results .gsc-cursor-box .gsc-cursor-current-page {
+    border-color: #CCCCCC;
+    background-color: #FFFFFF;
+    color: #1155CC;
+    }
+    .gsc-webResult.gsc-result.gsc-promotion {
+    border-color: #F6F6F6;
+    background-color: #F6F6F6;
+    }
+    .gsc-completion-title {
+    color: #1155CC;
+    }
+    .gsc-completion-snippet {
+    color: #333333;
+    }
+    .gs-promotion a.gs-title:link,
+    .gs-promotion a.gs-title:link *,
+    .gs-promotion .gs-snippet a:link {
+    color: #1155CC;
+    }
+    .gs-promotion a.gs-title:visited,
+    .gs-promotion a.gs-title:visited *,
+    .gs-promotion .gs-snippet a:visited {
+    color: #1155CC;
+    }
+    .gs-promotion a.gs-title:hover,
+    .gs-promotion a.gs-title:hover *,
+    .gs-promotion .gs-snippet a:hover {
+    color: #1155CC;
+    }
+    .gs-promotion a.gs-title:active,
+    .gs-promotion a.gs-title:active *,
+    .gs-promotion .gs-snippet a:active {
+    color: #1155CC;
+    }
+    .gs-promotion .gs-snippet,
+    .gs-promotion .gs-title .gs-promotion-title-right,
+    .gs-promotion .gs-title .gs-promotion-title-right * {
+    color: #333333;
+    }
+    .gs-promotion .gs-visibleUrl,
+    .gs-promotion .gs-visibleUrl-short {
+    color: #009933;
+    }
+</style>
+<style type="text/css">.gscb_a{display:inline-block;font:27px/13px arial,sans-serif}.gsst_a
+    .gscb_a{color:#a1b9ed;cursor:pointer}.gsst_a:hover .gscb_a,.gsst_a:focus
+    .gscb_a{color:#36c}.gsst_a{display:inline-block}.gsst_a{cursor:pointer;padding:0
+    4px}.gsst_a:hover{text-decoration:none!important}.gsst_b{font-size:16px;padding:0
+    2px;position:relative;user-select:none;-moz-user-select:none;white-space:nowrap}.gsst_e{opacity:0.55;}.gsst_a:hover
+    .gsst_e,.gsst_a:focus .gsst_e{opacity:0.72;}.gsst_a:active
+    .gsst_e{opacity:1;}.gsst_f{background:white;text-align:left}.gsst_g{background-color:white;border:1px solid
+    #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-moz-box-shadow:0 2px 4px
+    rgba(0,0,0,0.2);margin:-1px -3px;padding:0
+    6px}.gsst_h{background-color:white;height:1px;margin-bottom:-1px;position:relative;top:-1px}.gsib_a{width:100%;padding:4px
+    6px 0}.gsib_a,.gsib_b{vertical-align:top}.gssb_c{border:0;position:absolute;z-index:989}.gssb_e{border:1px solid
+    #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-moz-box-shadow:0 2px 4px
+    rgba(0,0,0,0.2);cursor:default}.gssb_f{visibility:hidden;white-space:nowrap}.gssb_k{border:0;display:block;position:absolute;top:0;z-index:988}.gsdd_a{border:none!important}.gsq_a{padding:0}.gscsep_a{display:none}.gssb_a{padding:0
+    7px}.gssb_a,.gssb_a
+    td{white-space:nowrap;overflow:hidden;line-height:22px}#gssb_b{font-size:11px;color:#36c;text-decoration:none}#gssb_b:hover{font-size:11px;color:#36c;text-decoration:underline}.gssb_g{text-align:center;padding:8px
+    0
+    7px;position:relative}.gssb_h{font-size:15px;height:28px;margin:0.2em}.gssb_i{background:#eee}.gss_ifl{visibility:hidden;padding-left:5px}.gssb_i
+    .gss_ifl{visibility:visible}a.gssb_j{font-size:13px;color:#36c;text-decoration:none;line-height:100%}a.gssb_j:hover{text-decoration:underline}.gssb_l{height:1px;background-color:#e5e5e5}.gssb_m{color:#000;background:#fff}.gsfe_a{border:1px
+    solid #b9b9b9;border-top-color:#a0a0a0;box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);-moz-box-shadow:inset 0px 1px
+    2px rgba(0,0,0,0.1);-webkit-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);}.gsfe_b{border:1px solid
+    #4d90fe;outline:none;box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);-moz-box-shadow:inset 0px 1px 2px
+    rgba(0,0,0,0.3);-webkit-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);}.gssb_a{padding:0
+    9px}.gsib_a{padding-right:8px;padding-left:8px}.gsst_a{padding-top:3px}.gssb_e{border:0}.gssb_l{margin:5px 0}.gssb_c
+    .gsc-completion-container{position:static}.gssb_c{z-index:5000}.gsc-completion-container
+    table{background:transparent;font-size:inherit;font-family:inherit}.gssb_c > tbody > tr,.gssb_c > tbody > tr >
+    td,.gssb_d,.gssb_d > tbody > tr,.gssb_d > tbody > tr > td,.gssb_e,.gssb_e > tbody > tr,.gssb_e > tbody > tr >
+    td{padding:0;margin:0;border:0}.gssb_a table,.gssb_a table tr,.gssb_a table tr td{padding:0;margin:0;border:0}
+</style>
+</head>
 <body style="position: relative; min-height: 100%; top: 0px;">
-<div id="smallnavContainer"><div id="smallnav"><div id="menuDIV"><hr><hr><hr></div><div id="closeSearchBTN" onclick="hideSearch()">X</div><div id="menuSearchDIV"></div><a href="http://www.w3schools.com/default.asp"><div id="menuHomeDIV"></div></a></div></div><div id="top"><div id="topLogo"><a href="http://www.w3schools.com/"><img src="w3_10_files/w3logotest2.png" alt="W3Schools.com" style="border:0;" height="32" width="280"></a></div></div><div id="topnav"><div id="topnavTut" class="notranslate"><a class="topnav" target="_top" href="http://www.w3schools.com/default.asp">HOME </a><a class="topnav" target="_top" href="http://www.w3schools.com/html/default.asp">HTML </a><a class="topnav" target="_top" href="http://www.w3schools.com/css/default.asp">CSS </a><a class="topnav" target="_top" href="http://www.w3schools.com/js/default.asp">JAVASCRIPT </a><a class="topnav" target="_top" href="http://www.w3schools.com/sql/default.asp">SQL </a><a class="topnav" target="_top" href="http://www.w3schools.com/php/default.asp">PHP </a><a class="topnav" target="_top" href="http://www.w3schools.com/jquery/default.asp">JQUERY </a><a class="topnav" target="_top" href="http://www.w3schools.com/angular/default.asp">ANGULAR </a><a class="topnav" target="_top" href="http://www.w3schools.com/bootstrap/default.asp">BOOTSTRAP </a><a class="topnav" target="_top" href="http://www.w3schools.com/xml/default.asp">XML </a><a class="topnav" target="_top" href="http://www.w3schools.com/aspnet/default.asp">ASP.NET </a><a class="topnav" target="_top" href="http://www.w3schools.com/sitemap/default.asp">MORE...</a><div style="float:right;word-spacing:0;"><a class="topnav" target="_top" href="http://www.w3schools.com/sitemap/sitemap_references.asp">REFERENCES</a><span style="letter-spacing:14px;"> |</span><a class="topnav" target="_top" href="http://www.w3schools.com/sitemap/sitemap_examples.asp"> EXAMPLES</a><span style="letter-spacing:14px;"> |</span><a class="topnav" target="_blank" href="http://www.w3schools.com/forum/default.asp"> FORUM</a><span style="letter-spacing:14px;"> |</span><a class="topnav" target="_top" href="http://www.w3schools.com/about/default.asp"> ABOUT</a></div></div></div><div id="belowTopnav"><div id="page"><div><div id="leftcolumn"><h2 class="left"><span class="left_h2">XML</span> Tutorial</h2>
-<a target="_top" href="http://www.w3schools.com/xml/default.asp" class="menu_default">XML HOME</a>
-<a target="_top" href="http://www.w3schools.com/xml/xml_whatis.asp" class="menu_xml_whatis">XML Introduction</a>
-<a target="_top" href="http://www.w3schools.com/xml/xml_usedfor.asp" class="menu_xml_usedfor">XML How to use</a>
-<a target="_top" href="http://www.w3schools.com/xml/xml_tree.asp" class="menu_xml_tree">XML Tree</a>
-<a target="_top" href="http://www.w3schools.com/xml/xml_syntax.asp" class="menu_xml_syntax">XML Syntax</a>
-<a target="_top" href="http://www.w3schools.com/xml/xml_elements.asp" class="menu_xml_elements">XML Elements</a>
-<a target="_top" href="http://www.w3schools.com/xml/xml_attributes.asp" class="menu_xml_attributes">XML Attributes</a>
-<a target="_top" href="http://www.w3schools.com/xml/xml_namespaces.asp" class="menu_xml_namespaces">XML Namespaces</a>
-<a target="_top" href="http://www.w3schools.com/xml/xml_encoding.asp" class="menu_xml_encoding">XML Encoding</a>
-<a target="_top" href="http://www.w3schools.com/xml/xml_view.asp" class="menu_xml_view">XML Viewing</a>
-<a target="_top" href="http://www.w3schools.com/xml/xml_display.asp" class="menu_xml_display">XML CSS</a>
-<br>
-<h2 class="left"><span class="left_h2">XML</span> Validation</h2>
-<a target="_top" href="http://www.w3schools.com/xml/xml_doctypes.asp" class="menu_xml_doctypes">XML Doctypes</a>
-<a target="_top" href="http://www.w3schools.com/xml/xml_validator.asp" class="menu_xml_validator">XML Validator</a>
-<a target="_top" href="http://www.w3schools.com/xml/xml_dtd.asp" class="menu_xml_dtd">XML DTD</a>
-<a target="_top" href="http://www.w3schools.com/xml/xml_schema.asp" class="menu_xml_schema">XML Schema</a>
-<br>
-<h2 class="left"><span class="left_h2">XML</span> JavaScript</h2>
-<a target="_top" href="http://www.w3schools.com/xml/xml_http.asp" class="menu_xml_http">XML HTTP Request</a>
-<a target="_top" href="http://www.w3schools.com/xml/xml_parser.asp" class="menu_xml_parser">XML Parser</a>
-<a target="_top" href="http://www.w3schools.com/xml/xml_dom.asp" class="menu_xml_dom">XML DOM</a>
-<a target="_top" href="http://www.w3schools.com/xml/xml_to_html.asp" class="menu_xml_to_html">XML in HTML</a>
-<a target="_top" href="http://www.w3schools.com/xml/xml_applications.asp" class="menu_xml_applications">XML Application</a>
-<br>
-<h2 class="left"><span class="left_h2">XML</span> Technologies</h2>
-<a target="_top" href="http://www.w3schools.com/xml/xml_xpath.asp" class="menu_xml_xpath">XML XPath</a>
-<a target="_top" href="http://www.w3schools.com/xml/xml_xsl.asp" class="menu_xml_xsl">XML XSLT</a>
-<a target="_top" href="http://www.w3schools.com/xml/xml_xlink.asp" class="menu_xml_xlink">XML XLink</a>
-<a target="_top" href="http://www.w3schools.com/xml/xml_xpointer.asp" class="menu_xml_xpointer">XML XPointer</a>
-<br>
-<h2 class="left"><span class="left_h2">XML</span> Advanced</h2>
-<a target="_top" href="http://www.w3schools.com/xml/xml_cdata.asp" class="menu_xml_cdata">XML CDATA</a>
-<a target="_top" href="http://www.w3schools.com/xml/xml_server.asp" class="menu_xml_server">XML Server</a>
-<a target="_top" href="http://www.w3schools.com/xml/xml_dom_advanced.asp" class="menu_xml_dom_advanced">XML DOM Advanced</a>
-<a target="_top" href="http://www.w3schools.com/xml/xml_real_life.asp" class="menu_xml_real_life">XML in Real Life</a>
-<a target="_top" href="http://www.w3schools.com/xml/xml_editors.asp" class="menu_xml_editors">XML Editors</a>
-<a target="_top" href="http://www.w3schools.com/xml/xml_summary.asp" class="menu_xml_summary">XML Summary</a>
-<br>
-<h2 class="left"><span class="left_h2">XML</span> Examples</h2>
-<a target="_top" href="http://www.w3schools.com/xml/xml_examples.asp" class="menu_xml_examples">XML Examples</a>
-<a target="_top" href="http://www.w3schools.com/xml/xml_quiz.asp" class="menu_xml_quiz">XML Quiz</a>
-<a target="_top" href="http://www.w3schools.com/xml/xml_exam.asp" class="menu_xml_exam">XML Certificate</a></div><div id="main"><div id="mainLeaderboard"><!-- MainLeaderboard --><div id="div-gpt-ad-1403595829794-2" style="width:728px;height:90px;float:right;"><script type="text/javascript">googletag.cmd.push(function() { googletag.display('div-gpt-ad-1403595829794-2'); });</script><div style="border: 0pt none;" id="google_ads_iframe_/16833175/MainLeaderboard_0__container__"><iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none; vertical-align: bottom;" marginheight="0" marginwidth="0" scrolling="no" name="google_ads_iframe_/16833175/MainLeaderboard_0" id="google_ads_iframe_/16833175/MainLeaderboard_0" frameborder="0" height="90" width="728"></iframe></div><iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none; vertical-align: bottom; visibility: hidden; display: none;" marginheight="0" marginwidth="0" scrolling="no" name="google_ads_iframe_/16833175/MainLeaderboard_0__hidden__" id="google_ads_iframe_/16833175/MainLeaderboard_0__hidden__" frameborder="0" height="0" width="0"></iframe></div></div>
+<div id="smallnavContainer">
+    <div id="smallnav">
+        <div id="menuDIV">
+            <hr>
+            <hr>
+            <hr>
+        </div>
+        <div id="closeSearchBTN" onclick="hideSearch()">X</div>
+        <div id="menuSearchDIV"></div>
+        <a href="http://www.w3schools.com/default.asp">
+            <div id="menuHomeDIV"></div>
+        </a></div>
+</div>
+<div id="top">
+    <div id="topLogo"><a href="http://www.w3schools.com/"><img src="w3_10_files/w3logotest2.png" alt="W3Schools.com"
+                                                               style="border:0;" height="32" width="280"></a></div>
+</div>
+<div id="topnav">
+    <div id="topnavTut" class="notranslate"><a class="topnav" target="_top" href="http://www.w3schools.com/default.asp">HOME </a><a
+            class="topnav" target="_top" href="http://www.w3schools.com/html/default.asp">HTML </a><a class="topnav"
+                                                                                                      target="_top"
+                                                                                                      href="http://www.w3schools.com/css/default.asp">CSS </a><a
+            class="topnav" target="_top" href="http://www.w3schools.com/js/default.asp">JAVASCRIPT </a><a class="topnav"
+                                                                                                          target="_top"
+                                                                                                          href="http://www.w3schools.com/sql/default.asp">SQL </a><a
+            class="topnav" target="_top" href="http://www.w3schools.com/php/default.asp">PHP </a><a class="topnav"
+                                                                                                    target="_top"
+                                                                                                    href="http://www.w3schools.com/jquery/default.asp">JQUERY </a><a
+            class="topnav" target="_top" href="http://www.w3schools.com/angular/default.asp">ANGULAR </a><a
+            class="topnav" target="_top" href="http://www.w3schools.com/bootstrap/default.asp">BOOTSTRAP </a><a
+            class="topnav" target="_top" href="http://www.w3schools.com/xml/default.asp">XML </a><a class="topnav"
+                                                                                                    target="_top"
+                                                                                                    href="http://www.w3schools.com/aspnet/default.asp">ASP.NET </a><a
+            class="topnav" target="_top" href="http://www.w3schools.com/sitemap/default.asp">MORE...</a>
+
+        <div style="float:right;word-spacing:0;"><a class="topnav" target="_top"
+                                                    href="http://www.w3schools.com/sitemap/sitemap_references.asp">REFERENCES</a><span
+                style="letter-spacing:14px;"> |</span><a class="topnav" target="_top"
+                                                         href="http://www.w3schools.com/sitemap/sitemap_examples.asp">
+            EXAMPLES</a><span style="letter-spacing:14px;"> |</span><a class="topnav" target="_blank"
+                                                                       href="http://www.w3schools.com/forum/default.asp">
+            FORUM</a><span style="letter-spacing:14px;"> |</span><a class="topnav" target="_top"
+                                                                    href="http://www.w3schools.com/about/default.asp">
+            ABOUT</a></div>
+    </div>
+</div>
+<div id="belowTopnav">
+<div id="page">
+<div>
+<div id="leftcolumn"><h2 class="left"><span class="left_h2">XML</span> Tutorial</h2>
+    <a target="_top" href="http://www.w3schools.com/xml/default.asp" class="menu_default">XML HOME</a>
+    <a target="_top" href="http://www.w3schools.com/xml/xml_whatis.asp" class="menu_xml_whatis">XML Introduction</a>
+    <a target="_top" href="http://www.w3schools.com/xml/xml_usedfor.asp" class="menu_xml_usedfor">XML How to use</a>
+    <a target="_top" href="http://www.w3schools.com/xml/xml_tree.asp" class="menu_xml_tree">XML Tree</a>
+    <a target="_top" href="http://www.w3schools.com/xml/xml_syntax.asp" class="menu_xml_syntax">XML Syntax</a>
+    <a target="_top" href="http://www.w3schools.com/xml/xml_elements.asp" class="menu_xml_elements">XML Elements</a>
+    <a target="_top" href="http://www.w3schools.com/xml/xml_attributes.asp" class="menu_xml_attributes">XML
+        Attributes</a>
+    <a target="_top" href="http://www.w3schools.com/xml/xml_namespaces.asp" class="menu_xml_namespaces">XML
+        Namespaces</a>
+    <a target="_top" href="http://www.w3schools.com/xml/xml_encoding.asp" class="menu_xml_encoding">XML Encoding</a>
+    <a target="_top" href="http://www.w3schools.com/xml/xml_view.asp" class="menu_xml_view">XML Viewing</a>
+    <a target="_top" href="http://www.w3schools.com/xml/xml_display.asp" class="menu_xml_display">XML CSS</a>
+    <br>
+
+    <h2 class="left"><span class="left_h2">XML</span> Validation</h2>
+    <a target="_top" href="http://www.w3schools.com/xml/xml_doctypes.asp" class="menu_xml_doctypes">XML Doctypes</a>
+    <a target="_top" href="http://www.w3schools.com/xml/xml_validator.asp" class="menu_xml_validator">XML Validator</a>
+    <a target="_top" href="http://www.w3schools.com/xml/xml_dtd.asp" class="menu_xml_dtd">XML DTD</a>
+    <a target="_top" href="http://www.w3schools.com/xml/xml_schema.asp" class="menu_xml_schema">XML Schema</a>
+    <br>
+
+    <h2 class="left"><span class="left_h2">XML</span> JavaScript</h2>
+    <a target="_top" href="http://www.w3schools.com/xml/xml_http.asp" class="menu_xml_http">XML HTTP Request</a>
+    <a target="_top" href="http://www.w3schools.com/xml/xml_parser.asp" class="menu_xml_parser">XML Parser</a>
+    <a target="_top" href="http://www.w3schools.com/xml/xml_dom.asp" class="menu_xml_dom">XML DOM</a>
+    <a target="_top" href="http://www.w3schools.com/xml/xml_to_html.asp" class="menu_xml_to_html">XML in HTML</a>
+    <a target="_top" href="http://www.w3schools.com/xml/xml_applications.asp" class="menu_xml_applications">XML
+        Application</a>
+    <br>
+
+    <h2 class="left"><span class="left_h2">XML</span> Technologies</h2>
+    <a target="_top" href="http://www.w3schools.com/xml/xml_xpath.asp" class="menu_xml_xpath">XML XPath</a>
+    <a target="_top" href="http://www.w3schools.com/xml/xml_xsl.asp" class="menu_xml_xsl">XML XSLT</a>
+    <a target="_top" href="http://www.w3schools.com/xml/xml_xlink.asp" class="menu_xml_xlink">XML XLink</a>
+    <a target="_top" href="http://www.w3schools.com/xml/xml_xpointer.asp" class="menu_xml_xpointer">XML XPointer</a>
+    <br>
+
+    <h2 class="left"><span class="left_h2">XML</span> Advanced</h2>
+    <a target="_top" href="http://www.w3schools.com/xml/xml_cdata.asp" class="menu_xml_cdata">XML CDATA</a>
+    <a target="_top" href="http://www.w3schools.com/xml/xml_server.asp" class="menu_xml_server">XML Server</a>
+    <a target="_top" href="http://www.w3schools.com/xml/xml_dom_advanced.asp" class="menu_xml_dom_advanced">XML DOM
+        Advanced</a>
+    <a target="_top" href="http://www.w3schools.com/xml/xml_real_life.asp" class="menu_xml_real_life">XML in Real
+        Life</a>
+    <a target="_top" href="http://www.w3schools.com/xml/xml_editors.asp" class="menu_xml_editors">XML Editors</a>
+    <a target="_top" href="http://www.w3schools.com/xml/xml_summary.asp" class="menu_xml_summary">XML Summary</a>
+    <br>
+
+    <h2 class="left"><span class="left_h2">XML</span> Examples</h2>
+    <a target="_top" href="http://www.w3schools.com/xml/xml_examples.asp" class="menu_xml_examples">XML Examples</a>
+    <a target="_top" href="http://www.w3schools.com/xml/xml_quiz.asp" class="menu_xml_quiz">XML Quiz</a>
+    <a target="_top" href="http://www.w3schools.com/xml/xml_exam.asp" class="menu_xml_exam">XML Certificate</a></div>
+<div id="main">
+<div id="mainLeaderboard"><!-- MainLeaderboard -->
+    <div id="div-gpt-ad-1403595829794-2" style="width:728px;height:90px;float:right;">
+        <script type="text/javascript">
+            googletag.cmd.push(function() { googletag.display('div-gpt-ad-1403595829794-2'); });
+        </script>
+        <div style="border: 0pt none;" id="google_ads_iframe_/16833175/MainLeaderboard_0__container__">
+            <iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;"
+                    style="border: 0px none; vertical-align: bottom;" marginheight="0" marginwidth="0" scrolling="no"
+                    name="google_ads_iframe_/16833175/MainLeaderboard_0"
+                    id="google_ads_iframe_/16833175/MainLeaderboard_0" frameborder="0" height="90" width="728"></iframe>
+        </div>
+        <iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;"
+                style="border: 0px none; vertical-align: bottom; visibility: hidden; display: none;" marginheight="0"
+                marginwidth="0" scrolling="no" name="google_ads_iframe_/16833175/MainLeaderboard_0__hidden__"
+                id="google_ads_iframe_/16833175/MainLeaderboard_0__hidden__" frameborder="0" height="0"
+                width="0"></iframe>
+    </div>
+</div>
 <h1>XML <span class="color_h1">Syntax Rules</span></h1>
+
 <div class="chapter">
-<div class="prev"><a class="chapter" href="http://www.w3schools.com/xml/xml_tree.asp">« Previous</a></div>
-<div class="next"><a class="chapter" href="http://www.w3schools.com/xml/xml_elements.asp">Next Chapter »</a></div>
+    <div class="prev"><a class="chapter" href="http://www.w3schools.com/xml/xml_tree.asp">« Previous</a></div>
+    <div class="next"><a class="chapter" href="http://www.w3schools.com/xml/xml_elements.asp">Next Chapter »</a></div>
 </div>
 <hr>
 <p class="intro">The syntax rules of XML are very simple and logical. The rules are easy to learn, and easy to use.</p>
 <hr>
 
 <h2>All XML Elements Must Have a Closing Tag</h2>
+
 <p>In HTML, some elements do not have to have a closing tag:</p>
 
 <div class="example">
-<div class="example_code notranslate htmlHigh">
-<span class="highLT">&lt;</span><span class="highELE">p</span><span class="highGT">&gt;</span>This is a paragraph.<br>
-<span class="highLT">&lt;</span><span class="highELE">br</span><span class="highGT">&gt;</span></div></div>
+    <div class="example_code notranslate htmlHigh">
+        <span class="highLT">&lt;</span><span class="highELE">p</span><span class="highGT">&gt;</span>This is a
+        paragraph.<br>
+        <span class="highLT">&lt;</span><span class="highELE">br</span><span class="highGT">&gt;</span></div>
+</div>
 
 <p>In XML, it is illegal to omit the closing tag. All elements <b>must</b> have a closing tag:</p>
 
 <div class="example">
-<div class="example_code notranslate htmlHigh">
-<span class="highLT">&lt;</span><span class="highELE">p</span><span class="highGT">&gt;</span>This is a paragraph.<span class="highLT">&lt;</span><span class="highELE">/p</span><span class="highGT">&gt;</span><br>
-<span class="highLT">&lt;</span><span class="highELE">br</span> <span class="highATT">/</span><span class="highGT">&gt;</span></div></div>
+    <div class="example_code notranslate htmlHigh">
+        <span class="highLT">&lt;</span><span class="highELE">p</span><span class="highGT">&gt;</span>This is a
+        paragraph.<span class="highLT">&lt;</span><span class="highELE">/p</span><span class="highGT">&gt;</span><br>
+        <span class="highLT">&lt;</span><span class="highELE">br</span> <span class="highATT">/</span><span
+            class="highGT">&gt;</span></div>
+</div>
 
 <p><b>Note</b>: You might have noticed from the previous example that the XML declaration
-did not have a closing tag. This is not an error. The declaration is not a part of the
-XML document itself, and it has no closing tag.</p>
+    did not have a closing tag. This is not an error. The declaration is not a part of the
+    XML document itself, and it has no closing tag.</p>
 <hr>
 
 <h2>XML Tags are Case Sensitive</h2>
+
 <p>XML tags are case sensitive. The tag &lt;Letter&gt; is different from the tag &lt;letter&gt;.</p>
+
 <p>Opening and closing tags must be written with the same case:</p>
 
 <div class="example">
-<div class="example_code notranslate htmlHigh">
-<span class="highLT">&lt;</span><span class="highELE">Message</span><span class="highGT">&gt;</span>This is incorrect<span class="highLT">&lt;</span><span class="highELE">/message</span><span class="highGT">&gt;</span><br>
-<span class="highLT">&lt;</span><span class="highELE">message</span><span class="highGT">&gt;</span>This is correct<span class="highLT">&lt;</span><span class="highELE">/message</span><span class="highGT">&gt;</span></div></div>
+    <div class="example_code notranslate htmlHigh">
+        <span class="highLT">&lt;</span><span class="highELE">Message</span><span class="highGT">&gt;</span>This is
+        incorrect<span class="highLT">&lt;</span><span class="highELE">/message</span><span
+            class="highGT">&gt;</span><br>
+        <span class="highLT">&lt;</span><span class="highELE">message</span><span class="highGT">&gt;</span>This is
+        correct<span class="highLT">&lt;</span><span class="highELE">/message</span><span class="highGT">&gt;</span>
+    </div>
+</div>
 
-<p><b>Note:</b> "Opening and closing tags" are often referred to as "Start and 
-end tags". Use whatever you prefer. It is exactly the same thing.</p>
+<p><b>Note:</b> "Opening and closing tags" are often referred to as "Start and
+    end tags". Use whatever you prefer. It is exactly the same thing.</p>
 <hr>
 
 <h2>XML Elements Must be Properly Nested</h2>
+
 <p>In HTML, you might see improperly nested elements:</p>
 
 <div class="example">
-<div class="example_code notranslate htmlHigh">
-<span class="highLT">&lt;</span><span class="highELE">b</span><span class="highGT">&gt;</span><span class="highLT">&lt;</span><span class="highELE">i</span><span class="highGT">&gt;</span>This text is bold and italic<span class="highLT">&lt;</span><span class="highELE">/b</span><span class="highGT">&gt;</span><span class="highLT">&lt;</span><span class="highELE">/i</span><span class="highGT">&gt;</span></div></div>
+    <div class="example_code notranslate htmlHigh">
+        <span class="highLT">&lt;</span><span class="highELE">b</span><span class="highGT">&gt;</span><span
+            class="highLT">&lt;</span><span class="highELE">i</span><span class="highGT">&gt;</span>This text is bold
+        and italic<span class="highLT">&lt;</span><span class="highELE">/b</span><span class="highGT">&gt;</span><span
+            class="highLT">&lt;</span><span class="highELE">/i</span><span class="highGT">&gt;</span></div>
+</div>
 
 <p>In XML, all elements <b>must</b> be properly nested within each other:</p>
 
 <div class="example">
-<div class="example_code notranslate htmlHigh">
-<span class="highLT">&lt;</span><span class="highELE">b</span><span class="highGT">&gt;</span><span class="highLT">&lt;</span><span class="highELE">i</span><span class="highGT">&gt;</span>This text is bold and italic<span class="highLT">&lt;</span><span class="highELE">/i</span><span class="highGT">&gt;</span><span class="highLT">&lt;</span><span class="highELE">/b</span><span class="highGT">&gt;</span></div></div>
+    <div class="example_code notranslate htmlHigh">
+        <span class="highLT">&lt;</span><span class="highELE">b</span><span class="highGT">&gt;</span><span
+            class="highLT">&lt;</span><span class="highELE">i</span><span class="highGT">&gt;</span>This text is bold
+        and italic<span class="highLT">&lt;</span><span class="highELE">/i</span><span class="highGT">&gt;</span><span
+            class="highLT">&lt;</span><span class="highELE">/b</span><span class="highGT">&gt;</span></div>
+</div>
 
-<p>In the example above, "Properly nested" simply means that since the &lt;i&gt; 
-element is opened inside the &lt;b&gt; element, it must be closed inside the &lt;b&gt; element.</p>
+<p>In the example above, "Properly nested" simply means that since the &lt;i&gt;
+    element is opened inside the &lt;b&gt; element, it must be closed inside the &lt;b&gt; element.</p>
 <hr>
 
 <h2>XML Documents Must Have a Root Element</h2>
-<p>XML documents must contain one element that is the <b>parent</b> of all other 
-elements. This element is called the <b>root</b> element.</p>
+
+<p>XML documents must contain one element that is the <b>parent</b> of all other
+    elements. This element is called the <b>root</b> element.</p>
 
 <div class="example">
-<div class="example_code notranslate htmlHigh">
-<span class="highLT">&lt;</span><span class="highELE">root</span><span class="highGT">&gt;</span><br>
-  &nbsp;
-  <span class="highLT">&lt;</span><span class="highELE">child</span><span class="highGT">&gt;</span><br>
-    &nbsp;&nbsp;&nbsp;
-    <span class="highLT">&lt;</span><span class="highELE">subchild</span><span class="highGT">&gt;</span>.....<span class="highLT">&lt;</span><span class="highELE">/subchild</span><span class="highGT">&gt;</span><br>
-  &nbsp;
-  <span class="highLT">&lt;</span><span class="highELE">/child</span><span class="highGT">&gt;</span><br>
-<span class="highLT">&lt;</span><span class="highELE">/root</span><span class="highGT">&gt;</span></div></div>
+    <div class="example_code notranslate htmlHigh">
+        <span class="highLT">&lt;</span><span class="highELE">root</span><span class="highGT">&gt;</span><br>
+        &nbsp;
+        <span class="highLT">&lt;</span><span class="highELE">child</span><span class="highGT">&gt;</span><br>
+        &nbsp;&nbsp;&nbsp;
+        <span class="highLT">&lt;</span><span class="highELE">subchild</span><span class="highGT">&gt;</span>.....<span
+            class="highLT">&lt;</span><span class="highELE">/subchild</span><span class="highGT">&gt;</span><br>
+        &nbsp;
+        <span class="highLT">&lt;</span><span class="highELE">/child</span><span class="highGT">&gt;</span><br>
+        <span class="highLT">&lt;</span><span class="highELE">/root</span><span class="highGT">&gt;</span></div>
+</div>
 <br>
 <hr>
 
 <h2>XML Attribute Values Must be Quoted</h2>
+
 <p>XML elements can have attributes in name/value pairs just like in HTML.</p>
+
 <p>In XML, the attribute values must always be quoted.</p>
+
 <p>Study the two XML documents below.
-The first one is incorrect, the second is correct:</p>
+    The first one is incorrect, the second is correct:</p>
 
 <div class="example">
-<div class="example_code notranslate htmlHigh">
-<span class="highLT">&lt;</span><span class="highELE">note</span> <span class="highATT">date=</span><span class="highVAL">12/11/2007&gt;<br>
+    <div class="example_code notranslate htmlHigh">
+        <span class="highLT">&lt;</span><span class="highELE">note</span> <span class="highATT">date=</span><span
+            class="highVAL">12/11/2007&gt;<br>
 &nbsp;
 &lt;to&gt;Tove&lt;/to&gt;<br>
 &nbsp;
 &lt;from&gt;Jani&lt;/from&gt;<br>
-&lt;/note&gt;</span></div></div>
+&lt;/note&gt;</span></div>
+</div>
 <br>
 
 <div class="example">
-<div class="example_code notranslate htmlHigh">
-<span class="highLT">&lt;</span><span class="highELE">note</span> <span class="highATT">date=</span><span class="highVAL">"12/11/2007"</span><span class="highGT">&gt;</span><br>
-&nbsp;
-<span class="highLT">&lt;</span><span class="highELE">to</span><span class="highGT">&gt;</span>Tove<span class="highLT">&lt;</span><span class="highELE">/to</span><span class="highGT">&gt;</span><br>
-&nbsp;
-<span class="highLT">&lt;</span><span class="highELE">from</span><span class="highGT">&gt;</span>Jani<span class="highLT">&lt;</span><span class="highELE">/from</span><span class="highGT">&gt;</span><br>
-<span class="highLT">&lt;</span><span class="highELE">/note</span><span class="highGT">&gt;</span></div></div>
+    <div class="example_code notranslate htmlHigh">
+        <span class="highLT">&lt;</span><span class="highELE">note</span> <span class="highATT">date=</span><span
+            class="highVAL">"12/11/2007"</span><span class="highGT">&gt;</span><br>
+        &nbsp;
+        <span class="highLT">&lt;</span><span class="highELE">to</span><span class="highGT">&gt;</span>Tove<span
+            class="highLT">&lt;</span><span class="highELE">/to</span><span class="highGT">&gt;</span><br>
+        &nbsp;
+        <span class="highLT">&lt;</span><span class="highELE">from</span><span class="highGT">&gt;</span>Jani<span
+            class="highLT">&lt;</span><span class="highELE">/from</span><span class="highGT">&gt;</span><br>
+        <span class="highLT">&lt;</span><span class="highELE">/note</span><span class="highGT">&gt;</span></div>
+</div>
 
 <p>The error in the first document is that the date attribute in the note element is not quoted.</p>
 <hr>
 
 <h2>Entity References</h2>
+
 <p>Some characters have a special meaning in XML.</p>
-<p>If you place a character like "&lt;" inside an XML element, it will generate an error because the parser interprets it as the
-start of a new element.</p>
+
+<p>If you place a character like "&lt;" inside an XML element, it will generate an error because the parser interprets
+    it as the
+    start of a new element.</p>
+
 <p>This will generate an XML error:</p>
 
 <div class="example">
-<div class="example_code notranslate">
-&lt;message&gt;if salary &lt; 1000 then&lt;/message&gt;</div></div>
+    <div class="example_code notranslate">
+        &lt;message&gt;if salary &lt; 1000 then&lt;/message&gt;</div>
+</div>
 
 <p>To avoid this error, replace the "&lt;" character with an <b>entity reference</b>:</p>
 
 <div class="example">
-<div class="example_code notranslate htmlHigh">
-<span class="highLT">&lt;</span><span class="highELE">message</span><span class="highGT">&gt;</span>if salary <span class="marked">&amp;lt;</span> 1000 then<span class="highLT">&lt;</span><span class="highELE">/message</span><span class="highGT">&gt;</span></div></div>  
+    <div class="example_code notranslate htmlHigh">
+        <span class="highLT">&lt;</span><span class="highELE">message</span><span class="highGT">&gt;</span>if salary
+        <span class="marked">&amp;lt;</span> 1000 then<span class="highLT">&lt;</span><span
+            class="highELE">/message</span><span class="highGT">&gt;</span></div>
+</div>
 
 <p>There are 5 predefined entity references in XML:</p>
 <table class="reference notranslate" style="width:50%">
-<tbody><tr>
-<td>&amp;lt;</td>
-<td>&lt;</td>
-<td>less than</td>
-</tr>
-<tr>
-<td>&amp;gt;</td>
-<td>&gt;</td>
-<td>greater than</td>
-</tr>
-<tr>
-<td>&amp;amp;</td>
-<td>&amp;</td>
-<td>ampersand&nbsp;</td>
-</tr>
-<tr>
-<td>&amp;apos;</td>
-<td>'</td>
-<td>apostrophe</td>
-</tr>
-<tr>
-<td>&amp;quot;</td>
-<td>"</td>
-<td>quotation mark</td>
-</tr></tbody></table>
+    <tbody>
+    <tr>
+        <td>&amp;lt;</td>
+        <td>&lt;</td>
+        <td>less than</td>
+    </tr>
+    <tr>
+        <td>&amp;gt;</td>
+        <td>&gt;</td>
+        <td>greater than</td>
+    </tr>
+    <tr>
+        <td>&amp;amp;</td>
+        <td>&amp;</td>
+        <td>ampersand&nbsp;</td>
+    </tr>
+    <tr>
+        <td>&amp;apos;</td>
+        <td>'</td>
+        <td>apostrophe</td>
+    </tr>
+    <tr>
+        <td>&amp;quot;</td>
+        <td>"</td>
+        <td>quotation mark</td>
+    </tr>
+    </tbody>
+</table>
 <p>
-<b>Note:</b> Only the characters "&lt;" and "&amp;" are strictly illegal in XML. The greater than character is
-legal, but it is a good habit to replace it.</p>
+    <b>Note:</b> Only the characters "&lt;" and "&amp;" are strictly illegal in XML. The greater than character is
+    legal, but it is a good habit to replace it.</p>
 <hr>
 
 <h2>Comments in XML</h2>
+
 <p>The syntax for writing comments in XML is similar to that of HTML.</p>
+
 <p>&lt;!-- This is a comment --&gt; </p>
 <hr>
 
 <h2>White-space is Preserved in XML</h2>
+
 <p>HTML truncates multiple white-space characters to one single white-space:</p>
 
 <table class="reference notranslate">
-<tbody><tr>
-<td>
-HTML:
-</td>
-<td>Hello&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;Tove
-</td>
-</tr>
-<tr>
-<td>
-Output:
-</td>
-<td>Hello Tove</td>
-</tr>
-</tbody></table>
+    <tbody>
+    <tr>
+        <td>
+            HTML:
+        </td>
+        <td>Hello&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;Tove
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Output:
+        </td>
+        <td>Hello Tove</td>
+    </tr>
+    </tbody>
+</table>
 
 <p>With XML, the white-space in a document is not truncated.</p>
 <hr>
 
 <h2>XML Stores New Line as LF</h2>
+
 <p>Windows applications store a new line as: carriage return and line feed (CR+LF).</p>
-<p>Unix 
-and Mac OSX uses LF.</p>
+
+<p>Unix
+    and Mac OSX uses LF.</p>
+
 <p>Old Mac systems uses CR.</p>
+
 <p>XML stores a new line as LF.</p>
 <hr>
 
 <h2>Well Formed XML</h2>
-<p>XML documents that conform to the syntax rules above are said to be "Well 
-Formed" XML documents.</p>
+
+<p>XML documents that conform to the syntax rules above are said to be "Well
+    Formed" XML documents.</p>
 <br>
+
 <div class="chapter">
-<div class="prev"><a class="chapter" href="http://www.w3schools.com/xml/xml_tree.asp">« Previous</a></div>
-<div class="next"><a class="chapter" href="http://www.w3schools.com/xml/xml_elements.asp">Next Chapter »</a></div>
+    <div class="prev"><a class="chapter" href="http://www.w3schools.com/xml/xml_tree.asp">« Previous</a></div>
+    <div class="next"><a class="chapter" href="http://www.w3schools.com/xml/xml_elements.asp">Next Chapter »</a></div>
 </div>
-				<hr>
-				<!-- SmallPS -->
-				<div id="div-gpt-ad-1403595829794-4" style="width:728px;display:none;">
-				<script type="text/javascript">
+<hr>
+<!-- SmallPS -->
+<div id="div-gpt-ad-1403595829794-4" style="width:728px;display:none;">
+    <script type="text/javascript">
 				googletag.cmd.push(function() { googletag.display('div-gpt-ad-1403595829794-4'); });
-				</script><div style="border: 0pt none;" id="google_ads_iframe_/16833175/SmallPS_0__container__"><iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none; vertical-align: bottom;" marginheight="0" marginwidth="0" scrolling="no" name="google_ads_iframe_/16833175/SmallPS_0" id="google_ads_iframe_/16833175/SmallPS_0" frameborder="0" height="170" width="723"></iframe></div>
-				</div>
-				<!-- LargePS -->
-				<div id="div-gpt-ad-1403595829794-1" style="width:728px;display:none;">
-				<script type="text/javascript">
+
+    </script>
+    <div style="border: 0pt none;" id="google_ads_iframe_/16833175/SmallPS_0__container__">
+        <iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;"
+                style="border: 0px none; vertical-align: bottom;" marginheight="0" marginwidth="0" scrolling="no"
+                name="google_ads_iframe_/16833175/SmallPS_0" id="google_ads_iframe_/16833175/SmallPS_0" frameborder="0"
+                height="170" width="723"></iframe>
+    </div>
+</div>
+<!-- LargePS -->
+<div id="div-gpt-ad-1403595829794-1" style="width:728px;display:none;">
+    <script type="text/javascript">
 				googletag.cmd.push(function() { googletag.display('div-gpt-ad-1403595829794-1'); });
-				</script><div style="border: 0pt none;" id="google_ads_iframe_/16833175/LargePS_0__container__"><iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none; vertical-align: bottom;" marginheight="0" marginwidth="0" scrolling="no" name="google_ads_iframe_/16833175/LargePS_0" id="google_ads_iframe_/16833175/LargePS_0" frameborder="0" height="280" width="723"></iframe></div>
-				</div>
-				<!-- BottomMediumRectangle -->
-				<div id="div-gpt-ad-1403595829794-0" style="width:300px;height:250px;margin-left:172px;">
-				<script type="text/javascript">
+
+    </script>
+    <div style="border: 0pt none;" id="google_ads_iframe_/16833175/LargePS_0__container__">
+        <iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;"
+                style="border: 0px none; vertical-align: bottom;" marginheight="0" marginwidth="0" scrolling="no"
+                name="google_ads_iframe_/16833175/LargePS_0" id="google_ads_iframe_/16833175/LargePS_0" frameborder="0"
+                height="280" width="723"></iframe>
+    </div>
+</div>
+<!-- BottomMediumRectangle -->
+<div id="div-gpt-ad-1403595829794-0" style="width:300px;height:250px;margin-left:172px;">
+    <script type="text/javascript">
 				googletag.cmd.push(function() { googletag.display('div-gpt-ad-1403595829794-0'); });
-				</script><div style="border: 0pt none;" id="google_ads_iframe_/16833175/BottomMediumRectangle_0__container__"><iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none; vertical-align: bottom;" marginheight="0" marginwidth="0" scrolling="no" name="google_ads_iframe_/16833175/BottomMediumRectangle_0" id="google_ads_iframe_/16833175/BottomMediumRectangle_0" frameborder="0" height="250" width="300"></iframe></div>
-				</div>
-				<div id="err_form">
-					<h2>Your suggestion:</h2>
-					<p><label for="err_email">Your E-mail (optional):</label> <input id="err_email" name="err_email" type="email"></p>
-					<p><label for="err_url">Page address:</label> <input disabled="disabled" id="err_url" name="err_url" type="text"></p>
-					<p><label for="err_desc">Description:</label> <textarea name="err_desc" id="err_desc" cols="92" rows="20"></textarea></p>
-					<p class="submit"><input value="Submit" onclick="sendErr()" type="button"></p>
-					<div class="err_close" onclick="hideError()">Close [X]</div>
-				</div>
-				<div id="err_sent">
-					<h2>Thank You For Helping Us!</h2>
-					<p>Your message has been sent to W3Schools.</p>
-					<div class="err_close" onclick="hideSent()">Close [X]</div>
-				</div>
-			</div>
-			<div style="clear:both;"></div>
-		</div>
-	</div>
-	<div id="rightcolumn">
-		<div id="searchSection">
-			<div id="searchText">Search w3schools.com:</div>
-			<div id="googleSearch">
-				<div id="___gcse_0"><div class="gsc-control-cse gsc-control-cse-en"><div dir="ltr" class="gsc-control-wrapper-cse"><form accept-charset="utf-8" class="gsc-search-box gsc-search-box-tools"><table class="gsc-search-box" cellpadding="0" cellspacing="0"><tbody><tr><td class="gsc-input"><div id="gsc-iw-id1" class="gsc-input-box"><table class="gstl_50 " id="gs_id50" style="width: 100%; padding: 0px;" cellpadding="0" cellspacing="0"><tbody><tr><td class="gsib_a" id="gs_tti50"><input spellcheck="false" dir="ltr" id="gsc-i-id1" style="width: 100%; padding: 0px; border: medium none; margin: 0px; height: auto; outline: medium none; background: url(&quot;http://www.google.com/cse/intl/en/images/google_custom_search_watermark.gif&quot;) no-repeat scroll left center rgb(255, 255, 255);" title="search" name="search" class="gsc-input" size="10" autocomplete="off" type="text"></td><td class="gsib_b"><div dir="ltr" id="gs_st50" class="gsst_b"><a style="display: none;" href="javascript:void(0)" class="gsst_a"><span id="gs_cb50" class="gscb_a">×</span></a></div></td></tr></tbody></table></div><input id="bgresponse" name="bgresponse" type="hidden"></td><td class="gsc-search-button"><input title="search" class="gsc-search-button gsc-search-button-v2" src="w3_10_files/search_box_icon.png" type="image"></td><td class="gsc-clear-button"><div title="clear results" class="gsc-clear-button">&nbsp;</div></td></tr></tbody></table><table class="gsc-branding" cellpadding="0" cellspacing="0"><tbody><tr><td class="gsc-branding-user-defined"></td><td class="gsc-branding-text"><div class="gsc-branding-text">powered by</div></td><td class="gsc-branding-img"><img class="gsc-branding-img" src="w3_10_files/small-logo.png"></td></tr></tbody></table></form><div class="gsc-results-wrapper-overlay"><div tabindex="0" class="gsc-results-close-btn"></div><div class="gsc-tabsAreaInvisible"><div class="gsc-tabHeader gsc-inline-block gsc-tabhActive">Custom Search</div><span class="gs-spacer"> </span></div><div class="gsc-tabsAreaInvisible"></div><div class="gsc-above-wrapper-area-invisible"><table class="gsc-above-wrapper-area-container" cellpadding="0" cellspacing="0"><tbody><tr><td class="gsc-result-info-container"><div class="gsc-result-info-invisible"></div></td></tr></tbody></table></div><div class="gsc-adBlockInvisible"></div><div class="gsc-wrapper"><div class="gsc-adBlockInvisible"></div><div class="gsc-resultsbox-invisible"><div class="gsc-resultsRoot gsc-tabData gsc-tabdActive"><table class="gsc-resultsHeader" cellpadding="0" cellspacing="0"><tbody><tr><td class="gsc-twiddleRegionCell"><div class="gsc-twiddle"><div class="gsc-title">Web</div></div><div class="gsc-stats"></div><div class="gsc-results-selector gsc-all-results-active"><div title="show one result" class="gsc-result-selector gsc-one-result">&nbsp;</div><div title="show more results" class="gsc-result-selector gsc-more-results">&nbsp;</div><div title="show all results" class="gsc-result-selector gsc-all-results">&nbsp;</div></div></td><td class="gsc-configLabelCell"></td></tr></tbody></table><div><div class="gsc-expansionArea"></div></div></div></div></div></div><div tabindex="0" class="gsc-modal-background-image"></div></div></div></div>
-			</div>
-		</div>
-		<div id="translateSection">
-			<div id="google_translate_element" style="word-spacing:3px;background-color:transparent;position:relative;top:-7px;"><div style="" dir="ltr" class="skiptranslate goog-te-gadget"><div class="goog-te-gadget-simple" style="white-space: nowrap;" id=":0.targetLanguage"><img style="background-image: url(&quot;https://translate.googleapis.com/translate_static/img/te_ctrl3.gif&quot;); background-position: -65px 0px;" class="goog-te-gadget-icon" src="w3_10_files/cleardot.gif"><span style="vertical-align: middle;"><a href="javascript:void(0)" class="goog-te-menu-value"><span>Select Language</span><img src="w3_10_files/cleardot.gif" height="1" width="1"><span style="border-left: 1px solid rgb(187, 187, 187);">​</span><img src="w3_10_files/cleardot.gif" height="1" width="1"><span style="color: rgb(155, 155, 155);">▼</span></a></span></div></div></div>			
-		</div>
-		<div class="rightad">
-			<h2>WEB HOSTING</h2>
-			<a target="_blank" rel="nofollow" href="https://www.heartinternet.uk/?utm_source=w3schools&amp;utm_medium=cpc&amp;utm_campaign=w3schools%20text%20link">UK Reseller Hosting</a>
-		</div>
-		<div class="rightad">
-			<h2>WEB BUILDING</h2>
-			<a target="_blank" rel="nofollow" id="altovatext" href="http://www.altova.com/ref/?s=w3s_text2&amp;q=xmlspy">XML Editor - Free Trial!</a>
-			<script>
+
+    </script>
+    <div style="border: 0pt none;" id="google_ads_iframe_/16833175/BottomMediumRectangle_0__container__">
+        <iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;"
+                style="border: 0px none; vertical-align: bottom;" marginheight="0" marginwidth="0" scrolling="no"
+                name="google_ads_iframe_/16833175/BottomMediumRectangle_0"
+                id="google_ads_iframe_/16833175/BottomMediumRectangle_0" frameborder="0" height="250"
+                width="300"></iframe>
+    </div>
+</div>
+<div id="err_form">
+    <h2>Your suggestion:</h2>
+
+    <p><label for="err_email">Your E-mail (optional):</label> <input id="err_email" name="err_email" type="email"></p>
+
+    <p><label for="err_url">Page address:</label> <input disabled="disabled" id="err_url" name="err_url" type="text">
+    </p>
+
+    <p><label for="err_desc">Description:</label> <textarea name="err_desc" id="err_desc" cols="92"
+                                                            rows="20"></textarea></p>
+
+    <p class="submit"><input value="Submit" onclick="sendErr()" type="button"></p>
+
+    <div class="err_close" onclick="hideError()">Close [X]</div>
+</div>
+<div id="err_sent">
+    <h2>Thank You For Helping Us!</h2>
+
+    <p>Your message has been sent to W3Schools.</p>
+
+    <div class="err_close" onclick="hideSent()">Close [X]</div>
+</div>
+</div>
+<div style="clear:both;"></div>
+</div>
+</div>
+<div id="rightcolumn">
+    <div id="searchSection">
+        <div id="searchText">Search w3schools.com:</div>
+        <div id="googleSearch">
+            <div id="___gcse_0">
+                <div class="gsc-control-cse gsc-control-cse-en">
+                    <div dir="ltr" class="gsc-control-wrapper-cse">
+                        <form accept-charset="utf-8" class="gsc-search-box gsc-search-box-tools">
+                            <table class="gsc-search-box" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                <tr>
+                                    <td class="gsc-input">
+                                        <div id="gsc-iw-id1" class="gsc-input-box">
+                                            <table class="gstl_50 " id="gs_id50" style="width: 100%; padding: 0px;"
+                                                   cellpadding="0" cellspacing="0">
+                                                <tbody>
+                                                <tr>
+                                                    <td class="gsib_a" id="gs_tti50"><input spellcheck="false" dir="ltr"
+                                                                                            id="gsc-i-id1"
+                                                                                            style="width: 100%; padding: 0px; border: medium none; margin: 0px; height: auto; outline: medium none; background: url(&quot;http://www.google.com/cse/intl/en/images/google_custom_search_watermark.gif&quot;) no-repeat scroll left center rgb(255, 255, 255);"
+                                                                                            title="search" name="search"
+                                                                                            class="gsc-input" size="10"
+                                                                                            autocomplete="off"
+                                                                                            type="text"></td>
+                                                    <td class="gsib_b">
+                                                        <div dir="ltr" id="gs_st50" class="gsst_b"><a
+                                                                style="display: none;" href="javascript:void(0)"
+                                                                class="gsst_a"><span id="gs_cb50"
+                                                                                     class="gscb_a">×</span></a></div>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <input id="bgresponse" name="bgresponse" type="hidden"></td>
+                                    <td class="gsc-search-button"><input title="search"
+                                                                         class="gsc-search-button gsc-search-button-v2"
+                                                                         src="w3_10_files/search_box_icon.png"
+                                                                         type="image"></td>
+                                    <td class="gsc-clear-button">
+                                        <div title="clear results" class="gsc-clear-button">&nbsp;</div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <table class="gsc-branding" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                <tr>
+                                    <td class="gsc-branding-user-defined"></td>
+                                    <td class="gsc-branding-text">
+                                        <div class="gsc-branding-text">powered by</div>
+                                    </td>
+                                    <td class="gsc-branding-img"><img class="gsc-branding-img"
+                                                                      src="w3_10_files/small-logo.png"></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </form>
+                        <div class="gsc-results-wrapper-overlay">
+                            <div tabindex="0" class="gsc-results-close-btn"></div>
+                            <div class="gsc-tabsAreaInvisible">
+                                <div class="gsc-tabHeader gsc-inline-block gsc-tabhActive">Custom Search</div>
+                                <span class="gs-spacer"> </span></div>
+                            <div class="gsc-tabsAreaInvisible"></div>
+                            <div class="gsc-above-wrapper-area-invisible">
+                                <table class="gsc-above-wrapper-area-container" cellpadding="0" cellspacing="0">
+                                    <tbody>
+                                    <tr>
+                                        <td class="gsc-result-info-container">
+                                            <div class="gsc-result-info-invisible"></div>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="gsc-adBlockInvisible"></div>
+                            <div class="gsc-wrapper">
+                                <div class="gsc-adBlockInvisible"></div>
+                                <div class="gsc-resultsbox-invisible">
+                                    <div class="gsc-resultsRoot gsc-tabData gsc-tabdActive">
+                                        <table class="gsc-resultsHeader" cellpadding="0" cellspacing="0">
+                                            <tbody>
+                                            <tr>
+                                                <td class="gsc-twiddleRegionCell">
+                                                    <div class="gsc-twiddle">
+                                                        <div class="gsc-title">Web</div>
+                                                    </div>
+                                                    <div class="gsc-stats"></div>
+                                                    <div class="gsc-results-selector gsc-all-results-active">
+                                                        <div title="show one result"
+                                                             class="gsc-result-selector gsc-one-result">&nbsp;</div>
+                                                        <div title="show more results"
+                                                             class="gsc-result-selector gsc-more-results">&nbsp;</div>
+                                                        <div title="show all results"
+                                                             class="gsc-result-selector gsc-all-results">&nbsp;</div>
+                                                    </div>
+                                                </td>
+                                                <td class="gsc-configLabelCell"></td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                        <div>
+                                            <div class="gsc-expansionArea"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div tabindex="0" class="gsc-modal-background-image"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="translateSection">
+        <div id="google_translate_element"
+             style="word-spacing:3px;background-color:transparent;position:relative;top:-7px;">
+            <div style="" dir="ltr" class="skiptranslate goog-te-gadget">
+                <div class="goog-te-gadget-simple" style="white-space: nowrap;" id=":0.targetLanguage"><img
+                        style="background-image: url(&quot;https://translate.googleapis.com/translate_static/img/te_ctrl3.gif&quot;); background-position: -65px 0px;"
+                        class="goog-te-gadget-icon" src="w3_10_files/cleardot.gif"><span
+                        style="vertical-align: middle;"><a href="javascript:void(0)" class="goog-te-menu-value"><span>Select Language</span><img
+                        src="w3_10_files/cleardot.gif" height="1" width="1"><span
+                        style="border-left: 1px solid rgb(187, 187, 187);">​</span><img src="w3_10_files/cleardot.gif"
+                                                                                        height="1" width="1"><span
+                        style="color: rgb(155, 155, 155);">▼</span></a></span></div>
+            </div>
+        </div>
+    </div>
+    <div class="rightad">
+        <h2>WEB HOSTING</h2>
+        <a target="_blank" rel="nofollow"
+           href="https://www.heartinternet.uk/?utm_source=w3schools&amp;utm_medium=cpc&amp;utm_campaign=w3schools%20text%20link">UK
+            Reseller Hosting</a>
+    </div>
+    <div class="rightad">
+        <h2>WEB BUILDING</h2>
+        <a target="_blank" rel="nofollow" id="altovatext" href="http://www.altova.com/ref/?s=w3s_text2&amp;q=xmlspy">XML
+            Editor - Free Trial!</a>
+        <script>
 			if (Math.random()<0.5)
 				{
 				x=document.getElementById("altovatext");
 				x.innerHTML="XML Editor - Free Trial!";
 				x.href="http://www.altova.com/ref/?s=w3s_text2&q=xmlspy";
 				}
-			</script>
-			<a target="_blank" rel="nofollow" href="http://www.wix.com/eteamhtml/900fwb-w3s?utm_campaign=ma_w3schools.com&amp;experiment_id=ma_w3schools.comlink1_900fwb-w3s&amp;embed_tags=camp&amp;utm_camp=hOUdCO-AmAMQm__j8AM">FREE Website BUILDER</a>
-			<a target="_blank" rel="nofollow" href="http://www.wix.com/eteamhtml/300n-w3s?utm_campaign=ma_w3schools.com&amp;experiment_id=ma_w3schools.comlink2_freehtml5templates_300n-w3s">Free HTML5 Templates</a>
-		</div>
-		<div class="rightad">
-			<h2>W3SCHOOLS EXAMS</h2>
-			<a target="_blank" href="http://www.w3schools.com/cert/default.asp">HTML, CSS, JavaScript, PHP, jQuery, XML, and ASP Certifications</a>
-		</div>
-		<div id="rightshare">
-			<h2>SHARE THIS PAGE</h2>
-			<div style="margin-top:7px;">
-				<script>
+
+        </script>
+        <a target="_blank" rel="nofollow"
+           href="http://www.wix.com/eteamhtml/900fwb-w3s?utm_campaign=ma_w3schools.com&amp;experiment_id=ma_w3schools.comlink1_900fwb-w3s&amp;embed_tags=camp&amp;utm_camp=hOUdCO-AmAMQm__j8AM">FREE
+            Website BUILDER</a>
+        <a target="_blank" rel="nofollow"
+           href="http://www.wix.com/eteamhtml/300n-w3s?utm_campaign=ma_w3schools.com&amp;experiment_id=ma_w3schools.comlink2_freehtml5templates_300n-w3s">Free
+            HTML5 Templates</a>
+    </div>
+    <div class="rightad">
+        <h2>W3SCHOOLS EXAMS</h2>
+        <a target="_blank" href="http://www.w3schools.com/cert/default.asp">HTML, CSS, JavaScript, PHP, jQuery, XML, and
+            ASP Certifications</a>
+    </div>
+    <div id="rightshare">
+        <h2>SHARE THIS PAGE</h2>
+
+        <div style="margin-top:7px;">
+            <script>
 				<!--
 				try{
 				loc=location.pathname;
@@ -531,16 +875,40 @@ Formed" XML documents.</p>
 				document.write(txt);
 				}
 				catch(e) {}
-				//--></script><ul id="sharelist"><li id="facebook"><a href="http://www.facebook.com/sharer.php?u=http://www.w3schools.com/xml/xml_syntax.asp" target="_blank" title="Facebook"></a></li><li id="twitter"><a href="http://twitter.com/home?status=Currently%20reading%20http://www.w3schools.com/xml/xml_syntax.asp" target="_blank" title="Twitter"></a></li><li id="email"><a href="mailto:?&amp;subject=XML%20Syntax&amp;body=Take%20a%20look%20at%20this%20page%20at%20W3Schools.com:%20http://www.w3schools.com/xml/xml_syntax.asp" target="_blank" title="E-mail"></a></li><li id="googleplus"><a href="https://plus.google.com/share?url=http://www.w3schools.com/xml/xml_syntax.asp" target="_blank" title="Google+"></a></li><li id="linkedin"><a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.w3schools.com/xml/xml_syntax.asp&amp;source=w3schools.com" target="_blank" title="LinkedIn"></a></li><li id="reddit"><a href="http://www.reddit.com/submit?url=http://www.w3schools.com/xml/xml_syntax.asp" target="_blank" title="Reddit"></a></li></ul>
-			</div>
-			<div id="rightfblike" style="xdisplay:none;margin-top:10px;">
-				<img style="cursor:pointer;" src="w3_10_files/fblike.gif" onclick="clickFBLike()" alt="facebook">
-				<div id="fblikeframe" style="display:none;">
-					<div id="popupframe" style="position:fixed;height:100%;width:100%;top:0;left:0;background-color:#000000;opacity:0.5;" onclick="hideFBLike()"></div>
-					<div id="popupDIV" style="position:fixed;height:40%;width:40%;min-width:310px;min-height:250px;top:30%;left:30%;background-color:#ffffff;">
-					</div>
-				</div>
-				<script>
+				//-->
+            </script>
+            <ul id="sharelist">
+                <li id="facebook"><a
+                        href="http://www.facebook.com/sharer.php?u=http://www.w3schools.com/xml/xml_syntax.asp"
+                        target="_blank" title="Facebook"></a></li>
+                <li id="twitter"><a
+                        href="http://twitter.com/home?status=Currently%20reading%20http://www.w3schools.com/xml/xml_syntax.asp"
+                        target="_blank" title="Twitter"></a></li>
+                <li id="email"><a
+                        href="mailto:?&amp;subject=XML%20Syntax&amp;body=Take%20a%20look%20at%20this%20page%20at%20W3Schools.com:%20http://www.w3schools.com/xml/xml_syntax.asp"
+                        target="_blank" title="E-mail"></a></li>
+                <li id="googleplus"><a
+                        href="https://plus.google.com/share?url=http://www.w3schools.com/xml/xml_syntax.asp"
+                        target="_blank" title="Google+"></a></li>
+                <li id="linkedin"><a
+                        href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.w3schools.com/xml/xml_syntax.asp&amp;source=w3schools.com"
+                        target="_blank" title="LinkedIn"></a></li>
+                <li id="reddit"><a href="http://www.reddit.com/submit?url=http://www.w3schools.com/xml/xml_syntax.asp"
+                                   target="_blank" title="Reddit"></a></li>
+            </ul>
+        </div>
+        <div id="rightfblike" style="xdisplay:none;margin-top:10px;">
+            <img style="cursor:pointer;" src="w3_10_files/fblike.gif" onclick="clickFBLike()" alt="facebook">
+
+            <div id="fblikeframe" style="display:none;">
+                <div id="popupframe"
+                     style="position:fixed;height:100%;width:100%;top:0;left:0;background-color:#000000;opacity:0.5;"
+                     onclick="hideFBLike()"></div>
+                <div id="popupDIV"
+                     style="position:fixed;height:40%;width:40%;min-width:310px;min-height:250px;top:30%;left:30%;background-color:#ffffff;">
+                </div>
+            </div>
+            <script>
 				function clickFBLike() {
 					document.getElementById("fblikeframe").style.display='block'
 					document.getElementById("popupDIV").innerHTML = "<iframe src='/fblike.asp?r=" + Math.random() + "' frameborder='no' style='height:200px;width:300px;'></iframe><br><button onclick='hideFBLike()'>Close</button>";
@@ -549,12 +917,13 @@ Formed" XML documents.</p>
 				function hideFBLike() {
 					document.getElementById("fblikeframe").style.display='none'
 				}
-				</script>
-			</div>
 
-		</div>
-		<div id="skyscraper" style="padding-left:1px;">
-			<script>
+            </script>
+        </div>
+
+    </div>
+    <div id="skyscraper" style="padding-left:1px;">
+        <script>
 			var adScreenWidth = screen.width;
 			if (adScreenWidth <= 768) {
 			  document.write("<!-- MobileBottomBanner --><div id='div-gpt-ad-1403595829794-3' style='width:728px;height:90px;'>")
@@ -565,103 +934,191 @@ Formed" XML documents.</p>
 			  googletag.cmd.push(function() { googletag.display('div-gpt-ad-1403595829794-5'); });
 			  document.write("</div>");
 			}
-			</script><!-- WideSkyScraper --><div id="div-gpt-ad-1403595829794-5" style="width:160px;height:600px;"><div style="border: 0pt none;" id="google_ads_iframe_/16833175/WideSkyScraper_0__container__"><iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none; vertical-align: bottom;" marginheight="0" marginwidth="0" scrolling="no" name="google_ads_iframe_/16833175/WideSkyScraper_0" id="google_ads_iframe_/16833175/WideSkyScraper_0" frameborder="0" height="600" width="160"></iframe></div></div>
-		</div>
-		<div class="rightad" style="margin-top:8px">
-			<h2>WEB RESOURCES</h2>
-			<a target="_top" href="http://www.w3schools.com/browsers/default.asp">Web Statistics</a>
-			<a target="_top" href="http://www.w3schools.com/website/web_validate.asp">Web Validation</a>
-		</div>
-	</div>
-	<div style="clear:both;"></div>
+
+        </script>
+        <!-- WideSkyScraper -->
+        <div id="div-gpt-ad-1403595829794-5" style="width:160px;height:600px;">
+            <div style="border: 0pt none;" id="google_ads_iframe_/16833175/WideSkyScraper_0__container__">
+                <iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;"
+                        style="border: 0px none; vertical-align: bottom;" marginheight="0" marginwidth="0"
+                        scrolling="no" name="google_ads_iframe_/16833175/WideSkyScraper_0"
+                        id="google_ads_iframe_/16833175/WideSkyScraper_0" frameborder="0" height="600"
+                        width="160"></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="rightad" style="margin-top:8px">
+        <h2>WEB RESOURCES</h2>
+        <a target="_top" href="http://www.w3schools.com/browsers/default.asp">Web Statistics</a>
+        <a target="_top" href="http://www.w3schools.com/website/web_validate.asp">Web Validation</a>
+    </div>
+</div>
+<div style="clear:both;"></div>
 </div>
 <div class="footer">
-	<br>
-	<table id="bottomlinks"><tbody><tr>
-	<td style="vertical-align:top;">
-	<h3>Top 10 Tutorials</h3>
-	<a href="http://www.w3schools.com/html/default.asp"><span class="bottomlinksraquo">»</span> HTML Tutorial</a><br>
-	<a href="http://www.w3schools.com/html/html5_intro.asp"><span class="bottomlinksraquo">»</span> HTML5 Tutorial</a><br>
-	<a href="http://www.w3schools.com/css/default.asp"><span class="bottomlinksraquo">»</span> CSS Tutorial</a><br>
-	<a href="http://www.w3schools.com/css/css3_intro.asp"><span class="bottomlinksraquo">»</span> CSS3 Tutorial</a><br>
-	<a href="http://www.w3schools.com/js/default.asp"><span class="bottomlinksraquo">»</span> JavaScript Tutorial</a><br>
-	<a href="http://www.w3schools.com/jquery/default.asp"><span class="bottomlinksraquo">»</span> jQuery Tutorial</a><br>
-	<a href="http://www.w3schools.com/sql/default.asp"><span class="bottomlinksraquo">»</span> SQL Tutorial</a><br>
-	<a href="http://www.w3schools.com/php/default.asp"><span class="bottomlinksraquo">»</span> PHP Tutorial</a><br>
-	<a href="http://www.w3schools.com/aspnet/default.asp"><span class="bottomlinksraquo">»</span> ASP.NET Tutorial</a><br>
-	<a href="http://www.w3schools.com/xml/default.asp"><span class="bottomlinksraquo">»</span> XML Tutorial</a><br>
-	</td>
-	<td style="vertical-align:top;">
-	<h3>Top 10 References</h3>
-	<a href="http://www.w3schools.com/tags/default.asp"><span class="bottomlinksraquo">»</span> HTML/HTML5 Reference</a><br>
-	<a href="http://www.w3schools.com/cssref/default.asp"><span class="bottomlinksraquo">»</span> CSS 1,2,3 Reference</a><br>
-	<a href="http://www.w3schools.com/cssref/css3_browsersupport.asp"><span class="bottomlinksraquo">»</span> CSS 3 Browser Support</a><br>
-	<a href="http://www.w3schools.com/jsref/default.asp"><span class="bottomlinksraquo">»</span> JavaScript</a><br>
-	<a href="http://www.w3schools.com/jsref/default.asp"><span class="bottomlinksraquo">»</span> HTML DOM</a><br>
-	<a href="http://www.w3schools.com/dom/dom_nodetype.asp"><span class="bottomlinksraquo">»</span> XML DOM</a><br>
-	<a href="http://www.w3schools.com/php/php_ref_array.asp"><span class="bottomlinksraquo">»</span> PHP Reference</a><br>
-	<a href="http://www.w3schools.com/jquery/jquery_ref_selectors.asp"><span class="bottomlinksraquo">»</span> jQuery Reference</a><br>
-	<a href="http://www.w3schools.com/aspnet/webpages_ref_classes.asp"><span class="bottomlinksraquo">»</span> ASP.NET Reference</a><br>
-	<a href="http://www.w3schools.com/tags/ref_colornames.asp"><span class="bottomlinksraquo">»</span> HTML Colors</a><br>
-	</td>
-	<td style="vertical-align:top;">
-	<h3>Top 10 Examples</h3>
-	<a href="http://www.w3schools.com/html/html_examples.asp"><span class="bottomlinksraquo">»</span> HTML Examples</a><br>
-	<a href="http://www.w3schools.com/css/css_examples.asp"><span class="bottomlinksraquo">»</span> CSS Examples</a><br>
-	<a href="http://www.w3schools.com/js/js_examples.asp"><span class="bottomlinksraquo">»</span> JavaScript Examples</a><br>
-	<a href="http://www.w3schools.com/js/js_dom_examples.asp"><span class="bottomlinksraquo">»</span> HTML DOM Examples</a><br>
-	<a href="http://www.w3schools.com/php/php_examples.asp"><span class="bottomlinksraquo">»</span> PHP Examples</a><br>
-	<a href="http://www.w3schools.com/jquery/jquery_examples.asp"><span class="bottomlinksraquo">»</span> jQuery Examples</a><br>
-	<a href="http://www.w3schools.com/xml/xml_examples.asp"><span class="bottomlinksraquo">»</span> XML Examples</a><br>
-	<a href="http://www.w3schools.com/dom/dom_examples.asp"><span class="bottomlinksraquo">»</span> XML DOM Examples</a><br>
-	<a href="http://www.w3schools.com/asp/asp_examples.asp"><span class="bottomlinksraquo">»</span> ASP Examples</a><br>
-	<a href="http://www.w3schools.com/svg/svg_examples.asp"><span class="bottomlinksraquo">»</span> SVG Examples</a>
-	</td>
-	<td style="vertical-align:top;">
-	<h3>Web Certificates</h3>
-	<a href="http://www.w3schools.com/cert/default.asp"><span class="bottomlinksraquo">»</span> HTML Certificate</a><br>
-	<a href="http://www.w3schools.com/cert/default.asp"><span class="bottomlinksraquo">»</span> HTML5 Certificate</a><br>
-	<a href="http://www.w3schools.com/cert/default.asp"><span class="bottomlinksraquo">»</span> CSS Certificate</a><br>
-	<a href="http://www.w3schools.com/cert/default.asp"><span class="bottomlinksraquo">»</span> JavaScript Certificate</a><br>
-	<a href="http://www.w3schools.com/cert/default.asp"><span class="bottomlinksraquo">»</span> jQuery Certificate</a><br>
-	<a href="http://www.w3schools.com/cert/default.asp"><span class="bottomlinksraquo">»</span> PHP Certificate</a><br>
-	<a href="http://www.w3schools.com/cert/default.asp"><span class="bottomlinksraquo">»</span> XML Certificate</a><br>
-	<a href="http://www.w3schools.com/cert/default.asp"><span class="bottomlinksraquo">»</span> ASP Certificate</a><br>
-	</td>
-	<td style="vertical-align:top;">
-	<h3>Color Picker</h3>
-	<a href="http://www.w3schools.com/tags/ref_colorpicker.asp">
-	<img src="w3_10_files/colorpicker.gif" alt="colorpicker" style="width:80px;height:68px;"></a>
-	</td>
-	</tr></tbody></table>
+    <br>
+    <table id="bottomlinks">
+        <tbody>
+        <tr>
+            <td style="vertical-align:top;">
+                <h3>Top 10 Tutorials</h3>
+                <a href="http://www.w3schools.com/html/default.asp"><span class="bottomlinksraquo">»</span> HTML
+                    Tutorial</a><br>
+                <a href="http://www.w3schools.com/html/html5_intro.asp"><span class="bottomlinksraquo">»</span> HTML5
+                    Tutorial</a><br>
+                <a href="http://www.w3schools.com/css/default.asp"><span class="bottomlinksraquo">»</span> CSS Tutorial</a><br>
+                <a href="http://www.w3schools.com/css/css3_intro.asp"><span class="bottomlinksraquo">»</span> CSS3
+                    Tutorial</a><br>
+                <a href="http://www.w3schools.com/js/default.asp"><span class="bottomlinksraquo">»</span> JavaScript
+                    Tutorial</a><br>
+                <a href="http://www.w3schools.com/jquery/default.asp"><span class="bottomlinksraquo">»</span> jQuery
+                    Tutorial</a><br>
+                <a href="http://www.w3schools.com/sql/default.asp"><span class="bottomlinksraquo">»</span> SQL Tutorial</a><br>
+                <a href="http://www.w3schools.com/php/default.asp"><span class="bottomlinksraquo">»</span> PHP Tutorial</a><br>
+                <a href="http://www.w3schools.com/aspnet/default.asp"><span class="bottomlinksraquo">»</span> ASP.NET
+                    Tutorial</a><br>
+                <a href="http://www.w3schools.com/xml/default.asp"><span class="bottomlinksraquo">»</span> XML Tutorial</a><br>
+            </td>
+            <td style="vertical-align:top;">
+                <h3>Top 10 References</h3>
+                <a href="http://www.w3schools.com/tags/default.asp"><span class="bottomlinksraquo">»</span> HTML/HTML5
+                    Reference</a><br>
+                <a href="http://www.w3schools.com/cssref/default.asp"><span class="bottomlinksraquo">»</span> CSS 1,2,3
+                    Reference</a><br>
+                <a href="http://www.w3schools.com/cssref/css3_browsersupport.asp"><span
+                        class="bottomlinksraquo">»</span> CSS 3 Browser Support</a><br>
+                <a href="http://www.w3schools.com/jsref/default.asp"><span class="bottomlinksraquo">»</span> JavaScript</a><br>
+                <a href="http://www.w3schools.com/jsref/default.asp"><span class="bottomlinksraquo">»</span> HTML
+                    DOM</a><br>
+                <a href="http://www.w3schools.com/dom/dom_nodetype.asp"><span class="bottomlinksraquo">»</span> XML DOM</a><br>
+                <a href="http://www.w3schools.com/php/php_ref_array.asp"><span class="bottomlinksraquo">»</span> PHP
+                    Reference</a><br>
+                <a href="http://www.w3schools.com/jquery/jquery_ref_selectors.asp"><span
+                        class="bottomlinksraquo">»</span> jQuery Reference</a><br>
+                <a href="http://www.w3schools.com/aspnet/webpages_ref_classes.asp"><span
+                        class="bottomlinksraquo">»</span> ASP.NET Reference</a><br>
+                <a href="http://www.w3schools.com/tags/ref_colornames.asp"><span class="bottomlinksraquo">»</span> HTML
+                    Colors</a><br>
+            </td>
+            <td style="vertical-align:top;">
+                <h3>Top 10 Examples</h3>
+                <a href="http://www.w3schools.com/html/html_examples.asp"><span class="bottomlinksraquo">»</span> HTML
+                    Examples</a><br>
+                <a href="http://www.w3schools.com/css/css_examples.asp"><span class="bottomlinksraquo">»</span> CSS
+                    Examples</a><br>
+                <a href="http://www.w3schools.com/js/js_examples.asp"><span class="bottomlinksraquo">»</span> JavaScript
+                    Examples</a><br>
+                <a href="http://www.w3schools.com/js/js_dom_examples.asp"><span class="bottomlinksraquo">»</span> HTML
+                    DOM Examples</a><br>
+                <a href="http://www.w3schools.com/php/php_examples.asp"><span class="bottomlinksraquo">»</span> PHP
+                    Examples</a><br>
+                <a href="http://www.w3schools.com/jquery/jquery_examples.asp"><span class="bottomlinksraquo">»</span>
+                    jQuery Examples</a><br>
+                <a href="http://www.w3schools.com/xml/xml_examples.asp"><span class="bottomlinksraquo">»</span> XML
+                    Examples</a><br>
+                <a href="http://www.w3schools.com/dom/dom_examples.asp"><span class="bottomlinksraquo">»</span> XML DOM
+                    Examples</a><br>
+                <a href="http://www.w3schools.com/asp/asp_examples.asp"><span class="bottomlinksraquo">»</span> ASP
+                    Examples</a><br>
+                <a href="http://www.w3schools.com/svg/svg_examples.asp"><span class="bottomlinksraquo">»</span> SVG
+                    Examples</a>
+            </td>
+            <td style="vertical-align:top;">
+                <h3>Web Certificates</h3>
+                <a href="http://www.w3schools.com/cert/default.asp"><span class="bottomlinksraquo">»</span> HTML
+                    Certificate</a><br>
+                <a href="http://www.w3schools.com/cert/default.asp"><span class="bottomlinksraquo">»</span> HTML5
+                    Certificate</a><br>
+                <a href="http://www.w3schools.com/cert/default.asp"><span class="bottomlinksraquo">»</span> CSS
+                    Certificate</a><br>
+                <a href="http://www.w3schools.com/cert/default.asp"><span class="bottomlinksraquo">»</span> JavaScript
+                    Certificate</a><br>
+                <a href="http://www.w3schools.com/cert/default.asp"><span class="bottomlinksraquo">»</span> jQuery
+                    Certificate</a><br>
+                <a href="http://www.w3schools.com/cert/default.asp"><span class="bottomlinksraquo">»</span> PHP
+                    Certificate</a><br>
+                <a href="http://www.w3schools.com/cert/default.asp"><span class="bottomlinksraquo">»</span> XML
+                    Certificate</a><br>
+                <a href="http://www.w3schools.com/cert/default.asp"><span class="bottomlinksraquo">»</span> ASP
+                    Certificate</a><br>
+            </td>
+            <td style="vertical-align:top;">
+                <h3>Color Picker</h3>
+                <a href="http://www.w3schools.com/tags/ref_colorpicker.asp">
+                    <img src="w3_10_files/colorpicker.gif" alt="colorpicker" style="width:80px;height:68px;"></a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
 </div>
 <hr style="height:5px;">
 <div class="footer">
-	<div id="footerImg"><a href="http://www.w3schools.com/">
-		<img style="width:150px;height:28px;border:0" src="w3_10_files/w3schoolscom_gray.gif" alt="W3Schools.com"></a>
-	</div>
-	<div id="footerAbout">
-		<a href="" onclick="displayError();return false" style="word-spacing:normal;">REPORT ERROR</a> |
-		<a href="http://www.w3schools.com/default.asp" target="_top">HOME</a> |
-		<a href="#top" target="_top">TOP</a> |
-		<a href="" target="_blank" onclick="printPage();return false">PRINT</a> |
-		<a href="http://www.w3schools.com/forum/default.asp" target="_blank">FORUM</a> |
-		<a href="http://www.w3schools.com/about/default.asp" target="_top">ABOUT</a> |
-		<a href="http://www.w3schools.com/about/about_advert.asp" target="_top" style="word-spacing:normal;">ADVERTISE WITH US</a>
-	</div>
-	<div id="footerText">
-		W3Schools is optimized for learning, testing, and training. Examples 
-might be simplified to improve reading and basic understanding.
-		Tutorials, references, and examples are constantly reviewed to avoid 
-errors, but we cannot warrant full correctness of all content.
-		While using this site, you agree to have read and accepted our <a href="http://www.w3schools.com/about/about_copyright.asp">terms of use</a>, <a href="http://www.w3schools.com/about/about_privacy.asp">cookie and privacy policy</a>.
-		<a href="http://www.w3schools.com/about/about_copyright.asp">Copyright 1999-2014</a> by Refsnes Data. All Rights Reserved.<br><br>
-	</div>
+    <div id="footerImg"><a href="http://www.w3schools.com/">
+        <img style="width:150px;height:28px;border:0" src="w3_10_files/w3schoolscom_gray.gif" alt="W3Schools.com"></a>
+    </div>
+    <div id="footerAbout">
+        <a href="" onclick="displayError();return false" style="word-spacing:normal;">REPORT ERROR</a> |
+        <a href="http://www.w3schools.com/default.asp" target="_top">HOME</a> |
+        <a href="#top" target="_top">TOP</a> |
+        <a href="" target="_blank" onclick="printPage();return false">PRINT</a> |
+        <a href="http://www.w3schools.com/forum/default.asp" target="_blank">FORUM</a> |
+        <a href="http://www.w3schools.com/about/default.asp" target="_top">ABOUT</a> |
+        <a href="http://www.w3schools.com/about/about_advert.asp" target="_top" style="word-spacing:normal;">ADVERTISE
+            WITH US</a>
+    </div>
+    <div id="footerText">
+        W3Schools is optimized for learning, testing, and training. Examples
+        might be simplified to improve reading and basic understanding.
+        Tutorials, references, and examples are constantly reviewed to avoid
+        errors, but we cannot warrant full correctness of all content.
+        While using this site, you agree to have read and accepted our <a
+            href="http://www.w3schools.com/about/about_copyright.asp">terms of use</a>, <a
+            href="http://www.w3schools.com/about/about_privacy.asp">cookie and privacy policy</a>.
+        <a href="http://www.w3schools.com/about/about_copyright.asp">Copyright 1999-2014</a> by Refsnes Data. All Rights
+        Reserved.<br><br>
+    </div>
 </div>
 <script src="w3_10_files/w3schools.js"></script>
 
-<script src="w3_10_files/element.js"></script><div id="goog-gt-tt" class="skiptranslate" dir="ltr"><div style="padding: 8px;"><div><div class="logo"><img src="w3_10_files/translate-32.png" height="20" width="20"></div></div></div><div class="top" style="padding: 8px; float: left; width: 100%;"><h1 class="title gray">Original text</h1></div><div class="middle" style="padding: 8px;"><div class="original-text"></div></div><div class="bottom" style="padding: 8px;"><div class="activity-links"><span class="activity-link">Contribute a better translation</span><span class="activity-link"></span></div><div class="started-activity-container"><hr style="color: #CCC; background-color: #CCC; height: 1px; border: none;"><div class="activity-root"></div></div></div><div style="display: none;" class="status-message"></div></div>
+<script src="w3_10_files/element.js"></script>
+<div id="goog-gt-tt" class="skiptranslate" dir="ltr">
+    <div style="padding: 8px;">
+        <div>
+            <div class="logo"><img src="w3_10_files/translate-32.png" height="20" width="20"></div>
+        </div>
+    </div>
+    <div class="top" style="padding: 8px; float: left; width: 100%;"><h1 class="title gray">Original text</h1></div>
+    <div class="middle" style="padding: 8px;">
+        <div class="original-text"></div>
+    </div>
+    <div class="bottom" style="padding: 8px;">
+        <div class="activity-links"><span class="activity-link">Contribute a better translation</span><span
+                class="activity-link"></span></div>
+        <div class="started-activity-container">
+            <hr style="color: #CCC; background-color: #CCC; height: 1px; border: none;">
+            <div class="activity-root"></div>
+        </div>
+    </div>
+    <div style="display: none;" class="status-message"></div>
+</div>
 
 
-
-<div style="position: absolute; top: -1000px; height: 1px; width: 1px;"><object id="fI0i09ce18x" name="fI0i09ce18x" type="application/x-shockwave-flash" data="w3_10_files/hrs.swf" height="500" width="400"><param name="allowScriptAccess" value="always"></object></div><iframe style="visibility: visible; box-sizing: content-box; width: 731px; height: 274px; display: none;" class="goog-te-menu-frame skiptranslate" frameborder="0"></iframe><table class="gstl_50 gssb_c" style="width: 221px; display: none; top: 141px; left: 1079px; position: absolute;" cellpadding="0" cellspacing="0"><tbody><tr><td class="gssb_f"></td><td style="width: 100%;" class="gssb_e"></td></tr></tbody></table></body></html>
+<div style="position: absolute; top: -1000px; height: 1px; width: 1px;">
+    <object id="fI0i09ce18x" name="fI0i09ce18x" type="application/x-shockwave-flash" data="w3_10_files/hrs.swf"
+            height="500" width="400">
+        <param name="allowScriptAccess" value="always">
+    </object>
+</div>
+<iframe style="visibility: visible; box-sizing: content-box; width: 731px; height: 274px; display: none;"
+        class="goog-te-menu-frame skiptranslate" frameborder="0"></iframe>
+<table class="gstl_50 gssb_c" style="width: 221px; display: none; top: 141px; left: 1079px; position: absolute;"
+       cellpadding="0" cellspacing="0">
+    <tbody>
+    <tr>
+        <td class="gssb_f"></td>
+        <td style="width: 100%;" class="gssb_e"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

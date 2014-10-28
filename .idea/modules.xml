@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/WebClusters.iml" filepath="$PROJECT_DIR$/WebClusters.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Structural-Web-Document-Clustering.iml" filepath="$PROJECT_DIR$/Structural-Web-Document-Clustering.iml" />
     </modules>
   </component>
 </project>
