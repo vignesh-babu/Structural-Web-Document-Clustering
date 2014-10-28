@@ -1,0 +1,2045 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0061)http://www.mathworks.in/matlabcentral/cody/?s_tid=gn_mlc_cody -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      
+      	<script type="text/javascript" src="./mat_10_files/jquery-latest.js"></script>
+      <!-- START OF GLOBAL NAV -->
+  <link rel="stylesheet" href="./mat_10_files/sitewide.css" type="text/css">
+  <link rel="stylesheet" href="./mat_10_files/mlc.css" type="text/css">
+  <!--[if lt IE 7]>
+  <link href="/matlabcentral/css/ie6down.css" type="text/css" rel="stylesheet">
+  <![endif]-->
+
+      
+       
+    
+    <meta name="keywords" content="file exchange, matlab answers, newsgroup access, link exchange, matlab blog, matlab central, simulink blog, matlab community, matlab and simulink community">
+    <link rel="stylesheet" type="text/css" media="print" href="./mat_10_files/print.css">
+    <title>MATLAB Cody - MATLAB Central</title>
+    <link rel="stylesheet" type="text/css" href="./mat_10_files/cody.css">
+<link href="./mat_10_files/960.css" media="screen" rel="stylesheet" type="text/css">
+<link href="./mat_10_files/jquery.jqplot.min.css" media="screen" rel="stylesheet" type="text/css">
+<link href="./mat_10_files/chosen.min.css" media="screen" rel="stylesheet" type="text/css">
+<link href="http://www.mathworks.in/matlabcentral/cody/stylesheets/cody_app.css?1412191045" media="screen" rel="stylesheet" type="text/css">
+<script src="http://www.mathworks.in/matlabcentral/cody/javascripts/jquery_ujs.js?1412191045" type="text/javascript"></script>
+<script src="./mat_10_files/jquery-ui.min.js" type="text/javascript"></script>
+<script src="./mat_10_files/application.js" type="text/javascript"></script>
+<meta content="authenticity_token" name="csrf-param">
+<meta content="bkhEWTGGdCzLpWXMM/Up5k5p6i9wxF09JgWkMBQFjhI=" name="csrf-token">
+
+<script type="text/javascript">
+  // makerzone callout javascript
+  $(document).ready(function() {
+    $(".random_callout").each(function() {
+      var callouts = $(this).find(".callout_container");
+      callouts.hide().eq(Math.floor((Math.random()*callouts.length))).show();
+    });
+  });
+</script>
+
+
+  </head><iframe allowtransparency="true" frameborder="0" id="abs-top-frame" src="./mat_10_files/top.html" style="position: fixed; z-index: 4294967295; overflow: hidden; top: 0px; left: 0px; right: 0px; width: 138px; height: 13px; max-height: none; min-height: 0px; margin: 0px auto; padding: 0px; border: 0px; display: block; background-color: transparent;"></iframe>
+    <body>
+      <div id="header">
+  <div class="wrapper">
+  <!--put nothing in left div - only 11px wide shadow --> 
+    <div class="main">
+        	<div id="logo"><a href="http://www.mathworks.in/matlabcentral/?s_tid=gn_mlc_logo" title="MATLAB Central Home"><img src="http://www.mathworks.in/matlabcentral/images/mlclogo-whitebgd.gif" alt="MATLAB Central"></a></div>
+      
+        <div id="headertools">
+        
+
+<script language="JavaScript1.3" type="text/javascript">
+
+function submitForm(query){
+
+	choice = document.forms['searchForm'].elements['search_submit'].value;
+	
+	if (choice == "entire1" || choice == "contest" || choice == "matlabcentral" || choice == "blogs"){
+	
+	   var newElem = document.createElement("input");
+	   newElem.type = "hidden";
+	   newElem.name = "q";
+	   newElem.value = query.value;
+	   document.forms['searchForm'].appendChild(newElem);
+	      
+	   submit_action = '/searchresults/';
+	}
+	
+	switch(choice){
+	   case "matlabcentral":
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "c[]";
+	      newElem.value = "matlabcentral";
+	      document.forms['searchForm'].appendChild(newElem);
+	
+	      selected_index = 0;
+	      break
+	   case "fileexchange":
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "term";
+	      newElem.value = query.value;
+	      newElem.classname = "formelem";
+	      document.forms['searchForm'].appendChild(newElem);
+	
+	      submit_action = "/matlabcentral/fileexchange/";
+	      selected_index = 1;
+	      break
+	   case "answers":
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "term";
+	      newElem.value = query.value;
+	      newElem.classname = "formelem";
+	      document.forms['searchForm'].appendChild(newElem);
+	
+	      submit_action = "/matlabcentral/answers/";
+	      selected_index = 2;
+	      break
+	   case "cssm":
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "search_string";
+	      newElem.value = query.value;
+	      newElem.classname = "formelem";
+	      document.forms['searchForm'].appendChild(newElem);
+	
+		  submit_action = "/matlabcentral/newsreader/search_results";
+	      selected_index = 3;
+	      break
+	   case "linkexchange":
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "term";
+	      newElem.value = query.value;
+	      newElem.classname = "formelem";
+	      document.forms['searchForm'].appendChild(newElem);
+	
+	      submit_action = "/matlabcentral/linkexchange/";
+	      selected_index = 4;
+	      break
+	   case "blogs":
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "c[]";
+	      newElem.value = "blogs";
+	      document.forms['searchForm'].appendChild(newElem);
+	
+	      selected_index = 5;
+	      break
+	   case "trendy":
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "search";
+	      newElem.value = query.value;
+	      newElem.classname = "formelem";
+	      document.forms['searchForm'].appendChild(newElem);
+	
+	      submit_action = "/matlabcentral/trendy";
+	      selected_index = 6;
+	      break
+	   case "cody":
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "term";
+	      newElem.value = query.value;
+	      newElem.classname = "formelem";
+	      document.forms['searchForm'].appendChild(newElem);
+	
+	      submit_action = "/matlabcentral/cody/";
+	      selected_index = 7;
+	      break
+	   case "contest":
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "c[]";
+	      newElem.value = "contest";
+	      document.forms['searchForm'].appendChild(newElem);
+	
+	      selected_index = 8;
+	      break
+	   case "entire1":
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "c[]";
+	      newElem.value = "entiresite";
+	      document.forms['searchForm'].appendChild(newElem);
+	      
+	      selected_index = 9;
+	      break
+	   default:
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "c[]";
+	      newElem.value = "entiresite";
+	      document.forms['searchForm'].appendChild(newElem);
+	   
+	      selected_index = 9;
+	      break
+	}
+
+	document.forms['searchForm'].elements['search_submit'].selectedIndex = selected_index;
+	document.forms['searchForm'].elements['query'].value = query.value;
+	document.forms['searchForm'].action = submit_action;
+}
+
+</script>
+
+
+  <form name="searchForm" method="GET" action="" style="margin:0px; margin-top:5px; font-size:90%" onsubmit="submitForm(query)">
+          <label for="search">Search: </label>
+        <select name="search_submit" style="font-size:9px ">
+         	 <option value="matlabcentral">MATLAB Central</option>
+          	<option value="fileexchange">&nbsp;&nbsp;&nbsp;File Exchange</option>
+          	<option value="answers">&nbsp;&nbsp;&nbsp;Answers</option>
+            <option value="cssm">&nbsp;&nbsp;&nbsp;Newsgroup</option>
+          	<option value="linkexchange">&nbsp;&nbsp;&nbsp;Link Exchange</option>
+          	<option value="blogs">&nbsp;&nbsp;&nbsp;Blogs</option>
+          	<option value="trendy">&nbsp;&nbsp;&nbsp;Trendy</option>
+          	<option value="cody" selected="">&nbsp;&nbsp;&nbsp;Cody</option>
+          	<option value="contest">&nbsp;&nbsp;&nbsp;Contest</option>
+          <option value="entire1">MathWorks.com</option>
+        </select>
+<input type="text" name="query" size="10" class="formelem" value="">
+<input type="submit" value="Go" class="formelem gobutton">
+</form>
+
+		  <ol id="access2">
+  <li class="first">
+    <a href="https://www.mathworks.in/accesslogin/createProfile.do?uri=http%3A%2F%2Fwww.mathworks.in%2Fmatlabcentral%2Fcody%2F%3Fs_tid%3Dgn_mlc_cody" rel="nofollow">Create Account</a>
+  </li>
+  <li>
+    <a href="https://www.mathworks.in/accesslogin/index_fe.do?uri=http%3A%2F%2Fwww.mathworks.in%2Fmatlabcentral%2Fcody%2F%3Fs_tid%3Dgn_mlc_cody" rel="nofollow">Log In</a>
+  </li>
+</ol>
+
+
+
+      </div>
+	  
+        <div id="globalnav">
+        <!-- from includes/global_nav.html -->
+        <ol>
+                <li class=";">
+                        <a href="http://www.mathworks.in/matlabcentral/fileexchange/?s_tid=gn_mlc_fx">File Exchange</a> 
+                </li>
+                <li class=";">
+                        <a href="http://www.mathworks.in/matlabcentral/answers/?s_tid=gn_mlc_an">Answers</a> 
+                </li>
+                <li class=";">
+                        <a href="http://www.mathworks.in/matlabcentral/newsreader/?s_tid=gn_mlc_ng">Newsgroup</a> 
+                </li>
+                <li class=";">
+                        <a href="http://www.mathworks.in/matlabcentral/linkexchange/?s_tid=gn_mlc_lx">Link Exchange</a> 
+                </li>
+                <li class=";">
+                        <a href="http://blogs.mathworks.com/?s_tid=gn_mlc_blg">Blogs</a> 
+                </li>
+                <li class=";">
+                        <a href="http://www.mathworks.in/matlabcentral/trendy/?s_tid=gn_mlc_tnd">Trendy</a> 
+                </li>
+                <li class=";">
+                        <a href="./mat_10_files/mat_10.html">Cody</a> 
+                </li>
+                <li class=";">
+                        <a href="http://www.mathworks.in/matlabcentral/contest/?s_tid=gn_mlc_cn">Contest</a> 
+                </li>
+                <li class="icon mathworks">
+                        <a href="http://www.mathworks.in/?s_tid=gn_mlc_main">MathWorks.com</a> 
+                </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+
+      	<div class="container_240">
+    	<div class="cody_content_container">
+        	<div class="grid_35 push_2">
+	<div id="localnav_container" class="localnav_container">
+    	<div class="localnav">
+      	<ul>
+          <li class="active"><a href="http://www.mathworks.in/matlabcentral/cody/problems" id="cody_problems_list_id">Problems</a></li>
+  				<li class=""><a href="http://www.mathworks.in/matlabcentral/cody/solutions" id="cody_all_solutions_list_id">Solutions</a></li>
+          <li class=""><a href="http://www.mathworks.in/matlabcentral/cody/players" id="cody_players_list_id">Players</a></li>
+          <li class=""><a href="http://www.mathworks.in/matlabcentral/cody/activities" id="cody_recent_activity_id">Recent Activity</a></li>
+
+            	<li class="logincta">
+                		<a href="https://www.mathworks.in/accesslogin/index_fe.do?uri=http%3A%2F%2Fwww.mathworks.in%2Fmatlabcentral%2Fcody%2F%3Fs_tid%3Dgn_mlc_cody" id="cody_community_login_id">Log In</a>
+              		<span>to solve and create problems.</span>
+				</li>
+        		<li class="maincta"><a href="http://www.mathworks.in/matlabcentral/cody/problems/new" id="cody_create_problem_id" rel="nofollow">Create a Problem</a></li>
+        		<li class="about"><a href="http://www.mathworks.in/matlabcentral/cody/about" class="about" id="cody_about_link_id">About Cody</a></li>
+				
+      		</ul>
+    	</div>
+  	</div>
+		<div class="filter-container" id="group_facet">
+		<h3>Problem Groups
+				<span class="info tip">
+					<span class="tip-container">
+						<span>
+							<a href="http://www.mathworks.in/matlabcentral/cody/?s_tid=gn_mlc_cody#">
+							<img src="http://www.mathworks.in/matlabcentral/images/icon_info.gif" width="16" height="16">
+							</a>
+						</span>
+						<span class="cody-callout tip-content filter-container-help">
+							<p>The Community group contains problems contributed by Cody players. All other groups contain problems created by the Cody administrator.</p>
+						</span>			
+					</span>
+				</span>
+		</h3>
+	  	<div class="filter">
+		    <ul>
+		      		<li><a href="http://www.mathworks.in/matlabcentral/cody/?s_tid=gn_mlc_cody&sort=&term=group%3A%22ASEE+Challenge%22" rel="nofollow"><span>10</span>ASEE Challenge</a></li>
+		      		<li><a href="http://www.mathworks.in/matlabcentral/cody/?s_tid=gn_mlc_cody&sort=&term=group%3A%22CUP+Challenge%22" rel="nofollow"><span>11</span>CUP Challenge</a></li>
+		      		<li><a href="http://www.mathworks.in/matlabcentral/cody/?s_tid=gn_mlc_cody&sort=&term=group%3A%22Cody+Challenge%22" rel="nofollow"><span>96</span>Cody Challenge</a></li>
+		      		<li><a href="http://www.mathworks.in/matlabcentral/cody/?s_tid=gn_mlc_cody&sort=&term=group%3ACommunity" rel="nofollow"><span>1656</span>Community</a></li>
+		      		<li><a href="http://www.mathworks.in/matlabcentral/cody/?s_tid=gn_mlc_cody&sort=&term=group%3A%22Tiles+Challenge%22" rel="nofollow"><span>7</span>Tiles Challenge</a></li>
+		    </ul>
+	  	</div>
+	</div>
+
+
+
+	
+  
+  <div class="random_callout">
+        
+  
+  
+  
+  
+  
+  
+  
+
+
+	
+
+
+  
+  
+  
+  
+      <div class="callout_container rounded shadow solid margined_20  " style="cursor:pointer;" onclick="javascript:$(window.location).attr(&#39;href&#39;, &#39;http://makerzone.mathworks.com/?utm_source=Acad&amp;utm_medium=spotlight&amp;utm_campaign=MZ&#39;);">
+        <div class="callout_content  bg_center_center">   <img src="http://www.mathworks.in/images/nextgen/callouts/logos/discover-makerzone-logo.png" alt="Discover MakerZone">
+  <p>MATLAB and Simulink resources for Arduino, LEGO, and Raspberry Pi</p>
+  
+
+
+    
+ <a href="http://makerzone.mathworks.com/?utm_source=Acad&utm_medium=spotlight&utm_campaign=MZ" class="cta">Learn more</a> 
+   
+
+ </div>
+      </div>
+
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+      <div class="callout_container rounded shadow gradient margined_20  ">
+        <div class="callout_content  bg_center_center">    <h3>Discover what MATLAB<sup>®</sup> can do for your career.</h3>
+   <p>Opportunities for recent engineering grads.</p>
+
+
+
+    
+ <a href="http://www.mathworks.in/company/jobs/opportunities/students/infographic.html?source=7677" class="cta">Apply Today</a> 
+   
+
+ </div>
+      </div>
+
+  
+
+</div>  
+</div>
+
+          
+        	<div class="grid_150 push_3">
+	<div class="grid_148">
+			<div id="new_to_cody">
+	<div class="message">
+		New to Cody? Let us show you <a href="http://www.mathworks.in/matlabcentral/cody/about">how Cody works</a>, or start solving problems.
+	</div>
+
+	<div id="dismiss_new_to_cody_message">
+		<button name="button" type="submit"></button>
+	</div>
+</div>
+
+<script type="text/javascript" src="http://www.mathworks.in/matlabcentral/cody/javascripts/cody/dismiss.js?1412191045"></script>
+
+<script type="text/javascript">
+	$("#dismiss_new_to_cody_message").dismiss({
+		dissmissBlockId: "new_to_cody",
+		cookieName: "new_to_cody"
+	});
+</script>
+		
+	</div>
+	<div class="grid_148">
+		<div class="container">
+			<div id="searchbox">
+					<p class="searchtitle">Search Problems</p>
+					<div>
+						<form accept-charset="utf-8" method="get" action="http://www.mathworks.in/matlabcentral/cody/">					
+								<div class="search_field">
+						      		<input autocomplete="off" id="problem_search_term" name="term" type="text" value="">
+								</div>
+								<div class="search_button">
+									<input title="Search" type="submit" value="">
+								</div>
+						</form>
+					</div>
+	         </div>
+		 </div>
+	</div>
+	<div class="grid_148">
+		
+	</div>
+	<div class="grid_148">
+		  <div class="search-results-tools">
+  <form class="sort" action="http://www.mathworks.in/matlabcentral/cody/" method="get">
+    <input id="term" name="term" type="hidden" value="">
+    <label for="sort">Sort by:</label>
+    <select id="sort" name="sort"><option value="solvers desc">Solvers (High – Low)</option>
+<option value="solvers asc">Solvers (Low – High)</option>
+<option value="likes desc">Likes (High – Low)</option>
+<option value="comments desc">Comments (High – Low)</option>
+<option value="created desc">Date Created (Newest – Oldest)</option>
+<option value="created asc">Date Created (Oldest – Newest)</option></select>
+    <input class="search button" title="Search" type="submit" value="">
+  </form>
+
+  <div class="pagination"><span class="text">1 – 50 of 1,780</span> <span class="previous"><span class="disabled">previous</span></span> <span class="next"><a href="http://www.mathworks.in/matlabcentral/cody/?page=2&s_tid=gn_mlc_cody">next</a></span></div>
+
+</div>
+
+<div class="problem-list">
+  <div class="grid_148" id="problem_1">
+  <div class="container problem"> <div class="grid_13">
+	<div class="problem-solvers count">
+		<span>9628</span>Solvers
+	</div>
+</div>
+<div class="grid_13 push_3">
+	<div class="likes-count count"> 
+		<span>28</span> likes 
+	</div>
+	 <div class="detail_controls">
+        <ul>
+          <li class="status"></li>
+        </ul>
+      </div>
+</div>
+
+    <div class="grid_115 push_2"> 	<div class="container problem-details">
+   		<div class="container title-author"> 
+			<h3 class="problem-title">
+					<a href="http://www.mathworks.in/matlabcentral/cody/problems/1-times-2-start-here">Times 2 - START HERE</a>
+			</h3>
+			Created by <a href="http://www.mathworks.in/matlabcentral/cody/players/3251402-cody-team" class="mathworker" title="Score: 0, Badges: 0">Cody Team</a>
+		</div>
+			<div class="container tags">
+		    	<div class="grid_20">
+		        	<h3>Tags</h3>
+		        </div>
+		      	<div class="grid_60 push_2">
+				      <a href="http://www.mathworks.in/matlabcentral/cody/?term=tag%3A%22intro%22" rel="nofollow">intro</a>, <a href="http://www.mathworks.in/matlabcentral/cody/?term=tag%3A%22math%22" rel="nofollow">math</a>
+		      	</div>
+		    </div>
+		<div class="container group">
+		    <div class="grid_20">
+				<h3>Problem Group</h3>
+		    </div>
+			<div class="grid_60 push_2">
+				<a href="http://www.mathworks.in/matlabcentral/cody/?term=group%3A%22Cody+Challenge%22" rel="nofollow">Cody Challenge</a>
+			</div>
+	    </div>
+
+	</div>
+ </div>
+  </div>
+</div>
+<div class="grid_148" id="problem_2">
+  <div class="container problem"> <div class="grid_13">
+	<div class="problem-solvers count">
+		<span>7772</span>Solvers
+	</div>
+</div>
+<div class="grid_13 push_3">
+	<div class="likes-count count"> 
+		<span>18</span> likes 
+	</div>
+	 <div class="detail_controls">
+        <ul>
+          <li class="status"></li>
+        </ul>
+      </div>
+</div>
+
+    <div class="grid_115 push_2"> 	<div class="container problem-details">
+   		<div class="container title-author"> 
+			<h3 class="problem-title">
+					<a href="http://www.mathworks.in/matlabcentral/cody/problems/2-make-the-vector-1-2-3-4-5-6-7-8-9-10">Make the vector [1 2 3 4 5 6 7 8 9 10]</a>
+			</h3>
+			Created by <a href="http://www.mathworks.in/matlabcentral/cody/players/3251402-cody-team" class="mathworker" title="Score: 0, Badges: 0">Cody Team</a>
+		</div>
+			<div class="container tags">
+		    	<div class="grid_20">
+		        	<h3>Tags</h3>
+		        </div>
+		      	<div class="grid_60 push_2">
+				      <a href="http://www.mathworks.in/matlabcentral/cody/?term=tag%3A%22colon%22" rel="nofollow">colon</a>, <a href="http://www.mathworks.in/matlabcentral/cody/?term=tag%3A%22basic%22" rel="nofollow">basic</a>
+		      	</div>
+		    </div>
+		<div class="container group">
+		    <div class="grid_20">
+				<h3>Problem Group</h3>
+		    </div>
+			<div class="grid_60 push_2">
+				<a href="http://www.mathworks.in/matlabcentral/cody/?term=group%3A%22Cody+Challenge%22" rel="nofollow">Cody Challenge</a>
+			</div>
+	    </div>
+
+	</div>
+ </div>
+  </div>
+</div>
+<div class="grid_148" id="problem_3">
+  <div class="container problem"> <div class="grid_13">
+	<div class="problem-solvers count">
+		<span>6795</span>Solvers
+	</div>
+</div>
+<div class="grid_13 push_3">
+	<div class="likes-count count"> 
+		<span>9</span> likes 
+	</div>
+	 <div class="detail_controls">
+        <ul>
+          <li class="status"></li>
+        </ul>
+      </div>
+</div>
+
+    <div class="grid_115 push_2"> 	<div class="container problem-details">
+   		<div class="container title-author"> 
+			<h3 class="problem-title">
+					<a href="http://www.mathworks.in/matlabcentral/cody/problems/3-find-the-sum-of-all-the-numbers-of-the-input-vector">Find the sum of all the numbers of the input vector</a>
+			</h3>
+			Created by <a href="http://www.mathworks.in/matlabcentral/cody/players/3251402-cody-team" class="mathworker" title="Score: 0, Badges: 0">Cody Team</a>
+		</div>
+			<div class="container tags">
+		    	<div class="grid_20">
+		        	<h3>Tags</h3>
+		        </div>
+		      	<div class="grid_60 push_2">
+				      <a href="http://www.mathworks.in/matlabcentral/cody/?term=tag%3A%22matlab+101%22" rel="nofollow">matlab 101</a>, <a href="http://www.mathworks.in/matlabcentral/cody/?term=tag%3A%22easy%22" rel="nofollow">easy</a>, <a href="http://www.mathworks.in/matlabcentral/cody/?term=tag%3A%22vector%22" rel="nofollow">vector</a>
+		      	</div>
+		    </div>
+		<div class="container group">
+		    <div class="grid_20">
+				<h3>Problem Group</h3>
+		    </div>
+			<div class="grid_60 push_2">
+				<a href="http://www.mathworks.in/matlabcentral/cody/?term=group%3A%22Cody+Challenge%22" rel="nofollow">Cody Challenge</a>
+			</div>
+	    </div>
+
+	</div>
+ </div>
+  </div>
+</div>
+<div class="grid_148" id="problem_8">
+  <div class="container problem"> <div class="grid_13">
+	<div class="problem-solvers count">
+		<span>6102</span>Solvers
+	</div>
+</div>
+<div class="grid_13 push_3">
+	<div class="likes-count count"> 
+		<span>7</span> likes 
+	</div>
+	 <div class="detail_controls">
+        <ul>
+          <li class="status"></li>
+        </ul>
+      </div>
+</div>
+
+    <div class="grid_115 push_2"> 	<div class="locked">
+	<p>This problem is locked. You need to solve more problems from <a href="http://www.mathworks.in/matlabcentral/cody/?term=group%3A%22Cody+Challenge%22" rel="nofollow">Cody Challenge</a> group to unlock it.</p>
+</div>
+
+ </div>
+  </div>
+</div>
+<div class="grid_148" id="problem_26">
+  <div class="container problem"> <div class="grid_13">
+	<div class="problem-solvers count">
+		<span>5374</span>Solvers
+	</div>
+</div>
+<div class="grid_13 push_3">
+	<div class="likes-count count"> 
+		<span>16</span> likes 
+	</div>
+	 <div class="detail_controls">
+        <ul>
+          <li class="status"></li>
+        </ul>
+      </div>
+</div>
+
+    <div class="grid_115 push_2"> 	<div class="locked">
+	<p>This problem is locked. You need to solve more problems from <a href="http://www.mathworks.in/matlabcentral/cody/?term=group%3A%22Cody+Challenge%22" rel="nofollow">Cody Challenge</a> group to unlock it.</p>
+</div>
+
+ </div>
+  </div>
+</div>
+<div class="grid_148" id="problem_6">
+  <div class="container problem"> <div class="grid_13">
+	<div class="problem-solvers count">
+		<span>4785</span>Solvers
+	</div>
+</div>
+<div class="grid_13 push_3">
+	<div class="likes-count count"> 
+		<span>21</span> likes 
+	</div>
+	 <div class="detail_controls">
+        <ul>
+          <li class="status"></li>
+        </ul>
+      </div>
+</div>
+
+    <div class="grid_115 push_2"> 	<div class="locked">
+	<p>This problem is locked. You need to solve more problems from <a href="http://www.mathworks.in/matlabcentral/cody/?term=group%3A%22Cody+Challenge%22" rel="nofollow">Cody Challenge</a> group to unlock it.</p>
+</div>
+
+ </div>
+  </div>
+</div>
+<div class="grid_148" id="problem_7">
+  <div class="container problem"> <div class="grid_13">
+	<div class="problem-solvers count">
+		<span>4440</span>Solvers
+	</div>
+</div>
+<div class="grid_13 push_3">
+	<div class="likes-count count"> 
+		<span>14</span> likes 
+	</div>
+	 <div class="detail_controls">
+        <ul>
+          <li class="status"></li>
+        </ul>
+      </div>
+</div>
+
+    <div class="grid_115 push_2"> 	<div class="locked">
+	<p>This problem is locked. You need to solve more problems from <a href="http://www.mathworks.in/matlabcentral/cody/?term=group%3A%22Cody+Challenge%22" rel="nofollow">Cody Challenge</a> group to unlock it.</p>
+</div>
+
+ </div>
+  </div>
+</div>
+<div class="grid_148" id="problem_149">
+  <div class="container problem"> <div class="grid_13">
+	<div class="problem-solvers count">
+		<span>4411</span>Solvers
+	</div>
+</div>
+<div class="grid_13 push_3">
+	<div class="likes-count count"> 
+		<span>95</span> likes 
+	</div>
+	 <div class="detail_controls">
+        <ul>
+          <li class="status"></li>
+        </ul>
+      </div>
+</div>
+
+    <div class="grid_115 push_2"> 	<div class="container problem-details">
+   		<div class="container title-author"> 
+			<h3 class="problem-title">
+					<a href="http://www.mathworks.in/matlabcentral/cody/problems/149-is-my-wife-right">Is my wife right?</a>
+			</h3>
+			Created by <a href="http://www.mathworks.in/matlabcentral/cody/players/1841757-the-cyclist" title="Score: 3155, Badges: 9">the cyclist</a>
+		</div>
+			<div class="container tags">
+		    	<div class="grid_20">
+		        	<h3>Tags</h3>
+		        </div>
+		      	<div class="grid_60 push_2">
+				      <a href="http://www.mathworks.in/matlabcentral/cody/?term=tag%3A%22stupid%22" rel="nofollow">stupid</a>, <a href="http://www.mathworks.in/matlabcentral/cody/?term=tag%3A%22fun%22" rel="nofollow">fun</a>
+		      	</div>
+		    </div>
+		<div class="container group">
+		    <div class="grid_20">
+				<h3>Problem Group</h3>
+		    </div>
+			<div class="grid_60 push_2">
+				<a href="http://www.mathworks.in/matlabcentral/cody/?term=group%3A%22Community%22" rel="nofollow">Community</a>
+			</div>
+	    </div>
+
+	</div>
+ </div>
+  </div>
+</div>
+<div class="grid_148" id="problem_5">
+  <div class="container problem"> <div class="grid_13">
+	<div class="problem-solvers count">
+		<span>4119</span>Solvers
+	</div>
+</div>
+<div class="grid_13 push_3">
+	<div class="likes-count count"> 
+		<span>12</span> likes 
+	</div>
+	 <div class="detail_controls">
+        <ul>
+          <li class="status"></li>
+        </ul>
+      </div>
+</div>
+
+    <div class="grid_115 push_2"> 	<div class="locked">
+	<p>This problem is locked. You need to solve more problems from <a href="http://www.mathworks.in/matlabcentral/cody/?term=group%3A%22Cody+Challenge%22" rel="nofollow">Cody Challenge</a> group to unlock it.</p>
+</div>
+
+ </div>
+  </div>
+</div>
+<div class="grid_148" id="problem_17">
+  <div class="container problem"> <div class="grid_13">
+	<div class="problem-solvers count">
+		<span>3811</span>Solvers
+	</div>
+</div>
+<div class="grid_13 push_3">
+	<div class="likes-count count"> 
+		<span>11</span> likes 
+	</div>
+	 <div class="detail_controls">
+        <ul>
+          <li class="status"></li>
+        </ul>
+      </div>
+</div>
+
+    <div class="grid_115 push_2"> 	<div class="locked">
+	<p>This problem is locked. You need to solve more problems from <a href="http://www.mathworks.in/matlabcentral/cody/?term=group%3A%22Cody+Challenge%22" rel="nofollow">Cody Challenge</a> group to unlock it.</p>
+</div>
+
+ </div>
+  </div>
+</div>
+<div class="grid_148" id="problem_4">
+  <div class="container problem"> <div class="grid_13">
+	<div class="problem-solvers count">
+		<span>3115</span>Solvers
+	</div>
+</div>
+<div class="grid_13 push_3">
+	<div class="likes-count count"> 
+		<span>47</span> likes 
+	</div>
+	 <div class="detail_controls">
+        <ul>
+          <li class="status"></li>
+        </ul>
+      </div>
+</div>
+
+    <div class="grid_115 push_2"> 	<div class="locked">
+	<p>This problem is locked. You need to solve more problems from <a href="http://www.mathworks.in/matlabcentral/cody/?term=group%3A%22Cody+Challenge%22" rel="nofollow">Cody Challenge</a> group to unlock it.</p>
+</div>
+
+ </div>
+  </div>
+</div>
+<div class="grid_148" id="problem_19">
+  <div class="container problem"> <div class="grid_13">
+	<div class="problem-solvers count">
+		<span>2968</span>Solvers
+	</div>
+</div>
+<div class="grid_13 push_3">
+	<div class="likes-count count"> 
+		<span>5</span> likes 
+	</div>
+	 <div class="detail_controls">
+        <ul>
+          <li class="status"></li>
+        </ul>
+      </div>
+</div>
+
+    <div class="grid_115 push_2"> 	<div class="locked">
+	<p>This problem is locked. You need to solve more problems from <a href="http://www.mathworks.in/matlabcentral/cody/?term=group%3A%22Cody+Challenge%22" rel="nofollow">Cody Challenge</a> group to unlock it.</p>
+</div>
+
+ </div>
+  </div>
+</div>
+<div class="grid_148" id="problem_167">
+  <div class="container problem"> <div class="grid_13">
+	<div class="problem-solvers count">
+		<span>2927</span>Solvers
+	</div>
+</div>
+<div class="grid_13 push_3">
+	<div class="likes-count count"> 
+		<span>69</span> likes 
+	</div>
+	 <div class="detail_controls">
+        <ul>
+          <li class="status"></li>
+        </ul>
+      </div>
+</div>
+
+    <div class="grid_115 push_2"> 	<div class="container problem-details">
+   		<div class="container title-author"> 
+			<h3 class="problem-title">
+					<a href="http://www.mathworks.in/matlabcentral/cody/problems/167-pizza">Pizza!</a>
+			</h3>
+			Created by <a href="http://www.mathworks.in/matlabcentral/cody/players/1841757-the-cyclist" title="Score: 3155, Badges: 9">the cyclist</a>
+		</div>
+			<div class="container tags">
+		    	<div class="grid_20">
+		        	<h3>Tags</h3>
+		        </div>
+		      	<div class="grid_60 push_2">
+				      <a href="http://www.mathworks.in/matlabcentral/cody/?term=tag%3A%22pizza%22" rel="nofollow">pizza</a>, <a href="http://www.mathworks.in/matlabcentral/cody/?term=tag%3A%22fun%22" rel="nofollow">fun</a>
+		      	</div>
+		    </div>
+		<div class="container group">
+		    <div class="grid_20">
+				<h3>Problem Group</h3>
+		    </div>
+			<div class="grid_60 push_2">
+				<a href="http://www.mathworks.in/matlabcentral/cody/?term=group%3A%22Community%22" rel="nofollow">Community</a>
+			</div>
+	    </div>
+
+	</div>
+ </div>
+  </div>
+</div>
+<div class="grid_148" id="problem_10">
+  <div class="container problem"> <div class="grid_13">
+	<div class="problem-solvers count">
+		<span>2718</span>Solvers
+	</div>
+</div>
+<div class="grid_13 push_3">
+	<div class="likes-count count"> 
+		<span>6</span> likes 
+	</div>
+	 <div class="detail_controls">
+        <ul>
+          <li class="status"></li>
+        </ul>
+      </div>
+</div>
+
+    <div class="grid_115 push_2"> 	<div class="locked">
+	<p>This problem is locked. You need to solve more problems from <a href="http://www.mathworks.in/matlabcentral/cody/?term=group%3A%22Cody+Challenge%22" rel="nofollow">Cody Challenge</a> group to unlock it.</p>
+</div>
+
+ </div>
+  </div>
+</div>
+<div class="grid_148" id="problem_12">
+  <div class="container problem"> <div class="grid_13">
+	<div class="problem-solvers count">
+		<span>2592</span>Solvers
+	</div>
+</div>
+<div class="grid_13 push_3">
+	<div class="likes-count count"> 
+		<span>19</span> likes 
+	</div>
+	 <div class="detail_controls">
+        <ul>
+          <li class="status"></li>
+        </ul>
+      </div>
+</div>
+
+    <div class="grid_115 push_2"> 	<div class="locked">
+	<p>This problem is locked. You need to solve more problems from <a href="http://www.mathworks.in/matlabcentral/cody/?term=group%3A%22Cody+Challenge%22" rel="nofollow">Cody Challenge</a> group to unlock it.</p>
+</div>
+
+ </div>
+  </div>
+</div>
+<div class="grid_148" id="problem_33">
+  <div class="container problem"> <div class="grid_13">
+	<div class="problem-solvers count">
+		<span>2295</span>Solvers
+	</div>
+</div>
+<div class="grid_13 push_3">
+	<div class="likes-count count"> 
+		<span>15</span> likes 
+	</div>
+	 <div class="detail_controls">
+        <ul>
+          <li class="status"></li>
+        </ul>
+      </div>
+</div>
+
+    <div class="grid_115 push_2"> 	<div class="locked">
+	<p>This problem is locked. You need to solve more problems from <a href="http://www.mathworks.in/matlabcentral/cody/?term=group%3A%22Cody+Challenge%22" rel="nofollow">Cody Challenge</a> group to unlock it.</p>
+</div>
+
+ </div>
+  </div>
+</div>
+<div class="grid_148" id="problem_106">
+  <div class="container problem"> <div class="grid_13">
+	<div class="problem-solvers count">
+		<span>2185</span>Solvers
+	</div>
+</div>
+<div class="grid_13 push_3">
+	<div class="likes-count count"> 
+		<span>2</span> likes 
+	</div>
+	 <div class="detail_controls">
+        <ul>
+          <li class="status"></li>
+        </ul>
+      </div>
+</div>
+
+    <div class="grid_115 push_2"> 	<div class="container problem-details">
+   		<div class="container title-author"> 
+			<h3 class="problem-title">
+					<a href="http://www.mathworks.in/matlabcentral/cody/problems/106-weighted-average">Weighted average</a>
+			</h3>
+			Created by <a href="http://www.mathworks.in/matlabcentral/cody/players/10806-will" title="Score: 335, Badges: 5">Will</a>
+		</div>
+			<div class="container tags">
+		    	<div class="grid_20">
+		        	<h3>Tags</h3>
+		        </div>
+		      	<div class="grid_60 push_2">
+				      <a href="http://www.mathworks.in/matlabcentral/cody/?term=tag%3A%22weighted%22" rel="nofollow">weighted</a>, <a href="http://www.mathworks.in/matlabcentral/cody/?term=tag%3A%22average%22" rel="nofollow">average</a>
+		      	</div>
+		    </div>
+		<div class="container group">
+		    <div class="grid_20">
+				<h3>Problem Group</h3>
+		    </div>
+			<div class="grid_60 push_2">
+				<a href="http://www.mathworks.in/matlabcentral/cody/?term=group%3A%22Community%22" rel="nofollow">Community</a>
+			</div>
+	    </div>
+
+	</div>
+ </div>
+  </div>
+</div>
+<div class="grid_148" id="problem_23">
+  <div class="container problem"> <div class="grid_13">
+	<div class="problem-solvers count">
+		<span>2074</span>Solvers
+	</div>
+</div>
+<div class="grid_13 push_3">
+	<div class="likes-count count"> 
+		<span>15</span> likes 
+	</div>
+	 <div class="detail_controls">
+        <ul>
+          <li class="status"></li>
+        </ul>
+      </div>
+</div>
+
+    <div class="grid_115 push_2"> 	<div class="locked">
+	<p>This problem is locked. You need to solve more problems from <a href="http://www.mathworks.in/matlabcentral/cody/?term=group%3A%22Cody+Challenge%22" rel="nofollow">Cody Challenge</a> group to unlock it.</p>
+</div>
+
+ </div>
+  </div>
+</div>
+<div class="grid_148" id="problem_25">
+  <div class="container problem"> <div class="grid_13">
+	<div class="problem-solvers count">
+		<span>1960</span>Solvers
+	</div>
+</div>
+<div class="grid_13 push_3">
+	<div class="likes-count count"> 
+		<span>12</span> likes 
+	</div>
+	 <div class="detail_controls">
+        <ul>
+          <li class="status"></li>
+        </ul>
+      </div>
+</div>
+
+    <div class="grid_115 push_2"> 	<div class="locked">
+	<p>This problem is locked. You need to solve more problems from <a href="http://www.mathworks.in/matlabcentral/cody/?term=group%3A%22Cody+Challenge%22" rel="nofollow">Cody Challenge</a> group to unlock it.</p>
+</div>
+
+ </div>
+  </div>
+</div>
+<div class="grid_148" id="problem_14">
+  <div class="container problem"> <div class="grid_13">
+	<div class="problem-solvers count">
+		<span>1891</span>Solvers
+	</div>
+</div>
+<div class="grid_13 push_3">
+	<div class="likes-count count"> 
+		<span>12</span> likes 
+	</div>
+	 <div class="detail_controls">
+        <ul>
+          <li class="status"></li>
+        </ul>
+      </div>
+</div>
+
+    <div class="grid_115 push_2"> 	<div class="locked">
+	<p>This problem is locked. You need to solve more problems from <a href="http://www.mathworks.in/matlabcentral/cody/?term=group%3A%22Cody+Challenge%22" rel="nofollow">Cody Challenge</a> group to unlock it.</p>
+</div>
+
+ </div>
+  </div>
+</div>
+<div class="grid_148" id="problem_32">
+  <div class="container problem"> <div class="grid_13">
+	<div class="problem-solvers count">
+		<span>1717</span>Solvers
+	</div>
+</div>
+<div class="grid_13 push_3">
+	<div class="likes-count count"> 
+		<span>6</span> likes 
+	</div>
+	 <div class="detail_controls">
+        <ul>
+          <li class="status"></li>
+        </ul>
+      </div>
+</div>
+
+    <div class="grid_115 push_2"> 	<div class="locked">
+	<p>This problem is locked. You need to solve more problems from <a href="http://www.mathworks.in/matlabcentral/cody/?term=group%3A%22Cody+Challenge%22" rel="nofollow">Cody Challenge</a> group to unlock it.</p>
+</div>
+
+ </div>
+  </div>
+</div>
+<div class="grid_148" id="problem_11">
+  <div class="container problem"> <div class="grid_13">
+	<div class="problem-solvers count">
+		<span>1653</span>Solvers
+	</div>
+</div>
+<div class="grid_13 push_3">
+	<div class="likes-count count"> 
+		<span>12</span> likes 
+	</div>
+	 <div class="detail_controls">
+        <ul>
+          <li class="status"></li>
+        </ul>
+      </div>
+</div>
+
+    <div class="grid_115 push_2"> 	<div class="locked">
+	<p>This problem is locked. You need to solve more problems from <a href="http://www.mathworks.in/matlabcentral/cody/?term=group%3A%22Cody+Challenge%22" rel="nofollow">Cody Challenge</a> group to unlock it.</p>
+</div>
+
+ </div>
+  </div>
+</div>
+<div class="grid_148" id="problem_109">
+  <div class="container problem"> <div class="grid_13">
+	<div class="problem-solvers count">
+		<span>1638</span>Solvers
+	</div>
+</div>
+<div class="grid_13 push_3">
+	<div class="likes-count count"> 
+		<span>0</span> likes 
+	</div>
+	 <div class="detail_controls">
+        <ul>
+          <li class="status"></li>
+        </ul>
+      </div>
+</div>
+
+    <div class="grid_115 push_2"> 	<div class="container problem-details">
+   		<div class="container title-author"> 
+			<h3 class="problem-title">
+					<a href="http://www.mathworks.in/matlabcentral/cody/problems/109-check-if-sorted">Check if sorted</a>
+			</h3>
+			Created by <a href="http://www.mathworks.in/matlabcentral/cody/players/504719-amitava-biswas" title="Score: 4525, Badges: 10">AMITAVA BISWAS</a>
+		</div>
+			<div class="container tags">
+		    	<div class="grid_20">
+		        	<h3>Tags</h3>
+		        </div>
+		      	<div class="grid_60 push_2">
+				      <a href="http://www.mathworks.in/matlabcentral/cody/?term=tag%3A%22sort%22" rel="nofollow">sort</a>, <a href="http://www.mathworks.in/matlabcentral/cody/?term=tag%3A%22basic+matlab%22" rel="nofollow">basic matlab</a>
+		      	</div>
+		    </div>
+		<div class="container group">
+		    <div class="grid_20">
+				<h3>Problem Group</h3>
+		    </div>
+			<div class="grid_60 push_2">
+				<a href="http://www.mathworks.in/matlabcentral/cody/?term=group%3A%22Community%22" rel="nofollow">Community</a>
+			</div>
+	    </div>
+
+	</div>
+ </div>
+  </div>
+</div>
+<div class="grid_148" id="problem_21">
+  <div class="container problem"> <div class="grid_13">
+	<div class="problem-solvers count">
+		<span>1600</span>Solvers
+	</div>
+</div>
+<div class="grid_13 push_3">
+	<div class="likes-count count"> 
+		<span>15</span> likes 
+	</div>
+	 <div class="detail_controls">
+        <ul>
+          <li class="status"></li>
+        </ul>
+      </div>
+</div>
+
+    <div class="grid_115 push_2"> 	<div class="locked">
+	<p>This problem is locked. You need to solve more problems from <a href="http://www.mathworks.in/matlabcentral/cody/?term=group%3A%22Cody+Challenge%22" rel="nofollow">Cody Challenge</a> group to unlock it.</p>
+</div>
+
+ </div>
+  </div>
+</div>
+<div class="grid_148" id="problem_9">
+  <div class="container problem"> <div class="grid_13">
+	<div class="problem-solvers count">
+		<span>1562</span>Solvers
+	</div>
+</div>
+<div class="grid_13 push_3">
+	<div class="likes-count count"> 
+		<span>12</span> likes 
+	</div>
+	 <div class="detail_controls">
+        <ul>
+          <li class="status"></li>
+        </ul>
+      </div>
+</div>
+
+    <div class="grid_115 push_2"> 	<div class="locked">
+	<p>This problem is locked. You need to solve more problems from <a href="http://www.mathworks.in/matlabcentral/cody/?term=group%3A%22Cody+Challenge%22" rel="nofollow">Cody Challenge</a> group to unlock it.</p>
+</div>
+
+ </div>
+  </div>
+</div>
+<div class="grid_148" id="problem_189">
+  <div class="container problem"> <div class="grid_13">
+	<div class="problem-solvers count">
+		<span>1507</span>Solvers
+	</div>
+</div>
+<div class="grid_13 push_3">
+	<div class="likes-count count"> 
+		<span>4</span> likes 
+	</div>
+	 <div class="detail_controls">
+        <ul>
+          <li class="status"></li>
+        </ul>
+      </div>
+</div>
+
+    <div class="grid_115 push_2"> 	<div class="container problem-details">
+   		<div class="container title-author"> 
+			<h3 class="problem-title">
+					<a href="http://www.mathworks.in/matlabcentral/cody/problems/189-sum-all-integers-from-1-to-2-n">Sum all integers from 1 to 2^n</a>
+			</h3>
+			Created by <a href="http://www.mathworks.in/matlabcentral/cody/players/1813637-dimitris-kaliakmanis" title="Score: 1880, Badges: 7">Dimitris Kaliakmanis</a>
+		</div>
+			<div class="container tags">
+		    	<div class="grid_20">
+		        	<h3>Tags</h3>
+		        </div>
+		      	<div class="grid_60 push_2">
+				      <a href="http://www.mathworks.in/matlabcentral/cody/?term=tag%3A%22basic+matlab%22" rel="nofollow">basic matlab</a>, <a href="http://www.mathworks.in/matlabcentral/cody/?term=tag%3A%22math%22" rel="nofollow">math</a>
+		      	</div>
+		    </div>
+		<div class="container group">
+		    <div class="grid_20">
+				<h3>Problem Group</h3>
+		    </div>
+			<div class="grid_60 push_2">
+				<a href="http://www.mathworks.in/matlabcentral/cody/?term=group%3A%22Community%22" rel="nofollow">Community</a>
+			</div>
+	    </div>
+
+	</div>
+ </div>
+  </div>
+</div>
+<div class="grid_148" id="problem_20">
+  <div class="container problem"> <div class="grid_13">
+	<div class="problem-solvers count">
+		<span>1462</span>Solvers
+	</div>
+</div>
+<div class="grid_13 push_3">
+	<div class="likes-count count"> 
+		<span>6</span> likes 
+	</div>
+	 <div class="detail_controls">
+        <ul>
+          <li class="status"></li>
+        </ul>
+      </div>
+</div>
+
+    <div class="grid_115 push_2"> 	<div class="locked">
+	<p>This problem is locked. You need to solve more problems from <a href="http://www.mathworks.in/matlabcentral/cody/?term=group%3A%22Cody+Challenge%22" rel="nofollow">Cody Challenge</a> group to unlock it.</p>
+</div>
+
+ </div>
+  </div>
+</div>
+<div class="grid_148" id="problem_30">
+  <div class="container problem"> <div class="grid_13">
+	<div class="problem-solvers count">
+		<span>1316</span>Solvers
+	</div>
+</div>
+<div class="grid_13 push_3">
+	<div class="likes-count count"> 
+		<span>4</span> likes 
+	</div>
+	 <div class="detail_controls">
+        <ul>
+          <li class="status"></li>
+        </ul>
+      </div>
+</div>
+
+    <div class="grid_115 push_2"> 	<div class="locked">
+	<p>This problem is locked. You need to solve more problems from <a href="http://www.mathworks.in/matlabcentral/cody/?term=group%3A%22Cody+Challenge%22" rel="nofollow">Cody Challenge</a> group to unlock it.</p>
+</div>
+
+ </div>
+  </div>
+</div>
+<div class="grid_148" id="problem_22">
+  <div class="container problem"> <div class="grid_13">
+	<div class="problem-solvers count">
+		<span>1256</span>Solvers
+	</div>
+</div>
+<div class="grid_13 push_3">
+	<div class="likes-count count"> 
+		<span>2</span> likes 
+	</div>
+	 <div class="detail_controls">
+        <ul>
+          <li class="status"></li>
+        </ul>
+      </div>
+</div>
+
+    <div class="grid_115 push_2"> 	<div class="locked">
+	<p>This problem is locked. You need to solve more problems from <a href="http://www.mathworks.in/matlabcentral/cody/?term=group%3A%22Cody+Challenge%22" rel="nofollow">Cody Challenge</a> group to unlock it.</p>
+</div>
+
+ </div>
+  </div>
+</div>
+<div class="grid_148" id="problem_233">
+  <div class="container problem"> <div class="grid_13">
+	<div class="problem-solvers count">
+		<span>1202</span>Solvers
+	</div>
+</div>
+<div class="grid_13 push_3">
+	<div class="likes-count count"> 
+		<span>2</span> likes 
+	</div>
+	 <div class="detail_controls">
+        <ul>
+          <li class="status"></li>
+        </ul>
+      </div>
+</div>
+
+    <div class="grid_115 push_2"> 	<div class="container problem-details">
+   		<div class="container title-author"> 
+			<h3 class="problem-title">
+					<a href="http://www.mathworks.in/matlabcentral/cody/problems/233-reverse-the-vector">Reverse the vector</a>
+			</h3>
+			Created by <a href="http://www.mathworks.in/matlabcentral/cody/players/3303578-vishwanathan-iyer" title="Score: 390, Badges: 4">Vishwanathan Iyer</a>
+		</div>
+			<div class="container tags">
+		    	<div class="grid_20">
+		        	<h3>Tags</h3>
+		        </div>
+		      	<div class="grid_60 push_2">
+				      <a href="http://www.mathworks.in/matlabcentral/cody/?term=tag%3A%22handling+vectors%22" rel="nofollow">handling vectors</a>, <a href="http://www.mathworks.in/matlabcentral/cody/?term=tag%3A%22matlab+101%22" rel="nofollow">matlab 101</a>
+		      	</div>
+		    </div>
+		<div class="container group">
+		    <div class="grid_20">
+				<h3>Problem Group</h3>
+		    </div>
+			<div class="grid_60 push_2">
+				<a href="http://www.mathworks.in/matlabcentral/cody/?term=group%3A%22Community%22" rel="nofollow">Community</a>
+			</div>
+	    </div>
+
+	</div>
+ </div>
+  </div>
+</div>
+<div class="grid_148" id="problem_105">
+  <div class="container problem"> <div class="grid_13">
+	<div class="problem-solvers count">
+		<span>1152</span>Solvers
+	</div>
+</div>
+<div class="grid_13 push_3">
+	<div class="likes-count count"> 
+		<span>2</span> likes 
+	</div>
+	 <div class="detail_controls">
+        <ul>
+          <li class="status"></li>
+        </ul>
+      </div>
+</div>
+
+    <div class="grid_115 push_2"> 	<div class="container problem-details">
+   		<div class="container title-author"> 
+			<h3 class="problem-title">
+					<a href="http://www.mathworks.in/matlabcentral/cody/problems/105-how-to-find-the-position-of-an-element-in-a-vector-without-using-the-find-function">How to find the position of an element in a vector without using the find function</a>
+			</h3>
+			Created by <a href="http://www.mathworks.in/matlabcentral/cody/players/3244031-chelsea" title="Score: 85, Badges: 3">Chelsea</a>
+		</div>
+			<div class="container tags">
+		    	<div class="grid_20">
+		        	<h3>Tags</h3>
+		        </div>
+		      	<div class="grid_60 push_2">
+				      <a href="http://www.mathworks.in/matlabcentral/cody/?term=tag%3A%22find%22" rel="nofollow">find</a>
+		      	</div>
+		    </div>
+		<div class="container group">
+		    <div class="grid_20">
+				<h3>Problem Group</h3>
+		    </div>
+			<div class="grid_60 push_2">
+				<a href="http://www.mathworks.in/matlabcentral/cody/?term=group%3A%22Community%22" rel="nofollow">Community</a>
+			</div>
+	    </div>
+
+	</div>
+ </div>
+  </div>
+</div>
+<div class="grid_148" id="problem_157">
+  <div class="container problem"> <div class="grid_13">
+	<div class="problem-solvers count">
+		<span>1152</span>Solvers
+	</div>
+</div>
+<div class="grid_13 push_3">
+	<div class="likes-count count"> 
+		<span>7</span> likes 
+	</div>
+	 <div class="detail_controls">
+        <ul>
+          <li class="status"></li>
+        </ul>
+      </div>
+</div>
+
+    <div class="grid_115 push_2"> 	<div class="container problem-details">
+   		<div class="container title-author"> 
+			<h3 class="problem-title">
+					<a href="http://www.mathworks.in/matlabcentral/cody/problems/157-the-hitchhiker-s-guide-to-matlab">The Hitchhiker's Guide to MATLAB</a>
+			</h3>
+			Created by <a href="http://www.mathworks.in/matlabcentral/cody/players/1841757-the-cyclist" title="Score: 3155, Badges: 9">the cyclist</a>
+		</div>
+			<div class="container tags">
+		    	<div class="grid_20">
+		        	<h3>Tags</h3>
+		        </div>
+		      	<div class="grid_60 push_2">
+				      <a href="http://www.mathworks.in/matlabcentral/cody/?term=tag%3A%22%26quot%3Bdouglas+adams%26quot%3B%22" rel="nofollow">"douglas adams"</a>, <a href="http://www.mathworks.in/matlabcentral/cody/?term=tag%3A%22Joke%22" rel="nofollow">Joke</a>, <a href="http://www.mathworks.in/matlabcentral/cody/?term=tag%3A%22douglas+adams%22" rel="nofollow">douglas adams</a>, <a href="http://www.mathworks.in/matlabcentral/cody/?term=tag%3A%22fun%22" rel="nofollow">fun</a>
+		      	</div>
+		    </div>
+		<div class="container group">
+		    <div class="grid_20">
+				<h3>Problem Group</h3>
+		    </div>
+			<div class="grid_60 push_2">
+				<a href="http://www.mathworks.in/matlabcentral/cody/?term=group%3A%22Community%22" rel="nofollow">Community</a>
+			</div>
+	    </div>
+
+	</div>
+ </div>
+  </div>
+</div>
+<div class="grid_148" id="problem_60">
+  <div class="container problem"> <div class="grid_13">
+	<div class="problem-solvers count">
+		<span>1101</span>Solvers
+	</div>
+</div>
+<div class="grid_13 push_3">
+	<div class="likes-count count"> 
+		<span>8</span> likes 
+	</div>
+	 <div class="detail_controls">
+        <ul>
+          <li class="status"></li>
+        </ul>
+      </div>
+</div>
+
+    <div class="grid_115 push_2"> 	<div class="locked">
+	<p>This problem is locked. You need to solve more problems from <a href="http://www.mathworks.in/matlabcentral/cody/?term=group%3A%22Cody+Challenge%22" rel="nofollow">Cody Challenge</a> group to unlock it.</p>
+</div>
+
+ </div>
+  </div>
+</div>
+<div class="grid_148" id="problem_39">
+  <div class="container problem"> <div class="grid_13">
+	<div class="problem-solvers count">
+		<span>1052</span>Solvers
+	</div>
+</div>
+<div class="grid_13 push_3">
+	<div class="likes-count count"> 
+		<span>6</span> likes 
+	</div>
+	 <div class="detail_controls">
+        <ul>
+          <li class="status"></li>
+        </ul>
+      </div>
+</div>
+
+    <div class="grid_115 push_2"> 	<div class="locked">
+	<p>This problem is locked. You need to solve more problems from <a href="http://www.mathworks.in/matlabcentral/cody/?term=group%3A%22Cody+Challenge%22" rel="nofollow">Cody Challenge</a> group to unlock it.</p>
+</div>
+
+ </div>
+  </div>
+</div>
+<div class="grid_148" id="problem_94">
+  <div class="container problem"> <div class="grid_13">
+	<div class="problem-solvers count">
+		<span>1020</span>Solvers
+	</div>
+</div>
+<div class="grid_13 push_3">
+	<div class="likes-count count"> 
+		<span>4</span> likes 
+	</div>
+	 <div class="detail_controls">
+        <ul>
+          <li class="status"></li>
+        </ul>
+      </div>
+</div>
+
+    <div class="grid_115 push_2"> 	<div class="locked">
+	<p>This problem is locked. You need to solve more problems from <a href="http://www.mathworks.in/matlabcentral/cody/?term=group%3A%22Cody+Challenge%22" rel="nofollow">Cody Challenge</a> group to unlock it.</p>
+</div>
+
+ </div>
+  </div>
+</div>
+<div class="grid_148" id="problem_115">
+  <div class="container problem"> <div class="grid_13">
+	<div class="problem-solvers count">
+		<span>949</span>Solvers
+	</div>
+</div>
+<div class="grid_13 push_3">
+	<div class="likes-count count"> 
+		<span>7</span> likes 
+	</div>
+	 <div class="detail_controls">
+        <ul>
+          <li class="status"></li>
+        </ul>
+      </div>
+</div>
+
+    <div class="grid_115 push_2"> 	<div class="container problem-details">
+   		<div class="container title-author"> 
+			<h3 class="problem-title">
+					<a href="http://www.mathworks.in/matlabcentral/cody/problems/115-distance-walked-1d">Distance walked 1D</a>
+			</h3>
+			Created by <a href="http://www.mathworks.in/matlabcentral/cody/players/504719-amitava-biswas" title="Score: 4525, Badges: 10">AMITAVA BISWAS</a>
+		</div>
+			<div class="container tags">
+		    	<div class="grid_20">
+		        	<h3>Tags</h3>
+		        </div>
+		      	<div class="grid_60 push_2">
+				      <a href="http://www.mathworks.in/matlabcentral/cody/?term=tag%3A%22walk%22" rel="nofollow">walk</a>
+		      	</div>
+		    </div>
+		<div class="container group">
+		    <div class="grid_20">
+				<h3>Problem Group</h3>
+		    </div>
+			<div class="grid_60 push_2">
+				<a href="http://www.mathworks.in/matlabcentral/cody/?term=group%3A%22Community%22" rel="nofollow">Community</a>
+			</div>
+	    </div>
+
+	</div>
+ </div>
+  </div>
+</div>
+<div class="grid_148" id="problem_16">
+  <div class="container problem"> <div class="grid_13">
+	<div class="problem-solvers count">
+		<span>935</span>Solvers
+	</div>
+</div>
+<div class="grid_13 push_3">
+	<div class="likes-count count"> 
+		<span>3</span> likes 
+	</div>
+	 <div class="detail_controls">
+        <ul>
+          <li class="status"></li>
+        </ul>
+      </div>
+</div>
+
+    <div class="grid_115 push_2"> 	<div class="locked">
+	<p>This problem is locked. You need to solve more problems from <a href="http://www.mathworks.in/matlabcentral/cody/?term=group%3A%22Cody+Challenge%22" rel="nofollow">Cody Challenge</a> group to unlock it.</p>
+</div>
+
+ </div>
+  </div>
+</div>
+<div class="grid_148" id="problem_1658">
+  <div class="container problem"> <div class="grid_13">
+	<div class="problem-solvers count">
+		<span>935</span>Solvers
+	</div>
+</div>
+<div class="grid_13 push_3">
+	<div class="likes-count count"> 
+		<span>0</span> likes 
+	</div>
+	 <div class="detail_controls">
+        <ul>
+          <li class="status"></li>
+        </ul>
+      </div>
+</div>
+
+    <div class="grid_115 push_2"> 	<div class="container problem-details">
+   		<div class="container title-author"> 
+			<h3 class="problem-title">
+					<a href="http://www.mathworks.in/matlabcentral/cody/problems/1658-simple-equation-annual-salary">Simple equation: Annual salary</a>
+			</h3>
+			Created by <a href="http://www.mathworks.in/matlabcentral/cody/players/4384780-matlab-zyante-com" title="Score: 360, Badges: 5">matlab.zyante.com</a>
+		</div>
+			<div class="container tags">
+		    	<div class="grid_20">
+		        	<h3>Tags</h3>
+		        </div>
+		      	<div class="grid_60 push_2">
+				      <a href="http://www.mathworks.in/matlabcentral/cody/?term=tag%3A%22salary%22" rel="nofollow">salary</a>, <a href="http://www.mathworks.in/matlabcentral/cody/?term=tag%3A%22zyante%22" rel="nofollow">zyante</a>, <a href="http://www.mathworks.in/matlabcentral/cody/?term=tag%3A%22easy%22" rel="nofollow">easy</a>
+		      	</div>
+		    </div>
+		<div class="container group">
+		    <div class="grid_20">
+				<h3>Problem Group</h3>
+		    </div>
+			<div class="grid_60 push_2">
+				<a href="http://www.mathworks.in/matlabcentral/cody/?term=group%3A%22Community%22" rel="nofollow">Community</a>
+			</div>
+	    </div>
+
+	</div>
+ </div>
+  </div>
+</div>
+<div class="grid_148" id="problem_18">
+  <div class="container problem"> <div class="grid_13">
+	<div class="problem-solvers count">
+		<span>876</span>Solvers
+	</div>
+</div>
+<div class="grid_13 push_3">
+	<div class="likes-count count"> 
+		<span>14</span> likes 
+	</div>
+	 <div class="detail_controls">
+        <ul>
+          <li class="status"></li>
+        </ul>
+      </div>
+</div>
+
+    <div class="grid_115 push_2"> 	<div class="locked">
+	<p>This problem is locked. You need to solve more problems from <a href="http://www.mathworks.in/matlabcentral/cody/?term=group%3A%22Cody+Challenge%22" rel="nofollow">Cody Challenge</a> group to unlock it.</p>
+</div>
+
+ </div>
+  </div>
+</div>
+<div class="grid_148" id="problem_1661">
+  <div class="container problem"> <div class="grid_13">
+	<div class="problem-solvers count">
+		<span>842</span>Solvers
+	</div>
+</div>
+<div class="grid_13 push_3">
+	<div class="likes-count count"> 
+		<span>2</span> likes 
+	</div>
+	 <div class="detail_controls">
+        <ul>
+          <li class="status"></li>
+        </ul>
+      </div>
+</div>
+
+    <div class="grid_115 push_2"> 	<div class="container problem-details">
+   		<div class="container title-author"> 
+			<h3 class="problem-title">
+					<a href="http://www.mathworks.in/matlabcentral/cody/problems/1661-circle-area-using-pi">Circle area using pi</a>
+			</h3>
+			Created by <a href="http://www.mathworks.in/matlabcentral/cody/players/4384780-matlab-zyante-com" title="Score: 360, Badges: 5">matlab.zyante.com</a>
+		</div>
+			<div class="container tags">
+		    	<div class="grid_20">
+		        	<h3>Tags</h3>
+		        </div>
+		      	<div class="grid_60 push_2">
+				      <a href="http://www.mathworks.in/matlabcentral/cody/?term=tag%3A%22mathematical+constant%22" rel="nofollow">mathematical constant</a>, <a href="http://www.mathworks.in/matlabcentral/cody/?term=tag%3A%22pi%22" rel="nofollow">pi</a>, <a href="http://www.mathworks.in/matlabcentral/cody/?term=tag%3A%22pizza%22" rel="nofollow">pizza</a>, <a href="http://www.mathworks.in/matlabcentral/cody/?term=tag%3A%22area%22" rel="nofollow">area</a>, <a href="http://www.mathworks.in/matlabcentral/cody/?term=tag%3A%22zyante%22" rel="nofollow">zyante</a>
+		      	</div>
+		    </div>
+		<div class="container group">
+		    <div class="grid_20">
+				<h3>Problem Group</h3>
+		    </div>
+			<div class="grid_60 push_2">
+				<a href="http://www.mathworks.in/matlabcentral/cody/?term=group%3A%22Community%22" rel="nofollow">Community</a>
+			</div>
+	    </div>
+
+	</div>
+ </div>
+  </div>
+</div>
+<div class="grid_148" id="problem_29">
+  <div class="container problem"> <div class="grid_13">
+	<div class="problem-solvers count">
+		<span>832</span>Solvers
+	</div>
+</div>
+<div class="grid_13 push_3">
+	<div class="likes-count count"> 
+		<span>7</span> likes 
+	</div>
+	 <div class="detail_controls">
+        <ul>
+          <li class="status"></li>
+        </ul>
+      </div>
+</div>
+
+    <div class="grid_115 push_2"> 	<div class="locked">
+	<p>This problem is locked. You need to solve more problems from <a href="http://www.mathworks.in/matlabcentral/cody/?term=group%3A%22Cody+Challenge%22" rel="nofollow">Cody Challenge</a> group to unlock it.</p>
+</div>
+
+ </div>
+  </div>
+</div>
+<div class="grid_148" id="problem_147">
+  <div class="container problem"> <div class="grid_13">
+	<div class="problem-solvers count">
+		<span>829</span>Solvers
+	</div>
+</div>
+<div class="grid_13 push_3">
+	<div class="likes-count count"> 
+		<span>3</span> likes 
+	</div>
+	 <div class="detail_controls">
+        <ul>
+          <li class="status"></li>
+        </ul>
+      </div>
+</div>
+
+    <div class="grid_115 push_2"> 	<div class="container problem-details">
+   		<div class="container title-author"> 
+			<h3 class="problem-title">
+					<a href="http://www.mathworks.in/matlabcentral/cody/problems/147-too-mean-spirited">Too mean-spirited</a>
+			</h3>
+			Created by <a href="http://www.mathworks.in/matlabcentral/cody/players/1841757-the-cyclist" title="Score: 3155, Badges: 9">the cyclist</a>
+		</div>
+			<div class="container tags">
+		    	<div class="grid_20">
+		        	<h3>Tags</h3>
+		        </div>
+		      	<div class="grid_60 push_2">
+				      <a href="http://www.mathworks.in/matlabcentral/cody/?term=tag%3A%22mean%22" rel="nofollow">mean</a>
+		      	</div>
+		    </div>
+		<div class="container group">
+		    <div class="grid_20">
+				<h3>Problem Group</h3>
+		    </div>
+			<div class="grid_60 push_2">
+				<a href="http://www.mathworks.in/matlabcentral/cody/?term=group%3A%22Community%22" rel="nofollow">Community</a>
+			</div>
+	    </div>
+
+	</div>
+ </div>
+  </div>
+</div>
+<div class="grid_148" id="problem_41">
+  <div class="container problem"> <div class="grid_13">
+	<div class="problem-solvers count">
+		<span>812</span>Solvers
+	</div>
+</div>
+<div class="grid_13 push_3">
+	<div class="likes-count count"> 
+		<span>4</span> likes 
+	</div>
+	 <div class="detail_controls">
+        <ul>
+          <li class="status"></li>
+        </ul>
+      </div>
+</div>
+
+    <div class="grid_115 push_2"> 	<div class="locked">
+	<p>This problem is locked. You need to solve more problems from <a href="http://www.mathworks.in/matlabcentral/cody/?term=group%3A%22Cody+Challenge%22" rel="nofollow">Cody Challenge</a> group to unlock it.</p>
+</div>
+
+ </div>
+  </div>
+</div>
+<div class="grid_148" id="problem_262">
+  <div class="container problem"> <div class="grid_13">
+	<div class="problem-solvers count">
+		<span>767</span>Solvers
+	</div>
+</div>
+<div class="grid_13 push_3">
+	<div class="likes-count count"> 
+		<span>2</span> likes 
+	</div>
+	 <div class="detail_controls">
+        <ul>
+          <li class="status"></li>
+        </ul>
+      </div>
+</div>
+
+    <div class="grid_115 push_2"> 	<div class="container problem-details">
+   		<div class="container title-author"> 
+			<h3 class="problem-title">
+					<a href="http://www.mathworks.in/matlabcentral/cody/problems/262-swap-the-input-arguments">Swap the input arguments</a>
+			</h3>
+			Created by <a href="http://www.mathworks.in/matlabcentral/cody/players/476476-steve-eddins" class="mathworker" title="Score: 895, Badges: 6">Steve Eddins</a>
+		</div>
+			<div class="container tags">
+		    	<div class="grid_20">
+		        	<h3>Tags</h3>
+		        </div>
+		      	<div class="grid_60 push_2">
+				      <a href="http://www.mathworks.in/matlabcentral/cody/?term=tag%3A%22swap%22" rel="nofollow">swap</a>, <a href="http://www.mathworks.in/matlabcentral/cody/?term=tag%3A%22matlab+101%22" rel="nofollow">matlab 101</a>
+		      	</div>
+		    </div>
+		<div class="container group">
+		    <div class="grid_20">
+				<h3>Problem Group</h3>
+		    </div>
+			<div class="grid_60 push_2">
+				<a href="http://www.mathworks.in/matlabcentral/cody/?term=group%3A%22Community%22" rel="nofollow">Community</a>
+			</div>
+	    </div>
+
+	</div>
+ </div>
+  </div>
+</div>
+<div class="grid_148" id="problem_37">
+  <div class="container problem"> <div class="grid_13">
+	<div class="problem-solvers count">
+		<span>739</span>Solvers
+	</div>
+</div>
+<div class="grid_13 push_3">
+	<div class="likes-count count"> 
+		<span>3</span> likes 
+	</div>
+	 <div class="detail_controls">
+        <ul>
+          <li class="status"></li>
+        </ul>
+      </div>
+</div>
+
+    <div class="grid_115 push_2"> 	<div class="locked">
+	<p>This problem is locked. You need to solve more problems from <a href="http://www.mathworks.in/matlabcentral/cody/?term=group%3A%22Cody+Challenge%22" rel="nofollow">Cody Challenge</a> group to unlock it.</p>
+</div>
+
+ </div>
+  </div>
+</div>
+<div class="grid_148" id="problem_42">
+  <div class="container problem"> <div class="grid_13">
+	<div class="problem-solvers count">
+		<span>713</span>Solvers
+	</div>
+</div>
+<div class="grid_13 push_3">
+	<div class="likes-count count"> 
+		<span>3</span> likes 
+	</div>
+	 <div class="detail_controls">
+        <ul>
+          <li class="status"></li>
+        </ul>
+      </div>
+</div>
+
+    <div class="grid_115 push_2"> 	<div class="locked">
+	<p>This problem is locked. You need to solve more problems from <a href="http://www.mathworks.in/matlabcentral/cody/?term=group%3A%22Cody+Challenge%22" rel="nofollow">Cody Challenge</a> group to unlock it.</p>
+</div>
+
+ </div>
+  </div>
+</div>
+<div class="grid_148" id="problem_1659">
+  <div class="container problem"> <div class="grid_13">
+	<div class="problem-solvers count">
+		<span>701</span>Solvers
+	</div>
+</div>
+<div class="grid_13 push_3">
+	<div class="likes-count count"> 
+		<span>0</span> likes 
+	</div>
+	 <div class="detail_controls">
+        <ul>
+          <li class="status"></li>
+        </ul>
+      </div>
+</div>
+
+    <div class="grid_115 push_2"> 	<div class="container problem-details">
+   		<div class="container title-author"> 
+			<h3 class="problem-title">
+					<a href="http://www.mathworks.in/matlabcentral/cody/problems/1659-fahrenheit-to-celsius-using-multiple-statements">Fahrenheit to Celsius using multiple statements</a>
+			</h3>
+			Created by <a href="http://www.mathworks.in/matlabcentral/cody/players/4384780-matlab-zyante-com" title="Score: 360, Badges: 5">matlab.zyante.com</a>
+		</div>
+			<div class="container tags">
+		    	<div class="grid_20">
+		        	<h3>Tags</h3>
+		        </div>
+		      	<div class="grid_60 push_2">
+				      <a href="http://www.mathworks.in/matlabcentral/cody/?term=tag%3A%22fahrenheit%22" rel="nofollow">fahrenheit</a>, <a href="http://www.mathworks.in/matlabcentral/cody/?term=tag%3A%22celsius%22" rel="nofollow">celsius</a>, <a href="http://www.mathworks.in/matlabcentral/cody/?term=tag%3A%22zyante%22" rel="nofollow">zyante</a>
+		      	</div>
+		    </div>
+		<div class="container group">
+		    <div class="grid_20">
+				<h3>Problem Group</h3>
+		    </div>
+			<div class="grid_60 push_2">
+				<a href="http://www.mathworks.in/matlabcentral/cody/?term=group%3A%22Community%22" rel="nofollow">Community</a>
+			</div>
+	    </div>
+
+	</div>
+ </div>
+  </div>
+</div>
+<div class="grid_148" id="problem_120">
+  <div class="container problem"> <div class="grid_13">
+	<div class="problem-solvers count">
+		<span>699</span>Solvers
+	</div>
+</div>
+<div class="grid_13 push_3">
+	<div class="likes-count count"> 
+		<span>0</span> likes 
+	</div>
+	 <div class="detail_controls">
+        <ul>
+          <li class="status"></li>
+        </ul>
+      </div>
+</div>
+
+    <div class="grid_115 push_2"> 	<div class="container problem-details">
+   		<div class="container title-author"> 
+			<h3 class="problem-title">
+					<a href="http://www.mathworks.in/matlabcentral/cody/problems/120-radius-of-a-spherical-planet">radius of a spherical planet</a>
+			</h3>
+			Created by <a href="http://www.mathworks.in/matlabcentral/cody/players/504719-amitava-biswas" title="Score: 4525, Badges: 10">AMITAVA BISWAS</a>
+		</div>
+			<div class="container tags">
+		    	<div class="grid_20">
+		        	<h3>Tags</h3>
+		        </div>
+		      	<div class="grid_60 push_2">
+				      <a href="http://www.mathworks.in/matlabcentral/cody/?term=tag%3A%22planet%22" rel="nofollow">planet</a>
+		      	</div>
+		    </div>
+		<div class="container group">
+		    <div class="grid_20">
+				<h3>Problem Group</h3>
+		    </div>
+			<div class="grid_60 push_2">
+				<a href="http://www.mathworks.in/matlabcentral/cody/?term=group%3A%22Community%22" rel="nofollow">Community</a>
+			</div>
+	    </div>
+
+	</div>
+ </div>
+  </div>
+</div>
+<div class="grid_148" id="problem_174">
+  <div class="container problem"> <div class="grid_13">
+	<div class="problem-solvers count">
+		<span>685</span>Solvers
+	</div>
+</div>
+<div class="grid_13 push_3">
+	<div class="likes-count count"> 
+		<span>4</span> likes 
+	</div>
+	 <div class="detail_controls">
+        <ul>
+          <li class="status"></li>
+        </ul>
+      </div>
+</div>
+
+    <div class="grid_115 push_2"> 	<div class="container problem-details">
+   		<div class="container title-author"> 
+			<h3 class="problem-title">
+					<a href="http://www.mathworks.in/matlabcentral/cody/problems/174-roll-the-dice">Roll the Dice!</a>
+			</h3>
+			Created by <a href="http://www.mathworks.in/matlabcentral/cody/players/2722350-bmtran" title="Score: 13125, Badges: 17">@bmtran</a>
+		</div>
+			<div class="container tags">
+		    	<div class="grid_20">
+		        	<h3>Tags</h3>
+		        </div>
+		      	<div class="grid_60 push_2">
+				      <a href="http://www.mathworks.in/matlabcentral/cody/?term=tag%3A%22rolling%22" rel="nofollow">rolling</a>, <a href="http://www.mathworks.in/matlabcentral/cody/?term=tag%3A%22gambling%22" rel="nofollow">gambling</a>, <a href="http://www.mathworks.in/matlabcentral/cody/?term=tag%3A%22dice%22" rel="nofollow">dice</a>, <a href="http://www.mathworks.in/matlabcentral/cody/?term=tag%3A%22random%22" rel="nofollow">random</a>
+		      	</div>
+		    </div>
+		<div class="container group">
+		    <div class="grid_20">
+				<h3>Problem Group</h3>
+		    </div>
+			<div class="grid_60 push_2">
+				<a href="http://www.mathworks.in/matlabcentral/cody/?term=group%3A%22Community%22" rel="nofollow">Community</a>
+			</div>
+	    </div>
+
+	</div>
+ </div>
+  </div>
+</div>
+<div class="grid_148" id="problem_15">
+  <div class="container problem"> <div class="grid_13">
+	<div class="problem-solvers count">
+		<span>684</span>Solvers
+	</div>
+</div>
+<div class="grid_13 push_3">
+	<div class="likes-count count"> 
+		<span>12</span> likes 
+	</div>
+	 <div class="detail_controls">
+        <ul>
+          <li class="status"></li>
+        </ul>
+      </div>
+</div>
+
+    <div class="grid_115 push_2"> 	<div class="locked">
+	<p>This problem is locked. You need to solve more problems from <a href="http://www.mathworks.in/matlabcentral/cody/?term=group%3A%22Cody+Challenge%22" rel="nofollow">Cody Challenge</a> group to unlock it.</p>
+</div>
+
+ </div>
+  </div>
+</div>
+
+</div>
+
+<div class="search-results-tools bottom">
+  <div class="pagination"><span class="text">1 – 50 of 1,780</span> <span class="previous"><span class="disabled">previous</span></span> <span class="next"><a href="http://www.mathworks.in/matlabcentral/cody/?page=2&s_tid=gn_mlc_cody">next</a></span></div>
+</div>
+
+	</div>
+</div>
+
+<script type="text/javascript" src="http://www.mathworks.in/matlabcentral/jscript/tokenize.js"></script></div></div></body></html>

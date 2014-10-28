@@ -1,0 +1,912 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0067)http://www.mathworks.in/matlabcentral/newsreader/view_thread/327672 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      
+      	<script type="text/javascript" async="" src="./mat_1_files/ahy.js"></script><script type="text/javascript" src="./mat_1_files/jquery-latest.js"></script>
+      <!-- START OF GLOBAL NAV -->
+  <link rel="stylesheet" href="./mat_1_files/sitewide.css" type="text/css">
+  <link rel="stylesheet" href="./mat_1_files/mlc.css" type="text/css">
+  <!--[if lt IE 7]>
+  <link href="/matlabcentral/css/ie6down.css" type="text/css" rel="stylesheet">
+  <![endif]-->
+
+      
+      
+<meta name="keywords" content="file exchange, matlab answers, newsgroup access, link exchange, matlab blog, matlab central, simulink blog, matlab community, matlab and simulink community">
+<meta name="description" content="File exchange, MATLAB Answers, newsgroup access, Links, and Blogs for the MATLAB &amp; Simulink user community">
+<link rel="stylesheet" href="./mat_1_files/newsreader.css" type="text/css">
+<link rel="stylesheet" type="text/css" media="print" href="./mat_1_files/print.css">
+<title>KNN classifier with ROC Analysis - Newsreader - MATLAB Central</title>
+<script src="./mat_1_files/prototype.js" type="text/javascript"></script>
+<script src="./mat_1_files/tags.js" type="text/javascript"></script>
+<script src="./mat_1_files/jquery_ujs.js" type="text/javascript"></script>
+<script src="./mat_1_files/jquery-ui-1.10.1.min.js" type="text/javascript"></script>
+<script src="./mat_1_files/application.js" type="text/javascript"></script>
+<link href="./mat_1_files/newsreader(1).css" media="screen" rel="stylesheet" type="text/css">
+
+<meta name="keywords" content="file exchange, newsgroup access, matlab central, matlab community, matlab and simulink community">
+<meta name="description" content="file exchange and newsgroup access for the MATLAB &amp; Simulink user community">
+
+<script type="text/javascript">
+  // makerzone callout javascript
+  jQuery(document).ready(function() {
+    jQuery(".random_callout").each(function() {
+      var callouts = jQuery(this).find(".callout_container");
+      callouts.hide().eq(Math.floor((Math.random()*callouts.length))).show();
+    });
+  });
+</script>
+
+<style type="text/css">
+<!--
+.recentlyadded {background-color:#FFFFFF; padding-left:6px; padding-top:3px; padding-bottom:4px; font-weight:bold; font-size:9pt; border-top:1px solid #243462; border-bottom:1px solid #243462 }
+td.recentheader {background-color:#FFFFFF; font-size: 9pt; padding:3px 3px 3px 6px; font-weight: bold; }
+td.recenttext {padding:7px; font-size:9pt; }
+ul.recentlist {list-style-image: url(/matlabcentral/images/bullet.gif) ; font-size:90%; margin-top:8px}
+div.recentul ul{margin-left:0}
+div.recentul a:link{text-decoration:none; font-size:86%}
+div.recentul a:visited{text-decoration:none; font-size:86%}
+div.recentul a:hover{text-decoration:underline; font-size:86%}
+ul {margin-top:0px; margin-bottom:5px; margin-left:17px;}
+div.mainbody {padding-top:30px}
+#rcol {background-color:#FFFFFF; font-size:9pt; }
+.section {cursor:pointer}
+div.sectioncontent {padding:10px; background-color:whitesmoke; border:1px solid #405B94; border-top:none; height:110px; overflow-y:auto}
+div.sectioncontentBottom {height:140px; padding:10px; background-color:whitesmoke; border:1px solid #405B94; border-top:none; overflow-y:auto}
+html>body div.sectioncontent, html>body div.sectioncontentBottom  {overflow:auto}
+#rcol td.pad  {padding:3px 5px 4px 11px; background-color:#F1F1F1; border-left:1px solid #D0D0D0; border-right:1px solid #D0D0D0}
+#rcol h2 {margin-top:0}
+.sep {padding-bottom:8px}
+h1 {font-size:94%; margin-bottom:0}
+h2 {color:#000066; font-size:90%}
+h3 {margin-top:10px; margin-bottom:0}
+.recentul a.small:link, .recentul a.small:visited {font-size:8pt; text-decoration:none}
+-->
+</style>
+<script type="text/javascript">
+
+var horizontal_offset="-150px" //horizontal offset of hint box from anchor link
+var login_state="1"
+/////No further editting needed
+
+var vertical_offset="20px" //horizontal offset of hint box from anchor link. No need to change.
+var ie=document.all
+var ns6=document.getElementById&&!document.all
+
+function getposOffset(what, offsettype){
+var totaloffset=(offsettype=="left")? what.offsetLeft : what.offsetTop;
+var parentEl=what.offsetParent;
+while (parentEl!=null){
+totaloffset=(offsettype=="left")? totaloffset+parentEl.offsetLeft : totaloffset+parentEl.offsetTop;
+parentEl=parentEl.offsetParent;
+}
+return totaloffset;
+}
+
+function iecompattest(){
+return (document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body
+}
+
+function clearbrowseredge(obj, whichedge){
+var edgeoffset=(whichedge=="rightedge")? parseInt(horizontal_offset)*-1 : parseInt(vertical_offset)*-1
+if (whichedge=="rightedge"){
+var windowedge=ie && !window.opera? iecompattest().scrollLeft+iecompattest().clientWidth-30 : window.pageXOffset+window.innerWidth-40
+dropmenuobj.contentmeasure=dropmenuobj.offsetWidth
+if (windowedge-dropmenuobj.x < dropmenuobj.contentmeasure)
+edgeoffset=dropmenuobj.contentmeasure+obj.offsetWidth+parseInt(horizontal_offset)
+}
+else{
+var windowedge=ie && !window.opera? iecompattest().scrollTop+iecompattest().clientHeight-15 : window.pageYOffset+window.innerHeight-18
+dropmenuobj.contentmeasure=dropmenuobj.offsetHeight
+if (windowedge-dropmenuobj.y < dropmenuobj.contentmeasure)
+edgeoffset=dropmenuobj.contentmeasure-obj.offsetHeight
+}
+return edgeoffset
+}
+
+function showhint(menucontents, obj, e, tipwidth) {
+  if ((ie||ns6) && document.getElementById("hintbox")) {
+    dropmenuobj=document.getElementById("hintbox")
+    dropmenuobj.innerHTML=menucontents
+    dropmenuobj.style.left=dropmenuobj.style.top=-500
+    if (tipwidth != "") {
+      dropmenuobj.widthobj=dropmenuobj.style
+      dropmenuobj.widthobj.width=tipwidth
+    }
+    dropmenuobj.x=getposOffset(obj, "left")
+    dropmenuobj.y=getposOffset(obj, "top")
+    dropmenuobj.style.left=dropmenuobj.x-clearbrowseredge(obj, "rightedge")+obj.offsetWidth+"px"
+
+    offset_top  = obj.offsetHeight + dropmenuobj.y;
+    if (document.documentElement["clientHeight"]) {
+      if ((offset_top + dropmenuobj.offsetHeight) > document.documentElement["clientHeight"]) {
+        offset_top = offset_top - 18 - dropmenuobj.offsetHeight;
+      }
+    }
+    dropmenuobj.style.top = offset_top + "px";
+    dropmenuobj.style.visibility="visible"
+    obj.onmouseout=hidetip
+  }
+}
+
+function hidetip(e){
+dropmenuobj.style.visibility="hidden"
+dropmenuobj.style.left="-500px"
+}
+
+function createhintbox(){
+var divblock=document.createElement("div")
+divblock.setAttribute("id", "hintbox")
+document.body.appendChild(divblock)
+}
+
+if (window.addEventListener)
+window.addEventListener("load", createhintbox, false)
+else if (window.attachEvent)
+window.attachEvent("onload", createhintbox)
+else if (document.getElementById)
+window.onload=createhintbox
+
+</script>
+<script language="javascript">
+<!--
+function PopUp(page)
+{
+OpenWin = this.open(page, "page_mail", "toolbar=no,menubar=no,location=no,scrollbars=yes,resize=no,height=385,width=420");
+}
+//-->
+</script>
+<script language="JavaScript">
+<!--
+
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+//-->
+</script>
+<script language="javascript">
+<!--
+function PopUp(page)
+{
+OpenWin = this.open(page, "page_mail", "toolbar=no,menubar=no,location=no,scrollbars=yes,resize=no,height=385,width=420");
+}
+//-->
+</script>
+
+<script language="JavaScript">
+<!--
+
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+//-->
+</script>
+
+
+  </head>
+    <body>
+      <div id="header">
+  <div class="wrapper">
+  <!--put nothing in left div - only 11px wide shadow --> 
+    <div class="main">
+        	<div id="logo"><a href="http://www.mathworks.in/matlabcentral/?s_tid=gn_mlc_logo" title="MATLAB Central Home"><img src="./mat_1_files/mlclogo-whitebgd.gif" alt="MATLAB Central"></a></div>
+      
+        <div id="headertools">
+        
+
+<script language="JavaScript1.3" type="text/javascript">
+
+function submitForm(query){
+
+	choice = document.forms['searchForm'].elements['search_submit'].value;
+	
+	if (choice == "entire1" || choice == "contest" || choice == "matlabcentral" || choice == "blogs"){
+	
+	   var newElem = document.createElement("input");
+	   newElem.type = "hidden";
+	   newElem.name = "q";
+	   newElem.value = query.value;
+	   document.forms['searchForm'].appendChild(newElem);
+	      
+	   submit_action = '/searchresults/';
+	}
+	
+	switch(choice){
+	   case "matlabcentral":
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "c[]";
+	      newElem.value = "matlabcentral";
+	      document.forms['searchForm'].appendChild(newElem);
+	
+	      selected_index = 0;
+	      break
+	   case "fileexchange":
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "term";
+	      newElem.value = query.value;
+	      newElem.classname = "formelem";
+	      document.forms['searchForm'].appendChild(newElem);
+	
+	      submit_action = "/matlabcentral/fileexchange/";
+	      selected_index = 1;
+	      break
+	   case "answers":
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "term";
+	      newElem.value = query.value;
+	      newElem.classname = "formelem";
+	      document.forms['searchForm'].appendChild(newElem);
+	
+	      submit_action = "/matlabcentral/answers/";
+	      selected_index = 2;
+	      break
+	   case "cssm":
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "search_string";
+	      newElem.value = query.value;
+	      newElem.classname = "formelem";
+	      document.forms['searchForm'].appendChild(newElem);
+	
+		  submit_action = "/matlabcentral/newsreader/search_results";
+	      selected_index = 3;
+	      break
+	   case "linkexchange":
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "term";
+	      newElem.value = query.value;
+	      newElem.classname = "formelem";
+	      document.forms['searchForm'].appendChild(newElem);
+	
+	      submit_action = "/matlabcentral/linkexchange/";
+	      selected_index = 4;
+	      break
+	   case "blogs":
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "c[]";
+	      newElem.value = "blogs";
+	      document.forms['searchForm'].appendChild(newElem);
+	
+	      selected_index = 5;
+	      break
+	   case "trendy":
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "search";
+	      newElem.value = query.value;
+	      newElem.classname = "formelem";
+	      document.forms['searchForm'].appendChild(newElem);
+	
+	      submit_action = "/matlabcentral/trendy";
+	      selected_index = 6;
+	      break
+	   case "cody":
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "term";
+	      newElem.value = query.value;
+	      newElem.classname = "formelem";
+	      document.forms['searchForm'].appendChild(newElem);
+	
+	      submit_action = "/matlabcentral/cody/";
+	      selected_index = 7;
+	      break
+	   case "contest":
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "c[]";
+	      newElem.value = "contest";
+	      document.forms['searchForm'].appendChild(newElem);
+	
+	      selected_index = 8;
+	      break
+	   case "entire1":
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "c[]";
+	      newElem.value = "entiresite";
+	      document.forms['searchForm'].appendChild(newElem);
+	      
+	      selected_index = 9;
+	      break
+	   default:
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "c[]";
+	      newElem.value = "entiresite";
+	      document.forms['searchForm'].appendChild(newElem);
+	   
+	      selected_index = 9;
+	      break
+	}
+
+	document.forms['searchForm'].elements['search_submit'].selectedIndex = selected_index;
+	document.forms['searchForm'].elements['query'].value = query.value;
+	document.forms['searchForm'].action = submit_action;
+}
+
+</script>
+
+
+  <form name="searchForm" method="GET" action="" style="margin:0px; margin-top:5px; font-size:90%" onsubmit="submitForm(query)">
+          <label for="search">Search: </label>
+        <select name="search_submit" style="font-size:9px ">
+         	 <option value="matlabcentral">MATLAB Central</option>
+          	<option value="fileexchange">&nbsp;&nbsp;&nbsp;File Exchange</option>
+          	<option value="answers">&nbsp;&nbsp;&nbsp;Answers</option>
+            <option value="cssm">&nbsp;&nbsp;&nbsp;Newsgroup</option>
+          	<option value="linkexchange">&nbsp;&nbsp;&nbsp;Link Exchange</option>
+          	<option value="blogs">&nbsp;&nbsp;&nbsp;Blogs</option>
+          	<option value="trendy">&nbsp;&nbsp;&nbsp;Trendy</option>
+          	<option value="cody">&nbsp;&nbsp;&nbsp;Cody</option>
+          	<option value="contest">&nbsp;&nbsp;&nbsp;Contest</option>
+          <option value="entire1">MathWorks.com</option>
+        </select>
+<input type="text" name="query" size="10" class="formelem" value="">
+<input type="submit" value="Go" class="formelem gobutton">
+</form>
+
+		  <ol id="access2">
+  <li class="first">
+    <a href="https://www.mathworks.in/accesslogin/createProfile.do?uri=http%3A%2F%2Fwww.mathworks.in%2Fmatlabcentral%2Fnewsreader%2Fview_thread%2F327672" id="create_account_link">Create Account</a>
+  </li>
+  <li>
+    <a href="https://www.mathworks.in/accesslogin/index_fe.do?uri=http%3A%2F%2Fwww.mathworks.in%2Fmatlabcentral%2Fnewsreader%2Fview_thread%2F327672" id="login_link">Log In</a>
+  </li>
+</ol>
+
+
+      </div>
+	  
+        <div id="globalnav">
+        <!-- from includes/global_nav.html -->
+        <ol>
+                <li class=";">
+                        <a href="http://www.mathworks.in/matlabcentral/fileexchange/?s_tid=gn_mlc_fx">File Exchange</a> 
+                </li>
+                <li class=";">
+                        <a href="http://www.mathworks.in/matlabcentral/answers/?s_tid=gn_mlc_an">Answers</a> 
+                </li>
+                <li class=";">
+                        <a href="http://www.mathworks.in/matlabcentral/newsreader/?s_tid=gn_mlc_ng">Newsgroup</a> 
+                </li>
+                <li class=";">
+                        <a href="http://www.mathworks.in/matlabcentral/linkexchange/?s_tid=gn_mlc_lx">Link Exchange</a> 
+                </li>
+                <li class=";">
+                        <a href="http://blogs.mathworks.com/?s_tid=gn_mlc_blg">Blogs</a> 
+                </li>
+                <li class=";">
+                        <a href="http://www.mathworks.in/matlabcentral/trendy/?s_tid=gn_mlc_tnd">Trendy</a> 
+                </li>
+                <li class=";">
+                        <a href="http://www.mathworks.in/matlabcentral/cody/?s_tid=gn_mlc_cody">Cody</a> 
+                </li>
+                <li class=";">
+                        <a href="http://www.mathworks.in/matlabcentral/contest/?s_tid=gn_mlc_cn">Contest</a> 
+                </li>
+                <li class="icon mathworks">
+                        <a href="http://www.mathworks.in/?s_tid=gn_mlc_main">MathWorks.com</a> 
+                </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <div id="middle">
+  <div class="wrapper">
+    <div id="colleft">
+  <ul id="localnav">
+
+    <li><a href="http://www.mathworks.in/matlabcentral/newsreader/about" class="hintanchor" onclick="window.open(this.href,&#39;new_window&#39;,&#39;width=536,height=500,scrollbars=yes&#39;);return false;">About the MATLAB Newsgroup</a></li>
+    <li class="maincta"><a href="http://www.mathworks.in/matlabcentral/newsreader/create_message" class="post" rel="nofollow">Post A New Message</a></li>
+
+    <li class="cta"><a class="email" href="mailto:?body=I%20thought%20you%20might%20find%20this%20interesting%3A%0Ahttp%3A%2F%2Fwww.mathworks.in%2Fmatlabcentral%2Fnewsreader%2Fview_thread%2F327672&subject=An%20interesting%20item%20from%20MathWorks" popup="new_window width=536,height=500,scrollbars=yes">E-mail this page</a>
+    </li>
+  </ul>
+  <div class="spotlight--nr2ans">
+  <a href="http://www.mathworks.in/matlabcentral/answers/?s_cid=nr2ans">
+    <img src="./mat_1_files/spotlight_answers.jpg" alt="Got Questions? Get Answers.">
+  </a>
+</div>
+
+<div class="callout_makerzone">
+ <div class="random_callout">
+        
+  
+  
+  
+  
+  
+  
+  
+
+
+	
+
+
+  
+  
+  
+  
+      <div class="callout_container rounded shadow solid margined_20  " style="cursor: pointer; display: none;" onclick="javascript:$(window.location).attr(&#39;href&#39;, &#39;http://makerzone.mathworks.com/?utm_source=Acad&amp;utm_medium=spotlight&amp;utm_campaign=MZ&#39;);">
+        <div class="callout_content  bg_center_center">   <img src="./mat_1_files/discover-makerzone-logo.png" alt="Discover MakerZone">
+  <p>MATLAB and Simulink resources for Arduino, LEGO, and Raspberry Pi</p>
+  
+
+
+    
+ <a href="http://makerzone.mathworks.com/?utm_source=Acad&utm_medium=spotlight&utm_campaign=MZ" class="cta">Learn more</a> 
+   
+
+ </div>
+      </div>
+
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+      <div class="callout_container rounded shadow gradient margined_20  " style="display: block;">
+        <div class="callout_content  bg_center_center">    <h3>Discover what MATLAB<sup>®</sup> can do for your career.</h3>
+   <p>Opportunities for recent engineering grads.</p>
+
+
+
+    
+ <a href="http://www.mathworks.in/company/jobs/opportunities/students/infographic.html?source=7677" class="cta">Apply Today</a> 
+   
+
+ </div>
+      </div>
+
+  
+
+</div>
+</div>
+
+
+</div>
+
+
+
+
+	<div id="mainbody" class="columns2">
+	<table id="breadcrumbs" border="0" cellspacing="0" cellpadding="0">
+	  <tbody><tr>
+	    <td class="brdcrmbcell">
+	      <a href="http://www.mathworks.in/matlabcentral/">MATLAB Central</a> <span class="separator">&gt;</span> 
+	      <a href="http://www.mathworks.in/matlabcentral/newsreader/">MATLAB Newsreader</a>
+	       &gt; KNN classifier with ROC Analysis
+	    </td>
+	  </tr>
+	</tbody></table>
+  
+
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td width="600">
+      <!--SEARCHBOX-->
+    </td>
+    <!--MENUBUTTONS-->
+    <td align="right" valign="bottom">
+      <table height="auto" cellpadding="0" cellspacing="0">
+        <tbody><tr>
+          <td align="left" valign="bottom" style="padding-bottom:3px">
+            <div id="menu">
+              <div class="mainlinks" style="width:100%; text-align:left;">
+                  <a href="http://www.mathworks.in/matlabcentral/newsreader/create_thread_watchlist/327672" class="add" rel="nofollow">Add thread to My Watch List</a>
+                <a href="http://www.mathworks.in/matlabcentral/newsreader/what_is_a_watchlist" class="hintanchor" onclick="window.open(this.href,&#39;new_window&#39;,&#39;width=536,height=500,scrollbars=yes&#39;);return false;" rel="nofollow">What is a Watch List?</a>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody></table>
+    </td>
+  </tr>
+</tbody></table>
+
+<div id="contentcontainer">
+<h1>Thread Subject: <div class="wordwrap">KNN classifier with ROC Analysis</div></h1>
+  <a name="900359"></a>
+  <table border="0" cellspacing="0" cellpadding="6" width="100%" class="threadlist">
+    <tbody><tr class="messageheader">
+      <td>
+        <div class="messageheader">
+          <p style="wrap:auto"><strong>Subject:</strong> KNN classifier with ROC Analysis</p>
+          <p><b>From:</b> <a href="http://www.mathworks.in/matlabcentral/newsreader/author/142564">Aaronne </a></p>
+          <p><b>Date:</b> 19 Mar, 2013 12:30:15</p>
+          <p><strong>Message:</strong> 1 of 2 </p>
+        </div>
+        <div class="submenu">
+          <div class="submenuitem"><a href="http://www.mathworks.in/matlabcentral/newsreader/create_message?reply_id=900359" rel="nofollow">Reply to this message</a></div>
+          <div class="submenuitem">
+              <a href="http://www.mathworks.in/matlabcentral/newsreader/create_author_watchlist/142564?thread=327672" class="add" rel="nofollow">Add author to My Watch List</a>
+          </div>
+          <div class="submenuitem"><a href="http://www.mathworks.in/matlabcentral/newsreader/view_original/900359" onclick="window.open(this.href,&#39;new_window&#39;,&#39;width=760,height=600,scrollbars=yes&#39;);return false;" rel="nofollow">View original format</a></div>
+          <div class="submenuitem">
+            <a href="http://www.mathworks.in/matlabcentral/newsreader/flagged_as_spam/900359" rel="nofollow">Flag as spam</a>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr class="messagebody">
+      <td>
+        <p style="overflow-x: auto;width: 522px">
+          Hi Smart guys,<br>
+<br>
+I wrote following codes to get a plot of ROC for my KNN classifier:<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;load fisheriris;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;features                                = meas;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;featureSelcted                          = features;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;numFeatures                             = size(meas,1);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;%% Define ground truth<br>
+&nbsp;&nbsp;&nbsp;&nbsp;groundTruthGroup                        = species;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;%% Construct a KNN classifier<br>
+&nbsp;&nbsp;&nbsp;&nbsp;KNNClassifierObject                     = ClassificationKNN.fit(featureSelcted, groundTruthGroup, 'NumNeighbors', 3, 'Distance', 'euclidean');<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;% Predict resubstitution response of k-nearest neighbor classifier<br>
+&nbsp;&nbsp;&nbsp;&nbsp;[KNNLabel, KNNScore]                   	= resubPredict(KNNClassifierObject);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;% Fit probabilities for scores<br>
+&nbsp;&nbsp;&nbsp;&nbsp;groundTruthNumericalLable        	= [ones(50,1); zeros(50,1); -1.*ones(50,1)];<br>
+&nbsp;&nbsp;&nbsp;&nbsp;[FPR, TPR, Thr, AUC, OPTROCPT]          = perfcurve(groundTruthNumericalLable(:,1), KNNScore(:,1), 1);<br>
+<br>
+Then we can plot the FPR vs TPR to get the ROC curve. <br>
+<br>
+However, the FPR and TPR is different from what I got using my own implementation that the one above will not display all the points, actually, the codes above display only three points on the ROC. The codes I implemented will dispaly 151 points on the ROC as the size of the data is 150.<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;patternsKNN                             = [KNNScore(:,1), groundTruthNumericalLable(:,1)];<br>
+&nbsp;&nbsp;&nbsp;&nbsp;patternsKNN                             = sortrows(patternsKNN, -1);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;groundTruthPattern                      = patternsKNN(:,2);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;POS                                     = cumsum(groundTruthPattern==1);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;TPR                                     = POS/sum(groundTruthPattern==1);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;NEG                                     = cumsum(groundTruthPattern==0);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;FPR                                     = NEG/sum(groundTruthPattern==0);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;FPR                                     = [0; FPR];<br>
+&nbsp;&nbsp;&nbsp;&nbsp;TPR                                     = [0; TPR];<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<br>
+May I ask how to tune '`perfcurve`' to let it output all the points for the ROC? Thanks a lot.<br>
+<br>
+<br>
+<br>
+A.
+        </p>
+      </td>
+    </tr>
+  </tbody></table>
+  <a name="906615"></a>
+  <table border="0" cellspacing="0" cellpadding="6" width="100%" class="threadlist">
+    <tbody><tr class="messageheader">
+      <td>
+        <div class="messageheader">
+          <p style="wrap:auto"><strong>Subject:</strong> KNN classifier with ROC Analysis</p>
+          <p><b>From:</b> <a href="http://www.mathworks.in/matlabcentral/newsreader/author/155661">Jing Wang</a></p>
+          <p><b>Date:</b> 18 Jun, 2013 15:58:18</p>
+          <p><strong>Message:</strong> 2 of 2 </p>
+        </div>
+        <div class="submenu">
+          <div class="submenuitem"><a href="http://www.mathworks.in/matlabcentral/newsreader/create_message?reply_id=906615" rel="nofollow">Reply to this message</a></div>
+          <div class="submenuitem">
+              <a href="http://www.mathworks.in/matlabcentral/newsreader/create_author_watchlist/155661?thread=327672" class="add" rel="nofollow">Add author to My Watch List</a>
+          </div>
+          <div class="submenuitem"><a href="http://www.mathworks.in/matlabcentral/newsreader/view_original/906615" onclick="window.open(this.href,&#39;new_window&#39;,&#39;width=760,height=600,scrollbars=yes&#39;);return false;" rel="nofollow">View original format</a></div>
+          <div class="submenuitem">
+            <a href="http://www.mathworks.in/matlabcentral/newsreader/flagged_as_spam/906615" rel="nofollow">Flag as spam</a>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr class="messagebody">
+      <td>
+        <p style="overflow-x: auto;width: 522px">
+          "Aaronne" wrote in message &lt;ki9lon$qgq$1@newscl01ah.mathworks.com&gt;...<br>
+&gt; Hi Smart guys,<br>
+&gt; <br>
+&gt; I wrote following codes to get a plot of ROC for my KNN classifier:<br>
+&gt; <br>
+&gt;     load fisheriris;<br>
+&gt;        <br>
+&gt;     features                                = meas;<br>
+&gt;     featureSelcted                          = features;<br>
+&gt;     numFeatures                             = size(meas,1);<br>
+&gt;     <br>
+&gt;     %% Define ground truth<br>
+&gt;     groundTruthGroup                        = species;<br>
+&gt;     <br>
+&gt;     %% Construct a KNN classifier<br>
+&gt;     KNNClassifierObject                     = ClassificationKNN.fit(featureSelcted, groundTruthGroup, 'NumNeighbors', 3, 'Distance', 'euclidean');<br>
+&gt;     <br>
+&gt;     % Predict resubstitution response of k-nearest neighbor classifier<br>
+&gt;     [KNNLabel, KNNScore]                   	= resubPredict(KNNClassifierObject);<br>
+&gt;     <br>
+&gt;     % Fit probabilities for scores<br>
+&gt;     groundTruthNumericalLable        	= [ones(50,1); zeros(50,1); -1.*ones(50,1)];<br>
+&gt;     [FPR, TPR, Thr, AUC, OPTROCPT]          = perfcurve(groundTruthNumericalLable(:,1), KNNScore(:,1), 1);<br>
+&gt; <br>
+&gt; Then we can plot the FPR vs TPR to get the ROC curve. <br>
+&gt; <br>
+&gt; However, the FPR and TPR is different from what I got using my own implementation that the one above will not display all the points, actually, the codes above display only three points on the ROC. The codes I implemented will dispaly 151 points on the ROC as the size of the data is 150.<br>
+&gt; <br>
+&gt;     patternsKNN                             = [KNNScore(:,1), groundTruthNumericalLable(:,1)];<br>
+&gt;     patternsKNN                             = sortrows(patternsKNN, -1);<br>
+&gt;     groundTruthPattern                      = patternsKNN(:,2);<br>
+&gt;     <br>
+&gt;     POS                                     = cumsum(groundTruthPattern==1);<br>
+&gt;     TPR                                     = POS/sum(groundTruthPattern==1);<br>
+&gt;     NEG                                     = cumsum(groundTruthPattern==0);<br>
+&gt;     FPR                                     = NEG/sum(groundTruthPattern==0);<br>
+&gt;     <br>
+&gt;     FPR                                     = [0; FPR];<br>
+&gt;     TPR                                     = [0; TPR];<br>
+&gt; <br>
+&gt;     <br>
+&gt; May I ask how to tune '`perfcurve`' to let it output all the points for the ROC? Thanks a lot.<br>
+&gt; <br>
+&gt; <br>
+&gt; <br>
+&gt; A.<br>
+<br>
+Hi, Aaronne,<br>
+<br>
+What do you mean by "let it output all the points for the ROC"? I think the points that suffice to plot the ROC curve are in FPR, TPR.<br>
+<br>
+I had write a script that does almost the same thing as perfcurve in Matlab, see below. Hope that will help.<br>
+<br>
+function [X,Y,T,AUC]=calculate_ROC_3(labels,scores,posclass)<br>
+% sort in parallel<br>
+% in ROC curve, there is no room for ACC or BACC<br>
+% 2013-06-17<br>
+<br>
+n=length(scores);<br>
+X=zeros(n,1);<br>
+Y=zeros(n,1);<br>
+T=zeros(n,1);<br>
+for i=1:n<br>
+&nbsp;&nbsp;&nbsp;&nbsp;labels_predict=scores&gt;=scores(i);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;% calculate the confusion matrix<br>
+&nbsp;&nbsp;&nbsp;&nbsp;temp=labels*2+labels_predict;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;table=tabulate(temp);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;% if table doesn't have 4 rows, put them in correct location<br>
+&nbsp;&nbsp;&nbsp;&nbsp;m=size(table,1);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if m~=4<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;temp=[[0:3]',zeros(4,2)];<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for j=1:m<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;temp(table(j,1)+1,:)=table(j,:);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;table=temp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;end<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;% statistics, see Wikipedia<br>
+&nbsp;&nbsp;&nbsp;&nbsp;TN=table(1,2);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;FP=table(2,2);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;FN=table(3,2);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;TP=table(4,2);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;TPR=TP/(TP+FN); % sensitivity<br>
+&nbsp;&nbsp;&nbsp;&nbsp;SPC=TN/(FP+TN); % specificity<br>
+&nbsp;&nbsp;&nbsp;&nbsp;FPR=FP/(FP+TN); % false positive rate<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ACC=(TP+TN)/(TP+TN+FP+FN); % accuracy<br>
+&nbsp;&nbsp;&nbsp;&nbsp;BACC=(TPR+SPC)/2; % balanced accuracy<br>
+&nbsp;&nbsp;&nbsp;&nbsp;dPrime=norminv(TPR)-norminv(FPR); % d'<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;X(i)=FPR;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Y(i)=TPR;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;T(i)=scores(i);<br>
+end<br>
+<br>
+% there are many equal number, "sort" will cause problems<br>
+ix=sort_parallel(X,Y);<br>
+X=X(ix);<br>
+Y=Y(ix);<br>
+<br>
+% counting the begining and ending parts<br>
+X=[0;X];<br>
+Y=[0;Y];<br>
+<br>
+AUC=0;<br>
+for i=1:length(X)-1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;AUC=AUC+(X(i+1)-X(i))*Y(i+1);<br>
+end<br>
+<br>
+if posclass==0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;X=1-X;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Y=1-Y;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;AUC=1-AUC;<br>
+end<br>
+<br>
+function ix=sort_parallel(x,y)<br>
+% x, y are vectors with the same length<br>
+% sort (xi, yi) in order<br>
+% xi, yi are in [0,1]<br>
+% when xi&gt;xj, yi&gt;yj<br>
+% when xi=xj, yi and yj could be different<br>
+% 2013-06-17<br>
+<br>
+% find the minimal difference in x, the one bigger than 0<br>
+xs=sort(x);<br>
+xd=diff(xs);<br>
+xu=unique(xd);<br>
+delta=xu(2); % the first one is usually 0<br>
+<br>
+% scale x by a big enough ratio<br>
+% then x will dominate the order, y will take effects when x are the same<br>
+% x/delta will guaratee that the smallest difference in x will be scaled to<br>
+% be no smaller than 1. At the same time, the biggest difference in y will<br>
+% not be larger than 1. So it does what I think.<br>
+z=x/delta+y;<br>
+[~,ix]=sort(z);<br>
+<br>
+Best Regards,<br>
+Jing.
+        </p>
+      </td>
+    </tr>
+  </tbody></table>
+</div>
+
+<div id="tagbox">
+  <h2 style=" color:#000000; font-size:14px; ">Tags for this Thread</h2>
+
+<div id="all_tags" class="tags tag_group tag-list">
+  <ul><li><a href="http://www.mathworks.in/matlabcentral/newsreader/search_results?search_string=tag%3A%22matlab%22" rel="nofollow" title="matlab">matlab</a><span class="tag-separator"></span></li><li><a href="http://www.mathworks.in/matlabcentral/newsreader/search_results?search_string=tag%3A%22roc%22" rel="nofollow" title="roc">roc</a><span class="tag-separator"></span></li><li><a href="http://www.mathworks.in/matlabcentral/newsreader/search_results?search_string=tag%3A%22lda%22" rel="nofollow" title="lda">lda</a><span class="tag-separator"></span></li><li><a href="http://www.mathworks.in/matlabcentral/newsreader/search_results?search_string=tag%3A%22classification%22" rel="nofollow" title="classification">classification</a></li></ul>
+
+</div>
+
+
+
+<h3>What are tags?</h3>
+<p>A tag is like a keyword or category label associated with each thread. Tags make it easier for you to find threads of interest.</p>
+<p>Anyone can tag a thread. Tags are public and visible to everyone.</p>
+
+<script type="text/javascript" src="./mat_1_files/jquery.multicomplete.js"></script>
+<script type="text/javascript">
+  jQuery("#add_tags").multicomplete({
+    data_source: { url: "/matlabcentral/newsreader/tags" }
+  });
+
+  jQuery("#add_new_tags_form").on('ajax:complete', function(){
+    jQuery('.multicomplete > .multicomplete-selected-item').remove()
+    jQuery("#add_tags").val('').blur();
+    return false;
+  });
+</script>
+
+</div>
+
+<div id="feed" style="clear:both">
+  <a href="http://www.mathworks.in/matlabcentral/newsreader/thread_feed/327672"><img src="./mat_1_files/rss.gif" alt="rss" style="margin: 10px 7px 0px 0px;" border="0" height="16" width="16"></a><a href="http://www.mathworks.in/matlabcentral/newsreader/thread_feed/327672">Feed for this Thread</a>
+  <link href="http://www.mathworks.in/matlabcentral/newsreader/thread_feed/327672" rel="alternate" title="RSS" type="application/rss+xml">
+</div>
+
+<p id="contactus"><a href="http://www.mathworks.in/company/feedback/">Contact us</a></p>
+
+
+
+
+      
+
+	
+      
+</div>
+<div class="clearboth">&nbsp;</div>
+</div>
+</div>
+<!-- footer.html -->
+<!-- START OF FOOTER -->
+
+<div id="mlc-footer">
+  <script type="text/javascript">
+function clickDynamic(obj, target_url, tracking_code) {
+	var pos=target_url.indexOf("?");
+	if (pos<=0) { 
+		var linkComponents = target_url + tracking_code;
+		obj.href=linkComponents;
+	} 
+}
+</script>
+  <div class="wrapper">
+    <div>
+      <ul id="matlabcentral">
+        <li class="copyright first">© 1994-2014 The MathWorks, Inc.</li>
+        <li class="first"><a href="http://www.mathworks.in/help.html" title="Site Help">Site Help</a></li>
+        <li><a href="http://www.mathworks.in/company/aboutus/policies_statements/patents.html" title="patents" rel="nofollow">Patents</a></li>
+        <li><a href="http://www.mathworks.in/company/aboutus/policies_statements/trademarks.html" title="trademarks" rel="nofollow">Trademarks</a></li>
+        <li><a href="http://www.mathworks.in/company/aboutus/policies_statements/" title="privacy policy" rel="nofollow">Privacy Policy</a></li>
+        <li><a href="http://www.mathworks.in/company/aboutus/policies_statements/piracy.html" title="preventing piracy" rel="nofollow">Preventing Piracy</a></li>
+        <li class="last"><a href="http://www.mathworks.in/matlabcentral/termsofuse.html" title="Terms of Use" rel="nofollow">Terms of Use</a></li>
+        <li class="icon"><a href="http://www.mathworks.in/company/rss/" title="RSS" class="rssfeed" rel="nofollow"><span class="text">RSS</span></a></li>
+        <li class="icon"><a href="http://www.mathworks.in/programs/bounce_hub_generic.html?s_tid=mlc_lkd&url=http://www.linkedin.com/company/the-mathworks_2" title="LinkedIn" class="linkedin" rel="nofollow" target="_blank"></a></li>
+        <li class="icon"><a href="http://www.mathworks.in/programs/bounce_hub_generic.html?s_tid=mlc_fbk&url=https://plus.google.com/117177960465154322866?prsrc=3" title="Google+" class="google" rel="nofollow" target="_blank"><span class="text">Google+</span></a></li>
+        <li class="icon"><a href="http://www.mathworks.in/programs/bounce_hub_generic.html?s_tid=mlc_fbk&url=http://www.facebook.com/MATLAB" title="Facebook" class="facebook" rel="nofollow" target="_blank"><span class="text">Facebook</span></a></li>
+        		<li class="last icon"><a href="http://www.mathworks.in/programs/bounce_hub_generic.html?s_tid=mlc_twt&url=http://www.twitter.com/MATLAB" title="Twitter" class="twitter" rel="nofollow" target="_blank"><span class="text">Twitter</span></a></li>        
+        
+      </ul>
+      <ul id="mathworks">
+        <li class="first sectionhead">Featured MathWorks.com Topics:</li>
+        <li class="first"><a href="http://www.mathworks.in/products/new_products/latest_features.html" onclick="clickDynamic(this, this.href, &#39;?s_cid=MLC_new&#39;)">New Products</a></li>
+        <li><a href="http://www.mathworks.in/support/" title="support" onclick="clickDynamic(this, this.href, &#39;?s_cid=MLC_support&#39;)">Support</a></li>
+        <li><a href="http://www.mathworks.in/help" title="documentation" onclick="clickDynamic(this, this.href, &#39;?s_cid=MLC_doc&#39;)">Documentation</a></li>
+        <li><a href="http://www.mathworks.in/services/training/" title="training" onclick="clickDynamic(this, this.href, &#39;?s_cid=MLC_training&#39;)">Training</a></li>
+        <li><a href="http://www.mathworks.in/company/events/webinars/" title="Webinars" onclick="clickDynamic(this, this.href, &#39;?s_cid=MLC_webinars&#39;)">Webinars</a></li>
+        <li><a href="http://www.mathworks.in/company/newsletters/" title="newsletters" onclick="clickDynamic(this, this.href, &#39;?s_cid=MLC_newsletters&#39;)">Newsletters</a></li>
+        <li><a href="http://www.mathworks.in/programs/trials/trial_request.html?prodcode=ML&s_cid=MLC_trials" title="MATLAB Trials">MATLAB Trials</a></li>
+        
+        		<li class="last"><a href="http://www.mathworks.in/company/jobs/opportunities/index_en_US.html" title="Careers" onclick="clickDynamic(this, this.href, &#39;?s_cid=MLC_careers&#39;)">Careers</a></li>
+                 
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- END OF FOOTER -->
+
+
+      
+      
+<!-- SiteCatalyst code version: H.24.4.
+Copyright 1996-2012 Adobe, Inc. All Rights Reserved
+More info available at http://www.omniture.com -->
+<script language="JavaScript" type="text/javascript" src="./mat_1_files/s_code.js"></script>
+
+
+<script language="JavaScript" type="text/javascript">
+
+
+
+<!--
+if (typeof mboxLoadSCPlugin == 'function') {
+	mboxLoadSCPlugin(s); 
+}
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)//--></script>
+<script language="JavaScript" type="text/javascript"><!--
+if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+//--></script>
+<!--/DO NOT REMOVE/-->
+<!-- End SiteCatalyst code version: H.24.4. -->
+
+
+  
+
+    
+
+<!-- BEGIN Qualaroo --> 
+<script type="text/javascript">
+  var _kiq = _kiq || [];
+  (function(){
+    setTimeout(function(){
+			var d = document, f = d.getElementsByTagName('script')[0], s = d.createElement('script'); s.type = 'text/javascript';
+			s.async = true; s.src = '//s3.amazonaws.com/ki.js/49559/ahy.js'; f.parentNode.insertBefore(s, f);
+    }, 1);
+  })();
+</script>
+<!-- END Qualaroo --> 
+
+    
+
+<div id="hintbox"></div></body><iframe allowtransparency="true" frameborder="0" id="abs-top-frame" src="./mat_1_files/top.html" style="position: fixed; z-index: 4294967295; overflow: hidden; top: 0px; left: 0px; right: 0px; width: 138px; height: 13px; max-height: none; min-height: 0px; margin: 0px auto; padding: 0px; border: 0px; display: block; background-color: transparent;"></iframe></html>

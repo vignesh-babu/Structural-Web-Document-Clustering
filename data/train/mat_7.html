@@ -1,0 +1,816 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0062)http://www.mathworks.in/matlabcentral/contest/?s_tid=gn_mlc_cn -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      
+      	<script type="text/javascript" async="" src="./mat_7_files/ahy.js"></script><script type="text/javascript" src="./mat_7_files/jquery-latest.js"></script>
+      <!-- START OF GLOBAL NAV -->
+  <link rel="stylesheet" href="./mat_7_files/sitewide.css" type="text/css">
+  <link rel="stylesheet" href="./mat_7_files/mlc.css" type="text/css">
+  <!--[if lt IE 7]>
+  <link href="/matlabcentral/css/ie6down.css" type="text/css" rel="stylesheet">
+  <![endif]-->
+
+      
+      
+<meta name="keywords" content="file exchange, matlab answers, newsgroup access, link exchange, matlab blog, matlab central, simulink blog, matlab community, matlab and simulink community">
+<meta name="description" content="File exchange, MATLAB Answers, newsgroup access, Links, and Blogs for the MATLAB &amp; Simulink user community">
+<link rel="stylesheet" href="./mat_7_files/contest.css" type="text/css">
+<link rel="stylesheet" type="text/css" media="print" href="./mat_7_files/print.css">
+<title>MATLAB Programming Contest - MATLAB Central</title>
+<script src="./mat_7_files/all.js" type="text/javascript"></script>
+<link href="./mat_7_files/eiffel.css" media="screen" rel="stylesheet" type="text/css">
+<link href="./mat_7_files/jquery-ui.custom.css" media="screen" rel="stylesheet" type="text/css">
+<link href="./mat_7_files/timepicker.css" media="screen" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="./mat_7_files/share_this.js"></script>
+<link type="text/css" rel="stylesheet" href="./mat_7_files/share_this.css">
+
+
+  </head>
+    <body>
+      <div id="header">
+  <div class="wrapper">
+  <!--put nothing in left div - only 11px wide shadow --> 
+    <div class="main">
+        	<div id="logo"><a href="http://www.mathworks.in/matlabcentral/?s_tid=gn_mlc_logo" title="MATLAB Central Home"><img src="./mat_7_files/mlclogo-whitebgd.gif" alt="MATLAB Central"></a></div>
+      
+        <div id="headertools">
+        
+
+<script language="JavaScript1.3" type="text/javascript">
+
+function submitForm(query){
+
+	choice = document.forms['searchForm'].elements['search_submit'].value;
+	
+	if (choice == "entire1" || choice == "contest" || choice == "matlabcentral" || choice == "blogs"){
+	
+	   var newElem = document.createElement("input");
+	   newElem.type = "hidden";
+	   newElem.name = "q";
+	   newElem.value = query.value;
+	   document.forms['searchForm'].appendChild(newElem);
+	      
+	   submit_action = '/searchresults/';
+	}
+	
+	switch(choice){
+	   case "matlabcentral":
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "c[]";
+	      newElem.value = "matlabcentral";
+	      document.forms['searchForm'].appendChild(newElem);
+	
+	      selected_index = 0;
+	      break
+	   case "fileexchange":
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "term";
+	      newElem.value = query.value;
+	      newElem.classname = "formelem";
+	      document.forms['searchForm'].appendChild(newElem);
+	
+	      submit_action = "/matlabcentral/fileexchange/";
+	      selected_index = 1;
+	      break
+	   case "answers":
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "term";
+	      newElem.value = query.value;
+	      newElem.classname = "formelem";
+	      document.forms['searchForm'].appendChild(newElem);
+	
+	      submit_action = "/matlabcentral/answers/";
+	      selected_index = 2;
+	      break
+	   case "cssm":
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "search_string";
+	      newElem.value = query.value;
+	      newElem.classname = "formelem";
+	      document.forms['searchForm'].appendChild(newElem);
+	
+		  submit_action = "/matlabcentral/newsreader/search_results";
+	      selected_index = 3;
+	      break
+	   case "linkexchange":
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "term";
+	      newElem.value = query.value;
+	      newElem.classname = "formelem";
+	      document.forms['searchForm'].appendChild(newElem);
+	
+	      submit_action = "/matlabcentral/linkexchange/";
+	      selected_index = 4;
+	      break
+	   case "blogs":
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "c[]";
+	      newElem.value = "blogs";
+	      document.forms['searchForm'].appendChild(newElem);
+	
+	      selected_index = 5;
+	      break
+	   case "trendy":
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "search";
+	      newElem.value = query.value;
+	      newElem.classname = "formelem";
+	      document.forms['searchForm'].appendChild(newElem);
+	
+	      submit_action = "/matlabcentral/trendy";
+	      selected_index = 6;
+	      break
+	   case "cody":
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "term";
+	      newElem.value = query.value;
+	      newElem.classname = "formelem";
+	      document.forms['searchForm'].appendChild(newElem);
+	
+	      submit_action = "/matlabcentral/cody/";
+	      selected_index = 7;
+	      break
+	   case "contest":
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "c[]";
+	      newElem.value = "contest";
+	      document.forms['searchForm'].appendChild(newElem);
+	
+	      selected_index = 8;
+	      break
+	   case "entire1":
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "c[]";
+	      newElem.value = "entiresite";
+	      document.forms['searchForm'].appendChild(newElem);
+	      
+	      selected_index = 9;
+	      break
+	   default:
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "c[]";
+	      newElem.value = "entiresite";
+	      document.forms['searchForm'].appendChild(newElem);
+	   
+	      selected_index = 9;
+	      break
+	}
+
+	document.forms['searchForm'].elements['search_submit'].selectedIndex = selected_index;
+	document.forms['searchForm'].elements['query'].value = query.value;
+	document.forms['searchForm'].action = submit_action;
+}
+
+</script>
+
+
+  <form name="searchForm" method="GET" action="" style="margin:0px; margin-top:5px; font-size:90%" onsubmit="submitForm(query)">
+          <label for="search">Search: </label>
+        <select name="search_submit" style="font-size:9px ">
+         	 <option value="matlabcentral">MATLAB Central</option>
+          	<option value="fileexchange">&nbsp;&nbsp;&nbsp;File Exchange</option>
+          	<option value="answers">&nbsp;&nbsp;&nbsp;Answers</option>
+            <option value="cssm">&nbsp;&nbsp;&nbsp;Newsgroup</option>
+          	<option value="linkexchange">&nbsp;&nbsp;&nbsp;Link Exchange</option>
+          	<option value="blogs">&nbsp;&nbsp;&nbsp;Blogs</option>
+          	<option value="trendy">&nbsp;&nbsp;&nbsp;Trendy</option>
+          	<option value="cody">&nbsp;&nbsp;&nbsp;Cody</option>
+          	<option value="contest" selected="">&nbsp;&nbsp;&nbsp;Contest</option>
+          <option value="entire1">MathWorks.com</option>
+        </select>
+<input type="text" name="query" size="10" class="formelem" value="">
+<input type="submit" value="Go" class="formelem gobutton">
+</form>
+
+
+        <ol id="access2">
+            
+            
+              <a href="https://www.mathworks.in/accesslogin/index_fe.do?uri=http://www.mathworks.in/matlabcentral/contest/?s_tid=gn_mlc_cn">Log In</a> 
+              <li class="first"><a href="https://www.mathworks.in/accesslogin/createProfile.do?uri=http://www.mathworks.in/matlabcentral/contest/?s_tid=gn_mlc_cn">Create Account</a></li>
+              <li><a href="https://www.mathworks.in/accesslogin/index_fe.do?uri=http://www.mathworks.in/matlabcentral/contest/?s_tid=gn_mlc_cn">Log In</a></li>
+            
+        </ol>
+      </div>
+	  
+        <div id="globalnav">
+        <!-- from includes/global_nav.html -->
+        <ol>
+                <li class=";">
+                        <a href="http://www.mathworks.in/matlabcentral/fileexchange/?s_tid=gn_mlc_fx">File Exchange</a> 
+                </li>
+                <li class=";">
+                        <a href="http://www.mathworks.in/matlabcentral/answers/?s_tid=gn_mlc_an">Answers</a> 
+                </li>
+                <li class=";">
+                        <a href="http://www.mathworks.in/matlabcentral/newsreader/?s_tid=gn_mlc_ng">Newsgroup</a> 
+                </li>
+                <li class=";">
+                        <a href="http://www.mathworks.in/matlabcentral/linkexchange/?s_tid=gn_mlc_lx">Link Exchange</a> 
+                </li>
+                <li class=";">
+                        <a href="http://blogs.mathworks.com/?s_tid=gn_mlc_blg">Blogs</a> 
+                </li>
+                <li class=";">
+                        <a href="http://www.mathworks.in/matlabcentral/trendy/?s_tid=gn_mlc_tnd">Trendy</a> 
+                </li>
+                <li class=";">
+                        <a href="http://www.mathworks.in/matlabcentral/cody/?s_tid=gn_mlc_cody">Cody</a> 
+                </li>
+                <li class="active">
+                        <a href="./mat_7_files/mat_7.html">Contest</a> 
+                </li>
+                <li class="icon mathworks">
+                        <a href="http://www.mathworks.in/?s_tid=gn_mlc_main">MathWorks.com</a> 
+                </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <div id="middle">
+  <div class="wrapper">
+<div id="colleft">
+  <ul id="localnav">
+    <li class="active"><a href="http://www.mathworks.in/matlabcentral/contest/contests">Contest Main Page</a></li>
+    <li><a href="http://www.mathworks.in/matlabcentral/contest/hall_of_fame">Hall of Fame</a></li>  
+    <li><a href="http://www.mathworks.in/matlabcentral/contest/faq">FAQ</a></li>
+    
+    
+
+    <li class="spotlightsmall">
+      <a href="http://www.mathworks.in/company/jobs/">Work for us!</a>
+    </li>
+
+    
+  </ul>
+</div>
+
+
+    <div id="mainbody" class="columns2">
+
+
+<h1>The MATLAB Online Programming Contest</h1>
+
+
+
+<p></p><h2>Raphaël Candelier - Knots Contest Grand Prize winner!</h2>
+<p>Our congratulations to <a href="http://www.mathworks.com/matlabcentral/contest/contests/38/players/2463">Raphaël Candelier</a> who has won the <a href="http://www.mathworks.com/matlabcentral/contest/contests/38">Knots Contest</a> with his submission <a href="http://www.mathworks.com/matlabcentral/contest/contests/38/submissions/69639">Cheeeese</a>.</p>
+
+We also congratulate our Knots Contest winners: 
+<ul>
+<li>Hannes Naudé, Prince of Darkness</li>
+<li>Alfonso Nieto-Castañón, Twilight Prize</li>
+<li>Richard Zapor, Early Bird</li>
+<li>Yi Cao, Saturday Leap</li>
+<li>Richard Zapor, Sunday Push</li>
+</ul>
+
+
+<div style="padding:3px; cursor:pointer;float:right;margin-left:10px">
+  <a onclick="window.open(&#39;/company/pressroom/video/index.html&#39;, &#39;DemoWindow&#39;,&#39;width=770,height=515,scrollbars=yes,resizable=yes&#39;)"><img src="./mat_7_files/MATLAB_contest_spotlight.jpg" alt="See behind the scenes of the MATLAB Programming Contest"></a>
+</div>
+
+
+
+<h2>About MATLAB Central Contests</h2>
+<p>MATLAB Central Contests were held semi-annually to inspire programmers to develop and share winning code. Each contest presented a different problem to solve. Topics varied in range and focus from gene sequencing to surveying  planets. For every contest, contestants submit hundreds of entries to earn the coveted top spot. In these online contests, contestants compete with the best programmers from all over the world!<br></p>
+<p></p><h2>MATLAB Contests in the News</h2>
+<p>Check out these articles highlighting MATLAB Contests:</p>
+<ul>
+  <li>Electronic Design: <a href="http://electronicdesign.com/article/embedded/Matlab-Contest-Builds-On-The-Best.aspx">MATLAB Contest Builds On The Best</a></li>
+  <li>Freakonomics: <a href="http://www.freakonomics.com/2010/11/15/geeks-and-tweaks-what-computer-programming-contests-can-teach-us-about-innovation">Geeks and Tweaks: What Computer Programming Contests Can Teach Us About Innovation</a></li>
+  <li>ECN Magazine: <a href="http://www.ecnmag.com/Blogs/2011/02/Test-practices/MATLAB-programming-contest">Cheating is what makes the MATLAB programming contest fun</a></li>
+  <li> IT Conversations: <a href="http://itc.conversationsnetwork.org/shows/detail3325.html%3C/a%3E%3C/li%3E%20%20%3Cli%3E%20Forbes%20:%20%3Ca%20href=" http:="" blogs.forbes.com="" sciencebiz="" 2011="" 02="" 04="" using-crowdsourcing-to-find-treatments-for-the-paralyzed"="">Using Crowdcasting To Find Treatments For The Paralyzed</a></li>
+</ul>
+
+<!--<h2>Current Contest</h2>
+<a href="http://www.mathworks.com/matlabcentral/contest/contests/36">Tiles Contest</a> April 4 - 11, 2012 --><p></p>
+
+
+
+
+
+
+
+  <h2>Recent Contests</h2>
+  <table cellpadding="0" cellspacing="0" border="0" class="datatable_full fileview">
+    <tbody><tr>
+      <th>Contest</th>
+      <th>Date</th>
+      <th>Top Entry</th>
+    </tr>
+    
+      <tr>
+        <td><a href="http://www.mathworks.in/matlabcentral/contest/contests/38">Knots Contest</a></td>
+        <td>Oct 2012</td>
+        <td>
+          
+            <a href="http://www.mathworks.in/matlabcentral/contest/contests/38/submissions/69639">Cheeeese</a>
+            <br>by
+            <a href="http://www.mathworks.in/matlabcentral/contest/contests/38/players/2463">Raphaël Candelier</a>
+          
+        </td>
+      </tr>
+    
+      <tr class="odd">
+        <td><a href="http://www.mathworks.in/matlabcentral/contest/contests/36">Tiles Contest</a></td>
+        <td>Apr 2012</td>
+        <td>
+          
+            <a href="http://www.mathworks.in/matlabcentral/contest/contests/36/submissions/67346">CatsAreComing?</a>
+            <br>by
+            <a href="http://www.mathworks.in/matlabcentral/contest/contests/36/players/20">Sergey Y.</a>
+          
+        </td>
+      </tr>
+    
+      <tr>
+        <td><a href="http://www.mathworks.in/matlabcentral/contest/contests/34">Vines</a></td>
+        <td>Nov 2011</td>
+        <td>
+          
+            <a href="http://www.mathworks.in/matlabcentral/contest/contests/34/submissions/65543">lasttry03</a>
+            <br>by
+            <a href="http://www.mathworks.in/matlabcentral/contest/contests/34/players/74">Alfonso Nieto-Castanon</a>
+          
+        </td>
+      </tr>
+    
+      <tr class="odd">
+        <td><a href="http://www.mathworks.in/matlabcentral/contest/contests/32">Crossword</a></td>
+        <td>Apr 2011</td>
+        <td>
+          
+            <a href="http://www.mathworks.in/matlabcentral/contest/contests/32/submissions/63353">Rapid Weight Loss May Be Harmful</a>
+            <br>by
+            <a href="http://www.mathworks.in/matlabcentral/contest/contests/32/players/24">Nicholas Howe</a>
+          
+        </td>
+      </tr>
+    
+      <tr>
+        <td><a href="http://www.mathworks.in/matlabcentral/contest/contests/30">Sailing Home</a></td>
+        <td>Nov 2010</td>
+        <td>
+          
+            <a href="http://www.mathworks.in/matlabcentral/contest/contests/30/submissions/61097">Lost Sailor Final5</a>
+            <br>by
+            <a href="http://www.mathworks.in/matlabcentral/contest/contests/30/players/2215">Andre Fioravanti</a>
+          
+        </td>
+      </tr>
+    
+      <tr class="odd">
+        <td><a href="http://www.mathworks.in/matlabcentral/contest/contests/2">Sensor</a></td>
+        <td>Apr 2010</td>
+        <td>
+          
+            <a href="http://www.mathworks.in/matlabcentral/contest/contests/2/submissions/4526">Overfitting is a fool's game</a>
+            <br>by
+            <a href="http://www.mathworks.in/matlabcentral/contest/contests/2/players/28">Hannes Naudé</a>
+          
+        </td>
+      </tr>
+    
+      <tr>
+        <td><a href="http://www.mathworks.in/matlabcentral/contest/contests/27">Color Bridge</a></td>
+        <td>Nov 2009</td>
+        <td>
+          
+            <a href="http://www.mathworks.in/matlabcentral/contest/contests/27/submissions/56940">lasttry01</a>
+            <br>by
+            <a href="http://www.mathworks.in/matlabcentral/contest/contests/27/players/74">Alfonso Nieto-Castanon</a>
+          
+        </td>
+      </tr>
+    
+      <tr class="odd">
+        <td><a href="http://www.mathworks.in/matlabcentral/contest/contests/14">Army Ants</a></td>
+        <td>Nov 2008</td>
+        <td>
+          
+            <a href="http://www.mathworks.in/matlabcentral/contest/contests/14/submissions/33997">Rogue Ant 4</a>
+            <br>by
+            <a href="http://www.mathworks.in/matlabcentral/contest/contests/14/players/621">David</a>
+          
+        </td>
+      </tr>
+    
+      <tr>
+        <td><a href="http://www.mathworks.in/matlabcentral/contest/contests/9">Wiring</a></td>
+        <td>Apr 2008</td>
+        <td>
+          
+            <a href="http://www.mathworks.in/matlabcentral/contest/contests/9/submissions/19608">tweaky bird and pushy cat 21</a>
+            <br>by
+            <a href="http://www.mathworks.in/matlabcentral/contest/contests/9/players/615">srach</a>
+          
+        </td>
+      </tr>
+    
+      <tr class="odd">
+        <td><a href="http://www.mathworks.in/matlabcentral/contest/contests/13">Gene Splicing</a></td>
+        <td>Nov 2007</td>
+        <td>
+          
+            <a href="http://www.mathworks.in/matlabcentral/contest/contests/13/submissions/33189">ones 8</a>
+            <br>by
+            <a href="http://www.mathworks.in/matlabcentral/contest/contests/13/players/1143">Markus</a>
+          
+        </td>
+      </tr>
+    
+      <tr>
+        <td><a href="http://www.mathworks.in/matlabcentral/contest/contests/7">Peg Solitaire</a></td>
+        <td>May 2007</td>
+        <td>
+          
+            <a href="http://www.mathworks.in/matlabcentral/contest/contests/7/submissions/14453">Buy a ticket</a>
+            <br>by
+            <a href="http://www.mathworks.in/matlabcentral/contest/contests/7/players/17">Yi Cao</a>
+          
+        </td>
+      </tr>
+    
+      <tr class="odd">
+        <td><a href="http://www.mathworks.in/matlabcentral/contest/contests/17">Blackbox</a></td>
+        <td>Nov 2006</td>
+        <td>
+          
+            <a href="http://www.mathworks.in/matlabcentral/contest/contests/17/submissions/46197">End of it all</a>
+            <br>by
+            <a href="http://www.mathworks.in/matlabcentral/contest/contests/17/players/15">Alan Chalker</a>
+          
+        </td>
+      </tr>
+    
+      <tr>
+        <td><a href="http://www.mathworks.in/matlabcentral/contest/contests/10">Blockbuster</a></td>
+        <td>Apr 2006</td>
+        <td>
+          
+            <a href="http://www.mathworks.in/matlabcentral/contest/contests/10/submissions/25660">typ2</a>
+            <br>by
+            <a href="http://www.mathworks.in/matlabcentral/contest/contests/10/players/495">the cyclist</a>
+          
+        </td>
+      </tr>
+    
+      <tr class="odd">
+        <td><a href="http://www.mathworks.in/matlabcentral/contest/contests/16">Sudoku</a></td>
+        <td>Nov 2005</td>
+        <td>
+          
+            <a href="http://www.mathworks.in/matlabcentral/contest/contests/16/submissions/39814">CT 1</a>
+            <br>by
+            <a href="http://www.mathworks.in/matlabcentral/contest/contests/16/players/495">the cyclist</a>
+          
+        </td>
+      </tr>
+    
+      <tr>
+        <td><a href="http://www.mathworks.in/matlabcentral/contest/contests/6">Ants</a></td>
+        <td>May 2005</td>
+        <td>
+          
+            <a href="http://www.mathworks.in/matlabcentral/contest/contests/6/submissions/10358">soo sneaky</a>
+            <br>by
+            <a href="http://www.mathworks.in/matlabcentral/contest/contests/6/players/495">the cyclist</a>
+          
+        </td>
+      </tr>
+    
+      <tr class="odd">
+        <td><a href="http://www.mathworks.in/matlabcentral/contest/contests/12">Moving Furniture</a></td>
+        <td>Nov 2004</td>
+        <td>
+          
+            <a href="http://www.mathworks.in/matlabcentral/contest/contests/12/submissions/29989">asdf1</a>
+            <br>by
+            <a href="http://www.mathworks.in/matlabcentral/contest/contests/12/players/1135">GUO</a>
+          
+        </td>
+      </tr>
+    
+      <tr>
+        <td><a href="http://www.mathworks.in/matlabcentral/contest/contests/24">Gerrymandering</a></td>
+        <td>Apr 2004</td>
+        <td>
+          
+            <a href="http://www.mathworks.in/matlabcentral/contest/contests/24/submissions/53569">dm1</a>
+            <br>by
+            <a href="http://www.mathworks.in/matlabcentral/contest/contests/24/players/297">Paulo Uribe</a>
+          
+        </td>
+      </tr>
+    
+      <tr class="odd">
+        <td><a href="http://www.mathworks.in/matlabcentral/contest/contests/15">MATLAB Golf: Snake</a></td>
+        <td>Nov 2003</td>
+        <td>
+          
+            <a href="http://www.mathworks.in/matlabcentral/contest/contests/15/submissions/36830">Revolution IV</a>
+            <br>by
+            <a href="http://www.mathworks.in/matlabcentral/contest/contests/15/players/408">Nicke</a>
+          
+        </td>
+      </tr>
+    
+      <tr>
+        <td><a href="http://www.mathworks.in/matlabcentral/contest/contests/26">MATLAB Golf: Pathfinder</a></td>
+        <td>Nov 2003</td>
+        <td>
+          
+            <a href="http://www.mathworks.in/matlabcentral/contest/contests/26/submissions/54232">PPath IV</a>
+            <br>by
+            <a href="http://www.mathworks.in/matlabcentral/contest/contests/26/players/444">Per Rutquist</a>
+          
+        </td>
+      </tr>
+    
+      <tr class="odd">
+        <td><a href="http://www.mathworks.in/matlabcentral/contest/contests/25">MATLAB Golf: Heaviest</a></td>
+        <td>Nov 2003</td>
+        <td>
+          
+            <a href="http://www.mathworks.in/matlabcentral/contest/contests/25/submissions/53948">FDA12.01</a>
+            <br>by
+            <a href="http://www.mathworks.in/matlabcentral/contest/contests/25/players/389">François Glineur</a>
+          
+        </td>
+      </tr>
+    
+      <tr>
+        <td><a href="http://www.mathworks.in/matlabcentral/contest/contests/20">MATLAB Golf: Infection</a></td>
+        <td>Nov 2003</td>
+        <td>
+          
+            <a href="http://www.mathworks.in/matlabcentral/contest/contests/20/submissions/49744">FSec4</a>
+            <br>by
+            <a href="http://www.mathworks.in/matlabcentral/contest/contests/20/players/401">Claus Still</a>
+          
+        </td>
+      </tr>
+    
+      <tr class="odd">
+        <td><a href="http://www.mathworks.in/matlabcentral/contest/contests/5">MATLAB Golf: Encryption</a></td>
+        <td>Nov 2003</td>
+        <td>
+          
+            <a href="http://www.mathworks.in/matlabcentral/contest/contests/5/submissions/8270">PCode</a>
+            <br>by
+            <a href="http://www.mathworks.in/matlabcentral/contest/contests/5/players/444">Per Rutquist</a>
+          
+        </td>
+      </tr>
+    
+      <tr>
+        <td><a href="http://www.mathworks.in/matlabcentral/contest/contests/23">MATLAB Golf: Palindrome</a></td>
+        <td>Nov 2003</td>
+        <td>
+          
+            <a href="http://www.mathworks.in/matlabcentral/contest/contests/23/submissions/51154">Shame n</a>
+            <br>by
+            <a href="http://www.mathworks.in/matlabcentral/contest/contests/23/players/395">Imre Polik</a>
+          
+        </td>
+      </tr>
+    
+      <tr class="odd">
+        <td><a href="http://www.mathworks.in/matlabcentral/contest/contests/22">MATLAB Golf: Frequencies</a></td>
+        <td>Nov 2003</td>
+        <td>
+          
+            <a href="http://www.mathworks.in/matlabcentral/contest/contests/22/submissions/50844">j11</a>
+            <br>by
+            <a href="http://www.mathworks.in/matlabcentral/contest/contests/22/players/411">Guy Shechter</a>
+          
+        </td>
+      </tr>
+    
+      <tr>
+        <td><a href="http://www.mathworks.in/matlabcentral/contest/contests/19">Trucking Freight</a></td>
+        <td>Apr 2003</td>
+        <td>
+          
+            <a href="http://www.mathworks.in/matlabcentral/contest/contests/19/submissions/49483">More tricks</a>
+            <br>by
+            <a href="http://www.mathworks.in/matlabcentral/contest/contests/19/players/1987">Ave</a>
+          
+        </td>
+      </tr>
+    
+      <tr class="odd">
+        <td><a href="http://www.mathworks.in/matlabcentral/contest/contests/11">Protein Folding</a></td>
+        <td>Nov 2002</td>
+        <td>
+          
+            <a href="http://www.mathworks.in/matlabcentral/contest/contests/11/submissions/28123">Santa Claus</a>
+            <br>by
+            <a href="http://www.mathworks.in/matlabcentral/contest/contests/11/players/441">MR Keenan</a>
+          
+        </td>
+      </tr>
+    
+      <tr>
+        <td><a href="http://www.mathworks.in/matlabcentral/contest/contests/18">Molecule</a></td>
+        <td>May 2002</td>
+        <td>
+          
+            <a href="http://www.mathworks.in/matlabcentral/contest/contests/18/submissions/47888">turbf1</a>
+            <br>by
+            <a href="http://www.mathworks.in/matlabcentral/contest/contests/18/players/297">Paulo Uribe</a>
+          
+        </td>
+      </tr>
+    
+      <tr class="odd">
+        <td><a href="http://www.mathworks.in/matlabcentral/contest/contests/8">Mastermind</a></td>
+        <td>Sep 2001</td>
+        <td>
+          
+            <a href="http://www.mathworks.in/matlabcentral/contest/contests/8/submissions/15615">fcol_a_05</a>
+            <br>by
+            <a href="http://www.mathworks.in/matlabcentral/contest/contests/8/players/707">Stijn Helsen</a>
+          
+        </td>
+      </tr>
+    
+      <tr>
+        <td><a href="http://www.mathworks.in/matlabcentral/contest/contests/21">Gene Sequencing</a></td>
+        <td>Mar 2000</td>
+        <td>
+          
+            <a href="http://www.mathworks.in/matlabcentral/contest/contests/21/submissions/50525">GFD6e</a>
+            <br>by
+            <a href="http://www.mathworks.in/matlabcentral/contest/contests/21/players/757">Francois Glineur</a>
+          
+        </td>
+      </tr>
+    
+      <tr class="odd">
+        <td><a href="http://www.mathworks.in/matlabcentral/contest/contests/4">Mars Surveyor</a></td>
+        <td>Jun 1999</td>
+        <td>
+          
+            <a href="http://www.mathworks.in/matlabcentral/contest/contests/4/submissions/7954">NoSoup4U !1</a>
+            <br>by
+            <a href="http://www.mathworks.in/matlabcentral/contest/contests/4/players/297">Paulo Uribe</a>
+          
+        </td>
+      </tr>
+    
+      <tr>
+        <td><a href="http://www.mathworks.in/matlabcentral/contest/contests/3">Binpack</a></td>
+        <td>Dec 1998</td>
+        <td>
+          
+            <a href="http://www.mathworks.in/matlabcentral/contest/contests/3/submissions/6319">cumsumshortsort</a>
+            <br>by
+            <a href="http://www.mathworks.in/matlabcentral/contest/contests/3/players/216">Hakan Erdogan</a>
+          
+        </td>
+      </tr>
+    
+  </tbody></table>
+
+
+<div class="share_this" id="">
+  <div class="share_this_toggle_wrapper">
+    <a href="http://www.mathworks.in/matlabcentral/contest/?s_tid=gn_mlc_cn#share_this" class="share_this_toggle">Share This</a>
+  </div>
+  <ul class="share_this_menu" style="display: none;">
+    <li><a href="http://www.mathworks.com/programs/bounce_hub_non_webex.html?url=http%3A%2F%2Fdelicious.com%2Fpost%3Furl%3Dhttp%253A%252F%252Fwww.mathworks.in%252Fmatlabcentral%252Fcontest%252F%253Fs_tid%253Dgn_mlc_cn%26title%3DMATLAB%2BProgramming%2BContest%2B-%2BMATLAB%2BCentral" id="share_this_delicious">Delicious</a></li>
+    <li><a href="http://www.mathworks.com/programs/bounce_hub_non_webex.html?url=http%3A%2F%2Fdigg.com%2Fsubmit%3Fphase%3D2%26url%3Dhttp%253A%252F%252Fwww.mathworks.in%252Fmatlabcentral%252Fcontest%252F%253Fs_tid%253Dgn_mlc_cn%26title%3DMATLAB%2BProgramming%2BContest%2B-%2BMATLAB%2BCentral" id="share_this_digg">Digg</a></li>
+    <li><a href="http://www.mathworks.com/programs/bounce_hub_non_webex.html?url=http%3A%2F%2Ffacebook.com%2Fsharer.php%3Fu%3Dhttp%253A%252F%252Fwww.mathworks.in%252Fmatlabcentral%252Fcontest%252F%253Fs_tid%253Dgn_mlc_cn%26t%3DMATLAB%2BProgramming%2BContest%2B-%2BMATLAB%2BCentral" id="share_this_facebook">Facebook</a></li>
+    <li><a href="http://www.mathworks.com/programs/bounce_hub_non_webex.html?url=http%3A%2F%2Fgoogle.com%2Fbookmarks%2Fmark%3Fop%3Dadd%26bkmk%3Dhttp%253A%252F%252Fwww.mathworks.in%252Fmatlabcentral%252Fcontest%252F%253Fs_tid%253Dgn_mlc_cn%26title%3DMATLAB%2BProgramming%2BContest%2B-%2BMATLAB%2BCentral" id="share_this_google">Google</a></li>
+    <li><a href="http://www.mathworks.com/programs/bounce_hub_non_webex.html?url=http%3A%2F%2Fstumbleupon.com%2Fsubmit%3Furl%3Dhttp%253A%252F%252Fwww.mathworks.in%252Fmatlabcentral%252Fcontest%252F%253Fs_tid%253Dgn_mlc_cn%26title%3DMATLAB%2BProgramming%2BContest%2B-%2BMATLAB%2BCentral" id="share_this_stumbleupon">StumbleUpon</a></li>
+    <li><a href="http://www.mathworks.com/programs/bounce_hub_non_webex.html?url=http%3A%2F%2Ftechnorati.com%2Ffaves%2F%3Fadd%3Dhttp%253A%252F%252Fwww.mathworks.in%252Fmatlabcentral%252Fcontest%252F%253Fs_tid%253Dgn_mlc_cn" id="share_this_technorati">Technorati</a></li>
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+<!-- SiteCatalyst code version: H.24.4.
+Copyright 1996-2012 Adobe, Inc. All Rights Reserved
+More info available at http://www.omniture.com -->
+<script language="JavaScript" type="text/javascript" src="./mat_7_files/s_code.js"></script>
+
+
+<script language="JavaScript" type="text/javascript">
+
+
+
+<!--
+if (typeof mboxLoadSCPlugin == 'function') {
+	mboxLoadSCPlugin(s); 
+}
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)//--></script>
+<script language="JavaScript" type="text/javascript"><!--
+if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+//--></script>
+<!--/DO NOT REMOVE/-->
+<!-- End SiteCatalyst code version: H.24.4. -->
+
+
+  
+
+    
+
+<!-- BEGIN Qualaroo --> 
+<script type="text/javascript">
+  var _kiq = _kiq || [];
+  (function(){
+    setTimeout(function(){
+			var d = document, f = d.getElementsByTagName('script')[0], s = d.createElement('script'); s.type = 'text/javascript';
+			s.async = true; s.src = '//s3.amazonaws.com/ki.js/49559/ahy.js'; f.parentNode.insertBefore(s, f);
+    }, 1);
+  })();
+</script>
+<!-- END Qualaroo --> 
+
+
+
+      
+
+	
+      
+</div>
+<div class="clearboth">&nbsp;</div>
+</div>
+</div>
+<!-- footer.html -->
+<!-- START OF FOOTER -->
+
+<div id="mlc-footer">
+  <script type="text/javascript">
+function clickDynamic(obj, target_url, tracking_code) {
+	var pos=target_url.indexOf("?");
+	if (pos<=0) { 
+		var linkComponents = target_url + tracking_code;
+		obj.href=linkComponents;
+	} 
+}
+</script>
+  <div class="wrapper">
+    <div>
+      <ul id="matlabcentral">
+        <li class="copyright first">© 1994-2014 The MathWorks, Inc.</li>
+        <li class="first"><a href="http://www.mathworks.in/help.html" title="Site Help">Site Help</a></li>
+        <li><a href="http://www.mathworks.in/company/aboutus/policies_statements/patents.html" title="patents" rel="nofollow">Patents</a></li>
+        <li><a href="http://www.mathworks.in/company/aboutus/policies_statements/trademarks.html" title="trademarks" rel="nofollow">Trademarks</a></li>
+        <li><a href="http://www.mathworks.in/company/aboutus/policies_statements/" title="privacy policy" rel="nofollow">Privacy Policy</a></li>
+        <li><a href="http://www.mathworks.in/company/aboutus/policies_statements/piracy.html" title="preventing piracy" rel="nofollow">Preventing Piracy</a></li>
+        <li class="last"><a href="http://www.mathworks.in/matlabcentral/termsofuse.html" title="Terms of Use" rel="nofollow">Terms of Use</a></li>
+        <li class="icon"><a href="http://www.mathworks.in/company/rss/" title="RSS" class="rssfeed" rel="nofollow"><span class="text">RSS</span></a></li>
+        <li class="icon"><a href="http://www.mathworks.in/programs/bounce_hub_generic.html?s_tid=mlc_lkd&url=http://www.linkedin.com/company/the-mathworks_2" title="LinkedIn" class="linkedin" rel="nofollow" target="_blank"></a></li>
+        <li class="icon"><a href="http://www.mathworks.in/programs/bounce_hub_generic.html?s_tid=mlc_fbk&url=https://plus.google.com/117177960465154322866?prsrc=3" title="Google+" class="google" rel="nofollow" target="_blank"><span class="text">Google+</span></a></li>
+        <li class="icon"><a href="http://www.mathworks.in/programs/bounce_hub_generic.html?s_tid=mlc_fbk&url=http://www.facebook.com/MATLAB" title="Facebook" class="facebook" rel="nofollow" target="_blank"><span class="text">Facebook</span></a></li>
+        		<li class="last icon"><a href="http://www.mathworks.in/programs/bounce_hub_generic.html?s_tid=mlc_twt&url=http://www.twitter.com/MATLAB" title="Twitter" class="twitter" rel="nofollow" target="_blank"><span class="text">Twitter</span></a></li>        
+        
+      </ul>
+      <ul id="mathworks">
+        <li class="first sectionhead">Featured MathWorks.com Topics:</li>
+        <li class="first"><a href="http://www.mathworks.in/products/new_products/latest_features.html" onclick="clickDynamic(this, this.href, &#39;?s_cid=MLC_new&#39;)">New Products</a></li>
+        <li><a href="http://www.mathworks.in/support/" title="support" onclick="clickDynamic(this, this.href, &#39;?s_cid=MLC_support&#39;)">Support</a></li>
+        <li><a href="http://www.mathworks.in/help" title="documentation" onclick="clickDynamic(this, this.href, &#39;?s_cid=MLC_doc&#39;)">Documentation</a></li>
+        <li><a href="http://www.mathworks.in/services/training/" title="training" onclick="clickDynamic(this, this.href, &#39;?s_cid=MLC_training&#39;)">Training</a></li>
+        <li><a href="http://www.mathworks.in/company/events/webinars/" title="Webinars" onclick="clickDynamic(this, this.href, &#39;?s_cid=MLC_webinars&#39;)">Webinars</a></li>
+        <li><a href="http://www.mathworks.in/company/newsletters/" title="newsletters" onclick="clickDynamic(this, this.href, &#39;?s_cid=MLC_newsletters&#39;)">Newsletters</a></li>
+        <li><a href="http://www.mathworks.in/programs/trials/trial_request.html?prodcode=ML&s_cid=MLC_trials" title="MATLAB Trials">MATLAB Trials</a></li>
+        
+                <li class="last"><a href="http://www.mathworks.in/company/jobs/opportunities/index_en_US.html" title="Careers" onclick="clickDynamic(this, this.href, &#39;?s_cid=MLC_careers&#39;)">Careers</a></li>
+                 
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- END OF FOOTER -->
+
+
+      
+      
+    
+
+</body><iframe allowtransparency="true" frameborder="0" id="abs-top-frame" src="./mat_7_files/top.html" style="position: fixed; z-index: 4294967295; overflow: hidden; top: 0px; left: 0px; right: 0px; width: 138px; height: 13px; max-height: none; min-height: 0px; margin: 0px auto; padding: 0px; border: 0px; display: block; background-color: transparent;"></iframe></html>

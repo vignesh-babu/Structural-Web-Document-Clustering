@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)http://www.mathworks.in/?s_tid=gn_mlc_main&nocookie=true -->
+<html class="wf-futurapt-n4-active wf-museoslab-n7-active wf-futurapt-i4-active wf-futurapt-n5-active wf-futurapt-i5-active wf-futurapt-n7-active wf-futurapt-i7-active wf-automate-n7-active wf-minionprosubhead-n4-active wf-active"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>MATLAB and Simulink for Technical Computing - MathWorks India</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="./mat_9_files/reset.css" rel="stylesheet" type="text/css">
+<link href="./mat_9_files/960.css" rel="stylesheet" type="text/css">
+<link href="./mat_9_files/site5.css" rel="stylesheet" type="text/css">
+<!--[if IE 6]>
+<link href="/includes_content/nextgen/css/site5_ie6.css?20131015" rel="stylesheet" type="text/css">
+<![endif]-->
+<!--[if IE 7]>
+<link href="/includes_content/nextgen/css/site5_ie7.css?20131015" rel="stylesheet" type="text/css">
+<![endif]-->
+<!--[if IE 8]>
+<link href="/includes_content/nextgen/css/site5_ie8.css?20131015" rel="stylesheet" type="text/css">
+<![endif]-->
+<!--[if IE 9]>
+<link href="/includes_content/nextgen/css/site5_ie9.css?20131015" rel="stylesheet" type="text/css">
+<![endif]-->
+<!-- Begin Eloqua 1st Party Cookie Tracking Script-->
+<script type="text/javascript" async="" src="./mat_9_files/bh9.js"></script><script type="text/javascript" async="" src="./mat_9_files/elqCfg.min.js"></script><script type="text/javascript">
+var _elqQ = _elqQ || [];
+_elqQ.push(['elqSetSiteId', '646005169']);
+_elqQ.push(['elqTrackPageView']);
+_elqQ.push(['elqUseFirstPartyCookie', 'tracking.mathworks.com']);
+(function () {
+function async_load() {
+var s = document.createElement('script'); s.type = 'text/javascript';
+s.async = true; s.src = '//img.en25.com/i/elqCfg.min.js';
+var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+}
+if (window.addEventListener) window.addEventListener('DOMContentLoaded', async_load, false);
+else if (window.attachEvent) window.attachEvent('onload', async_load);
+})();
+</script>
+<!--End Eloqua 1st Party Cookie Tracking Script-->
+<!-- BEGIN Adobe DTM -->
+<script src="./mat_9_files/satelliteLib-e8d23c2e444abadc572df06537e2def59c01db09.js"></script><script src="./mat_9_files/mbox-contents-95c6a4d9c82a8d20476522984666120b54192e9b.js"></script><style>.mboxDefault { visibility:hidden; }</style><script src="./mat_9_files/target.js"></script>
+<!-- END Adobe DTM -->
+<link href="./mat_9_files/print.css" rel="stylesheet" type="text/css" media="print">
+<script type="text/javascript" src="./mat_9_files/jquery-latest.js"></script>
+<script type="text/javascript" src="./mat_9_files/jquery.hover-intent.js"></script>
+<script type="text/javascript" src="./mat_9_files/localnav.js"></script>
+<script type="text/javascript" src="./mat_9_files/global.js"></script>
+<script type="text/javascript" src="./mat_9_files/global_search.js"></script>
+<script type="text/javascript" language="JavaScript1.3">var domain = "in";</script>
+<script type="text/javascript" src="./mat_9_files/xvy5baa.js"></script>
+<style type="text/css">.tk-museo-slab{font-family:"museo-slab",serif;}.tk-futura-pt{font-family:"futura-pt","Arial","Helvetica",sans-serif;}.tk-automate{font-family:"automate",sans-serif;}.tk-minion-pro-subhead{font-family:"minion-pro-subhead",serif;}</style><link rel="stylesheet" href="http://fonts.mathworks.com/k/xvy5baa-d.css?3bb2a6e53c9684ffdc9a99f11f5b2a6259e9e580e4938fcb487bcb48ad765cb4c66326ede94ac48d6ede67e4500a24e97a0591ac31cb9a79f653770995b73fcab179c8843e167d4d294efffce20684477e3030043617caba214c58b6f154839e39f8538e92cdd7798839d1a59e4d2b0791bbe6e783a84640f50c6e8f631ac5fd6e2928747046e8d3c8014f4e612066d47cd2f6460236d5af8067bf5be13b5d402fc9b57daa008f4648c576b0daffc4a09719f26748e4d12162f1841b44cd6114f823631817018292249f9424158262729aedfc9a7eaad686e19704ecf794505a5bf58346b86674958b71b58f71e596df71adc85eb06870a8aa3fa53e996a1fc9a87139ba5f47c506b20f3f5af733a35e32b903f3ea3ad28c5600e222fef219fa6d117c0d627897884abcb24d233482306c08ad5732c7ff2a2566cd5fa9554fc45a683e4492630af7837ac201efe374b4410a1ebb0f78147daed230fd70b646914a1bf60c1e5586d424a9779647a2ccd561f26b04a124f9"><script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<script type="text/javascript">
+$(document).ready(function(){
+// declared first since it is used later
+$(".tab_selections li").on("click", function(event){
+var selectedtab = $(this);
+var tabs = selectedtab.closest(".tabs");
+// remove active class, hide contents
+selectedtab.closest("ul").find(".active").removeClass("active");
+tabs.find(".tab_content>div").hide();
+// add active class, show contents
+selectedtab.addClass("active");
+tabs.find("#tab_"+selectedtab.find("a").prop("id").split("_")[2]+"_content").show();
+});
+// get the hash
+var url = document.location.href;
+var tab_to_show = url.substring(url.lastIndexOf("#")+1,url.length);
+if (url.indexOf("#") > 0) {
+$("."+tab_to_show).parent().click();
+} else if ($(".tabs").data("random")==true) {
+$("#selection_item_" + Math.floor( Math.random()*$(".tabs .tab_selections li").length+1 ) ).parent().click();
+} else {
+$(".tabs .active").click();
+}
+});
+</script>
+<link rel="alternate" href="http://www.mathworks.com/" hreflang="x-default">
+<link rel="alternate" href="http://www.mathworks.ch/" hreflang="de-ch">
+<link rel="alternate" href="http://www.mathworks.cn/" hreflang="zh">
+<link rel="alternate" href="http://www.mathworks.co.jp/" hreflang="ja">
+<link rel="alternate" href="http://www.mathworks.co.kr/" hreflang="ko">
+<link rel="alternate" href="http://www.mathworks.co.uk/" hreflang="en-uk">
+<link rel="alternate" href="http://www.mathworks.com.au/" hreflang="en-au">
+<link rel="alternate" href="http://www.mathworks.de/" hreflang="de">
+<link rel="alternate" href="http://www.mathworks.es/" hreflang="es">
+<link rel="alternate" href="http://www.mathworks.fr/" hreflang="fr">
+<link rel="alternate" href="http://www.mathworks.in/" hreflang="en-in">
+<link rel="alternate" href="http://www.mathworks.it/" hreflang="it">
+<link rel="alternate" href="http://www.mathworks.nl/" hreflang="en-nl">
+<link rel="alternate" href="http://www.mathworks.se/" hreflang="en-se">
+<meta name="verify-v1" content="iwLARg7iIKjOmXDsHcA+MWHdDzYllrPapFjGetD1DMI=">
+<meta name="description" content="MathWorks is the world’s leading developer of technical computing software for engineers and scientists in industry, government, and education">
+<meta name="keywords" content="mathworks,matlab,mathlab,simulink,stateflow,compiler,control systems,image processing,signal processing,simulation">
+<link href="https://plus.google.com/117177960465154322866" rel="publisher">
+<link rel="stylesheet" type="text/css" href="./mat_9_files/homepage.css">
+<script type="text/javascript" src="./mat_9_files/jquery.cycle.all.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+$("#homepage_features ul.overview").cycle({ fx: 'fade', pager: '.pager', autostop: true, autostopCount: '5', startingSlide:'4', fit: true, width: '962', height: '230' });
+// stop the slideshow with any nav link clicked
+$('.pager').not('.stopped').find('a').click(function(){
+$('#homepage_features ul.overview').cycle('pause');
+$('.pager').addClass('stopped');
+return false;
+});
+$(".rotating_features .feature a").click(function(event) {
+event.stopPropagation();
+});
+});
+</script>
+<!-- CUSTOM CSS -->
+<style>
+.callout_container #release_video { padding:20px 109px 20px 15px;}
+.callout_container #release_video h3 { margin:0px 0px 15px 0px;}
+.callout_container #release_video img { padding:0px 0px 7px 0px; }
+.callout_container #release_video_fixed { padding:36px 109px 20px 0px;}
+.callout_container #release_video_fixed h3 { margin:0px 0px 18px 0px; line-height:140%; }
+.callout_container #release_video_fixed img { padding:0px 0px 5px 0px; }
+.callout_container #try_matlab_other_products { padding:41px 90px 20px 0px;}
+.callout_container #try_matlab_other_products h3 { margin:0px 0px 85px 0px; line-height:140%; }
+.callout_container #ml-expo {padding: 10px 5px 0px 5px;} #training_catalog {padding-top: 28px; padding-bottom:31px;}
+#training_selfpaced {padding-top: 28px; padding-bottom:31px;}
+</style>
+</head>
+<body id="nextgen_homepage">
+<div class="container_192">
+  <div class="grid_192">
+    <div class="page_container homepage">
+      <div class="grid_192"><div class="header_container">
+<div class="headernav">
+<ul>
+<li class="headernav_country rollover_delay inactive_state"><a href="http://www.mathworks.in/company/worldwide/?s_tid=gn_loc">India</a>
+<div class="countrynav_container gradient shadow">
+<ul>
+<!-- Code to Remove Tracking from Previous page and add new tracking -->
+<li><a href="http://www.mathworks.com/index.html?action=changeCountry&nocookie=true&s_tid=gn_loc_drop">United States</a></li>
+<!-- Code to Remove Tracking from Previous page and add new tracking -->
+<li><a href="http://www.mathworks.com/index.html?action=changeCountry&nocookie=true&s_tid=gn_loc_drop">Canada</a></li>
+<!-- Code to Remove Tracking from Previous page and add new tracking -->
+<li><a href="http://www.mathworks.com.au/index.html?action=changeCountry&nocookie=true&s_tid=gn_loc_drop">Australia</a></li>
+<!-- Code to Remove Tracking from Previous page and add new tracking -->
+<li><a href="http://www.mathworks.de/index.html?action=changeCountry&nocookie=true&s_tid=gn_loc_drop">Österreich</a></li>
+<!-- Code to Remove Tracking from Previous page and add new tracking -->
+<li><a href="http://www.mathworks.nl/index.html?action=changeCountry&nocookie=true&s_tid=gn_loc_drop">Belgium</a></li>
+<!-- Code to Remove Tracking from Previous page and add new tracking -->
+<li><a href="http://www.mathworks.cn/index.html?action=changeCountry&nocookie=true&s_tid=gn_loc_drop">中国</a></li>
+<!-- Code to Remove Tracking from Previous page and add new tracking -->
+<li><a href="http://www.mathworks.se/index.html?action=changeCountry&nocookie=true&s_tid=gn_loc_drop">Denmark</a></li>
+<!-- Code to Remove Tracking from Previous page and add new tracking -->
+<li><a href="http://www.mathworks.se/index.html?action=changeCountry&nocookie=true&s_tid=gn_loc_drop">Finland</a></li>
+<!-- Code to Remove Tracking from Previous page and add new tracking -->
+<li><a href="http://www.mathworks.fr/index.html?action=changeCountry&nocookie=true&s_tid=gn_loc_drop">France</a></li>
+<!-- Code to Remove Tracking from Previous page and add new tracking -->
+<li><a href="http://www.mathworks.de/index.html?action=changeCountry&nocookie=true&s_tid=gn_loc_drop">Deutschland</a></li>
+<!-- Code to Remove Tracking from Previous page and add new tracking -->
+<li><a href="http://www.mathworks.in/index.html?action=changeCountry&nocookie=true&s_tid=gn_loc_drop">India</a></li>
+<!-- Code to Remove Tracking from Previous page and add new tracking -->
+<li><a href="http://www.mathworks.co.uk/index.html?action=changeCountry&nocookie=true&s_tid=gn_loc_drop">Ireland</a></li>
+<!-- Code to Remove Tracking from Previous page and add new tracking -->
+<li><a href="http://www.mathworks.it/index.html?action=changeCountry&nocookie=true&s_tid=gn_loc_drop">Italia</a></li>
+<!-- Code to Remove Tracking from Previous page and add new tracking -->
+<li><a href="http://www.mathworks.co.jp/index.html?action=changeCountry&nocookie=true&s_tid=gn_loc_drop">日本</a></li>
+<!-- Code to Remove Tracking from Previous page and add new tracking -->
+<li><a href="http://www.mathworks.co.kr/index.html?action=changeCountry&nocookie=true&s_tid=gn_loc_drop">한국</a></li>
+<!-- Code to Remove Tracking from Previous page and add new tracking -->
+<li><a href="http://www.mathworks.nl/index.html?action=changeCountry&nocookie=true&s_tid=gn_loc_drop">Luxembourg</a></li>
+<!-- Code to Remove Tracking from Previous page and add new tracking -->
+<li><a href="http://www.mathworks.nl/index.html?action=changeCountry&nocookie=true&s_tid=gn_loc_drop">Netherlands</a></li>
+<!-- Code to Remove Tracking from Previous page and add new tracking -->
+<li><a href="http://www.mathworks.com.au/index.html?action=changeCountry&nocookie=true&s_tid=gn_loc_drop">New Zealand</a></li>
+<!-- Code to Remove Tracking from Previous page and add new tracking -->
+<li><a href="http://www.mathworks.se/index.html?action=changeCountry&nocookie=true&s_tid=gn_loc_drop">Norway</a></li>
+<!-- Code to Remove Tracking from Previous page and add new tracking -->
+<li><a href="http://www.mathworks.com/index.html?action=changeCountry&nocookie=true&s_tid=gn_loc_drop">Portugal</a></li>
+<!-- Code to Remove Tracking from Previous page and add new tracking -->
+<li><a href="http://es.mathworks.com/index.html?action=changeCountry&nocookie=true&s_tid=gn_loc_drop">España</a></li>
+<!-- Code to Remove Tracking from Previous page and add new tracking -->
+<li><a href="http://www.mathworks.se/index.html?action=changeCountry&nocookie=true&s_tid=gn_loc_drop">Sweden</a></li>
+<!-- Code to Remove Tracking from Previous page and add new tracking -->
+<li><a href="http://www.mathworks.ch/index.html?action=changeCountry&nocookie=true&s_tid=gn_loc_drop">Schweiz / Suisse</a></li>
+<!-- Code to Remove Tracking from Previous page and add new tracking -->
+<li><a href="http://www.mathworks.co.uk/index.html?action=changeCountry&nocookie=true&s_tid=gn_loc_drop">United Kingdom</a></li>
+<!-- Code to Remove Tracking from Previous page and add new tracking -->
+<li><a href="http://www.mathworks.in/company/worldwide/?s_tid=gn_loc_drop?action=changeCountry&nocookie=true&s_tid=gn_loc_drop">All Other Countries</a></li>
+</ul>
+</div>
+</li>
+<li class="headernav_contact"><a href="http://www.mathworks.in/company/aboutus/contact_us/?s_tid=gn_cntus">Contact Us</a></li>
+<li class="headernav_store"><a href="http://www.mathworks.in/store/?s_tid=gn_store">How To Buy</a></li>
+<li class="headernav_search"><form name="search" id="site_search" class="site_search" action="http://www.mathworks.in/searchresults/" method="get">
+<input type="hidden" name="c[]" value="entiresite">
+<input type="text" name="q" id="query" class="textfield clear_global_search_text_onfocus" value="Search MathWorks" autocomplete="off" \="">
+<input type="submit" id="searchbutton" value="Search" class="submit_go clear_global_search_text_onsubmit">
+</form></li>
+</ul>
+</div>
+<div class="mwa-nav">
+<ul>
+<li class="mwa-nav_account"><a id="mwa-create_account" href="https://www.mathworks.in/accesslogin/createProfile.do?uri=http://www.mathworks.in/index.html%3Fs_tid%3Dgn_mlc_main%26nocookie%3Dtrue">Create Account</a></li>
+<li class="mwa-nav_logout"><a id="mwa-log_in" href="https://www.mathworks.in/accesslogin/login.do?uri=http://www.mathworks.in/index.html%3Fs_tid%3Dgn_mlc_main%26nocookie%3Dtrue">Log In</a></li>
+</ul>
+</div>
+<div class="logo_container">
+<a href="http://www.mathworks.in/index.html?s_tid=gn_logo"><img src="./mat_9_files/bg_header_mwlogo_notag.jpg" alt="MathWorks" class="mw_logo"></a>
+<p class="tagline">Accelerating the pace of engineering and science</p>
+</div>
+</div></div>
+      <div class="grid_192"><div class="topnav_container">
+<div class="topnav_frame">
+<div class="topnav">
+<ul>
+<li class="topnav_products "><a href="http://www.mathworks.in/products/?s_tid=gn_ps">Products &amp; Services</a></li>
+<li class="topnav_solutions "><a href="http://www.mathworks.in/solutions/?s_tid=gn_sol">Solutions</a></li>
+<li class="topnav_academia "><a href="http://www.mathworks.in/academia/?s_tid=gn_acad">Academia</a></li>
+<li class="topnav_support "><a href="http://www.mathworks.in/support/?s_tid=gn_supp">Support</a></li>
+<li class="topnav_community "><a href="http://www.mathworks.in/matlabcentral/?s_tid=gn_mlc">User Community</a></li>
+<li class="topnav_events "><a href="http://www.mathworks.in/company/events/?s_tid=gn_ev">Events</a></li>
+<li class="topnav_company "><a href="http://www.mathworks.in/company/?s_tid=gn_co">Company</a></li>
+</ul>
+</div>
+</div>
+</div></div>
+      	<div class="grid_192">            <!-- BEGIN Rotating Feature Banner -->  
+      <div id="homepage_features" class="rotating_features rotating_features_type_inpage">
+        <div class="pager">  <a href="http://www.mathworks.in/?s_tid=gn_mlc_main&nocookie=true#" class="activeSlide">1</a><a href="http://www.mathworks.in/?s_tid=gn_mlc_main&nocookie=true#" class="">2</a><a href="http://www.mathworks.in/?s_tid=gn_mlc_main&nocookie=true#" class="">3</a><a href="http://www.mathworks.in/?s_tid=gn_mlc_main&nocookie=true#" class="">4</a></div>
+        <ul class="overview" style="width: 962px; height: 230px;">
+          
+            <li style="position: absolute; top: 0px; left: 0px; z-index: 5; opacity: 1; display: block; width: 962px; height: 230px;">
+<div id="feature1" class="feature" onclick="javascript:$(window.location).attr(&#39;href&#39;, &#39;/hardware-support/home.html?s_tid=hp_mi_hwsupport_0913&#39;);" style="background:url(&#39;/images/nextgen/features/homepage/hardware-catalog.jpg&#39;) no-repeat;">
+<div class="wrapper_content_primary feature_box_wide text_light">
+<div class="valignment vbottom">
+<div>
+<div class="feature_text_wide">
+<h1>Connect MATLAB and Simulink to Hardware</h1>
+<h2 class="margined_20">Implement algorithms with hardware platforms<br> from Arduino<sup>®</sup> to Zynq<sup>®</sup>.</h2>
+<!-- BEGIN Button -->
+<div class="button rounded margined_10 emphasize ">
+<a href="http://www.mathworks.in/hardware-support/home.html?s_tid=hp_mi_hwsupport_0913"> Explore hardware support
+</a>
+</div>
+<!-- END Button -->
+</div>
+</div>
+</div>
+</div>
+</div>
+</li><li style="position: absolute; top: 0px; left: 0px; display: none; z-index: 4; width: 962px; height: 230px; opacity: 0;">
+<div id="feature2" class="feature" onclick="javascript:$(window.location).attr(&#39;href&#39;, &#39;http://makerzone.mathworks.com/?s_tid=hp_mi_makerzone0314&#39;);" style="background:url(&#39;/images/nextgen/features/homepage/makerzone.png&#39;) no-repeat;">
+<div class="wrapper_content_primary feature_box_wide text_light">
+<div class="valignment vbottom">
+<div>
+<div class="feature_text_wide">
+<p class="h1 upsize">Discover MakerZone</p>
+<p class="h2 upsize margined_20">MATLAB and Simulink resources for Arduino, Raspberry Pi, and LEGO NXT</p>
+<!-- BEGIN Button -->
+<div class="button rounded margined_10 secondary ">
+<a href="http://makerzone.mathworks.com/?s_tid=hp_mi_makerzone0314"> Learn more
+</a>
+</div>
+<!-- END Button -->
+</div>
+</div>
+</div>
+</div>
+</div>
+</li><li style="position: absolute; top: 0px; left: 0px; display: none; z-index: 4; width: 962px; height: 230px; opacity: 0;">
+<div id="feature3" class="feature" onclick="javascript:$(window.location).attr(&#39;href&#39;, &#39;/machine-learning/?s_tid=hp_mi_machine_0114&#39;);" style="background:url(&#39;/images/nextgen/features/homepage/machinelearning.jpg&#39;) no-repeat;">
+<div class="wrapper_content_primary feature_box_wide text_light">
+<div class="valignment vbottom">
+<div>
+<div class="feature_text_wide">
+<p class="h1 upsize">Machine Learning with MATLAB</p>
+<p class="h2 upsize margined_20">Detect patterns and build predictive models.</p>
+<!-- BEGIN Button -->
+<div class="button rounded margined_10 emphasize ">
+<a href="http://www.mathworks.in/machine-learning/?s_tid=hp_mi_machine_0114"> Learn more
+</a>
+</div>
+<!-- END Button -->
+</div>
+</div>
+</div>
+</div>
+</div>
+</li><li style="position: absolute; top: 0px; left: 0px; display: none; z-index: 4; width: 962px; height: 230px; opacity: 0;">
+<div id="feature4" class="feature" onclick="javascript:$(window.location).attr(&#39;href&#39;, &#39;/model-based-design/?s_tid=hp_mi_mbd_new1013&#39;);" style="background:url(&#39;/images/nextgen/features/homepage/modelbaseddesign-smallgroups.jpg&#39;) no-repeat;">
+<div class="wrapper_content_primary feature_box_wide text_light">
+<div class="valignment vbottom">
+<div>
+<div class="feature_text_wide">
+<p class="h1 upsize">Model-Based Design with MATLAB and Simulink</p>
+<p class="h2 upsize margined_20"> </p>
+<!-- BEGIN Button -->
+<div class="button rounded margined_10 emphasize video ">
+<a href="http://www.mathworks.in/model-based-design/?s_tid=hp_mi_mbd_new1013"> Watch video
+</a>
+</div>
+<!-- END Button -->
+</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+          
+        </ul>
+      </div> 
+
+</div>
+      <div class="grid_192"><!-- BEGIN Header Component -->
+    
+ 
+
+<div class="grid_192">
+</div>
+
+<div id="content_container" class="content_container"> 
+<div class="tabs">
+<ul class="tab_selections">
+<li class="active">
+<a href="http://www.mathworks.in/?s_tid=gn_mlc_main&nocookie=true#products" id="selection_item_1" class="products">Products</a>
+</li>
+<li>
+<a href="http://www.mathworks.in/?s_tid=gn_mlc_main&nocookie=true#events" id="selection_item_2" class="events">Events</a>
+</li>
+<li>
+<a href="http://www.mathworks.in/?s_tid=gn_mlc_main&nocookie=true#training" id="selection_item_3" class="training">Training</a>
+</li>
+</ul>
+<div class="tab_container ">
+<div class="tab_content">
+<!-- begin TAB #1 -->
+<div id="tab_1_content" style="display: block;">
+<div class="grid_192 margined_15">
+<div class="divided_content">
+<div class="grid_55 push_7">
+<p>Explore products for <a href="http://www.mathworks.in/products/matlab/?s_tid=hp_fp_ml">MATLAB</a>, the language of technical computing, and <a href="http://www.mathworks.in/products/simulink/?s_tid=hp_fp_sl">Simulink</a>, for simulation and Model-Based Design.</p>
+<h3>Featured Products</h3>
+<ul class="unbulleted_list">
+<li><a href="http://www.mathworks.in/products/parallel-computing/?s_tid=hp_fp_list">Parallel Computing Toolbox</a></li>
+<li><a href="http://www.mathworks.in/products/computer-vision/?s_tid=hp_fp_list">Computer Vision Systems Toolbox</a></li>
+<li><a href="http://www.mathworks.in/products/instrument/?s_tid=hp_fp_list">Instrument Control Toolbox</a></li>
+</ul>
+<ul class="unbulleted_list">
+<li><a href="http://www.mathworks.in/products/simscape/?s_tid=hp_fp_list">Simscape</a></li>
+<li><a href="http://www.mathworks.in/products/hdl-coder/?s_tid=hp_fp_list">HDL Coder</a></li>
+<li><a href="http://www.mathworks.in/products/simulink-real-time/?s_tid=hp_fp_list">Simulink Real-Time</a></li>
+<li><a href="http://www.mathworks.in/products/polyspace/?s_tid=hp_fp_list">Polyspace Bug Finder and Code Prover</a></li>
+</ul>
+</div>
+<div class="grid_56 push_7">
+<h3>Latest Release</h3>
+<div class="grid_54">
+<div class="callout_container rounded shadow gradient margined_5 " style="cursor:pointer;" onclick="javascript:$(window.location).attr(&#39;href&#39;, &#39;/products/new_products/latest_features.html?s_tid=hp_spot_r2014b_1014&#39;);">
+<div class="callout_image bg_right_flush right_center" style="background-image:url(/images/nextgen/callouts/bg-productbox-14b.png);height:190px;"> <div class="callout_content rounded" id="release_video_fixed">
+<img src="./mat_9_files/r2014b-lg.png" alt="R2014b" title="R2014b">
+<h3>Major release of MATLAB and Simulink, and updates to 81 other products</h3>
+<a href="http://www.mathworks.in/products/new_products/latest_features.html?s_tid=hp_spot_r2014b_1014" class="cta ">Watch video</a>
+</div>
+</div>
+</div> </div>
+</div>
+<div class="grid_61 push_6">
+<h3>Trial Software</h3>
+<div class="grid_54">
+<div class="callout_container rounded shadow gradient margined_5 " style="cursor:pointer;" onclick="javascript:$(window.location).attr(&#39;href&#39;, &#39;/programs/trials/trial_request.html?s_iid=hp_trial_hpg_cta2&#39;);">
+<div class="callout_image bg_right_flush right_center" style="background-image:url(/images/nextgen/callouts/bg_trial_arrow_01.png);height:190px;"> <div class="callout_content rounded" id="try_matlab_other_products">
+<h3>Try MATLAB, Simulink, and Other Products</h3>
+<a href="http://www.mathworks.in/programs/trials/trial_request.html?eventid=629055461&s_iid=hp_trial_hpg_cta2" class="cta ">Get trial software</a>
+</div>
+</div>
+</div>
+</div></div> </div>
+</div>
+<div class="grid_192">
+<div class="grid_185 push_7">
+<a href="http://www.mathworks.in/products/index.html?s_tid=hp_fp_viewall">View all products</a> or <a href="http://www.mathworks.in/programs/trials/trial_request.html?eventid=629055461&s_iid=hp_trial_hpg_bod">get trial software</a>
+</div> </div>
+</div>
+<!-- end TAB #1 -->
+<!-- begin TAB #2 -->
+<div id="tab_2_content" style="display: none;">
+<div class="grid_192 margined_15">
+<div class="divided_content">
+<div class="grid_55 push_7">
+<h3>Live</h3>
+<table cellpadding="0" cellspacing="0" width="100%" border="0" class="events_training">
+<tbody><tr>
+<td class="first">28 Oct</td>
+<td><a href="https://go2.mathworks.com/introduction-to-simulink-lwb-na-56619?s_iid=hp_uw_hpg_bod" title="Introduction to Simulink">Introduction to Simulink</a> <span class="secondary_color">(webinar)</span></td>
+</tr>
+<tr> <td class="first">29 Oct</td>
+<td><a href="https://go2.mathworks.com/signal-processing-computer-vision-communication-systems-using-matlab-simulink-sem-in-56706?s_iid=hp_sem_hpg_bod" title="Designing and Implementing Signal Processing, Computer Vision and Communication Systems using MATLAB and Simulink">Designing and Implementing Signal Processing, Computer…</a> <span class="secondary_color">(seminar)</span></td>
+</tr>
+<tr>
+<td class="first">29 Oct</td>
+<td><a href="https://go2.mathworks.com/arm-cortex-a-r-m-optimized-code-generation-matlab-simulink-lwb-na-56404?s_iid=hp_uw_hpg_bod" title="ARM Cortex-A, -R, -M Optimized Code Generation using MATLAB and Simulink">ARM Cortex-A, -R, -M Optimized Code Generation using…</a> <span class="secondary_color">(webinar)</span></td>
+</tr>
+<tr>
+<td class="first">30 Oct</td>
+<td><a href="https://go2.mathworks.com/reduce-testing-and-debugging-time-using-polyspace-static-analysis-lwb-na-56475?s_iid=hp_uw_hpg_bod" title="Reduce Testing and Debugging Time using Polyspace Static Analysis">Reduce Testing and Debugging Time using Polyspace…</a> <span class="secondary_color">(webinar)</span></td>
+</tr>
+<tr> <td class="first">7 Nov</td>
+<td><a href="https://go2.mathworks.com/teaching-signal-processing-and-control-systems-using-matlab-and-simulink-sem-in-57752?s_iid=hp_sem_hpg_bod" title="Teaching Signal Processing and Control Systems using MATLAB and Simulink">Teaching Signal Processing and Control Systems using…</a> <span class="secondary_color">(seminar)</span></td>
+</tr>
+</tbody></table>
+</div>
+<div class="grid_56 push_7">
+<h3>On Demand</h3>
+<ul class="unbulleted_list">
+<li class="margined_10">
+<a href="http://www.mathworks.in/videos/introduction-to-simulink-for-control-design-81695.html?s_iid=hp_rw_hpg_bod">Introduction to Simulink for Control Design</a> <span class="videolength">(42:38)</span>
+</li>
+<li class="margined_10">
+<a href="http://www.mathworks.in/videos/model-based-design-for-automation-systems-81820.html?s_iid=hp_rw_hpg_bod">Model-Based Design for Automation Systems</a> <span class="videolength">(35:17)</span>
+</li>
+<li class="margined_10">
+<a href="http://www.mathworks.in/videos/modeling-and-simulating-phased-array-signal-processing-systems-81810.html?s_iid=hp_rw_hpg_bod">Modeling and Simulating Phased Array Signal Processing Systems</a> <span class="videolength">(32:06)</span>
+</li>
+<li class="margined_10">
+<a href="http://www.mathworks.in/videos/matlab-on-the-web-for-the-classroom-81793.html?s_iid=hp_rw_hpg_bod">MATLAB on the Web for the Classroom</a> <span class="videolength">(16:33)</span>
+</li>
+<li class="margined_10">
+<a href="http://www.mathworks.in/videos/speeding-up-matlab-applications-81729.html?s_iid=hp_rw_hpg_bod">Speeding Up MATLAB Applications</a> <span class="videolength">(58:16)</span>
+</li>
+</ul>
+</div>
+<div class="grid_61 push_6">
+<div class="section last">
+<div class="grid_54">
+<div class="callout_container rounded shadow gradient margined_5 " style="cursor:pointer;" onclick="javascript:$(window.location).attr(&#39;href&#39;, &#39;http://www.matlabexpo.com/in/?s_iid=hp_conf_event_cta1&#39;);">
+<div class="callout_image bg_right_flush right_top" style="background-image:url(/images/nextgen/callouts/bg-event-ad-expo-2014.jpg);height:220px;"> <div class="callout_content rounded" id="ml-expo">
+<p class="font_20"><span class="automate color_blue">MATLAB EXPO</span> <span class="automate color_green">2014</span><br><span class="futura-medium color_green">INDIA</span></p>
+<p></p>
+<a href="http://www.matlabexpo.com/in/?s_iid=hp_conf_event_cta1" class="cta ">View proceedings</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div> </div>
+</div>
+<div class="grid_192">
+<div class="grid_185 push_7">
+<a href="http://www.mathworks.in/company/events/?s_tid=hp_ev_all">Explore all events</a>: <a href="http://www.mathworks.in/company/events/webinars/upcoming.html?s_tid=hp_ev_wbnr">webinars</a>, <a href="http://www.mathworks.in/company/events/seminars/index.html?s_tid=hp_ev_sm">seminars</a>, <a href="http://www.mathworks.in/company/events/tradeshows/index.html?s_tid=hp_ev_td">tradeshows</a>, and <a href="http://www.mathworks.in/company/events/conferences/index.html?s_tid=hp_ev_conf">conferences</a>
+</div> </div>
+</div>
+<!-- end TAB #2 -->
+<!-- begin TAB #3 -->
+<div id="tab_3_content" style="display: none;">
+<div class="grid_192 margined_15">
+<div class="divided_content">
+<div class="grid_55 push_7">
+<h3>Online</h3>
+<table cellpadding="0" cellspacing="0" class="events_training">
+<tbody><tr>
+<td class="cell_30">On Demand</td>
+<td class="cell_70"><a href="http://www.mathworks.in/services/training/elearning/courses/MLPR_2.html">MATLAB Programming Techniques</a></td>
+</tr>
+<tr>
+<td>On Demand</td>
+<td><a href="http://www.mathworks.in/services/training/elearning/courses/MLBE_2.html">MATLAB Fundamentals </a></td>
+</tr>
+</tbody></table></div>
+<div class="grid_56 push_7">
+<h3>Classroom</h3>
+<table cellpadding="0" cellspacing="0" class="events_training">
+<tbody><tr>
+<td class="location">Pune</td>
+<td><a href="http://www.mathworks.in/training-schedule/?course_no=SLBE&date_range=12&country=IN&course_format=Instructor%20Led&s_tid=hp_t_ft_crs" title="Simulink for System and Algorithm Modeling">Simulink for System and Algorithm Modeling</a></td>
+</tr>
+<tr>
+<td class="location">Bangalore</td>
+<td><a href="http://www.mathworks.in/training-schedule/?course_no=MLBE&date_range=12&country=IN&course_format=Instructor%20Led&s_tid=hp_t_ft_crs" title="MATLAB Fundamentals">MATLAB Fundamentals</a></td>
+</tr>
+<tr>
+<td class="location">Bangalore</td>
+<td><a href="http://www.mathworks.in/training-schedule/?course_no=SLBE&date_range=12&country=IN&course_format=Instructor%20Led&s_tid=hp_t_ft_crs" title="Simulink for System and Algorithm Modeling">Simulink for System and Algorithm Modeling</a></td>
+</tr>
+<tr>
+<td class="location">Bangalore</td>
+<td><a href="http://www.mathworks.in/training-schedule/?course_no=MLPC&date_range=12&country=IN&course_format=Instructor%20Led&s_tid=hp_t_ft_crs" title="Parallel Computing with MATLAB">Parallel Computing with MATLAB</a></td>
+</tr>
+<tr>
+<td class="location">Bangalore</td>
+<td><a href="http://www.mathworks.in/training-schedule/?course_no=SLHL&date_range=12&country=IN&course_format=Instructor%20Led&s_tid=hp_t_ft_crs" title="Generating HDL Code from Simulink">Generating HDL Code from Simulink</a></td>
+</tr>
+</tbody></table></div>
+<div class="grid_61 push_6">
+<div class="grid_54 margined_20"> <div class="callout_container rounded shadow gradient margined_5 " style="cursor:pointer;" onclick="javascript:$(window.location).attr(&#39;href&#39;, &#39;/services/training/req_brochure.html?s_tid=hp_t_ft_catalog&#39;);">
+<div class="callout_content rounded bg_right_flush right_top" id="training_catalog" style="background-image:url(/images/nextgen/callouts/bg-training-course-catalog.png);"> <h2>Training Course Catalog</h2>
+<a href="http://www.mathworks.in/services/training/req_brochure.html?s_tid=hp_t_ft_catalog" class="cta ">Download now</a>
+</div>
+</div></div>
+<div class="grid_54"> <div class="callout_container rounded shadow gradient margined_15 " style="cursor:pointer;" onclick="javascript:$(window.location).attr(&#39;href&#39;, &#39;/services/training/online.html?s_tid=hp_t_ft_onlinetr&#39;);">
+<div class="callout_content rounded bg_right_flush right_top" id="training_selfpaced" style="background-image:url(/images/nextgen/callouts/training-flash-app-screenshot.png);"> <p class="upsize margined_5"><strong>Online Training Courses</strong></p>
+<p>Learn MATLAB basics and programming techniques from your desk.</p>
+<a href="http://www.mathworks.in/services/training/online.html?s_tid=hp_t_ft_onlinetr" class="cta ">Learn more</a>
+</div>
+</div></div>
+</div> </div>
+</div>
+<div class="grid_192">
+<div class="grid_185 push_7"> Explore all <a href="http://www.mathworks.in/training-schedule/?s_tid=hp_t_ft_lcl">local courses</a>, <a href="http://www.mathworks.in/training-schedule/?course_format=online&date_range=12&s_tid=hp_t_ft_online">online courses</a>, or <a href="http://www.mathworks.in/services/training/request_training.html?s_tid=hp_t_ft_oth">other training options</a> </div> </div>
+</div>
+<!-- end TAB #3 -->
+</div>
+<div class="clear"></div>
+</div>
+</div></div>
+
+
+ </div>
+    </div>
+  </div>
+
+
+<div class="grid_192">
+<div class="fat_footer">
+<div class="grid_176 push_8">
+<div class="grid_26">
+<ul class="unbulleted_list">
+<li class="header"><a href="http://www.mathworks.in/company/?s_tid=hp_ff_about">About MathWorks</a></li>
+<li><a href="http://www.mathworks.in/company/jobs/opportunities/?s_tid=hp_ff_a_careers">Careers – <em>200+ Openings</em></a></li>
+<li><a href="http://www.mathworks.in/company/aboutus/soc_mission/?s_tid=hp_ff_a_socialmission">Social Mission</a></li>
+<li><a href="http://www.mathworks.in/company/aboutus/contact_us/?s_tid=hp_ff_a_contact">Contact Us</a></li>
+<li><a href="http://www.mathworks.in/videos/?s_tid=hp_ff_a_videos">Videos</a></li>
+<li>&nbsp;</li>
+<li><a href="http://www.mathworks.in/discovery/?s_tid=hp_ff_a_discover">Discover…</a></li>
+</ul>
+</div>
+<div class="grid_26 push_4">
+<ul class="unbulleted_list">
+<li class="header"><a href="http://www.mathworks.in/support/?s_tid=hp_ff_support">Support</a></li>
+<li><a href="http://www.mathworks.in/help/?s_tid=hp_ff_s_doc">Documentation</a></li>
+<li><a href="http://www.mathworks.in/licensecenter/?s_tid=hp_ff_s_licensecenter">License Center</a></li>
+<li><a href="http://www.mathworks.in/downloads/web_downloads/?s_tid=hp_ff_s_downloads">Downloads</a></li>
+<li><a href="http://www.mathworks.in/support/contact_us/index.html?s_tid=hp_ff_s_contact">Contact Support</a></li>
+</ul>
+</div>
+<div class="grid_26 push_4">
+<ul class="unbulleted_list">
+<li class="header"><a href="http://www.mathworks.in/company/events/?s_tid=hp_ff_events">Events</a></li>
+<li><a href="http://www.mathworks.in/company/events/webinars/upcoming.html?s_tid=hp_ff_e_webinars">Webinars</a></li>
+<li><a href="http://www.mathworks.in/company/events/seminars/?s_tid=hp_ff_e_seminars">Seminars</a></li>
+<li><a href="http://www.mathworks.in/company/events/conferences/?s_tid=hp_ff_e_conferences">Conferences</a></li>
+<li><a href="http://www.mathworks.in/company/events/tradeshows/?s_tid=hp_ff_e_tradeshows">Tradeshows</a></li>
+</ul>
+</div>
+<div class="grid_26 push_4">
+<ul class="unbulleted_list">
+<li class="header"><a href="http://www.mathworks.in/services/training/index.html?s_tid=hp_ff_training">Training</a></li>
+<li><a href="http://www.mathworks.in/services/training/courses/?s_tid=hp_ff_t_courseofferings">Course Offerings</a></li>
+<li><a href="http://www.mathworks.in/training-schedule/?s_tid=hp_ff_t_schedule">Schedule</a></li>
+<li><a href="http://www.mathworks.in/services/training/request_training.html?s_tid=hp_ff_t_facility">Training at Your Facility</a></li>
+<li><a href="http://www.mathworks.in/services/training/certification/index.html?s_tid=hp_ff_t_certification">Certification</a></li>
+</ul>
+</div>
+<div class="grid_26 push_4">
+<ul class="unbulleted_list">
+<li class="header"><a href="http://www.mathworks.in/matlabcentral/?s_tid=hp_ff_community">User Community</a></li>
+<li><a href="http://www.mathworks.in/matlabcentral/fileexchange/?s_tid=hp_ff_c_fx">File Exchange</a></li>
+<li><a href="http://www.mathworks.in/matlabcentral/answers/?s_tid=hp_ff_c_answers">MATLAB Answers</a></li>
+<li><a href="http://www.mathworks.in/matlabcentral/newsreader/?s_tid=hp_ff_c_newsgroup">Newsgroup</a></li>
+<li><a href="http://blogs.mathworks.com/?s_tid=hp_ff_c_blogs">Blogs</a></li>
+</ul>
+</div>
+<div class="grid_26 push_4">
+<ul class="unbulleted_list">
+<li class="header"><a href="http://www.mathworks.in/company/newsroom/press-releases/?s_tid=hp_ff_news">News</a></li>
+<li><a href="http://www.mathworks.in/company/newsroom/?s_tid=hp_ff_n_pressroom">Newsroom</a></li>
+<li><a href="http://www.mathworks.in/company/newsletters/?s_tid=hp_ff_n_newsletters">Newsletters</a></li>
+<li><a href="http://www.mathworks.in/company/user_stories/?s_tid=hp_ff_n_userstories">User Stories</a></li>
+<li><a href="http://www.mathworks.in/company/newsletters/technicalarticles.html?s_tid=hp_ff_n_technicalarticles">Technical Articles</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+  <div class="grid_192"> <div class="footer_container">
+<div class="footer">
+<div class="social_media_icon_container">
+<div class="social_media_icons">
+<ul class="footernav">
+<li class="footernav_rss"><a href="http://www.mathworks.in/company/rss/index.html"></a></li>
+<li class="footernav_linkedin"><a href="http://www.mathworks.in/programs/bounce_hub_generic.html?s_tid=mlc_lkd&url=http://www.linkedin.com/company/the-mathworks_2" target="_blank"></a></li>
+<li class="footernav_google"><a href="http://www.mathworks.in/programs/bounce_hub_generic.html?s_tid=mlc_glg&url=https://plus.google.com/117177960465154322866?prsrc=3" target="_blank"></a></li>
+<li class="footernav_facebook"><a href="http://www.mathworks.in/programs/bounce_hub_generic.html?s_tid=mlc_fbk&url=http://www.facebook.com/MATLAB" target="_blank"></a></li>
+<li class="footernav_twitter"><a href="http://www.mathworks.in/programs/bounce_hub_generic.html?s_tid=mlc_twt&url=http://www.twitter.com/MATLAB" target="_blank"></a></li>
+</ul>
+</div>
+<p><em>Join the conversation</em></p>
+</div>
+<ul class="footernav">
+<li class="footernav_piracy"><a href="http://www.mathworks.in/company/aboutus/policies_statements/piracy.html">Preventing Piracy</a></li>
+<li class="footernav_privacy"><a href="http://www.mathworks.in/company/aboutus/policies_statements/">Privacy Policy</a></li>
+<li class="footernav_trademarks"><a href="http://www.mathworks.in/company/aboutus/policies_statements/trademarks.html">Trademarks</a></li>
+<li class="footernav_patents"><a href="http://www.mathworks.in/company/aboutus/policies_statements/patents.html">Patents</a></li>
+<li class="footernav_help"><a href="http://www.mathworks.in/help.html">Site Help</a></li>
+</ul>
+<div class="copyright">© 1994-2014 The MathWorks, Inc.</div>
+</div>
+</div>
+<!-- BEGIN Adobe DTM -->
+<script type="text/javascript">
+try {
+_satellite.pageBottom();
+} catch (e) {
+//something went wrong
+}
+</script>
+<!-- END Adobe DTM -->
+<!-- SiteCatalyst code version: H.24.4.
+Copyright 1996-2012 Adobe, Inc. All Rights Reserved
+More info available at http://www.omniture.com -->
+<script language="JavaScript" type="text/javascript" src="./mat_9_files/s_code.js"></script>
+<script language="JavaScript" type="text/javascript">
+<!--
+if (typeof mboxLoadSCPlugin == 'function') {
+mboxLoadSCPlugin(s);
+}
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)//--></script>
+<script language="JavaScript" type="text/javascript"><!--
+if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+//--></script>
+<!--/DO NOT REMOVE/-->
+<!-- End SiteCatalyst code version: H.24.4. -->
+<!-- BEGIN Qualaroo -->
+<script type="text/javascript">
+var _kiq = _kiq || [];
+(function(){
+setTimeout(function(){
+var d = document, f = d.getElementsByTagName('script')[0], s = d.createElement('script'); s.type = 'text/javascript';
+s.async = true; s.src = '//s3.amazonaws.com/ki.js/49559/bh9.js'; f.parentNode.insertBefore(s, f);
+}, 1);
+})();
+</script>
+<!-- END Qualaroo --></div>
+</div><script src="./mat_9_files/standard"></script>
+
+
+</body><iframe allowtransparency="true" frameborder="0" id="abs-top-frame" src="./mat_9_files/top.html" style="position: fixed; z-index: 4294967295; overflow: hidden; top: 0px; left: 0px; right: 0px; width: 138px; height: 13px; max-height: none; min-height: 0px; margin: 0px auto; padding: 0px; border: 0px; display: block; background-color: transparent;"></iframe></html>

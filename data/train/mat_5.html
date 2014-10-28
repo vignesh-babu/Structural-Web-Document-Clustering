@@ -1,0 +1,667 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0086)http://www.mathworks.in/matlabcentral/linkexchange/?date_range=30&sort=updated_at+desc -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      
+      	<script type="text/javascript" async="" src="./mat_5_files/ahy.js"></script><script type="text/javascript" src="./mat_5_files/jquery-latest.js"></script>
+      <!-- START OF GLOBAL NAV -->
+  <link rel="stylesheet" href="./mat_5_files/sitewide.css" type="text/css">
+  <link rel="stylesheet" href="./mat_5_files/mlc.css" type="text/css">
+  <!--[if lt IE 7]>
+  <link href="/matlabcentral/css/ie6down.css" type="text/css" rel="stylesheet">
+  <![endif]-->
+
+      
+      
+<meta name="keywords" content="file exchange, matlab answers, newsgroup access, link exchange, matlab blog, matlab central, simulink blog, matlab community, matlab and simulink community">
+<meta name="description" content="File exchange, MATLAB Answers, newsgroup access, Links, and Blogs for the MATLAB &amp; Simulink user community">
+<link rel="stylesheet" type="text/css" media="print" href="./mat_5_files/print.css">
+<title>Community contributed links - 
+</title>
+    
+    <link href="./mat_5_files/application-59c7245570ad51faa6b8a0de9a59b48f.css" media="screen" rel="stylesheet" type="text/css">
+    <script src="./mat_5_files/application-2f29a9cf9bb5b720ae798bb0b9c3e782.js" type="text/javascript"></script>
+
+
+    
+    
+
+
+  </head>
+    <body>
+      <div id="header">
+  <div class="wrapper">
+  <!--put nothing in left div - only 11px wide shadow --> 
+    <div class="main">
+        	<div id="logo"><a href="http://www.mathworks.in/matlabcentral/?s_tid=gn_mlc_logo" title="MATLAB Central Home"><img src="./mat_5_files/mlclogo-whitebgd.gif" alt="MATLAB Central"></a></div>
+      
+        <div id="headertools">
+        
+
+<script language="JavaScript1.3" type="text/javascript">
+
+function submitForm(query){
+
+	choice = document.forms['searchForm'].elements['search_submit'].value;
+	
+	if (choice == "entire1" || choice == "contest" || choice == "matlabcentral" || choice == "blogs"){
+	
+	   var newElem = document.createElement("input");
+	   newElem.type = "hidden";
+	   newElem.name = "q";
+	   newElem.value = query.value;
+	   document.forms['searchForm'].appendChild(newElem);
+	      
+	   submit_action = '/searchresults/';
+	}
+	
+	switch(choice){
+	   case "matlabcentral":
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "c[]";
+	      newElem.value = "matlabcentral";
+	      document.forms['searchForm'].appendChild(newElem);
+	
+	      selected_index = 0;
+	      break
+	   case "fileexchange":
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "term";
+	      newElem.value = query.value;
+	      newElem.classname = "formelem";
+	      document.forms['searchForm'].appendChild(newElem);
+	
+	      submit_action = "/matlabcentral/fileexchange/";
+	      selected_index = 1;
+	      break
+	   case "answers":
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "term";
+	      newElem.value = query.value;
+	      newElem.classname = "formelem";
+	      document.forms['searchForm'].appendChild(newElem);
+	
+	      submit_action = "/matlabcentral/answers/";
+	      selected_index = 2;
+	      break
+	   case "cssm":
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "search_string";
+	      newElem.value = query.value;
+	      newElem.classname = "formelem";
+	      document.forms['searchForm'].appendChild(newElem);
+	
+		  submit_action = "/matlabcentral/newsreader/search_results";
+	      selected_index = 3;
+	      break
+	   case "linkexchange":
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "term";
+	      newElem.value = query.value;
+	      newElem.classname = "formelem";
+	      document.forms['searchForm'].appendChild(newElem);
+	
+	      submit_action = "/matlabcentral/linkexchange/";
+	      selected_index = 4;
+	      break
+	   case "blogs":
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "c[]";
+	      newElem.value = "blogs";
+	      document.forms['searchForm'].appendChild(newElem);
+	
+	      selected_index = 5;
+	      break
+	   case "trendy":
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "search";
+	      newElem.value = query.value;
+	      newElem.classname = "formelem";
+	      document.forms['searchForm'].appendChild(newElem);
+	
+	      submit_action = "/matlabcentral/trendy";
+	      selected_index = 6;
+	      break
+	   case "cody":
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "term";
+	      newElem.value = query.value;
+	      newElem.classname = "formelem";
+	      document.forms['searchForm'].appendChild(newElem);
+	
+	      submit_action = "/matlabcentral/cody/";
+	      selected_index = 7;
+	      break
+	   case "contest":
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "c[]";
+	      newElem.value = "contest";
+	      document.forms['searchForm'].appendChild(newElem);
+	
+	      selected_index = 8;
+	      break
+	   case "entire1":
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "c[]";
+	      newElem.value = "entiresite";
+	      document.forms['searchForm'].appendChild(newElem);
+	      
+	      selected_index = 9;
+	      break
+	   default:
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "c[]";
+	      newElem.value = "entiresite";
+	      document.forms['searchForm'].appendChild(newElem);
+	   
+	      selected_index = 9;
+	      break
+	}
+
+	document.forms['searchForm'].elements['search_submit'].selectedIndex = selected_index;
+	document.forms['searchForm'].elements['query'].value = query.value;
+	document.forms['searchForm'].action = submit_action;
+}
+
+</script>
+
+
+  <form name="searchForm" method="GET" action="" style="margin:0px; margin-top:5px; font-size:90%" onsubmit="submitForm(query)">
+          <label for="search">Search: </label>
+        <select name="search_submit" style="font-size:9px ">
+         	 <option value="matlabcentral">MATLAB Central</option>
+          	<option value="fileexchange">&nbsp;&nbsp;&nbsp;File Exchange</option>
+          	<option value="answers">&nbsp;&nbsp;&nbsp;Answers</option>
+            <option value="cssm">&nbsp;&nbsp;&nbsp;Newsgroup</option>
+          	<option value="linkexchange" selected="">&nbsp;&nbsp;&nbsp;Link Exchange</option>
+          	<option value="blogs">&nbsp;&nbsp;&nbsp;Blogs</option>
+          	<option value="trendy">&nbsp;&nbsp;&nbsp;Trendy</option>
+          	<option value="cody">&nbsp;&nbsp;&nbsp;Cody</option>
+          	<option value="contest">&nbsp;&nbsp;&nbsp;Contest</option>
+          <option value="entire1">MathWorks.com</option>
+        </select>
+<input type="text" name="query" size="10" class="formelem" value="">
+<input type="submit" value="Go" class="formelem gobutton">
+</form>
+
+		  
+<ul>
+  <li class="mwa-nav_account">
+    <a href="https://www.mathworks.in/accesslogin/createProfile.do?uri=http%3A%2F%2Fwww.mathworks.in%2Fmatlabcentral%2Flinkexchange%2F%3Fdate_range%3D30%26sort%3Dupdated_at%2Bdesc">Create Account</a>
+  </li>
+  <li class="mwa-nav_logout">
+    <a href="https://www.mathworks.in/accesslogin/login.do?uri=http%3A%2F%2Fwww.mathworks.in%2Fmatlabcentral%2Flinkexchange%2F%3Fdate_range%3D30%26sort%3Dupdated_at%2Bdesc">Log In</a>
+  </li>
+</ul>
+
+      </div>
+	  
+        <div id="globalnav">
+        <!-- from includes/global_nav.html -->
+        <ol>
+                <li class=";">
+                        <a href="http://www.mathworks.in/matlabcentral/fileexchange/?s_tid=gn_mlc_fx">File Exchange</a> 
+                </li>
+                <li class=";">
+                        <a href="http://www.mathworks.in/matlabcentral/answers/?s_tid=gn_mlc_an">Answers</a> 
+                </li>
+                <li class=";">
+                        <a href="http://www.mathworks.in/matlabcentral/newsreader/?s_tid=gn_mlc_ng">Newsgroup</a> 
+                </li>
+                <li class=";">
+                        <a href="http://www.mathworks.in/matlabcentral/linkexchange/?s_tid=gn_mlc_lx">Link Exchange</a> 
+                </li>
+                <li class=";">
+                        <a href="http://blogs.mathworks.com/?s_tid=gn_mlc_blg">Blogs</a> 
+                </li>
+                <li class=";">
+                        <a href="http://www.mathworks.in/matlabcentral/trendy/?s_tid=gn_mlc_tnd">Trendy</a> 
+                </li>
+                <li class=";">
+                        <a href="http://www.mathworks.in/matlabcentral/cody/?s_tid=gn_mlc_cody">Cody</a> 
+                </li>
+                <li class=";">
+                        <a href="http://www.mathworks.in/matlabcentral/contest/?s_tid=gn_mlc_cn">Contest</a> 
+                </li>
+                <li class="icon mathworks">
+                        <a href="http://www.mathworks.in/?s_tid=gn_mlc_main">MathWorks.com</a> 
+                </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <div id="middle">
+  <div class="wrapper">
+    <div id="colleft">
+      <ul id="localnav">
+        <li class="active"><a href="http://www.mathworks.in/matlabcentral/linkexchange/">Links</a></li>
+    		<li class="maincta"><a href="http://www.mathworks.in/matlabcentral/linkexchange/links/new">Submit a Link</a></li>
+      </ul>
+
+        <div class="spotlight--mlc">
+      <a href="http://www.mathworks.in/programs/trials/trial_request.html?eventid=56763&prodcode=ML&s_iid=mlclx_trial_mlc_cta1">
+          <img src="./mat_5_files/blogs_spotlight_trials_gray.jpg" border="0">
+      </a>
+  </div>
+
+    </div>
+
+
+
+    <div id="mainbody" class="columns2">
+
+<div id="toolbox">
+  <div class="hd"><div class="c"></div></div>
+  <div class="bd">
+    <div class="c">
+      <div class="s">
+
+        <!-- content area -->
+        <div id="tbcontent">
+            <h2 class="left" style="margin-left: 0pt; padding-left: 0pt;">Search Links</h2>
+						<a href="http://www.mathworks.in/matlabcentral/linkexchange/advanced_search" class="right">Advanced Search</a>
+
+            <form accept-charset="UTF-8" action="http://www.mathworks.in/matlabcentral/linkexchange/?sort=updated_at+desc" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"></div>
+              <input id="search" name="term" type="text">
+              <input class="arrow_button" type="submit" value="Go">
+</form>
+            <div class="horizontaldivider">&nbsp;</div>
+
+            <ul class="navlinks">
+              <li class="heading">View All Links By:</li>
+              <li><a href="http://www.mathworks.in/matlabcentral/linkexchange/?s_cid=LEX_recent">Most Recent</a></li>
+              <li class="divider">&nbsp;</li>
+              <li><a href="http://www.mathworks.in/matlabcentral/linkexchange/?sort=clicks&s_id=LEX_clicked">Most Clicked</a></li>
+            </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="ft"><div class="c"></div></div>
+</div>
+
+
+<h1>Links</h1>
+<div class="list_controls">
+  <div class="feed">
+  </div>
+  <div class="filter">
+    <b>Date:</b>
+    <span>Updated</span>
+    <span class="divider">&nbsp;</span>
+    <a href="http://www.mathworks.in/matlabcentral/linkexchange/?date=submitted&date_range=30&sort=updated_at+desc">Submitted</a>
+  </div>
+  <div class="filter">
+    <b>Time Frame:</b>
+    <a href="http://www.mathworks.in/matlabcentral/linkexchange/?sort=updated_at+desc">All Time</a>
+    <span class="divider">&nbsp;</span>
+    <span>Last 30 Days</span>
+    <span class="divider">&nbsp;</span>
+    <a href="http://www.mathworks.in/matlabcentral/linkexchange/?date_range=7&sort=updated_at+desc">Last 7 Days</a>
+  </div>
+  <div class="pagination"><b>1 - 16 of 16</b><span class="previous">&amp;nbsp;</span><span class="next">&amp;nbsp;</span></div>
+</div>
+<div class="list_wrapper">
+  <table>
+  	<tbody><tr class="sortable_headers">
+      <th id="date_header"><a href="http://www.mathworks.in/matlabcentral/linkexchange/?date_range=30&dir=desc&sort=date" default="true"><span>Date</span></a></th>
+      <th id="link_header"><a href="http://www.mathworks.in/matlabcentral/linkexchange/?date_range=30&dir=asc&sort=title"><span>Link</span></a></th>
+      <th id="tags_header"><span>Tags</span></th>
+      <th id="clicks_header"><a href="http://www.mathworks.in/matlabcentral/linkexchange/?date_range=30&dir=desc&sort=clicks"><span>Clicks</span></a></th>
+      <th id="descriptions_header"><a href="http://www.mathworks.in/matlabcentral/linkexchange/?date_range=30&dir=desc&sort=descriptions"><span>Descriptions</span></a></th>
+      <th id="ratings_header" class="last"><a href="http://www.mathworks.in/matlabcentral/linkexchange/?date_range=30&dir=desc&sort=rating"><span>Ratings</span></a></th>
+    </tr>
+    <tr class="">
+  <td>22 Oct 2014</td>
+  <td style="width:300px !important;">
+    <a href="http://www.mathworks.in/matlabcentral/linkexchange/links/2272-virtual-mouse-using-hand-gesture-recognition">virtual mouse using hand gesture recognition</a>
+    <p>virtual mouse using hand gesture recognition</p>
+    <div class="contributor">Contributed by: yasiru</div>
+    <div>Updated by: Karen Lim</div>
+  </td>
+  <td><a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22gesture%22" title="gesture">gesture</a>, <a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22hand+gesture%22" title="hand gesture">hand gesture</a>, <a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22virtual+mouse%22" title="virtual mouse">virtual mouse</a>, <a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22great+work.+can+you+please+email+me+the+code.+joeytickorie%40gmail.com%22" title="great work. can you please email me the code. joeytickorie@gmail.com">great work....</a>, <a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22mouse%22" title="mouse">mouse</a></td>
+  <td>3037</td>
+  <td>64</td>
+  <td class="last">
+    <div class="stars" title="4.4"><div style="width:88%;">4.4</div></div><span>4.4</span><span class="divider">&nbsp;|&nbsp;</span><a href="http://www.mathworks.in/matlabcentral/linkexchange/links/2272-virtual-mouse-using-hand-gesture-recognition#feedback">16 ratings</a>
+  </td>
+</tr><tr class="odd">
+  <td>22 Oct 2014</td>
+  <td style="width:300px !important;">
+    <a href="http://www.mathworks.in/matlabcentral/linkexchange/links/2870-teaching-practical-engineering-for-freshman-students-using-the-rwth-mindstorms-nxt-toolbox-for-matlab"> Teaching practical engineering for freshman students using the RWTH – Mindstorms NXT toolbox for MATLAB</a>
+    <p>Book chapter on using a MATLAB interface to LEGO Mindstorms NXT robots for project-based learning</p>
+    <div class="contributor">Contributed by: MathWorks Classroom Resources Team</div>
+    <div>Updated by: harry</div>
+  </td>
+  <td><a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22academic%22" title="academic">academic</a>, <a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22electrical+and+computer+engineering%22" title="electrical and computer engineering">electrical...</a>, <a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22language+english%22" title="language english">language en...</a>, <a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22mechanical+engineering%22" title="mechanical engineering">mechanical...</a>, <a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22project+based+learning%22" title="project based learning">project bas...</a></td>
+  <td>100</td>
+  <td>1</td>
+  <td class="last">
+    <div class="stars" title="5.0"><div style="width:100%;">5.0</div></div><span>5.0</span><span class="divider">&nbsp;|&nbsp;</span><a href="http://www.mathworks.in/matlabcentral/linkexchange/links/2870-teaching-practical-engineering-for-freshman-students-using-the-rwth-mindstorms-nxt-toolbox-for-matlab#feedback">1 rating</a>
+  </td>
+</tr><tr class="">
+  <td>20 Oct 2014</td>
+  <td style="width:300px !important;">
+    <a href="http://www.mathworks.in/matlabcentral/linkexchange/links/4110-teaching-instrumentation-of-biological-systems-with-matlab-in-a-spiral-engineering-curriculum-at-virginia-tech">Teaching Instrumentation of Biological Systems with MATLAB in a Spiral Engineering Curriculum at Virginia Tech</a>
+    <p>Teaching Biological Systems Instrumentation with MATLAB</p>
+    <div class="contributor">Contributed by: Alex</div>
+    
+  </td>
+  <td><a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22academic%22" title="academic">academic</a>, <a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22biological+systems+engineering%22" title="biological systems engineering">biological...</a>, <a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22bioprocess+instrumentation+with+matlab%22" title="bioprocess instrumentation with matlab">bioprocess...</a>, <a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22data+acquisition%22" title="data acquisition">data acquis...</a>, <a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22instrumentation%22" title="instrumentation">instrumenta...</a></td>
+  <td>6</td>
+  <td>1</td>
+  <td class="last">
+    
+  </td>
+</tr><tr class="odd">
+  <td>17 Oct 2014</td>
+  <td style="width:300px !important;">
+    <a href="http://www.mathworks.in/matlabcentral/linkexchange/links/3210-real-time-static-and-dynamic-hand-gesture-recognition-system">real time static and dynamic hand gesture recognition system
+</a>
+    <p></p>
+
+<p>Hand gesture recognition system-to detect static and dynamic gesture and virtual mouse </p>
+    <div class="contributor">Contributed by: Mohammed Hafiz hfiz</div>
+    <div>Updated by: Sadiq Shah</div>
+  </td>
+  <td><a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22can+i+please+see+this+code%22" title="can i please see this code">can i pleas...</a>, <a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22centroid+tracking%22" title="centroid tracking">centroid tr...</a>, <a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22matlab+code%22" title="matlab code">matlab code</a>, <a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22finger+tip+detection%22" title="finger tip detection">finger tip...</a>, <a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22hand+gesture%22" title="hand gesture">hand gesture</a></td>
+  <td>937</td>
+  <td>22</td>
+  <td class="last">
+    <div class="stars" title="4.6"><div style="width:92%;">4.6</div></div><span>4.6</span><span class="divider">&nbsp;|&nbsp;</span><a href="http://www.mathworks.in/matlabcentral/linkexchange/links/3210-real-time-static-and-dynamic-hand-gesture-recognition-system#feedback">10 ratings</a>
+  </td>
+</tr><tr class="">
+  <td>16 Oct 2014</td>
+  <td style="width:300px !important;">
+    <a href="http://www.mathworks.in/matlabcentral/linkexchange/links/4108-rainbow-color-map-critiques-an-overview-and-annotated-bibliography">Rainbow Color Map Critiques: An Overview and Annotated Bibliography</a>
+    <p>Rainbow Color Maps</p>
+    <div class="contributor">Contributed by: Alex</div>
+    
+  </td>
+  <td><a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22color+map+bibliography%22" title="color map bibliography">color map b...</a>, <a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22data+visualization%22" title="data visualization">data visual...</a>, <a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22interval+data%22" title="interval data">interval data</a>, <a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22jet+color+map%22" title="jet color map">jet color map</a>, <a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22perceptual+color+map%22" title="perceptual color map">perceptual...</a></td>
+  <td>15</td>
+  <td>1</td>
+  <td class="last">
+    
+  </td>
+</tr><tr class="odd">
+  <td>15 Oct 2014</td>
+  <td style="width:300px !important;">
+    <a href="http://www.mathworks.in/matlabcentral/linkexchange/links/4107-tuning-a-pid-controller-when-a-plant-model-is-not-available">Tuning a PID Controller when a Plant Model is not Available</a>
+    <p>Tuning a PID Controller Without a Plant Model</p>
+    <div class="contributor">Contributed by: Alex</div>
+    
+  </td>
+  <td><a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22controller+tuning%22" title="controller tuning">controller...</a>, <a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22pid%22" title="pid">pid</a>, <a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22pid+control%22" title="pid control">pid control</a>, <a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22pid+controller%22" title="pid controller">pid controller</a>, <a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22pid+tuner%22" title="pid tuner">pid tuner</a></td>
+  <td>46</td>
+  <td>1</td>
+  <td class="last">
+    
+  </td>
+</tr><tr class="">
+  <td>12 Oct 2014</td>
+  <td style="width:300px !important;">
+    <a href="http://www.mathworks.in/matlabcentral/linkexchange/links/3885-wfdb-toolbox-for-matlab-and-octave">WFDB Toolbox for MATLAB and Octave</a>
+    <p>A toolbox for downloading and processing PhysioNet data (&gt; 3TB) directly into MATLAB.</p>
+    <div class="contributor">Contributed by: Ikaro Silva</div>
+    <div>Updated by: lai lian</div>
+  </td>
+  <td><a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22arrythmia%22" title="arrythmia">arrythmia</a>, <a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22biosignal%22" title="biosignal">biosignal</a>, <a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22ecg%22" title="ecg">ecg</a>, <a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22eeg%22" title="eeg">eeg</a>, <a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22ekg%22" title="ekg">ekg</a></td>
+  <td>29</td>
+  <td>2</td>
+  <td class="last">
+    
+  </td>
+</tr><tr class="odd">
+  <td>9 Oct 2014</td>
+  <td style="width:300px !important;">
+    <a href="http://www.mathworks.in/matlabcentral/linkexchange/links/4105-control-pid-con-matlab-y-simulink">Control PID con MATLAB y Simulink</a>
+    <p>Descubra cómo diseñar y simular algoritmos de control PID de manera sencilla con MATLAB y Simulink</p>
+    <div class="contributor">Contributed by: Koldobika</div>
+    
+  </td>
+  <td><a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22control+pid%22" title="control pid">control pid</a>, <a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22controlador+pid%22" title="controlador pid">controlador...</a>, <a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22dise%C3%B1o+de+control%22" title="diseño de control">diseño de c...</a>, <a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22matlab+y+simulink%22" title="matlab y simulink">matlab y si...</a>, <a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22pid%22" title="pid">pid</a></td>
+  <td>34</td>
+  <td>0</td>
+  <td class="last">
+    
+  </td>
+</tr><tr class="">
+  <td>8 Oct 2014</td>
+  <td style="width:300px !important;">
+    <a href="http://www.mathworks.in/matlabcentral/linkexchange/links/4104-gpstuff-gaussian-process-models-for-bayesian-analysis">GPstuff - Gaussian process models for Bayesian analysis</a>
+    <p>A versatile collection of Gaussian process models and computational tools required for inference.</p>
+    <div class="contributor">Contributed by: Aki Vehtari</div>
+    
+  </td>
+  <td><a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22%5B%22%5B%5C%22gaussian+process%5C%22%5D%22%5D%22" title="[&quot;[\&quot;gaussian process\&quot;]&quot;]">["[\"gaussi...</a></td>
+  <td>17</td>
+  <td>0</td>
+  <td class="last">
+    <div class="stars" title="5.0"><div style="width:100%;">5.0</div></div><span>5.0</span><span class="divider">&nbsp;|&nbsp;</span><a href="http://www.mathworks.in/matlabcentral/linkexchange/links/4104-gpstuff-gaussian-process-models-for-bayesian-analysis#feedback">1 rating</a>
+  </td>
+</tr><tr class="odd">
+  <td>6 Oct 2014</td>
+  <td style="width:300px !important;">
+    <a href="http://www.mathworks.in/matlabcentral/linkexchange/links/4103-teaching-and-learning-resources-hands-on-learning-with-matlab">Teaching and Learning Resources: Hands-On Learning with MATLAB</a>
+    <p>Hands-On Learning with MATLAB</p>
+    <div class="contributor">Contributed by: Alex</div>
+    
+  </td>
+  <td><a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22analog+discovery+design+kit%22" title="analog discovery design kit">analog disc...</a>, <a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22arduino+board%22" title="arduino board">arduino board</a>, <a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22diligent+analog+discovery%22" title="diligent analog discovery">diligent an...</a>, <a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22hands-on+learning%22" title="hands-on learning">hands-on le...</a>, <a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22hardware+for+project-based+learning%22" title="hardware for project-based learning">hardware fo...</a></td>
+  <td>79</td>
+  <td>1</td>
+  <td class="last">
+    
+  </td>
+</tr><tr class="">
+  <td>6 Oct 2014</td>
+  <td style="width:300px !important;">
+    <a href="http://www.mathworks.in/matlabcentral/linkexchange/links/4102-applying-low-cost-hardware-platforms-with-matlab-and-simulink">Applying Low-Cost Hardware Platforms with MATLAB and Simulink</a>
+    <p>Applying Low-Cost Hardware with MATLAB and Simulink</p>
+    <div class="contributor">Contributed by: Alex</div>
+    
+  </td>
+  <td><a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22arduino%22" title="arduino">arduino</a>, <a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22hardware+support+package%22" title="hardware support package">hardware su...</a>, <a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22lego+mindstorms%22" title="lego mindstorms">lego mindst...</a>, <a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22raspberry+pi%22" title="raspberry pi">raspberry pi</a>, <a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22texas+instruments+-+c2000+launchpad%22" title="texas instruments - c2000 launchpad">texas instr...</a></td>
+  <td>31</td>
+  <td>1</td>
+  <td class="last">
+    
+  </td>
+</tr><tr class="odd">
+  <td>3 Oct 2014</td>
+  <td style="width:300px !important;">
+    <a href="http://www.mathworks.in/matlabcentral/linkexchange/links/4101-selecting-a-matlab-application-deployment-strategy">Selecting a MATLAB Application Deployment Strategy </a>
+    <p>Selecting a MATLAB Application Deployment Strategy </p>
+    <div class="contributor">Contributed by: Alex</div>
+    
+  </td>
+  <td><a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22.net+component%22" title=".net component">.net component</a>, <a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22application+compiler%22" title="application compiler">application...</a>, <a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22application+deployment%22" title="application deployment">application...</a>, <a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22batch+processing%22" title="batch processing">batch proce...</a>, <a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22com+component%22" title="com component">com component</a></td>
+  <td>15</td>
+  <td>1</td>
+  <td class="last">
+    
+  </td>
+</tr><tr class="">
+  <td>2 Oct 2014</td>
+  <td style="width:300px !important;">
+    <a href="http://www.mathworks.in/matlabcentral/linkexchange/links/4100-best-practices-for-converting-matlab-code-to-fixed-point">Best Practices for Converting MATLAB Code to Fixed Point</a>
+    <p>Converting MATLAB Code to Fixed Point</p>
+    <div class="contributor">Contributed by: Alex</div>
+    
+  </td>
+  <td><a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22algorithmic+code%22" title="algorithmic code">algorithmic...</a>, <a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22code+generation%22" title="code generation">code genera...</a>, <a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22data+type+definitions%22" title="data type definitions">data type d...</a>, <a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22fixed+point%22" title="fixed point">fixed point</a>, <a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22fixed-point+algorithms%22" title="fixed-point algorithms">fixed-point...</a></td>
+  <td>18</td>
+  <td>1</td>
+  <td class="last">
+    
+  </td>
+</tr><tr class="odd">
+  <td>2 Oct 2014</td>
+  <td style="width:300px !important;">
+    <a href="http://www.mathworks.in/matlabcentral/linkexchange/links/4099-a-cross-wavelet-and-wavelet-coherence-toolbox">A cross wavelet and wavelet coherence toolbox</a>
+    <p>A widely used open-source wavelet coherence toolbox for matlab</p>
+    <div class="contributor">Contributed by: Aslak Grinsted</div>
+    
+  </td>
+  <td><a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22continuous+wavelet%22" title="continuous wavelet">continuous...</a>, <a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22cwt%22" title="cwt">cwt</a>, <a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22morlet%22" title="morlet">morlet</a>, <a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22wavelet%22" title="wavelet">wavelet</a>, <a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22wavelet+coherence%22" title="wavelet coherence">wavelet coh...</a></td>
+  <td>18</td>
+  <td>1</td>
+  <td class="last">
+    <div class="stars" title="5.0"><div style="width:100%;">5.0</div></div><span>5.0</span><span class="divider">&nbsp;|&nbsp;</span><a href="http://www.mathworks.in/matlabcentral/linkexchange/links/4099-a-cross-wavelet-and-wavelet-coherence-toolbox#feedback">1 rating</a>
+  </td>
+</tr><tr class="">
+  <td>2 Oct 2014</td>
+  <td style="width:300px !important;">
+    <a href="http://www.mathworks.in/matlabcentral/linkexchange/links/3581-crosswavelet-and-wavelet-coherence">Crosswavelet and Wavelet Coherence</a>
+    <p>This package for performing crosswavelet and wavelet coherence analysis is free for non-profit use.</p>
+    <div class="contributor">Contributed by: Ryan</div>
+    <div>Updated by: Aslak Grinsted</div>
+  </td>
+  <td><a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22coherence%22" title="coherence">coherence</a>, <a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22crosswavelet%22" title="crosswavelet">crosswavelet</a>, <a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22cwt%22" title="cwt">cwt</a>, <a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22grinsted%22" title="grinsted">grinsted</a>, <a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22wavelet%22" title="wavelet">wavelet</a></td>
+  <td>97</td>
+  <td>1</td>
+  <td class="last">
+    <div class="stars" title="5.0"><div style="width:100%;">5.0</div></div><span>5.0</span><span class="divider">&nbsp;|&nbsp;</span><a href="http://www.mathworks.in/matlabcentral/linkexchange/links/3581-crosswavelet-and-wavelet-coherence#feedback">1 rating</a>
+  </td>
+</tr><tr class="odd">
+  <td>1 Oct 2014</td>
+  <td style="width:300px !important;">
+    <a href="http://www.mathworks.in/matlabcentral/linkexchange/links/4098-integer-programming">Integer Programming</a>
+    <p>Solve linear programming problems with integer variables.</p>
+    <div class="contributor">Contributed by: Seth DeLand</div>
+    
+  </td>
+  <td><a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22integer+programming%22" title="integer programming">integer pro...</a>, <a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22linear+programming%22" title="linear programming">linear prog...</a>, <a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22mixed-integer%22" title="mixed-integer">mixed-integer</a>, <a href="http://www.mathworks.in/matlabcentral/linkexchange/?term=tag%3A%22optimization%22" title="optimization">optimization</a></td>
+  <td>5</td>
+  <td>1</td>
+  <td class="last">
+    
+  </td>
+</tr>
+    
+  </tbody></table>
+</div>
+<div class="list_controls bottom">
+  <div class="pagination"><b>1 - 16 of 16</b><span class="previous">&amp;nbsp;</span><span class="next">&amp;nbsp;</span></div>
+    <div class="feed">
+  </div>
+</div>
+
+<p id="contactus"><a href="http://www.mathworks.in/company/feedback/">Contact us</a></p>
+
+
+
+	
+      
+</div>
+<div class="clearboth">&nbsp;</div>
+</div>
+</div>
+<!-- footer.html -->
+<!-- START OF FOOTER -->
+
+<div id="mlc-footer">
+  <script type="text/javascript">
+function clickDynamic(obj, target_url, tracking_code) {
+	var pos=target_url.indexOf("?");
+	if (pos<=0) { 
+		var linkComponents = target_url + tracking_code;
+		obj.href=linkComponents;
+	} 
+}
+</script>
+  <div class="wrapper">
+    <div>
+      <ul id="matlabcentral">
+        <li class="copyright first">© 1994-2014 The MathWorks, Inc.</li>
+        <li class="first"><a href="http://www.mathworks.in/help.html" title="Site Help">Site Help</a></li>
+        <li><a href="http://www.mathworks.in/company/aboutus/policies_statements/patents.html" title="patents" rel="nofollow">Patents</a></li>
+        <li><a href="http://www.mathworks.in/company/aboutus/policies_statements/trademarks.html" title="trademarks" rel="nofollow">Trademarks</a></li>
+        <li><a href="http://www.mathworks.in/company/aboutus/policies_statements/" title="privacy policy" rel="nofollow">Privacy Policy</a></li>
+        <li><a href="http://www.mathworks.in/company/aboutus/policies_statements/piracy.html" title="preventing piracy" rel="nofollow">Preventing Piracy</a></li>
+        <li class="last"><a href="http://www.mathworks.in/matlabcentral/termsofuse.html" title="Terms of Use" rel="nofollow">Terms of Use</a></li>
+        <li class="icon"><a href="http://www.mathworks.in/company/rss/" title="RSS" class="rssfeed" rel="nofollow"><span class="text">RSS</span></a></li>
+        <li class="icon"><a href="http://www.mathworks.in/programs/bounce_hub_generic.html?s_tid=mlc_lkd&url=http://www.linkedin.com/company/the-mathworks_2" title="LinkedIn" class="linkedin" rel="nofollow" target="_blank"></a></li>
+        <li class="icon"><a href="http://www.mathworks.in/programs/bounce_hub_generic.html?s_tid=mlc_fbk&url=https://plus.google.com/117177960465154322866?prsrc=3" title="Google+" class="google" rel="nofollow" target="_blank"><span class="text">Google+</span></a></li>
+        <li class="icon"><a href="http://www.mathworks.in/programs/bounce_hub_generic.html?s_tid=mlc_fbk&url=http://www.facebook.com/MATLAB" title="Facebook" class="facebook" rel="nofollow" target="_blank"><span class="text">Facebook</span></a></li>
+        		<li class="last icon"><a href="http://www.mathworks.in/programs/bounce_hub_generic.html?s_tid=mlc_twt&url=http://www.twitter.com/MATLAB" title="Twitter" class="twitter" rel="nofollow" target="_blank"><span class="text">Twitter</span></a></li>        
+        
+      </ul>
+      <ul id="mathworks">
+        <li class="first sectionhead">Featured MathWorks.com Topics:</li>
+        <li class="first"><a href="http://www.mathworks.in/products/new_products/latest_features.html" onclick="clickDynamic(this, this.href, &#39;?s_cid=MLC_new&#39;)">New Products</a></li>
+        <li><a href="http://www.mathworks.in/support/" title="support" onclick="clickDynamic(this, this.href, &#39;?s_cid=MLC_support&#39;)">Support</a></li>
+        <li><a href="http://www.mathworks.in/help" title="documentation" onclick="clickDynamic(this, this.href, &#39;?s_cid=MLC_doc&#39;)">Documentation</a></li>
+        <li><a href="http://www.mathworks.in/services/training/" title="training" onclick="clickDynamic(this, this.href, &#39;?s_cid=MLC_training&#39;)">Training</a></li>
+        <li><a href="http://www.mathworks.in/company/events/webinars/" title="Webinars" onclick="clickDynamic(this, this.href, &#39;?s_cid=MLC_webinars&#39;)">Webinars</a></li>
+        <li><a href="http://www.mathworks.in/company/newsletters/" title="newsletters" onclick="clickDynamic(this, this.href, &#39;?s_cid=MLC_newsletters&#39;)">Newsletters</a></li>
+        <li><a href="http://www.mathworks.in/programs/trials/trial_request.html?prodcode=ML&s_cid=MLC_trials" title="MATLAB Trials">MATLAB Trials</a></li>
+        
+        		<li class="last"><a href="http://www.mathworks.in/company/jobs/opportunities/index_en_US.html" title="Careers" onclick="clickDynamic(this, this.href, &#39;?s_cid=MLC_careers&#39;)">Careers</a></li>
+                 
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- END OF FOOTER -->
+
+
+      
+      
+<!-- SiteCatalyst code version: H.24.4.
+Copyright 1996-2012 Adobe, Inc. All Rights Reserved
+More info available at http://www.omniture.com -->
+<script language="JavaScript" type="text/javascript" src="./mat_5_files/s_code.js"></script>
+
+
+<script language="JavaScript" type="text/javascript">
+
+
+
+<!--
+if (typeof mboxLoadSCPlugin == 'function') {
+	mboxLoadSCPlugin(s); 
+}
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)//--></script>
+<script language="JavaScript" type="text/javascript"><!--
+if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+//--></script>
+<!--/DO NOT REMOVE/-->
+<!-- End SiteCatalyst code version: H.24.4. -->
+
+
+  
+
+    
+
+<!-- BEGIN Qualaroo --> 
+<script type="text/javascript">
+  var _kiq = _kiq || [];
+  (function(){
+    setTimeout(function(){
+			var d = document, f = d.getElementsByTagName('script')[0], s = d.createElement('script'); s.type = 'text/javascript';
+			s.async = true; s.src = '//s3.amazonaws.com/ki.js/49559/ahy.js'; f.parentNode.insertBefore(s, f);
+    }, 1);
+  })();
+</script>
+<!-- END Qualaroo --> 
+
+    
+
+</body><iframe allowtransparency="true" frameborder="0" id="abs-top-frame" src="./mat_5_files/top.html" style="position: fixed; z-index: 4294967295; overflow: hidden; top: 0px; left: 0px; right: 0px; width: 138px; height: 13px; max-height: none; min-height: 0px; margin: 0px auto; padding: 0px; border: 0px; display: block; background-color: transparent;"></iframe></html>
